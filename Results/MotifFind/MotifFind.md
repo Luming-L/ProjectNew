@@ -47,12 +47,13 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 ```
 # Motif finding
 ## extract fasta
+`-fo`: Specify an output file name.
 ```bash
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fasta
 ```
 
 ## fimo
-`-fo`: Specify an output file name.
+
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868/Fimo/PRDM9.pwm.meme $file
 ```
@@ -62,6 +63,6 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjY1MjIzNiwtMTgzNzY3NzEyOCwtNz
-I2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLT
+cyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
 -->
