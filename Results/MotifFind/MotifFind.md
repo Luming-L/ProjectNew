@@ -53,6 +53,7 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fasta
 ```
 ## fimo
+version: meme/4.11.1
 **options**
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
 `--thresh num`: The threshold is a p-value of 1e-4.
@@ -69,8 +70,8 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOT
-QzMTE0LDE3NjU4OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAs
-LTE4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MD
-gzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTE4ODE0NzYyMywxMTg4NjA5NzE5LDYxOD
+A1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtNDE1MDQxMCwt
+MTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIwMjAyLDk5Mz
+E5MDk2MSwzNDkwODMwNDRdfQ==
 -->
