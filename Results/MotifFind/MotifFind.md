@@ -7,7 +7,7 @@ Each text file represents all merged peak calls from each cancer type.
 **Recalled peaks in each technical replicate (796)**
 The output of PeakRecall.py, see PeakRecall.md
 ## steps
-**Two scripts **
+**Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run peakOverlap.py on eddie) contains these steps.
 ### download cancer type-specific PeakCalls
 ```bash
 wget https://api.gdc.cancer.gov/data/71ccfc55-b428-4a04-bb5a-227f7f3bf91c
@@ -54,6 +54,6 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjAzNTAxNTMsOTkzMTkwOTYxLDM0OT
-A4MzA0NF19
+eyJoaXN0b3J5IjpbLTc1MTQzMjI0Nyw5OTMxOTA5NjEsMzQ5MD
+gzMDQ0XX0=
 -->
