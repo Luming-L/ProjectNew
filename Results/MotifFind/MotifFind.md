@@ -53,7 +53,8 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fa
 ```
 
 ## fimo
-`--parse-genomic-coord`: 
+`--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form:
+>sequence name:starting position-ending position
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868/Fimo/PRDM9.pwm.meme $file
 ```
@@ -63,7 +64,7 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjI1ODc4NCwtMTYzNjIzNTcwMCwtMT
-gzNzY3NzEyOCwtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMw
-NDRdfQ==
+eyJoaXN0b3J5IjpbLTExNTAwNDM1MTUsLTE2MzYyMzU3MDAsLT
+E4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgz
+MDQ0XX0=
 -->
