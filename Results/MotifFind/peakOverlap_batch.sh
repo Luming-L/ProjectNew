@@ -4,7 +4,7 @@
 #$ -l h_rt=00:05:00
 #$ -l h_vmem=2G
  
-#$ -t 257-257
+#$ -t 1-410
  
 # Configure modules
 . /etc/profile.d/modules.sh
