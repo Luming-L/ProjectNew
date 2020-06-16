@@ -29,6 +29,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
 3. finally get a list of peaks for each of 410 biological samples
 
+**o'p**
 `-f`： Minimum overlap required as **a fraction of A**. `-f 1.0` means 100% of the query record is overlapped by a database record.
 
 `-c`: For each entry in A, report the number of hits in B while restricting to -f.
@@ -49,6 +50,6 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sor
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzkyMTU1NzUsOTkzMTkwOTYxLDM0OT
+eyJoaXN0b3J5IjpbLTEzMTE2Njk1MjksOTkzMTkwOTYxLDM0OT
 A4MzA0NF19
 -->
