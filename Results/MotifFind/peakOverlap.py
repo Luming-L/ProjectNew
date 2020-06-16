@@ -48,5 +48,5 @@ def peakOverlap(Cancer_type, path):
 # ======================================= Main =======================================
 
 # call peakOverlap() function
-print Cancer_types[num]
+print(Cancer_types[num])
 peakOverlap(Cancer_type=Cancer_types[num], path=Sample_PeakCalls_path)
