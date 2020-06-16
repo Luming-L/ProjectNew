@@ -36,12 +36,13 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 
 `-wa`: Write the original entry in A for each overlap.
 
-**command for a sample with **
+**command for a sample with 1  replicate**
 ```bash
-bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
+bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC_D6F95774_441D_47F6_93CE_999D7BE81E44_X040_S11*bed.sorted -f 1.0 -wa > /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC_D6F95774_441D_47F6_93CE_999D7BE81E44_X040_S11_peakCalls.bed
 ```
+**command for a sample with 1 replicate**
 ```bash
-bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
+bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08_peakCalls.bed
 ```
 # Motif finding
 ## extract fasta
@@ -52,6 +53,6 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sor
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODcyNTI0OCw5OTMxOTA5NjEsMzQ5MD
-gzMDQ0XX0=
+eyJoaXN0b3J5IjpbLTEyMjk5MTA0MzcsOTkzMTkwOTYxLDM0OT
+A4MzA0NF19
 -->
