@@ -52,6 +52,7 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fa
 ```
 
 ## fimo
+`-fo`: Specify an output file name.
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868/Fimo/PRDM9.pwm.meme $file
 ```
@@ -61,6 +62,6 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OT
-MxOTA5NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTc2NjY1MjIzNiwtMTgzNzY3NzEyOCwtNz
+I2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
 -->
