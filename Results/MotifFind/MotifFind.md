@@ -11,12 +11,7 @@ unzip 71ccfc55-b428-4a04-bb5a-227f7f3bf91c
 mkdir TCGA-ATAC_Cancer_Type-specific_PeakCalls
 mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
 ```
-```bash
-for cancer in 23 cancer
-sample set ()
-for sample in ACC_samples
-Bedrolls intersect -u -a ACC -b ACC_sample_peaks -r 0.8
-```
+
 ```bash
 sort -k1,1 -k2n ACC_peakCalls.txt | grep "chr" | awk '{FS=OFS="\t"; {print $1,$2,$3,$4}}' > ACC_peakCalls.pure.txt
 awk '{FS=OFS="\t"; {print $1,$2,$3}}' ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks001.bed | grep "chr"> ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks001.pure.bed
@@ -40,5 +35,5 @@ ls ACC*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMjA0MTM5MDA3MywzNDkwODMwNDRdfQ==
 -->
