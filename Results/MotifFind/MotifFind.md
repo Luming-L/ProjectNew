@@ -7,6 +7,7 @@ Each text file represents all merged peak calls from each cancer type.
 **Recalled peaks in each technical replicate (796)**
 The output of PeakRecall.py, see PeakRecall.md
 ## steps
+### download
 ```bash
 # download cancer type-specific PeakCalls
 wget https://api.gdc.cancer.gov/data/71ccfc55-b428-4a04-bb5a-227f7f3bf91c
@@ -14,6 +15,7 @@ unzip 71ccfc55-b428-4a04-bb5a-227f7f3bf91c
 mkdir TCGA-ATAC_Cancer_Type-specific_PeakCalls
 mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
 ```
+### sort files 
 ```bash
 # prepare the input of bedtools
 echo "sort start: $(date)"
@@ -44,6 +46,6 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sor
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA1NzkyMTU1LDk5MzE5MDk2MSwzNDkwOD
-MwNDRdfQ==
+eyJoaXN0b3J5IjpbLTc5MDg4ODcwNiw5OTMxOTA5NjEsMzQ5MD
+gzMDQ0XX0=
 -->
