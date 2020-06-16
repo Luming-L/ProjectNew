@@ -55,7 +55,7 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fa
 ## fimo
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
 `--thresh`: The threshold is a p-value of 1e-4.
-`--oc
+`--oc dir`: Create a folder called dir but if it already exists allow overwriting the contents.
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868/Fimo/PRDM9.pwm.meme $file
 ```
@@ -65,7 +65,7 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDE0MzYxNTIsLTQxNTA0MTAsLTE2Mz
-YyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5
-NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTc2NTg5NDMwNSwtNDE1MDQxMCwtMTYzNj
+IzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIwMjAyLDk5MzE5MDk2
+MSwzNDkwODMwNDRdfQ==
 -->
