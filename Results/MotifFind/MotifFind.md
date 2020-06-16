@@ -66,8 +66,11 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
+
+[fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1OD
-k0MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4
-LC03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
+eyJoaXN0b3J5IjpbMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOT
+QzMTE0LDE3NjU4OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAs
+LTE4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MD
+gzMDQ0XX0=
 -->
