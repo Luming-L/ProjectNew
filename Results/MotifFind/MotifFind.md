@@ -15,6 +15,7 @@ mkdir TCGA-ATAC_Cancer_Type-specific_PeakCalls
 mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
 ```
 ### prepare the input of bedtools
+sort files
 ```bash
 # sort and cut files of Cancer Type-specific PeakCalls
 cd /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls
@@ -23,6 +24,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 cd /exports/eddie/scratch/s1949868/PeakRecall_peaks001
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
 ```
+### 
 ```bash
 bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 ```
@@ -42,6 +44,6 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sor
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzU1ODM4NSw5OTMxOTA5NjEsMzQ5MD
+eyJoaXN0b3J5IjpbLTkwNDgzMDU4NSw5OTMxOTA5NjEsMzQ5MD
 gzMDQ0XX0=
 -->
