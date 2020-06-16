@@ -26,8 +26,9 @@ ls ACC*
 ## fimo
 
 # Reference
-[https://bedtools intersect.html](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
+[bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
+[bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMDk3NjY0MywzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
