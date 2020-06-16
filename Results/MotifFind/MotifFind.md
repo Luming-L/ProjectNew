@@ -25,6 +25,9 @@ ls ACC*
 ## extract fasta
 ## fimo
 
+# Reference
+[https://bedtools intersect.html](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTE5NDQ4MDMsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTkzMDk3NjY0MywzNDkwODMwNDRdfQ==
 -->
