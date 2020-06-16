@@ -47,12 +47,13 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 ```
 # Motif finding
 ## extract fasta
+**options**
 `-fo`: Specify an output file name.
 ```bash
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fasta
 ```
-
 ## fimo
+**options**
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
 `--thresh num`: The threshold is a p-value of 1e-4.
 `--oc dir`: Create a folder called dir but if it already exists allow overwriting the contents.
@@ -66,7 +67,7 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTQzMTE0LDE3NjU4OTQzMDUsLTQxNT
-A0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgyMDIw
-Miw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1OD
+k0MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4
+LC03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
