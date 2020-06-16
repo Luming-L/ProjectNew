@@ -20,11 +20,11 @@ bedtools intersect -wa -a -b -f 1.0 -c -sorted
 bedtools intersect -a -b -f 1.0 -c -wa -sorted
 ls ACC*
 
-## overlap
-## merge peaks in different replicates
-# Motif finding
 
+# Motif finding
+## extract fasta
+## fimo
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTMxOTM0NDksMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbLTEyNTE5NDQ4MDMsMzQ5MDgzMDQ0XX0=
 -->
