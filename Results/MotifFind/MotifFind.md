@@ -1,6 +1,6 @@
 
 # Refine recalled peaks 
-Refine recalled peaks of each  to get a list of peaks for each biological sample
+Refine recalled peaks to get a list of peaks for each biological sample
 ## input files
 **Cancer type-specific peak calls (23)**
 Each text file represents all merged peak calls from each cancer type. 
@@ -47,6 +47,6 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/ACC*txt.sor
 
 [bedtools getfasta](https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODgzOTMyNzYsOTkzMTkwOTYxLDM0OT
-A4MzA0NF19
+eyJoaXN0b3J5IjpbMTQxNTcxMDU3Miw5OTMxOTA5NjEsMzQ5MD
+gzMDQ0XX0=
 -->
