@@ -47,13 +47,14 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 ```
 # Find PRDM9 motif occurrences
 ## extracts sequences in FASTA by `bedtools  getfasta`
+**version**: BEDTools/2.27.1
 **options**
 `-fo`: Specify an output file name.
 **command**
 ```bash
-
+bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.fasta"
 ```
-## find PRDM9 Motif Occurrences by `fimo`
+## find PRDM9 motif occurrences by `fimo`
 **version**: meme/4.11.1
 **options**
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
@@ -69,6 +70,7 @@ wc -l ./*_fimo_out/fimo.gff
 The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to 10,000,000.
 **command**
 ```bash
+
 ```
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
@@ -77,7 +79,7 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NDI5MDkzMiwtOTEwNjAzODQ5LC0xND
+eyJoaXN0b3J5IjpbMTg1MDMzODQxOSwtOTEwNjAzODQ5LC0xND
 E0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5
 NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtND
 E1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIw
