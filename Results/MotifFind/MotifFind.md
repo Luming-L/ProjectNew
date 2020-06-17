@@ -121,15 +121,14 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 ```
 
   2845652 total
-	 
-	  184385 ./BRCA_peakCalls_fimo_out/fimo.gff
-	  175572 ./BLCA_peakCalls_fimo_out/fimo.gff
-	  163170 ./PRAD_peakCalls_fimo_out/fimo.gff
-	  142972 ./KIRP_peakCalls_fimo_out/fimo.gff
-	  137216 ./ESCA_peakCalls_fimo_out/fimo.gff
-   
-...
+	
+	184385 ./BRCA_peakCalls_fimo_out/fimo.gff
+	175572 ./BLCA_peakCalls_fimo_out/fimo.gff
+	163170 ./PRAD_peakCalls_fimo_out/fimo.gff
+	142972 ./KIRP_peakCalls_fimo_out/fimo.gff
+	137216 ./ESCA_peakCalls_fimo_out/fimo.gff
 
+...
 	106200 ./SKCM_peakCalls_fimo_out/fimo.gff
 	106092 ./ACC_peakCalls_fimo_out/fimo.gff
 	98454 ./CHOL_peakCalls_fimo_out/fimo.gff
@@ -142,10 +141,10 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ0Mzc2ODIzLC01MzY4MjQyMSwtMTA2OD
-A5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4
-NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLD
-ExODg2MDk3MTksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0
-MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC
-03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
+eyJoaXN0b3J5IjpbLTE4MDMzMjM5ODMsLTUzNjgyNDIxLC0xMD
+Y4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3MTEsLTkxMDYw
+Mzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2Mj
+MsMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4
+OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMj
+gsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
 -->
