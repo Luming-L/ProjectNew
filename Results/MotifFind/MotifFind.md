@@ -25,7 +25,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 cd /exports/eddie/scratch/s1949868/PeakRecall_peaks001
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
 ```
-### Refine recalled peaks by using `bedtools intersect`
+### refine recalled peaks by using `bedtools intersect`
 1. for each technical replicate (796), output cancer type-specific peaks that can be 100% overlapped by recalled peaks (set by `-f 1.0`)
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
 3. finally get a list of peaks for each of 410 biological samples
@@ -61,6 +61,7 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.f
 `--thresh num`: The threshold is a p-value of 1e-4.
 `--oc dir`: Create a folder called dir but if it already exists allow overwriting the contents.
 `--max-stored-scores`: Set the maximum number of scores that will be stored. The maximum number of stored matches is 100,000.
+**note*
 ```bash
 wc -l ./*_fimo_out/fimo.gff
 ```
@@ -79,7 +80,7 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjQxNjUzMSwtOTEwNjAzODQ5LC0xND
+eyJoaXN0b3J5IjpbMTI0MDg2MDI2NywtOTEwNjAzODQ5LC0xND
 E0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5
 NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtND
 E1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIw
