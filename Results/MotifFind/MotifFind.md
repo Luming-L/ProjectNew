@@ -10,15 +10,16 @@ Each text file represents all merged peak calls from each cancer type.
 **Recalled peaks in each technical replicate (796)**
 
 The output of PeakRecall.py, see PeakRecall.md
+## substeps
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
-## download cancer type-specific PeakCalls
+### download cancer type-specific PeakCalls
 ```bash
 wget https://api.gdc.cancer.gov/data/71ccfc55-b428-4a04-bb5a-227f7f3bf91c
 unzip 71ccfc55-b428-4a04-bb5a-227f7f3bf91c
 mkdir TCGA-ATAC_Cancer_Type-specific_PeakCalls
 mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
 ```
-## prepare the input of bedtools
+### prepare the input of bedtools
 sort files
 ```bash
 # sort and cut files of Cancer Type-specific PeakCalls
@@ -28,7 +29,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 cd /exports/eddie/scratch/s1949868/PeakRecall_peaks001
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
 ```
-## refine recalled peaks by using `bedtools intersect`
+### refine recalled peaks by using `bedtools intersect`
 1. for each technical replicate (796), output cancer type-specific peaks that can be 100% overlapped by recalled peaks (set by `-f 1.0`)
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
 3. finally get a list of peaks for each of 410 biological samples
@@ -111,7 +112,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NjU1MjA2MSwtMTA2ODA5MTY5OSwtMT
+eyJoaXN0b3J5IjpbLTkzNjI1MzMzOSwtMTA2ODA5MTY5OSwtMT
 YwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4NDksLTE0MTQy
 MTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MT
 ksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUw
