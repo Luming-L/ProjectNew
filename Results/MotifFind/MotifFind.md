@@ -1,5 +1,5 @@
 
-# Refine recalled peaks 
+# 1.Refine recalled peaks 
 Refine recalled peaks to get a list of peaks for each biological sample
 ## input files
 **Cancer type-specific peak calls (23)**
@@ -45,7 +45,7 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.so
 ```bash
 bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08_peakCalls.bed
 ```
-# Find PRDM9 motif occurrences
+# 2.Find PRDM9 motif occurrences
 ## extracts sequences in FASTA by `bedtools  getfasta`
 **version**: BEDTools/2.27.1
 **options**
@@ -70,7 +70,7 @@ wc -l ./*_fimo_out/fimo.gff
 The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to 10,000,000.
 **command**
 ```bash
-
+fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
@@ -79,7 +79,7 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MDMzODQxOSwtOTEwNjAzODQ5LC0xND
+eyJoaXN0b3J5IjpbLTY0NjQxNjUzMSwtOTEwNjAzODQ5LC0xND
 E0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5
 NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtND
 E1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIw
