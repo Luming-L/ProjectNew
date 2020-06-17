@@ -41,6 +41,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 
 `-wa`: Write the original entry in A for each overlap.
 
+Because the minimum length of recalled peaks is set to 501, w
 
 **command for a sample with 1 technical replicate**
 ```bash
@@ -143,11 +144,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNjI5Mjg3OSwxMTUyNTQwMTksLTUzNj
-gyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3
-MTEsLTkxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5MzkzLD
-ExODgxNDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOTQz
-MTE0LDE3NjU4OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAsLT
-E4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgz
-MDQ0XX0=
+eyJoaXN0b3J5IjpbLTE4OTYzMTQ5MzEsMTE1MjU0MDE5LC01Mz
+Y4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAz
+NzExLC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5My
+wxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5MzkwLC05MDk0
+MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC
+0xODM3Njc3MTI4LC03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4
+MzA0NF19
 -->
