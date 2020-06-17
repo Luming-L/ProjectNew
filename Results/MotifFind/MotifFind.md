@@ -62,6 +62,12 @@ version: meme/4.11.1
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868/Fimo/PRDM9.pwm.meme $file
 ```
+```bash
+wc -l ./*_fimo_out/fimo.gff
+```
+106092 ./AAA_peakCalls_fimo_out/fimo.gff
+70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
+176630 total
 
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
@@ -70,8 +76,8 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4ODE0NzYyMywxMTg4NjA5NzE5LDYxOD
-A1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtNDE1MDQxMCwt
-MTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIwMjAyLDk5Mz
-E5MDk2MSwzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbMTIwNjkyOTM5MywxMTg4MTQ3NjIzLDExOD
+g2MDk3MTksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1
+LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC03Mj
+Y4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
