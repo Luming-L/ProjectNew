@@ -68,7 +68,7 @@ wc -l ./*_fimo_out/fimo.gff
 106092 ./ACC_peakCalls_fimo_out/fimo.gff 
 70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
 176630 total
-The number of scores in `ACC_peakCalls_fimo_out` exceed
+The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to 10,000,000.
 
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
@@ -77,9 +77,9 @@ The number of scores in `ACC_peakCalls_fimo_out` exceed
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA1OTEwMzUsLTE0MTQyMTM3MTEsMTIwNj
-kyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5Mzkw
-LC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNjM2Mj
-M1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAyMDIsOTkzMTkwOTYx
-LDM0OTA4MzA0NF19
+eyJoaXN0b3J5IjpbLTkxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMj
+A2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkz
+OTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLTQxNTA0MTAsLTE2Mz
+YyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5
+NjEsMzQ5MDgzMDQ0XX0=
 -->
