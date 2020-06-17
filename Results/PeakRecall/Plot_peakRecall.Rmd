@@ -1,0 +1,65 @@
+---
+title: "Plot the result of peakRecall"
+output: html_notebook
+---
+
+```{r}
+setwd("~/project/test_peakRecall/")
+```
+
+```{r}
+library(Sushi)
+```
+
+```{r}
+# read files
+GenomeSignal_fromBigwig <- read.delim("ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg",header = FALSE)
+peak_recall <- read.delim("ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks001.bed",header = FALSE)
+peak_recall <- peak_recall[-1, c(1,2,3,5)]
+```
+
+```{r}
+png("peakRecall_chr1.png",width = 960,height = 640)
+# The genomic region I want to present
+chrom = "chr1"
+chromstart = 0
+chromend = 248956422
+
+# plot signal
+plotBedgraph(GenomeSignal_fromBigwig,chrom,chromstart,chromend,transparency=1,flip=FALSE,color="blue",linecol="blue")
+plotBedgraph(peak_recall,chrom,chromstart,chromend,transparency=0,flip=FALSE,color="#E5001B",linecol="#E5001B",overlay=TRUE,rescaleoverlay=TRUE)
+# genome label
+labelgenome(chrom,chromstart,chromend,side=1,scipen=20,n=3,line=.18,chromline=.5,scaleline=0.5,scale="Mb")
+
+transparency = 0.5
+col1 = col2rgb("blue")
+finalcolor1 = rgb(col1[1],col1[2],col1[3],alpha=transparency * 255,maxColorValue = 255)
+col2 = col2rgb("#E5001B")
+finalcolor2 = rgb(col2[1],col2[2],col2[3],alpha=transparency * 255,maxColorValue = 255)
+# legend
+legend("topright",inset=0.025,legend=c("GenomeSignal_fromBigwig","peak_recall"),fill=c(finalcolor1,finalcolor2),border=c("blue","#E5001B"),text.font=2,cex=0.75)
+dev.off()
+```
+```{r}
+png("peakRecall_chr1_777499_1233399.png",width = 960,height = 640)
+# The genomic region I want to present
+chrom = "chr1"
+chromstart = 777499
+chromend = 1233399
+
+# plot signal
+plotBedgraph(GenomeSignal_fromBigwig,chrom,chromstart,chromend,transparency=1,flip=FALSE,color="blue",linecol="blue")
+plotBedgraph(peak_recall,chrom,chromstart,chromend,transparency=0,flip=FALSE,color="#E5001B",linecol="#E5001B",overlay=TRUE,rescaleoverlay=TRUE)
+# genome label
+labelgenome(chrom,chromstart,chromend,side=1,scipen=20,n=3,line=.18,chromline=.5,scaleline=0.5,scale="Mb")
+
+transparency = 0.5
+col1 = col2rgb("blue")
+finalcolor1 = rgb(col1[1],col1[2],col1[3],alpha=transparency * 255,maxColorValue = 255)
+col2 = col2rgb("#E5001B")
+finalcolor2 = rgb(col2[1],col2[2],col2[3],alpha=transparency * 255,maxColorValue = 255)
+# legend
+legend("topright",inset=0.025,legend=c("GenomeSignal_fromBigwig","peak_recall"),fill=c(finalcolor1,finalcolor2),border=c("blue","#E5001B"),text.font=2,cex=0.75)
+dev.off()
+```
+
