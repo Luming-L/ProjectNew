@@ -1,6 +1,6 @@
 
 This step will output a list of PRDM9 motif occurrences for each of 410 biological samples.
-# 1.Refine recalled peaks 
+# Step1 Refine recalled peaks 
 Refine recalled peaks to get a list of peaks for each biological sample
 ## input files
 **Cancer type-specific peak calls (23)**
@@ -10,16 +10,16 @@ Each text file represents all merged peak calls from each cancer type.
 **Recalled peaks in each technical replicate (796)**
 
 The output of PeakRecall.py, see PeakRecall.md
-## steps
+
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
-### download cancer type-specific PeakCalls
+## download cancer type-specific PeakCalls
 ```bash
 wget https://api.gdc.cancer.gov/data/71ccfc55-b428-4a04-bb5a-227f7f3bf91c
 unzip 71ccfc55-b428-4a04-bb5a-227f7f3bf91c
 mkdir TCGA-ATAC_Cancer_Type-specific_PeakCalls
 mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
 ```
-### prepare the input of bedtools
+## prepare the input of bedtools
 sort files
 ```bash
 # sort and cut files of Cancer Type-specific PeakCalls
@@ -29,7 +29,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 cd /exports/eddie/scratch/s1949868/PeakRecall_peaks001
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
 ```
-### refine recalled peaks by using `bedtools intersect`
+## refine recalled peaks by using `bedtools intersect`
 1. for each technical replicate (796), output cancer type-specific peaks that can be 100% overlapped by recalled peaks (set by `-f 1.0`)
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
 3. finally get a list of peaks for each of 410 biological samples
@@ -49,7 +49,7 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.so
 ```bash
 bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08_peakCalls.bed
 ```
-# 2.Find PRDM9 motif occurrences
+# Step2 Find PRDM9 motif occurrences
 The script `fimo_batch.sh` includes these two steps.
 ## extracts sequences in FASTA by `bedtools  getfasta`
 **version**: BEDTools/2.27.1
@@ -112,10 +112,10 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc3NDAxNjUzLC0xMDY4MDkxNjk5LC0xNj
-A0MjM1OTMsLTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMTQxNDIx
-MzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYwOTcxOS
-w2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLTQxNTA0
-MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgyMDIwMi
-w5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTQyNjMyMTY3OSwtMTA2ODA5MTY5OSwtMT
+YwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4NDksLTE0MTQy
+MTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MT
+ksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUw
+NDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAyMD
+IsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
