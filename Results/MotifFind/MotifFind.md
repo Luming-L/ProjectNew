@@ -65,7 +65,7 @@ fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868
 ```bash
 wc -l ./*_fimo_out/fimo.gff
 ```
-106092 ./ACC_peakCalls_fimo_out/fimo.gff
+106092 ./ACC_peakCalls_fimo_out/fimo.gff 
 70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
 176630 total
 
@@ -76,9 +76,9 @@ wc -l ./*_fimo_out/fimo.gff
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTQyMTM3MTEsMTIwNjkyOTM5MywxMT
-g4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5MzkwLC05MDk0MzEx
-NCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xOD
-M3Njc3MTI4LC03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0
-NF19
+eyJoaXN0b3J5IjpbLTE5NDMzMjYzMzMsLTE0MTQyMTM3MTEsMT
+IwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5
+MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNj
+M2MjM1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAyMDIsOTkzMTkw
+OTYxLDM0OTA4MzA0NF19
 -->
