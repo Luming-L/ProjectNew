@@ -41,7 +41,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 
 `-wa`: Write the original entry in A for each overlap.
 
-Because the minimum length of recalled peaks is set to 501, which is equal to the length of cancer type-specific peaks (501 bp), so the intersect of a cancer type-specific peak with a recalled peak is unique. Therefore, `-u` is not set.
+`-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. Because the minimum length of recalled peaks is set to 501, which is equal to the length of cancer type-specific peaks (501 bp), so the intersect of a cancer type-specific peak with a recalled peak is unique. Therefore, `-u` is not set.
 
 **command for a sample with 1 technical replicate**
 ```bash
@@ -144,7 +144,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ2MjM1ODE0LDExNTI1NDAxOSwtNTM2OD
+eyJoaXN0b3J5IjpbNDU2NzY2OTE4LDExNTI1NDAxOSwtNTM2OD
 I0MjEsLTEwNjgwOTE2OTksLTE2MDQyMzU5MywtMTA2MzkwMzcx
 MSwtOTEwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMT
 E4ODE0NzYyMywxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMx
