@@ -110,13 +110,14 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
      26153 ./SKCM_4EDE1486_22DD_4DB9_8CB1_B4A058E459D1_X035_S10_peakCalls_fimo_out/fimo.gff
      24424 ./LUSC_3AD1EA06_AA53_4C53_B436_4417FA2B8A0E_X031_S10_peakCalls_fimo_out/fimo.gff
 
-**a list of PRDM9 motif occurrences for each of 23 cancer types**
+**By the way, a list of PRDM9 motif occurrences for each of 23 cancer types**
 ```bash
 for file in $(ls /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/*_peakCalls.txt); do
 > fileName=`basename -s ".txt" $file`
 > awk '{OFS=FS="\t";if($1~/^chr/){print $1,$2,$3,$4}}' $file > "${fileName}.bed";
 > done
 qsub qsub ~/fimo_batch.sh
+wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 ```
 
 # Reference
@@ -126,10 +127,10 @@ qsub qsub ~/fimo_batch.sh
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MDY1NDg5NywtNTM2ODI0MjEsLTEwNj
-gwOTE2OTksLTE2MDQyMzU5MywtMTA2MzkwMzcxMSwtOTEwNjAz
-ODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMy
-wxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5
-NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOC
-wtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbLTIxMjU3NDU0MTgsLTUzNjgyNDIxLC0xMD
+Y4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3MTEsLTkxMDYw
+Mzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2Mj
+MsMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4
+OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMj
+gsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
 -->
