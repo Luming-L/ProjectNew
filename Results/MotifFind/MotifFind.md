@@ -1,11 +1,14 @@
 
+This step will output a list of PRDM9 motif occurrences for each of 410 biological samples.
 # 1.Refine recalled peaks 
 Refine recalled peaks to get a list of peaks for each biological sample
 ## input files
 **Cancer type-specific peak calls (23)**
+
 Each text file represents all merged peak calls from each cancer type. 
 
 **Recalled peaks in each technical replicate (796)**
+
 The output of PeakRecall.py, see PeakRecall.md
 ## steps
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
@@ -81,9 +84,9 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNzEzNDIwNywtOTEwNjAzODQ5LC0xND
-E0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5
-NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtND
-E1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIw
-MjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbLTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMT
+QxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYw
+OTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLT
+QxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgy
+MDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
 -->
