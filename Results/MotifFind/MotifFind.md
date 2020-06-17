@@ -50,6 +50,7 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.so
 bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08_peakCalls.bed
 ```
 # 2.Find PRDM9 motif occurrences
+The script `` inc
 ## extracts sequences in FASTA by `bedtools  getfasta`
 **version**: BEDTools/2.27.1
 
@@ -95,10 +96,10 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQyMzU5MywtMTA2MzkwMzcxMSwtOT
-EwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0
-NzYyMywxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMT
-c2NTg5NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3
-NzEyOCwtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ
-==
+eyJoaXN0b3J5IjpbMTI0ODk2OTgyNSwtMTYwNDIzNTkzLC0xMD
+YzOTAzNzExLC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMTIwNjky
+OTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5MzkwLC
+05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNjM2MjM1
+NzAwLC0xODM3Njc3MTI4LC03MjY4MjAyMDIsOTkzMTkwOTYxLD
+M0OTA4MzA0NF19
 -->
