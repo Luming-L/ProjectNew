@@ -121,25 +121,15 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 ```
 
   2845652 total
-
-184385 ./BRCA_peakCalls_fimo_out/fimo.gff
+	 
+	  184385 ./BRCA_peakCalls_fimo_out/fimo.gff
    175572 ./BLCA_peakCalls_fimo_out/fimo.gff
    163170 ./PRAD_peakCalls_fimo_out/fimo.gff
    142972 ./KIRP_peakCalls_fimo_out/fimo.gff
    137216 ./ESCA_peakCalls_fimo_out/fimo.gff
-   136447 ./LUAD_peakCalls_fimo_out/fimo.gff
-   131183 ./STAD_peakCalls_fimo_out/fimo.gff
-   131027 ./COAD_peakCalls_fimo_out/fimo.gff
-   125365 ./LUSC_peakCalls_fimo_out/fimo.gff
-   120320 ./KIRC_peakCalls_fimo_out/fimo.gff
-   119546 ./UCEC_peakCalls_fimo_out/fimo.gff
-   118476 ./LIHC_peakCalls_fimo_out/fimo.gff
-   116849 ./TGCT_peakCalls_fimo_out/fimo.gff
-   113498 ./PCPG_peakCalls_fimo_out/fimo.gff
-   112565 ./HNSC_peakCalls_fimo_out/fimo.gff
-   111442 ./LGG_peakCalls_fimo_out/fimo.gff
-   106906 ./GBM_peakCalls_fimo_out/fimo.gff
-   106545 ./THCA_peakCalls_fimo_out/fimo.gff
+   
+...
+
    106200 ./SKCM_peakCalls_fimo_out/fimo.gff
    106092 ./ACC_peakCalls_fimo_out/fimo.gff
     98454 ./CHOL_peakCalls_fimo_out/fimo.gff
@@ -152,7 +142,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1ODIwNTY0MiwtNTM2ODI0MjEsLTEwNj
+eyJoaXN0b3J5IjpbLTk1MDYwNzc0MywtNTM2ODI0MjEsLTEwNj
 gwOTE2OTksLTE2MDQyMzU5MywtMTA2MzkwMzcxMSwtOTEwNjAz
 ODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMy
 wxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5
