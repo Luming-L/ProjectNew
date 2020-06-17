@@ -108,6 +108,13 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
      28731 ./STAD_CEF81A6C_B09A_4698_BC93_DC029B9CA17A_X028_S06_peakCalls_fimo_out/fimo.gff
      26153 ./SKCM_4EDE1486_22DD_4DB9_8CB1_B4A058E459D1_X035_S10_peakCalls_fimo_out/fimo.gff
      24424 ./LUSC_3AD1EA06_AA53_4C53_B436_4417FA2B8A0E_X031_S10_peakCalls_fimo_out/fimo.gff
+```bash
+for file in $(ls /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/*_peakCalls.txt); do
+> fileName=`basename -s ".txt" $file`
+> awk '{OFS=FS="\t";if($1~/^chr/){print $1,$2,$3,$4}}' $file > "${fileName}.bed";
+> done
+
+```
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -115,10 +122,10 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNj
-A0MjM1OTMsLTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMTQxNDIx
-MzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYwOTcxOS
-w2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLTQxNTA0
-MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgyMDIwMi
-w5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbLTE1MjMxNzc4NiwtNTM2ODI0MjEsLTEwNj
+gwOTE2OTksLTE2MDQyMzU5MywtMTA2MzkwMzcxMSwtOTEwNjAz
+ODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMy
+wxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5
+NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOC
+wtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
 -->
