@@ -41,6 +41,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 
 `-wa`: Write the original entry in A for each overlap.
 
+
 **command for a sample with 1 technical replicate**
 ```bash
 bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC_D6F95774_441D_47F6_93CE_999D7BE81E44_X040_S11*bed.sorted -f 1.0 -wa > /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC_D6F95774_441D_47F6_93CE_999D7BE81E44_X040_S11_peakCalls.bed
@@ -142,10 +143,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MjU0MDE5LC01MzY4MjQyMSwtMTA2OD
-A5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4
-NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLD
-ExODg2MDk3MTksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0
-MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC
-03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
+eyJoaXN0b3J5IjpbLTQwNjI5Mjg3OSwxMTUyNTQwMTksLTUzNj
+gyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3
+MTEsLTkxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5MzkzLD
+ExODgxNDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOTQz
+MTE0LDE3NjU4OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAsLT
+E4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgz
+MDQ0XX0=
 -->
