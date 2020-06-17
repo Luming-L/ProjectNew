@@ -52,7 +52,9 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 # 2.Find PRDM9 motif occurrences
 ## extracts sequences in FASTA by `bedtools  getfasta`
 **version**: BEDTools/2.27.1
+
 **options**
+
 `-fo`: Specify an output file name.
 **command**
 ```bash
@@ -84,9 +86,10 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMT
-QxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYw
-OTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLT
-QxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgy
-MDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTkyNDUzMDkxMywtMTA2MzkwMzcxMSwtOT
+EwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0
+NzYyMywxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMT
+c2NTg5NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3
+NzEyOCwtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ
+==
 -->
