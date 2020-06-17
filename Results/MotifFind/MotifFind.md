@@ -82,7 +82,7 @@ wc -l ./*_fimo_out/fimo.gff
 70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
 176630 total
 
-The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to 10,000,000.
+The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to **10,000,000**.
 
 **command**
 ```bash
@@ -95,10 +95,10 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDM4OTgyMTcsLTEwNjM5MDM3MTEsLT
-kxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgx
-NDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LD
-E3NjU4OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2
-NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX
-0=
+eyJoaXN0b3J5IjpbLTE2MDQyMzU5MywtMTA2MzkwMzcxMSwtOT
+EwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0
+NzYyMywxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMT
+c2NTg5NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3
+NzEyOCwtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ
+==
 -->
