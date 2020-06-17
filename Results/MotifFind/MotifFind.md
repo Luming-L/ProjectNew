@@ -68,6 +68,7 @@ wc -l ./*_fimo_out/fimo.gff
 106092 ./ACC_peakCalls_fimo_out/fimo.gff 
 70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
 176630 total
+The number of scores in `ACC_peakCalls_fimo_out` exceed
 
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
@@ -76,9 +77,9 @@ wc -l ./*_fimo_out/fimo.gff
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDMzMjYzMzMsLTE0MTQyMTM3MTEsMT
-IwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5
-MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNj
-M2MjM1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAyMDIsOTkzMTkw
-OTYxLDM0OTA4MzA0NF19
+eyJoaXN0b3J5IjpbOTA1OTEwMzUsLTE0MTQyMTM3MTEsMTIwNj
+kyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5Mzkw
+LC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNjM2Mj
+M1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAyMDIsOTkzMTkwOTYx
+LDM0OTA4MzA0NF19
 -->
