@@ -129,6 +129,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 	137216 ./ESCA_peakCalls_fimo_out/fimo.gff
 
 ...
+
 	106200 ./SKCM_peakCalls_fimo_out/fimo.gff
 	106092 ./ACC_peakCalls_fimo_out/fimo.gff
 	98454 ./CHOL_peakCalls_fimo_out/fimo.gff
@@ -141,10 +142,10 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDMzMjM5ODMsLTUzNjgyNDIxLC0xMD
-Y4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3MTEsLTkxMDYw
-Mzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2Mj
-MsMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4
-OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMj
-gsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTE1MjU0MDE5LC01MzY4MjQyMSwtMTA2OD
+A5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4
+NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLD
+ExODg2MDk3MTksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0
+MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC
+03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
