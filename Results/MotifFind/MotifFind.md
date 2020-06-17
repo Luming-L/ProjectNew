@@ -56,17 +56,24 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 **options**
 
 `-fo`: Specify an output file name.
+
 **command**
 ```bash
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.fasta"
 ```
 ## find PRDM9 motif occurrences by `fimo`
 **version**: meme/4.11.1
+
 **options**
+
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
+
 `--thresh num`: The threshold is a p-value of 1e-4.
+
 `--oc dir`: Create a folder called dir but if it already exists allow overwriting the contents.
+
 `--max-stored-scores`: Set the maximum number of scores that will be stored. The maximum number of stored matches is 100,000.
+
 **note**
 ```bash
 wc -l ./*_fimo_out/fimo.gff
@@ -74,7 +81,9 @@ wc -l ./*_fimo_out/fimo.gff
 106092 ./ACC_peakCalls_fimo_out/fimo.gff 
 70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
 176630 total
+
 The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to 10,000,000.
+
 **command**
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
@@ -86,10 +95,10 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDUzMDkxMywtMTA2MzkwMzcxMSwtOT
-EwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0
-NzYyMywxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMT
-c2NTg5NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3
-NzEyOCwtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ
-==
+eyJoaXN0b3J5IjpbLTIwMDM4OTgyMTcsLTEwNjM5MDM3MTEsLT
+kxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgx
+NDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LD
+E3NjU4OTQzMDUsLTQxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2
+NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX
+0=
 -->
