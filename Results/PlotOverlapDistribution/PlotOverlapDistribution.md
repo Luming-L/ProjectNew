@@ -4,13 +4,13 @@ recombination hotspots
 
 `-F`: Minimum overlap required as a fraction of B. Default is 1E-9 (i.e., 1bp).
 
-bedtools intersect -u -a testis.peaks -b PRDM9_bound_peaks | wc -l 
+bedtools intersect -a testis.peaks -b PRDM9_bound_peaks  -u -F 1.0 | wc -l 
 
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
 > Written with [StackEdit](https://stackedit.io/). 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzMxMDY4NywtOTI4NDc3MSw0NzU1Mz
+eyJoaXN0b3J5IjpbLTM3MTU1OTIyNSwtOTI4NDc3MSw0NzU1Mz
 Y4MjMsLTE0OTkxMDc2NjMsLTExNTgyNDYwOTUsLTEwODc1NTQ5
 NzEsLTE1OTczNjc3MzQsMTMxMTA5NDI4MSwtMjAxMzQ2MjcxOC
 wtMjEzOTc2Mjg0Nyw3MzA5OTgxMTZdfQ==
