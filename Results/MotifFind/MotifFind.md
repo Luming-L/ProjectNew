@@ -10,7 +10,6 @@ Each text file represents all merged peak calls from each cancer type.
 **Recalled peaks in each technical replicate (796)**
 
 The output of PeakRecall.py, see PeakRecall.md
-
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
 ## download cancer type-specific PeakCalls
 ```bash
@@ -112,7 +111,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNjMyMTY3OSwtMTA2ODA5MTY5OSwtMT
+eyJoaXN0b3J5IjpbMTc4NjU1MjA2MSwtMTA2ODA5MTY5OSwtMT
 YwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4NDksLTE0MTQy
 MTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MT
 ksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUw
