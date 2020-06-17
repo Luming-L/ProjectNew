@@ -46,11 +46,11 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.so
 bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08_peakCalls.bed
 ```
 # Motif finding
-## extract fasta
+## Find Individual Motif Occurrences
 **options**
 `-fo`: Specify an output file name.
+**command**
 ```bash
-bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fasta
 ```
 ## fimo
 **version**: meme/4.11.1
@@ -66,7 +66,9 @@ wc -l ./*_fimo_out/fimo.gff
 70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
 176630 total
 The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to 10,000,000.
-
+**command**
+```bash
+```
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -74,9 +76,9 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNjk4NTk4MywtOTEwNjAzODQ5LC0xND
-E0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5
-NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtND
-E1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIw
-MjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbLTExNTg0NzUyNTIsLTkxMDYwMzg0OSwtMT
+QxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYw
+OTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLT
+QxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgy
+MDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
 -->
