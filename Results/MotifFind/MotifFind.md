@@ -61,7 +61,7 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.f
 `--thresh num`: The threshold is a p-value of 1e-4.
 `--oc dir`: Create a folder called dir but if it already exists allow overwriting the contents.
 `--max-stored-scores`: Set the maximum number of scores that will be stored. The maximum number of stored matches is 100,000.
-**note*
+**note**
 ```bash
 wc -l ./*_fimo_out/fimo.gff
 ```
@@ -80,9 +80,9 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MDg2MDI2NywtOTEwNjAzODQ5LC0xND
-E0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5
-NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtND
-E1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIw
-MjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbMTgyNDY5MTM3LC05MTA2MDM4NDksLTE0MT
+QyMTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3
+MTksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MT
+UwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAy
+MDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
