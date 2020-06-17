@@ -53,15 +53,12 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.so
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo ${fileName}.fasta
 ```
 ## fimo
-version: meme/4.11.1
+**version**: meme/4.11.1
 **options**
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
 `--thresh num`: The threshold is a p-value of 1e-4.
 `--oc dir`: Create a folder called dir but if it already exists allow overwriting the contents.
 `--max-stored-scores`: Set the maximum number of scores that will be stored. The maximum number of stored matches is 100,000.
-```bash
-fimo  --verbosity 4 --parse-genomic-coord --o "${bfile}_fimo_out" /home/s1949868/Fimo/PRDM9.pwm.meme $file
-```
 ```bash
 wc -l ./*_fimo_out/fimo.gff
 ```
@@ -77,9 +74,9 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMj
-A2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkz
-OTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLTQxNTA0MTAsLTE2Mz
-YyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgyMDIwMiw5OTMxOTA5
-NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbMTgzNjk4NTk4MywtOTEwNjAzODQ5LC0xND
+E0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5
+NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtND
+E1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIw
+MjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
 -->
