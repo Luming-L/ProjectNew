@@ -46,13 +46,13 @@ bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.so
 bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08_peakCalls.bed
 ```
 # Motif finding
-## Find Individual Motif Occurrences
+## extracts sequences  FASTA file for input BED file.
 **options**
 `-fo`: Specify an output file name.
 **command**
 ```bash
 ```
-## fimo
+## find PRDM9 Motif Occurrences by fimo
 **version**: meme/4.11.1
 **options**
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
@@ -76,9 +76,9 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTg0NzUyNTIsLTkxMDYwMzg0OSwtMT
-QxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYw
-OTcxOSw2MTgwNTkzOTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLT
-QxNTA0MTAsLTE2MzYyMzU3MDAsLTE4Mzc2NzcxMjgsLTcyNjgy
-MDIwMiw5OTMxOTA5NjEsMzQ5MDgzMDQ0XX0=
+eyJoaXN0b3J5IjpbLTc1NDU5MjQzLC05MTA2MDM4NDksLTE0MT
+QyMTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3
+MTksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MT
+UwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAy
+MDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
