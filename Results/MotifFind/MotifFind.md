@@ -89,6 +89,10 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
+# Results
+```bash
+
+`
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -96,10 +100,10 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjgwOTE2OTksLTE2MDQyMzU5MywtMT
-A2MzkwMzcxMSwtOTEwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5
-MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5NzE5LDYxODA1OTM5MC
-wtOTA5NDMxMTQsMTc2NTg5NDMwNSwtNDE1MDQxMCwtMTYzNjIz
-NTcwMCwtMTgzNzY3NzEyOCwtNzI2ODIwMjAyLDk5MzE5MDk2MS
-wzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbMTAzNTA1MTY2OCwtMTA2ODA5MTY5OSwtMT
+YwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4NDksLTE0MTQy
+MTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MT
+ksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0MzA1LC00MTUw
+NDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC03MjY4MjAyMD
+IsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
