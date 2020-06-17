@@ -123,18 +123,18 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
   2845652 total
 	 
 	  184385 ./BRCA_peakCalls_fimo_out/fimo.gff
-   175572 ./BLCA_peakCalls_fimo_out/fimo.gff
-   163170 ./PRAD_peakCalls_fimo_out/fimo.gff
-   142972 ./KIRP_peakCalls_fimo_out/fimo.gff
-   137216 ./ESCA_peakCalls_fimo_out/fimo.gff
+	  175572 ./BLCA_peakCalls_fimo_out/fimo.gff
+	  163170 ./PRAD_peakCalls_fimo_out/fimo.gff
+	  142972 ./KIRP_peakCalls_fimo_out/fimo.gff
+	  137216 ./ESCA_peakCalls_fimo_out/fimo.gff
    
 ...
 
-   106200 ./SKCM_peakCalls_fimo_out/fimo.gff
-   106092 ./ACC_peakCalls_fimo_out/fimo.gff
-    98454 ./CHOL_peakCalls_fimo_out/fimo.gff
-    96894 ./MESO_peakCalls_fimo_out/fimo.gff
-    84528 ./CESC_peakCalls_fimo_out/fimo.gff
+	106200 ./SKCM_peakCalls_fimo_out/fimo.gff
+	106092 ./ACC_peakCalls_fimo_out/fimo.gff
+	98454 ./CHOL_peakCalls_fimo_out/fimo.gff
+	96894 ./MESO_peakCalls_fimo_out/fimo.gff
+	84528 ./CESC_peakCalls_fimo_out/fimo.gff
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -142,10 +142,10 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MDYwNzc0MywtNTM2ODI0MjEsLTEwNj
-gwOTE2OTksLTE2MDQyMzU5MywtMTA2MzkwMzcxMSwtOTEwNjAz
-ODQ5LC0xNDE0MjEzNzExLDEyMDY5MjkzOTMsMTE4ODE0NzYyMy
-wxMTg4NjA5NzE5LDYxODA1OTM5MCwtOTA5NDMxMTQsMTc2NTg5
-NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcwMCwtMTgzNzY3NzEyOC
-wtNzI2ODIwMjAyLDk5MzE5MDk2MSwzNDkwODMwNDRdfQ==
+eyJoaXN0b3J5IjpbNjQ0Mzc2ODIzLC01MzY4MjQyMSwtMTA2OD
+A5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAzNzExLC05MTA2MDM4
+NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3NjIzLD
+ExODg2MDk3MTksNjE4MDU5MzkwLC05MDk0MzExNCwxNzY1ODk0
+MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAwLC0xODM3Njc3MTI4LC
+03MjY4MjAyMDIsOTkzMTkwOTYxLDM0OTA4MzA0NF19
 -->
