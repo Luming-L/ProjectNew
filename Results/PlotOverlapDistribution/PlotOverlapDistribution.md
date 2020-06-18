@@ -8,7 +8,7 @@ echo -e "sampleName\toverlapNumber\ttotalHotspots" > hotspotsOverlap.txt
 # find the DSB hotspots that any PRDM9 motif falls into by `bedtools intersect`
 bedtools intersect -a /exports/eddie/scratch/s1949868/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt -b $file -u -F 1.0 > "${fileName}.hotspots.bed"
 ```
-The regions of PRDM motifs that has been observed in cancer open chromatin regions overlap with how many hotspots
+For a cancer sample, regions of PRDM motifs that have been observed in ATAC-seq peaks overlap with how many hotspots
 ```bash
 # count hotspots that overlap PRDM9 motif
 overlapNumber=`wc -l "${fileName}.hotspots.bed" | awk '{print $1}'`
@@ -22,9 +22,9 @@ echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MDEwNDE2OSwyMTI4ODY0NjEsNzU4Mz
-Q0MTU0LC0zNzE1NTkyMjUsLTkyODQ3NzEsNDc1NTM2ODIzLC0x
-NDk5MTA3NjYzLC0xMTU4MjQ2MDk1LC0xMDg3NTU0OTcxLC0xNT
-k3MzY3NzM0LDEzMTEwOTQyODEsLTIwMTM0NjI3MTgsLTIxMzk3
-NjI4NDcsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEyMTA3MzcwOTksMjEyODg2NDYxLDc1OD
+M0NDE1NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywt
+MTQ5OTEwNzY2MywtMTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMT
+U5NzM2NzczNCwxMzExMDk0MjgxLC0yMDEzNDYyNzE4LC0yMTM5
+NzYyODQ3LDczMDk5ODExNl19
 -->
