@@ -69,16 +69,16 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 ~~`-l 501`: The author extended peak summits by 250 bp on either side to a final width of 501 bp.~~
 
-`-l 150`: The author set `--extsize 150`. We want to obtain more peaks.
+`-l 400`
 
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 
 **macs2 bdgpeakcall command:**
 ~~bash
 macs2 bdgpeakcall -i ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.pvalue.bg -c 2 -l 501 -g 75 -o ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks001.bed~~
-
-
-
+```bash
+macs2 bdgpeakcall -i "+fileName+".pvalue.bg"+" -c 3 -l 400 -g 75 -o "+fileName+".peaks001.bed
+```
 # Test
 ## test on paper data
 **Test file:** `ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg`
@@ -119,7 +119,7 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NjkwMzAyNywtMTk4OTU0MzE3LC0xMT
-IwMDMwMTM5LC04OTE5NDQ5MTAsOTk4NDExNDYwLDEzOTUxOTE4
-OV19
+eyJoaXN0b3J5IjpbMTk1MTQyODc1LDE4NjY5MDMwMjcsLTE5OD
+k1NDMxNywtMTEyMDAzMDEzOSwtODkxOTQ0OTEwLDk5ODQxMTQ2
+MCwxMzk1MTkxODldfQ==
 -->
