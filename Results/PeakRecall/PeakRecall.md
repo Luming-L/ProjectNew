@@ -62,8 +62,12 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 **In our case**, we set 
 `-c 2`: The scores in the output from _bdgcmp_ are in -log10 form and we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2).
+
 `-g 75`: The read length is 75 bp.
+
 ~~`-l 501`: The author extended peak summits by 250 bp on either side to a final width of 501 bp.~~
+
+`-l 150`: 
 
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 
@@ -112,12 +116,12 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJrRkFHTHFodVVPelU2SGlhIjp7In
-N0YXJ0Ijo1NjUwLCJlbmQiOjU3NDUsInRleHQiOiJgLWwgNTAx
+N0YXJ0Ijo1NjUyLCJlbmQiOjU3NDcsInRleHQiOiJgLWwgNTAx
 YDogVGhlIGF1dGhvciBleHRlbmRlZCBwZWFrIHN1bW1pdHMgYn
 kgMjUwIGJwIG9uIGVpdGhlciBzaWRlIHRvIGEgZmluYWzigKYi
 fX0sImNvbW1lbnRzIjp7IjczQWpQbFZRa1NkbWRQdzUiOnsiZG
 lzY3Vzc2lvbklkIjoia0ZBR0xxaHVVT3pVNkhpYSIsInN1YiI6
 ImdoOjU1NzM1Mzk1IiwidGV4dCI6Im1vcmUgcGVha3MiLCJjcm
-VhdGVkIjoxNTkyNTAwMTYxNDUxfX0sImhpc3RvcnkiOlstMTA0
-MDk5NzAzLDEzOTUxOTE4OV19
+VhdGVkIjoxNTkyNTAwMTYxNDUxfX0sImhpc3RvcnkiOls5OTg0
+MTE0NjAsMTM5NTE5MTg5XX0=
 -->
