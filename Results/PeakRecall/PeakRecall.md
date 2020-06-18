@@ -76,6 +76,7 @@ The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 macs2 bdgpeakcall -i ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.pvalue.bg -c 2 -l 501 -g 75 -o ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks001.bed~~
 
 
+
 # Test
 ## test on paper data
 **Test file:** `ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg`
@@ -116,6 +117,6 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjAwMzAxMzksLTg5MTk0NDkxMCw5OT
-g0MTE0NjAsMTM5NTE5MTg5XX0=
+eyJoaXN0b3J5IjpbLTE5ODk1NDMxNywtMTEyMDAzMDEzOSwtOD
+kxOTQ0OTEwLDk5ODQxMTQ2MCwxMzk1MTkxODldfQ==
 -->
