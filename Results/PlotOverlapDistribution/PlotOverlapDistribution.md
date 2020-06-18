@@ -8,7 +8,7 @@ echo -e "sampleName\toverlapNumber\ttotalHotspots" > hotspotsOverlap.txt
 # find the DSB hotspots that any PRDM9 motif falls into by `bedtools intersect`
 bedtools intersect -a /exports/eddie/scratch/s1949868/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt -b $file -u -F 1.0 > "${fileName}.hotspots.bed"
 ```
-
+how many hotspots contains at least one PRDM motif
 ```bash
 # count hotspots that overlap PRDM9 motif
 overlapNumber=`wc -l "${fileName}.hotspots.bed" | awk '{print $1}'`
@@ -22,9 +22,9 @@ echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyODg2NDYxLDc1ODM0NDE1NCwtMzcxNT
-U5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OTEwNzY2Mywt
-MTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2NzczNCwxMz
-ExMDk0MjgxLC0yMDEzNDYyNzE4LC0yMTM5NzYyODQ3LDczMDk5
-ODExNl19
+eyJoaXN0b3J5IjpbLTkyOTU0ODY0NSwyMTI4ODY0NjEsNzU4Mz
+Q0MTU0LC0zNzE1NTkyMjUsLTkyODQ3NzEsNDc1NTM2ODIzLC0x
+NDk5MTA3NjYzLC0xMTU4MjQ2MDk1LC0xMDg3NTU0OTcxLC0xNT
+k3MzY3NzM0LDEzMTEwOTQyODEsLTIwMTM0NjI3MTgsLTIxMzk3
+NjI4NDcsNzMwOTk4MTE2XX0=
 -->
