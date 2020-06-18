@@ -63,7 +63,7 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 **In our case**, we set 
 ~~`-c 2`: The scores in the output from _bdgcmp_ are in -log10 form and we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2).~~
 
-`-c 3`: 0.001
+`-c 3`: pvalue=0.001
 
 `-g 75`: The read length is 75 bp.
 
@@ -119,7 +119,7 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MTQyODc1LDE4NjY5MDMwMjcsLTE5OD
-k1NDMxNywtMTEyMDAzMDEzOSwtODkxOTQ0OTEwLDk5ODQxMTQ2
-MCwxMzk1MTkxODldfQ==
+eyJoaXN0b3J5IjpbMTc1MjYyNTc3OSwxOTUxNDI4NzUsMTg2Nj
+kwMzAyNywtMTk4OTU0MzE3LC0xMTIwMDMwMTM5LC04OTE5NDQ5
+MTAsOTk4NDExNDYwLDEzOTUxOTE4OV19
 -->
