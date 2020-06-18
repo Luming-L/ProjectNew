@@ -1,0 +1,61 @@
+---
+title: "testis hotspots containing PRDM9 motif in ATAC-peaks"
+output: html_notebook
+---
+
+-l 501
+
+```{r}
+library(plyr)
+```
+
+```{r}
+hotspotsOverlap_cancerType=read.delim("hotspotsOverlap_cancerType.txt",header = TRUE,sep = "\t")
+hotspotsOverlap_sample=read.delim("hotspotsOverlap_sample.txt",header = TRUE,sep = "\t")
+hotspotsOverlap_cancerType$sampleName=as.character(hotspotsOverlap_cancerType$sampleName)
+hotspotsOverlap_sample$sampleName=as.character(hotspotsOverlap_sample$sampleName)
+```
+
+```{r}
+hotspotsOverlap_cancerType
+```
+
+```{r}
+# hotspotsOverlap_sample$cancerType<-""
+# plyr::a_ply(hotspotsOverlap_sample$sampleName[c(1:5)],1,function(name){
+#         cancerType=gsub("x","",strsplit(name,split='_')[[1]][1])
+#         hotspotsOverlap_sample[hotspotsOverlap_sample$sampleName==name,]$cancerType<-cancerType
+#         print(hotspotsOverlap_sample[hotspotsOverlap_sample$sampleName==name,])
+#         })
+hotspotsOverlap_sample
+```
+
+```{r}
+png("hotspotsOverlap23_motif_-F1_-l501.png",width = 960,height = 640)
+overlapPercentage_C=hotspotsOverlap_cancerType$overlapNumber/hotspotsOverlap_cancerType$totalHotspots*100
+h <- hist(overlapPercentage_C,
+     main="23: Percentage of Hotspots Overlapped by PRDM9 Motif in Cancer Peaks",
+     xlab="percentage of overlap",
+     ylab="cancer type number",
+     ylim = c(0,10),
+     col="darkmagenta",
+     freq=TRUE
+     )
+text(h$mids,h$counts,labels=h$counts, adj=c(0.5, -0.5))
+dev.off()
+```
+```{r}
+png("hotspotsOverlap410_motif_-F1_-l501.png",width = 960,height = 640)
+overlapPercentage_S=hotspotsOverlap_sample$overlapNumber/hotspotsOverlap_sample$totalHotspots*100
+h <- hist(overlapPercentage_S,
+     main="410: Percentage of Hotspots Overlapped by PRDM9 Motif in Cancer Peaks",
+     xlab="percentage of overlap",
+     ylab="sample number",
+     ylim = c(0,100),
+     col="darkmagenta",
+     freq=TRUE
+     )
+text(h$mids,h$counts,labels=h$counts, adj=c(0.5, -0.5))
+dev.off()
+```
+
