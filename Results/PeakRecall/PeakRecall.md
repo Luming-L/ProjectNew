@@ -67,7 +67,7 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 ~~`-l 501`: The author extended peak summits by 250 bp on either side to a final width of 501 bp.~~
 
-`-l 150`: The author set `--extsize 150`
+`-l 150`: The author set `--extsize 150`. We want to obtain more peaks.
 
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 
@@ -122,6 +122,7 @@ kgMjUwIGJwIG9uIGVpdGhlciBzaWRlIHRvIGEgZmluYWzigKYi
 fX0sImNvbW1lbnRzIjp7IjczQWpQbFZRa1NkbWRQdzUiOnsiZG
 lzY3Vzc2lvbklkIjoia0ZBR0xxaHVVT3pVNkhpYSIsInN1YiI6
 ImdoOjU1NzM1Mzk1IiwidGV4dCI6Im1vcmUgcGVha3MiLCJjcm
-VhdGVkIjoxNTkyNTAwMTYxNDUxfX0sImhpc3RvcnkiOlstODkx
-OTQ0OTEwLDk5ODQxMTQ2MCwxMzk1MTkxODldfQ==
+VhdGVkIjoxNTkyNTAwMTYxNDUxfX0sImhpc3RvcnkiOlstNDky
+MzAwMjQzLC04OTE5NDQ5MTAsOTk4NDExNDYwLDEzOTUxOTE4OV
+19
 -->
