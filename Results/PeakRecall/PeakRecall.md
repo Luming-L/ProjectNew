@@ -61,7 +61,9 @@ It is the final task of peak calling. We need to set three arguments in this ste
 Positions with scores higher than certain cutoff (set by `-c`) will be kept. If two nearby regions are both above cutoff but the region in-between is lower, and if the region in-between is small enough (set by `-g`), we will merge the two nearby regions together into a bigger one. `-g` is set as the read length since the read length represents the resolution of the dataset. Finally, only peaks larger than a minimum length (set by `-l`) will be reported. `-l` is set as the fragment size _d_ by default. 
 
 **In our case**, we set 
-`-c 2`: The scores in the output from _bdgcmp_ are in -log10 form and we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2).
+~~`-c 2`: The scores in the output from _bdgcmp_ are in -log10 form and we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2).~~
+
+`-c 3`: 0.001
 
 `-g 75`: The read length is 75 bp.
 
@@ -117,6 +119,7 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODk1NDMxNywtMTEyMDAzMDEzOSwtOD
-kxOTQ0OTEwLDk5ODQxMTQ2MCwxMzk1MTkxODldfQ==
+eyJoaXN0b3J5IjpbMTg2NjkwMzAyNywtMTk4OTU0MzE3LC0xMT
+IwMDMwMTM5LC04OTE5NDQ5MTAsOTk4NDExNDYwLDEzOTUxOTE4
+OV19
 -->
