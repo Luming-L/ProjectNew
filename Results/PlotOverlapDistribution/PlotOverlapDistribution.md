@@ -21,11 +21,13 @@ echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
+Bedtools closest
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NDcwMTcxMCwxMTU5NDM4MjQzLDIxMj
-g4NjQ2MSw3NTgzNDQxNTQsLTM3MTU1OTIyNSwtOTI4NDc3MSw0
-NzU1MzY4MjMsLTE0OTkxMDc2NjMsLTExNTgyNDYwOTUsLTEwOD
-c1NTQ5NzEsLTE1OTczNjc3MzQsMTMxMTA5NDI4MSwtMjAxMzQ2
-MjcxOCwtMjEzOTc2Mjg0Nyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTIwMDgzMTk5MSwxNzQ0NzAxNzEwLDExNT
+k0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1NCwtMzcxNTU5MjI1
+LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OTEwNzY2MywtMTE1OD
+I0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2NzczNCwxMzExMDk0
+MjgxLC0yMDEzNDYyNzE4LC0yMTM5NzYyODQ3LDczMDk5ODExNl
+19
 -->
