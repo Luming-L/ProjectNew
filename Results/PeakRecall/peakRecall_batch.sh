@@ -1,10 +1,10 @@
 #!/bin/sh
 # Grid Engine options (lines prefixed with #$)
 #$ -cwd -V                  
-#$ -l h_rt=00:10:00 
-#$ -l h_vmem=6G
+#$ -l h_rt=00:10:00 # 6G 3min
+#$ -l h_vmem=4G
  
-#$ -t 1-796 
+#$ -t 1-796
  
 # Configure modules
 . /etc/profile.d/modules.sh
