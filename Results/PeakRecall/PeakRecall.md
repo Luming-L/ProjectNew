@@ -80,8 +80,8 @@ macs2 bdgpeakcall -i ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_
 macs2 bdgpeakcall -i "+fileName+".pvalue.bg"+" -c 3 -l 400 -g 75 -o "+fileName+".peaks001.bed
 ```
 # Test
-## test on MACS2 testing file
 Write **a script** `peakRecall.py` to recall peaks including these three steps above.
+## test on MACS2 testing file
 ```bash
 # use main function `callpeak` to call peak
 macs2 callpeak -t ../CTCF_ChIP_200K.bed.gz -c ../CTCF_Control_200K.bed.gz -f BED -g hs -n test -B
@@ -124,9 +124,9 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MD
-c1MTIyLC0zNDAwNjc5MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0
-NywxNzUyNjI1Nzc5LDE5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOT
-g5NTQzMTcsLTExMjAwMzAxMzksLTg5MTk0NDkxMCw5OTg0MTE0
-NjAsMTM5NTE5MTg5XX0=
+eyJoaXN0b3J5IjpbMTkzODA2MjY3OSwyMDQ0NDUxMDEsMTcyOD
+MyMzk4NCw5OTYwNzUxMjIsLTM0MDA2NzkzMCwxNDk4Nzc0MTU0
+LC0xODIxNzY0NDQ3LDE3NTI2MjU3NzksMTk1MTQyODc1LDE4Nj
+Y5MDMwMjcsLTE5ODk1NDMxNywtMTEyMDAzMDEzOSwtODkxOTQ0
+OTEwLDk5ODQxMTQ2MCwxMzk1MTkxODldfQ==
 -->
