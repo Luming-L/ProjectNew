@@ -30,7 +30,7 @@ cd /exports/eddie/scratch/s1949868/PeakRecall_peaks001
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
 ```
 ### refine recalled peaks by using `bedtools intersect`
-1. for each technical replicate (796), output cancer type-specific peaks that can 79% overlapped recalled peaks (set by `-F 1.0`)
+1. for each technical replicate (796), output cancer type-specific peaks  79% overlapped recalled peaks (set by `-F 1.0`)
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
 3. finally get a list of peaks for each of 410 biological samples
 
@@ -41,7 +41,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 
 `-wa`: Write the original entry in A for each overlap.
 
-`-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. Because the minimum length of recalled peaks is set to 501, which is equal to the length of cancer type-specific peaks (501 bp), and recalled peaks in a sample don't overlap each other, so the intersect of a cancer type-specific peak with a recalled peak is unique. Therefore, `-u` is not set.
+`-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. 
 
 **command for a sample with 1 technical replicate**
 ```bash
@@ -168,11 +168,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwODUwNDU0NywxMzU2MDYxODksMTc1Mj
-YwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5LC01
-MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOT
-AzNzExLC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5
-MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5MzkwLC05MD
-k0MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAw
-XX0=
+eyJoaXN0b3J5IjpbODc0MjU5NDA0LDIwMDg1MDQ1NDcsMTM1Nj
+A2MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDEx
+NTI1NDAxOSwtNTM2ODI0MjEsLTEwNjgwOTE2OTksLTE2MDQyMz
+U5MywtMTA2MzkwMzcxMSwtOTEwNjAzODQ5LC0xNDE0MjEzNzEx
+LDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5NzE5LDYxOD
+A1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtNDE1MDQxMF19
+
 -->
