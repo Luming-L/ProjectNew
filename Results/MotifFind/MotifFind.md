@@ -30,7 +30,7 @@ cd /exports/eddie/scratch/s1949868/PeakRecall_796_c3l400 # peaks_path in peakOve
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/PeakCall_410_c3l400/${file}.sorted; done
 ```
 ### refine recalled peaks by using `bedtools intersect`
-1. for each technical replicate (796), the minimum overlap between cancer type peaks and sample recalled peaks should be more than 75% of cancer type peaks. (set by `-f 0.75`) Then output these cancer type peaks.
+1. for each technical replicate (796), the minimum overlap between cancer type peaks and sample recalled peaks should be more than 60% of cancer type peaks. (set by `-f 0.6`) Then output these cancer type peaks.
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
 3. finally get a list of peaks for each of 410 biological samples
 
@@ -169,11 +169,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwOD
-QyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4
-OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNT
-QwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMs
-LTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMj
-A2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkz
-OTBdfQ==
+eyJoaXN0b3J5IjpbLTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMD
+kzNjk2NjcxLDIwODQyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0
+NTQ3LDEzNTYwNjE4OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Nj
+c2NjkxOCwxMTUyNTQwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5
+LC0xNjA0MjM1OTMsLTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMT
+QxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYw
+OTcxOV19
 -->
