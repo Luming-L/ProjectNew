@@ -103,9 +103,10 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 **Plot genome-wide signal from BigWig file and peaks recalled to compare**
 
 Region: chr1
-
+~~-c 2 -l 510~~
 ![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1.png)
 Region: chr1: 777499-1233399
+~~-c 2 -l 510:~~ 
 ![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399.png)
 
 
@@ -119,8 +120,8 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MDA2NzkzMCwxNDk4Nzc0MTU0LC0xOD
-IxNzY0NDQ3LDE3NTI2MjU3NzksMTk1MTQyODc1LDE4NjY5MDMw
-MjcsLTE5ODk1NDMxNywtMTEyMDAzMDEzOSwtODkxOTQ0OTEwLD
-k5ODQxMTQ2MCwxMzk1MTkxODldfQ==
+eyJoaXN0b3J5IjpbOTk2MDc1MTIyLC0zNDAwNjc5MzAsMTQ5OD
+c3NDE1NCwtMTgyMTc2NDQ0NywxNzUyNjI1Nzc5LDE5NTE0Mjg3
+NSwxODY2OTAzMDI3LC0xOTg5NTQzMTcsLTExMjAwMzAxMzksLT
+g5MTk0NDkxMCw5OTg0MTE0NjAsMTM5NTE5MTg5XX0=
 -->
