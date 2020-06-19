@@ -2,7 +2,7 @@
 # Grid Engine options (lines prefixed with #$)
 #$ -cwd -V                  
 #$ -l h_rt=00:10:00 # 6G 3min
-#$ -l h_vmem=4G
+#$ -l h_vmem=6G # 4G is too small
  
 #$ -t 1-796
  
