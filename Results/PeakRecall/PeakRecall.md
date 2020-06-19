@@ -55,22 +55,14 @@ macs2 bdgcmp -t ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_
 ```
 ## Step 7: Call peaks on score track using a cutoff
 It is the final task of peak calling. We need to set three arguments in this step:
-`-c CUTOFF, --cutoff`:  The scores in the output from _bdgcmp_ are in -log10 form. If we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2), we should set `-c 2`
+`-c CUTOFF, --cutoff`:  The scores in the output from _bdgcmp_ are in -log10 form. If we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2), we should set `-c 2`.
 `-l MINLEN, --min-length`
 `-g MAXGAP, --max-gap`
 Positions with scores higher than certain cutoff (set by `-c`) will be kept. If two nearby regions are both above cutoff but the region in-between is lower, and if the region in-between is small enough (set by `-g`), we will merge the two nearby regions together into a bigger one. `-g` is set as the read length since the read length represents the resolution of the dataset. Finally, only peaks larger than a minimum length (set by `-l`) will be reported. `-l` is set as the fragment size _d_ by default. 
 
 **In our case**, we set 
-~~`-c 2`: The scores in the output from _bdgcmp_ are in -log10 form and if we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2).~~
-
-`-c 3`: pvalue=0.001
 
 `-g 75`: The read length is 75 bp.
-
-~~`-l 501`: The author extended peak summits by 250 bp on either side to a final width of 501 bp.~~
-
-`-l 400`
-
 
 `-c 2 -l 501`
 `-c 2 -l 150`
@@ -137,10 +129,10 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk5ODk1Mzk4LC0xMzE2OTIyOTY0LDE5Mz
-gwNjI2NzksMjA0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MDc1MTIy
-LC0zNDAwNjc5MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0NywxNz
-UyNjI1Nzc5LDE5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOTg5NTQz
-MTcsLTExMjAwMzAxMzksLTg5MTk0NDkxMCw5OTg0MTE0NjAsMT
-M5NTE5MTg5XX0=
+eyJoaXN0b3J5IjpbLTE1OTM1NTkwMjksLTEzMTY5MjI5NjQsMT
+kzODA2MjY3OSwyMDQ0NDUxMDEsMTcyODMyMzk4NCw5OTYwNzUx
+MjIsLTM0MDA2NzkzMCwxNDk4Nzc0MTU0LC0xODIxNzY0NDQ3LD
+E3NTI2MjU3NzksMTk1MTQyODc1LDE4NjY5MDMwMjcsLTE5ODk1
+NDMxNywtMTEyMDAzMDEzOSwtODkxOTQ0OTEwLDk5ODQxMTQ2MC
+wxMzk1MTkxODldfQ==
 -->
