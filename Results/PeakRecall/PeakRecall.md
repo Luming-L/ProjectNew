@@ -80,6 +80,18 @@ macs2 bdgpeakcall -i ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_
 macs2 bdgpeakcall -i "+fileName+".pvalue.bg"+" -c 3 -l 400 -g 75 -o "+fileName+".peaks001.bed
 ```
 # Test
+## test on MACS2 testing file
+```bash
+# use main function `callpeak` to call peak
+macs2 callpeak -t ../CTCF_ChIP_200K.bed.gz -c ../CTCF_Control_200K.bed.gz -f BED -g hs -n test -B
+wc -l ../test_callpeak/test_peaks.narrowPeak #13294
+# use the script ./peakRecall_test_CTCF.py
+./peakRecall_test_CTCF.py CTCF_ChIP_200K_filterdup.pileup.bdg
+wc -l CTCF_ChIP_200K_filterdup.pileup.peaks.bed #16813 
+# check the number of overlapping peaks
+bedtools intersect -wa -wb -a ../test_callpeak/test_peaks.narrowPeak -b ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -sorted -filenames -f 1.0 | wc -l # 13294
+bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../test_callpeak/test_peaks.narrowPeak -sorted -filenames -f 1.0 | wc -l # 12284
+```
 ## test on paper data
 **Test file:** `ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg`
 
@@ -97,18 +109,8 @@ Region: chr1
 ![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1.png)
 Region: chr1: 777499-1233399
 ![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399.png)
-## test on MACS2 testing file
-```bash
-# use main function `callpeak` to call peak
-macs2 callpeak -t ../CTCF_ChIP_200K.bed.gz -c ../CTCF_Control_200K.bed.gz -f BED -g hs -n test -B
-wc -l ../test_callpeak/test_peaks.narrowPeak #13294
-# use the script ./peakRecall_test_CTCF.py
-./peakRecall_test_CTCF.py CTCF_ChIP_200K_filterdup.pileup.bdg
-wc -l CTCF_ChIP_200K_filterdup.pileup.peaks.bed #16813 
-# check the number of overlapping peaks
-bedtools intersect -wa -wb -a ../test_callpeak/test_peaks.narrowPeak -b ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -sorted -filenames -f 1.0 | wc -l # 13294
-bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../test_callpeak/test_peaks.narrowPeak -sorted -filenames -f 1.0 | wc -l # 12284
-```
+
+
 # Reference
 [Advanced:-Call-peaks-using-MACS2-subcommands](https://github.com/macs3-project/MACS/wiki/Advanced:-Call-peaks-using-MACS2-subcommands)
 
@@ -119,7 +121,7 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MjYyNTc3OSwxOTUxNDI4NzUsMTg2Nj
-kwMzAyNywtMTk4OTU0MzE3LC0xMTIwMDMwMTM5LC04OTE5NDQ5
-MTAsOTk4NDExNDYwLDEzOTUxOTE4OV19
+eyJoaXN0b3J5IjpbMzcwODAxNDQ5LDE3NTI2MjU3NzksMTk1MT
+QyODc1LDE4NjY5MDMwMjcsLTE5ODk1NDMxNywtMTEyMDAzMDEz
+OSwtODkxOTQ0OTEwLDk5ODQxMTQ2MCwxMzk1MTkxODldfQ==
 -->
