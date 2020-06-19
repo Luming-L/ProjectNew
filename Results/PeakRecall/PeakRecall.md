@@ -104,10 +104,11 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 
 Region: chr1
 -c 3 -l 400
+![-c 3 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_c3_l400.png)
 ~~-c 2 -l 510~~
 ![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1.png)
 Region: chr1: 777499-1233399
--c 3 -l 400:
+-c 3 -l 400
 ![-c 3 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c3_l400.png)
 ~~-c 2 -l 510:~~ 
 ![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399.png)
@@ -123,7 +124,7 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcyNTcwOTIwLDE3MjgzMjM5ODQsOTk2MD
+eyJoaXN0b3J5IjpbMjA0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MD
 c1MTIyLC0zNDAwNjc5MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0
 NywxNzUyNjI1Nzc5LDE5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOT
 g5NTQzMTcsLTExMjAwMzAxMzksLTg5MTk0NDkxMCw5OTg0MTE0
