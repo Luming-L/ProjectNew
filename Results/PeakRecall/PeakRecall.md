@@ -70,8 +70,12 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 ~~`-l 501`: The author extended peak summits by 250 bp on either side to a final width of 501 bp.~~
 
 `-l 400`
+
+
 `-c 2 -l 501`
 `-c 2 -l 150`
+`-c 2 -l 300`
+`-c 2 -l 400`
 
 
 
@@ -133,9 +137,10 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQxOTAyNjcxLDE5MzgwNjI2NzksMjA0ND
-Q1MTAxLDE3MjgzMjM5ODQsOTk2MDc1MTIyLC0zNDAwNjc5MzAs
-MTQ5ODc3NDE1NCwtMTgyMTc2NDQ0NywxNzUyNjI1Nzc5LDE5NT
-E0Mjg3NSwxODY2OTAzMDI3LC0xOTg5NTQzMTcsLTExMjAwMzAx
-MzksLTg5MTk0NDkxMCw5OTg0MTE0NjAsMTM5NTE5MTg5XX0=
+eyJoaXN0b3J5IjpbLTEzMTY5MjI5NjQsMTkzODA2MjY3OSwyMD
+Q0NDUxMDEsMTcyODMyMzk4NCw5OTYwNzUxMjIsLTM0MDA2Nzkz
+MCwxNDk4Nzc0MTU0LC0xODIxNzY0NDQ3LDE3NTI2MjU3NzksMT
+k1MTQyODc1LDE4NjY5MDMwMjcsLTE5ODk1NDMxNywtMTEyMDAz
+MDEzOSwtODkxOTQ0OTEwLDk5ODQxMTQ2MCwxMzk1MTkxODldfQ
+==
 -->
