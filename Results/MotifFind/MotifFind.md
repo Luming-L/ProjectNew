@@ -45,11 +45,11 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 
 **command for a sample with 1 technical replicate**
 ```bash
-bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.75 -u > " + path + "/" + sample+"_peakCalls.bed
+bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -u > " + path + "/" + sample+"_peakCalls.bed
 ```
 **command for a sample with 2 technical replicates**
 ```bash
-bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.75 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed
+bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed
 ```
 
 15145132 total
@@ -169,11 +169,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMD
-kzNjk2NjcxLDIwODQyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0
-NTQ3LDEzNTYwNjE4OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Nj
-c2NjkxOCwxMTUyNTQwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5
-LC0xNjA0MjM1OTMsLTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMT
-QxNDIxMzcxMSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYw
-OTcxOV19
+eyJoaXN0b3J5IjpbNjM4ODUxMzIwLC0xMDExMjQyODI2LC0yNj
+M1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC00MDE3NDQy
+MzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYwNjgsLTkxNj
+UwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5LC01MzY4MjQyMSwt
+MTA2ODA5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAzNzExLC05MT
+A2MDM4NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5MywxMTg4MTQ3
+NjIzXX0=
 -->
