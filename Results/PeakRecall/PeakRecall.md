@@ -65,7 +65,8 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 `-g 75`: The read length is 75 bp.
 
 `-c 2 -l 501`
-
+```bash
+`
 `-c 2 -l 150`
 ```bash
 wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed # 210571
@@ -139,11 +140,11 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY5NDI2MDU3LDE2MDQ5MDczODcsLTM4ND
-Y3MzEsMjAyNDEwMTEyOCwtMTMxNjkyMjk2NCwxOTM4MDYyNjc5
-LDIwNDQ0NTEwMSwxNzI4MzIzOTg0LDk5NjA3NTEyMiwtMzQwMD
-Y3OTMwLDE0OTg3NzQxNTQsLTE4MjE3NjQ0NDcsMTc1MjYyNTc3
-OSwxOTUxNDI4NzUsMTg2NjkwMzAyNywtMTk4OTU0MzE3LC0xMT
-IwMDMwMTM5LC04OTE5NDQ5MTAsOTk4NDExNDYwLDEzOTUxOTE4
-OV19
+eyJoaXN0b3J5IjpbNDE5NTI4OTMxLDQ2OTQyNjA1NywxNjA0OT
+A3Mzg3LC0zODQ2NzMxLDIwMjQxMDExMjgsLTEzMTY5MjI5NjQs
+MTkzODA2MjY3OSwyMDQ0NDUxMDEsMTcyODMyMzk4NCw5OTYwNz
+UxMjIsLTM0MDA2NzkzMCwxNDk4Nzc0MTU0LC0xODIxNzY0NDQ3
+LDE3NTI2MjU3NzksMTk1MTQyODc1LDE4NjY5MDMwMjcsLTE5OD
+k1NDMxNywtMTEyMDAzMDEzOSwtODkxOTQ0OTEwLDk5ODQxMTQ2
+MF19
 -->
