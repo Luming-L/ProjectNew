@@ -64,12 +64,7 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 `-g 75`: The read length is 75 bp.
 
-
-
-
-
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
-
 # Test
 Write **a script** `peakRecall.py` to recall peaks including these three steps above.
 ## test on MACS2 testing file
@@ -93,35 +88,15 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 
 Region: chr1: 777499-1233399
 `-c 2 -l 501`: 52519 
-```bash
-wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
-# 52519 
-```
 ![-c 2 -l 501](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c2l501.png)
-`-c 2 -l 150`
-```bash
-wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed # 210571
-```
-`-c 2 -l 300`
-```bash
-wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
-# 124102
-```
-`-c 2 -l 400`
-```bash
-wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
-# 86186
-```
+`-c 2 -l 150`: 210571
+
+`-c 2 -l 300`: 124102
+
+`-c 2 -l 400`: 86186
 ![-c 2 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c2l400.png)
-`-c 3 -l 400`
-```bash
-wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
-# 64905 
-```
+`-c 3 -l 400`: 64905 
 ![-c 3 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c3l400.png)
-
-
-
 # Reference
 [Advanced:-Call-peaks-using-MACS2-subcommands](https://github.com/macs3-project/MACS/wiki/Advanced:-Call-peaks-using-MACS2-subcommands)
 
@@ -132,11 +107,11 @@ wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.inserti
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODg3MzE3OSwtMzc4NzAzNDAwLC0yMD
-c4NjI3OTc5LDQ2OTQyNjA1NywxNjA0OTA3Mzg3LC0zODQ2NzMx
-LDIwMjQxMDExMjgsLTEzMTY5MjI5NjQsMTkzODA2MjY3OSwyMD
-Q0NDUxMDEsMTcyODMyMzk4NCw5OTYwNzUxMjIsLTM0MDA2Nzkz
-MCwxNDk4Nzc0MTU0LC0xODIxNzY0NDQ3LDE3NTI2MjU3NzksMT
-k1MTQyODc1LDE4NjY5MDMwMjcsLTE5ODk1NDMxNywtMTEyMDAz
-MDEzOV19
+eyJoaXN0b3J5IjpbMjg4ODA1ODY2LC0zNzg3MDM0MDAsLTIwNz
+g2Mjc5NzksNDY5NDI2MDU3LDE2MDQ5MDczODcsLTM4NDY3MzEs
+MjAyNDEwMTEyOCwtMTMxNjkyMjk2NCwxOTM4MDYyNjc5LDIwND
+Q0NTEwMSwxNzI4MzIzOTg0LDk5NjA3NTEyMiwtMzQwMDY3OTMw
+LDE0OTg3NzQxNTQsLTE4MjE3NjQ0NDcsMTc1MjYyNTc3OSwxOT
+UxNDI4NzUsMTg2NjkwMzAyNywtMTk4OTU0MzE3LC0xMTIwMDMw
+MTM5XX0=
 -->
