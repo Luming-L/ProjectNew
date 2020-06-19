@@ -84,12 +84,13 @@ wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.inserti
 wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 # 86186
 ```
+![-c 2 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c2l400.png)
 `-c 3 -l 400`
 ```bash
 wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 # 64905 
 ```
-
+![-c 3 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c3l400.png)
 
 
 
@@ -135,11 +136,11 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODk3NjA2NTAsLTM3ODcwMzQwMCwtMj
-A3ODYyNzk3OSw0Njk0MjYwNTcsMTYwNDkwNzM4NywtMzg0Njcz
-MSwyMDI0MTAxMTI4LC0xMzE2OTIyOTY0LDE5MzgwNjI2NzksMj
-A0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MDc1MTIyLC0zNDAwNjc5
-MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0NywxNzUyNjI1Nzc5LD
-E5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOTg5NTQzMTcsLTExMjAw
-MzAxMzldfQ==
+eyJoaXN0b3J5IjpbMjA1NTcwMjE5MiwtMzc4NzAzNDAwLC0yMD
+c4NjI3OTc5LDQ2OTQyNjA1NywxNjA0OTA3Mzg3LC0zODQ2NzMx
+LDIwMjQxMDExMjgsLTEzMTY5MjI5NjQsMTkzODA2MjY3OSwyMD
+Q0NDUxMDEsMTcyODMyMzk4NCw5OTYwNzUxMjIsLTM0MDA2Nzkz
+MCwxNDk4Nzc0MTU0LC0xODIxNzY0NDQ3LDE3NTI2MjU3NzksMT
+k1MTQyODc1LDE4NjY5MDMwMjcsLTE5ODk1NDMxNywtMTEyMDAz
+MDEzOV19
 -->
