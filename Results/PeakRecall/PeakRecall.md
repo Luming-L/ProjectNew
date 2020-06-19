@@ -63,8 +63,6 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 **In our case**, we set 
 
 `-g 75`: The read length is 75 bp.
- 
- We tested 
 
 `-c 2 -l 501`
 ```bash
@@ -91,9 +89,14 @@ wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.inserti
 wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 # 64905 
 ```
+
+
+
+
+
+
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
-macs2 bdgpeakcall -i "+fileName+".pvalue.bg"+" -c 3 -l 400 -g 75 -o "+fileName+".peaks001.bed
-```
+
 # Test
 Write **a script** `peakRecall.py` to recall peaks including these three steps above.
 ## test on MACS2 testing file
@@ -132,11 +135,11 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODcwMzQwMCwtMjA3ODYyNzk3OSw0Nj
-k0MjYwNTcsMTYwNDkwNzM4NywtMzg0NjczMSwyMDI0MTAxMTI4
-LC0xMzE2OTIyOTY0LDE5MzgwNjI2NzksMjA0NDQ1MTAxLDE3Mj
-gzMjM5ODQsOTk2MDc1MTIyLC0zNDAwNjc5MzAsMTQ5ODc3NDE1
-NCwtMTgyMTc2NDQ0NywxNzUyNjI1Nzc5LDE5NTE0Mjg3NSwxOD
-Y2OTAzMDI3LC0xOTg5NTQzMTcsLTExMjAwMzAxMzksLTg5MTk0
-NDkxMF19
+eyJoaXN0b3J5IjpbLTE3ODk3NjA2NTAsLTM3ODcwMzQwMCwtMj
+A3ODYyNzk3OSw0Njk0MjYwNTcsMTYwNDkwNzM4NywtMzg0Njcz
+MSwyMDI0MTAxMTI4LC0xMzE2OTIyOTY0LDE5MzgwNjI2NzksMj
+A0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MDc1MTIyLC0zNDAwNjc5
+MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0NywxNzUyNjI1Nzc5LD
+E5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOTg5NTQzMTcsLTExMjAw
+MzAxMzldfQ==
 -->
