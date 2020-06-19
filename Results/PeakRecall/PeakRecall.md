@@ -90,12 +90,14 @@ Region: chr1: 777499-1233399
 
 `-c 2 -l 501`: 52519 
 ![-c 2 -l 501](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c2l501.png)
+
 `-c 2 -l 150`: 210571
 
 `-c 2 -l 300`: 124102
 
 `-c 2 -l 400`: 86186
 ![-c 2 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c2l400.png)
+
 `-c 3 -l 400`: 64905 
 ![-c 3 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c3l400.png)
 # Reference
@@ -108,11 +110,11 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY4MDQwOTEwLC0zNzg3MDM0MDAsLTIwNz
-g2Mjc5NzksNDY5NDI2MDU3LDE2MDQ5MDczODcsLTM4NDY3MzEs
-MjAyNDEwMTEyOCwtMTMxNjkyMjk2NCwxOTM4MDYyNjc5LDIwND
-Q0NTEwMSwxNzI4MzIzOTg0LDk5NjA3NTEyMiwtMzQwMDY3OTMw
-LDE0OTg3NzQxNTQsLTE4MjE3NjQ0NDcsMTc1MjYyNTc3OSwxOT
-UxNDI4NzUsMTg2NjkwMzAyNywtMTk4OTU0MzE3LC0xMTIwMDMw
-MTM5XX0=
+eyJoaXN0b3J5IjpbLTEzNzg5NTY1MzAsLTM3ODcwMzQwMCwtMj
+A3ODYyNzk3OSw0Njk0MjYwNTcsMTYwNDkwNzM4NywtMzg0Njcz
+MSwyMDI0MTAxMTI4LC0xMzE2OTIyOTY0LDE5MzgwNjI2NzksMj
+A0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MDc1MTIyLC0zNDAwNjc5
+MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0NywxNzUyNjI1Nzc5LD
+E5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOTg5NTQzMTcsLTExMjAw
+MzAxMzldfQ==
 -->
