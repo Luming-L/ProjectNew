@@ -103,12 +103,6 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.f
 `--max-stored-scores`: Set the maximum number of scores that will be stored. The maximum number of stored matches is 100,000.
 
 **note**
-```bash
-wc -l ./*_fimo_out/fimo.gff
-```
-106092 ./ACC_peakCalls_fimo_out/fimo.gff 
-70538 ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls_fimo_out/fimo.gff
-176630 total
 
 The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to **10,000,000**.
 
@@ -169,11 +163,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU1ODA5NzMyLDYzODg1MTMyMCwtMTAxMT
-I0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2MTg0
-MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2MTg5LDE3NT
-I2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNTI1NDAxOSwt
-NTM2ODI0MjEsLTEwNjgwOTE2OTksLTE2MDQyMzU5MywtMTA2Mz
-kwMzcxMSwtOTEwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5Mjkz
-OTNdfQ==
+eyJoaXN0b3J5IjpbLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzOD
+g1MTMyMCwtMTAxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2
+NzEsMjA4NDI2MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMT
+M1NjA2MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4
+LDExNTI1NDAxOSwtNTM2ODI0MjEsLTEwNjgwOTE2OTksLTE2MD
+QyMzU5MywtMTA2MzkwMzcxMSwtOTEwNjAzODQ5LC0xNDE0MjEz
+NzExXX0=
 -->
