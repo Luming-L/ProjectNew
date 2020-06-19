@@ -84,9 +84,10 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 ```bash
 ./peakRecall.py ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg
 ```
-**Plot signal from BigWig file and peaks recalled to compare**
+**Check peaks number, and Plot signal from BigWig file and peaks recalled to compare**
 
 Region: chr1: 777499-1233399
+
 `-c 2 -l 501`: 52519 
 ![-c 2 -l 501](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c2l501.png)
 `-c 2 -l 150`: 210571
@@ -107,7 +108,7 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg4ODA1ODY2LC0zNzg3MDM0MDAsLTIwNz
+eyJoaXN0b3J5IjpbNzY4MDQwOTEwLC0zNzg3MDM0MDAsLTIwNz
 g2Mjc5NzksNDY5NDI2MDU3LDE2MDQ5MDczODcsLTM4NDY3MzEs
 MjAyNDEwMTEyOCwtMTMxNjkyMjk2NCwxOTM4MDYyNjc5LDIwND
 Q0NTEwMSwxNzI4MzIzOTg0LDk5NjA3NTEyMiwtMzQwMDY3OTMw
