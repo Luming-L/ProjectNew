@@ -51,6 +51,7 @@ bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "
 ```bash
 bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.75 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed
 ```
+
 15145132 total
 	69538 KIRP_0C6C66CE_7D41_4176_8438_F275CDFE7759_X006_S07_peakCalls.bed
 	64929 KIRP_DB49B30A_EECF_4F76_8E0B_3B0F612996F4_X006_S10_peakCalls.bed
@@ -147,7 +148,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 ```
 
   2845652 total
-	
+  
 	184385 ./BRCA_peakCalls_fimo_out/fimo.gff
 	175572 ./BLCA_peakCalls_fimo_out/fimo.gff
 	163170 ./PRAD_peakCalls_fimo_out/fimo.gff
@@ -168,7 +169,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NjQ2NDE2MCwxMDkzNjk2NjcxLDIwOD
+eyJoaXN0b3J5IjpbLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwOD
 QyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4
 OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNT
 QwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMs
