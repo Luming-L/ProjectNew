@@ -51,7 +51,9 @@ bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "
 ```bash
 bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed
 ```
-`
+```bash
+wc -l * | sort -k1,1nr | head
+```
 15145132 total
 	69538 KIRP_0C6C66CE_7D41_4176_8438_F275CDFE7759_X006_S07_peakCalls.bed
 	64929 KIRP_DB49B30A_EECF_4F76_8E0B_3B0F612996F4_X006_S10_peakCalls.bed
@@ -63,6 +65,17 @@ bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "
 	54321 BRCA_01112370_4F6F_4A20_9BE0_7975C3465268_X017_S04_peakCalls.bed
 	54048 LIHC_9CFCE167_AE10_47E5_8E18_947E06323052_X026_S02_peakCalls.bed
 ```bash
+
+    86903 KIRP_DB49B30A_EECF_4F76_8E0B_3B0F612996F4_X006_S10_peakCalls.bed
+    86362 KIRP_0C6C66CE_7D41_4176_8438_F275CDFE7759_X006_S07_peakCalls.bed
+    81368 BRCA_08499A64_3FD8_4E62_AF08_3C66AF93CAE7_X003_S05_peakCalls.bed
+    78382 BRCA_0142AAAC_FFE8_43B7_AB99_02F7A1740567_X022_S06_peakCalls.bed
+    78115 KIRP_9E89F1FA_31C6_46C4_B203_29DBB9F1B184_X016_S06_peakCalls.bed
+    76704 BRCA_6108FBB3_DFCE_4A67_A16D_0547827F058C_X008_S04_peakCalls.bed
+    76348 KIRP_5E268D3E_9CC0_4D85_9742_765A53CB3D96_X015_S03_peakCalls.bed
+    76050 BRCA_8D1E6006_85CB_484A_8B5C_30766D90137B_X012_S03_peakCalls.bed
+    75700 COAD_ED8C6999_09C5_4B1C_916B_0E479EB39F6D_X009_S08_peakCalls.bed
+
 wc -l * | sort -k1,1nr | tail
 ```
     30498 TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_peakCalls.bed
@@ -75,6 +88,7 @@ wc -l * | sort -k1,1nr | tail
     21414 STAD_CEF81A6C_B09A_4698_BC93_DC029B9CA17A_X028_S06_peakCalls.bed
     20660 SKCM_4EDE1486_22DD_4DB9_8CB1_B4A058E459D1_X035_S10_peakCalls.bed
     18855 LUSC_3AD1EA06_AA53_4C53_B436_4417FA2B8A0E_X031_S10_peakCalls.bed
+
 
 
 # Step2 Find PRDM9 motif occurrences
@@ -170,11 +184,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDg1NTYxMjEsNjM4ODUxMzIwLC0xMD
-ExMjQyODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYx
-ODQxLC00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMT
-c1MjYwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5
-LC01MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkzLC0xMD
-YzOTAzNzExLC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMTIwNjky
-OTM5M119
+eyJoaXN0b3J5IjpbLTUwMDI5OTg2Nyw2Mzg4NTEzMjAsLTEwMT
+EyNDI4MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4
+NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4OSwxNz
+UyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNTQwMTks
+LTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNj
+M5MDM3MTEsLTkxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMjA2OTI5
+MzkzXX0=
 -->
