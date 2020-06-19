@@ -113,7 +113,7 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 # Results
 **a list of PRDM9 motif occurrences for each of 410 biological samples**
 ```bash
-wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr | head
+wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 ```
     113732 ./BRCA_1253F1AD_60FD_4536_97A8_E84B756E5E52_X004_S05_peakCalls_fimo_out/fimo.gff
     113584 ./BRCA_0142AAAC_FFE8_43B7_AB99_02F7A1740567_X022_S06_peakCalls_fimo_out/fimo.gff
@@ -127,8 +127,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr | head
      
 ...
 
-
-      60631 ./STAD_91C7155F_8187_4688_BEAB_C4179C786667_X029_S08_peakCalls_fimo_out/fimo.gff
+     60631 ./STAD_91C7155F_8187_4688_BEAB_C4179C786667_X029_S08_peakCalls_fimo_out/fimo.gff
      59926 ./BRCA_78F79CE9_210D_47BF_B6AB_AA5327778FBE_X010_S03_peakCalls_fimo_out/fimo.gff
      59873 ./HNSC_D6F95774_441D_47F6_93CE_999D7BE81E44_X040_S11_peakCalls_fimo_out/fimo.gff
      58371 ./BRCA_E2534288_EFAE_4EF6_98A0_0A931BC20FF1_X017_S07_peakCalls_fimo_out/fimo.gff
@@ -172,11 +171,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODMzMzU0NywxMTg3ODA3Mjg3LC0xND
-IxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4
-MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLT
-QwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4OSwxNzUyNjA2
-OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNTQwMTksLTUzNj
-gyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3
-MTFdfQ==
+eyJoaXN0b3J5IjpbNTk3NTk4MTM3LDExODc4MDcyODcsLTE0Mj
+E1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMyMCwtMTAxMTI0Mjgy
+NiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2MTg0MSwtND
+AxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2MTg5LDE3NTI2MDY4
+LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNTI1NDAxOSwtNTM2OD
+I0MjEsLTEwNjgwOTE2OTksLTE2MDQyMzU5MywtMTA2MzkwMzcx
+MV19
 -->
