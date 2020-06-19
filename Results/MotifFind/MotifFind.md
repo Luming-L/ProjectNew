@@ -35,6 +35,9 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 3. finally get a list of peaks for each of 410 biological samples
 
 **options**
+**-F**
+
+Minimum overlap required as a fraction of B. Default is 1E-9 (i.e., 1bp).
 `-f`： Minimum overlap required as **a fraction of A**. `-f 1.0` means 100% of the query record is overlapped by a database record.
 
 `-c`: For each entry in A, report the number of hits in B while restricting to -f.
@@ -168,11 +171,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NjYzODQwMywxMzU2MDYxODksMTc1Mj
-YwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5LC01
-MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOT
-AzNzExLC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5
-MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5MzkwLC05MD
-k0MzExNCwxNzY1ODk0MzA1LC00MTUwNDEwLC0xNjM2MjM1NzAw
-XX0=
+eyJoaXN0b3J5IjpbLTIwMTc5MTMwMTUsMTM1NjA2MTg5LDE3NT
+I2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNTI1NDAxOSwt
+NTM2ODI0MjEsLTEwNjgwOTE2OTksLTE2MDQyMzU5MywtMTA2Mz
+kwMzcxMSwtOTEwNjAzODQ5LC0xNDE0MjEzNzExLDEyMDY5Mjkz
+OTMsMTE4ODE0NzYyMywxMTg4NjA5NzE5LDYxODA1OTM5MCwtOT
+A5NDMxMTQsMTc2NTg5NDMwNSwtNDE1MDQxMCwtMTYzNjIzNTcw
+MF19
 -->
