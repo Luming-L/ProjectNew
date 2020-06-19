@@ -30,7 +30,7 @@ cd /exports/eddie/scratch/s1949868/PeakRecall_peaks001
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
 ```
 ### refine recalled peaks by using `bedtools intersect`
-1. for each technical replicate (796), the 
+1. for each technical replicate (796), the minimum overlap should be more than 79% of A.
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
 3. finally get a list of peaks for each of 410 biological samples
 
@@ -168,11 +168,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk2NjQ1NTA1LDIwMDg1MDQ1NDcsMTM1Nj
-A2MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDEx
-NTI1NDAxOSwtNTM2ODI0MjEsLTEwNjgwOTE2OTksLTE2MDQyMz
-U5MywtMTA2MzkwMzcxMSwtOTEwNjAzODQ5LC0xNDE0MjEzNzEx
-LDEyMDY5MjkzOTMsMTE4ODE0NzYyMywxMTg4NjA5NzE5LDYxOD
-A1OTM5MCwtOTA5NDMxMTQsMTc2NTg5NDMwNSwtNDE1MDQxMF19
-
+eyJoaXN0b3J5IjpbLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNT
+YwNjE4OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwx
+MTUyNTQwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0Mj
+M1OTMsLTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMTQxNDIxMzcx
+MSwxMjA2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYwOTcxOSw2MT
+gwNTkzOTAsLTkwOTQzMTE0LDE3NjU4OTQzMDUsLTQxNTA0MTBd
+fQ==
 -->
