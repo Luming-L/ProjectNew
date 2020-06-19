@@ -64,7 +64,7 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 `-g 75`: The read length is 75 bp.
 
-`-c 3 -l 400`: We also check `-c 2 -l 501`, `-c 2 -l 150`, `-c 2 -l 300` and `-c 2 -l 400`, and found `-c 3 -l 400` is the best.
+`-c 3 -l 400`: We also check `-c 2 -l 501`, `-c 2 -l 150`, `-c 2 -l 300` and `-c 2 -l 400`, and found `-c 3 -l 400` is the best. The peak plots of them are show i
 
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 # Test
@@ -112,11 +112,11 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc0NzgyOTY5LC0zNzg3MDM0MDAsLTIwNz
-g2Mjc5NzksNDY5NDI2MDU3LDE2MDQ5MDczODcsLTM4NDY3MzEs
-MjAyNDEwMTEyOCwtMTMxNjkyMjk2NCwxOTM4MDYyNjc5LDIwND
-Q0NTEwMSwxNzI4MzIzOTg0LDk5NjA3NTEyMiwtMzQwMDY3OTMw
-LDE0OTg3NzQxNTQsLTE4MjE3NjQ0NDcsMTc1MjYyNTc3OSwxOT
-UxNDI4NzUsMTg2NjkwMzAyNywtMTk4OTU0MzE3LC0xMTIwMDMw
-MTM5XX0=
+eyJoaXN0b3J5IjpbLTUzNTU5NzQwMiw2NzQ3ODI5NjksLTM3OD
+cwMzQwMCwtMjA3ODYyNzk3OSw0Njk0MjYwNTcsMTYwNDkwNzM4
+NywtMzg0NjczMSwyMDI0MTAxMTI4LC0xMzE2OTIyOTY0LDE5Mz
+gwNjI2NzksMjA0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MDc1MTIy
+LC0zNDAwNjc5MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0NywxNz
+UyNjI1Nzc5LDE5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOTg5NTQz
+MTddfQ==
 -->
