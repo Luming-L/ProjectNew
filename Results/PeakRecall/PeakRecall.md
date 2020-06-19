@@ -69,6 +69,7 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 # 52519 
 ```
+
 `-c 2 -l 150`
 ```bash
 wc -l ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed # 210571
@@ -140,11 +141,11 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNDY5MjYwMSw0Njk0MjYwNTcsMTYwND
-kwNzM4NywtMzg0NjczMSwyMDI0MTAxMTI4LC0xMzE2OTIyOTY0
-LDE5MzgwNjI2NzksMjA0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MD
-c1MTIyLC0zNDAwNjc5MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0
-NywxNzUyNjI1Nzc5LDE5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOT
-g5NTQzMTcsLTExMjAwMzAxMzksLTg5MTk0NDkxMCw5OTg0MTE0
-NjBdfQ==
+eyJoaXN0b3J5IjpbLTIwNzg2Mjc5NzksNDY5NDI2MDU3LDE2MD
+Q5MDczODcsLTM4NDY3MzEsMjAyNDEwMTEyOCwtMTMxNjkyMjk2
+NCwxOTM4MDYyNjc5LDIwNDQ0NTEwMSwxNzI4MzIzOTg0LDk5Nj
+A3NTEyMiwtMzQwMDY3OTMwLDE0OTg3NzQxNTQsLTE4MjE3NjQ0
+NDcsMTc1MjYyNTc3OSwxOTUxNDI4NzUsMTg2NjkwMzAyNywtMT
+k4OTU0MzE3LC0xMTIwMDMwMTM5LC04OTE5NDQ5MTAsOTk4NDEx
+NDYwXX0=
 -->
