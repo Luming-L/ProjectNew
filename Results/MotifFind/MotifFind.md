@@ -49,7 +49,7 @@ bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "
 ```
 **command for a sample with 2 technical replicates**
 ```bash
-bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08*bed.sorted -f 1.0 -c -wa | awk '{FS=OFS="\t";if($5>1){print $1,$2,$3,$4}}' > /home/s1949868/test_Overlap/Sample_PeakCalls_w/LIHC_31861258_F778_40B3_A2A4_E4E8F00794B2_X037_S08_peakCalls.bed
+bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.75 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed
 ```
 15145132 total
 	69538 KIRP_0C6C66CE_7D41_4176_8438_F275CDFE7759_X006_S07_peakCalls.bed
@@ -168,11 +168,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjUxODMyNDUsMTA5MzY5NjY3MSwyMD
-g0MjYxODQxLC00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYx
-ODksMTc1MjYwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1Mj
-U0MDE5LC01MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkz
-LC0xMDYzOTAzNzExLC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMT
-IwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5
-MzkwXX0=
+eyJoaXN0b3J5IjpbLTY2NjQ2NDE2MCwxMDkzNjk2NjcxLDIwOD
+QyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4
+OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNT
+QwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMs
+LTEwNjM5MDM3MTEsLTkxMDYwMzg0OSwtMTQxNDIxMzcxMSwxMj
+A2OTI5MzkzLDExODgxNDc2MjMsMTE4ODYwOTcxOSw2MTgwNTkz
+OTBdfQ==
 -->
