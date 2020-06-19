@@ -45,7 +45,7 @@ for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/)
 
 **command for a sample with 1 technical replicate**
 ```bash
-bedtools intersect -a /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC*txt.sorted -b /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC_D6F95774_441D_47F6_93CE_999D7BE81E44_X040_S11*bed.sorted -f 1.0 -wa > /home/s1949868/test_Overlap/Sample_PeakCalls_w/HNSC_D6F95774_441D_47F6_93CE_999D7BE81E44_X040_S11_peakCalls.bed
+bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.75 -u > " + path + "/" + sample+"_peakCalls.bed
 ```
 **command for a sample with 2 technical replicates**
 ```bash
@@ -168,7 +168,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDEwMjg4MDUsMTA5MzY5NjY3MSwyMD
+eyJoaXN0b3J5IjpbLTE4MjUxODMyNDUsMTA5MzY5NjY3MSwyMD
 g0MjYxODQxLC00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYx
 ODksMTc1MjYwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1Mj
 U0MDE5LC01MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkz
