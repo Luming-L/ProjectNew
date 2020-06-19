@@ -23,11 +23,11 @@ mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
 sort files
 ```bash
 # sort and cut files of Cancer Type-specific PeakCalls
-cd /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls
-for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
+cd /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls # Cancer_Type_PeakCalls_path in peakOverlap.py
+for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > /exports/eddie/scratch/s1949868/PeakCall_410_c3l400/${file}.sorted; done
 # cut files of recalled peaks in each technical replicate
-cd /exports/eddie/scratch/s1949868/PeakRecall_peaks001
-for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/Sample_PeakCalls/${file}.sorted; done
+cd /exports/eddie/scratch/s1949868/PeakRecall_796_c3l400 # peaks_path in peakOverlap.py
+for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/PeakCall_410_c3l400/${file}.sorted; done
 ```
 ### refine recalled peaks by using `bedtools intersect`
 1. for each technical replicate (796), the minimum overlap between cancer type peaks and sample recalled peaks should be more than 75% of cancer type peaks. (set by `-f 0.75`) Then output these cancer type peaks.
@@ -168,11 +168,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MzY5NjY3MSwyMDg0MjYxODQxLC00MD
-E3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYwNjgs
-LTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5LC01MzY4Mj
-QyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAzNzEx
-LC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMTIwNjkyOTM5MywxMT
-g4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5MzkwLC05MDk0MzEx
-NF19
+eyJoaXN0b3J5IjpbLTE1NDEwMjg4MDUsMTA5MzY5NjY3MSwyMD
+g0MjYxODQxLC00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYx
+ODksMTc1MjYwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1Mj
+U0MDE5LC01MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkz
+LC0xMDYzOTAzNzExLC05MTA2MDM4NDksLTE0MTQyMTM3MTEsMT
+IwNjkyOTM5MywxMTg4MTQ3NjIzLDExODg2MDk3MTksNjE4MDU5
+MzkwXX0=
 -->
