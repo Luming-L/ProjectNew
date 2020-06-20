@@ -22,14 +22,14 @@ Bedtools closest
 
 how they generated the file
 
-DSB hotspots with 
+co'localDSB hotspots with chromosome rearrangement breakpoints
 
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg2NjIyNTUsLTIwMDgzMTk5MSwxNz
+eyJoaXN0b3J5IjpbLTE5OTQ2MDUwMDYsLTIwMDgzMTk5MSwxNz
 Q0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1
 NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OT
 EwNzY2MywtMTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2
