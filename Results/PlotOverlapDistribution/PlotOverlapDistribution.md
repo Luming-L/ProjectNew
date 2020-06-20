@@ -18,16 +18,16 @@ totalHotspots=`wc -l /exports/eddie/scratch/s1949868/humanDSBhotspots/humanDSBho
 echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 ```
 ## 23 cancer types
+Bedtools closest
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
-Bedtools closest
-
+[Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDgzMTk5MSwxNzQ0NzAxNzEwLDExNT
-k0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1NCwtMzcxNTU5MjI1
-LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OTEwNzY2MywtMTE1OD
-I0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2NzczNCwxMzExMDk0
-MjgxLC0yMDEzNDYyNzE4LC0yMTM5NzYyODQ3LDczMDk5ODExNl
-19
+eyJoaXN0b3J5IjpbLTE3MDM2NDE2MTAsLTIwMDgzMTk5MSwxNz
+Q0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1
+NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OT
+EwNzY2MywtMTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2
+NzczNCwxMzExMDk0MjgxLC0yMDEzNDYyNzE4LC0yMTM5NzYyOD
+Q3LDczMDk5ODExNl19
 -->
