@@ -24,15 +24,19 @@ how they generated the file
 
 colocalization DSB hotspots with chromosome rearrangement breakpoints
 
+Fig. 1. Genome-wide distribution of DSB hotspots in human individuals.
+
+Fig. 2. PRDM9-defined hotspots are found in the human PARs
+
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NTM3MzcyMywtMjAwODMxOTkxLDE3ND
-Q3MDE3MTAsMTE1OTQzODI0MywyMTI4ODY0NjEsNzU4MzQ0MTU0
-LC0zNzE1NTkyMjUsLTkyODQ3NzEsNDc1NTM2ODIzLC0xNDk5MT
-A3NjYzLC0xMTU4MjQ2MDk1LC0xMDg3NTU0OTcxLC0xNTk3MzY3
-NzM0LDEzMTEwOTQyODEsLTIwMTM0NjI3MTgsLTIxMzk3NjI4ND
-csNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE5ODA3ODgxNDAsLTIwMDgzMTk5MSwxNz
+Q0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1
+NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OT
+EwNzY2MywtMTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2
+NzczNCwxMzExMDk0MjgxLC0yMDEzNDYyNzE4LC0yMTM5NzYyOD
+Q3LDczMDk5ODExNl19
 -->
