@@ -28,14 +28,19 @@ Fig. 1. Genome-wide distribution of DSB hotspots in human individuals.
 
 Fig. 2. PRDM9-defined hotspots are found in the human PARs.
 
+Fig. 3. Comparison of LD-based recombinationmaps and DSB hotspots.
 
+Fig. 4. Variation in hotspot strength between the AA1 and AA2 individuals.
 
+Fig. 5. Signatures of increased genetic diversity at DSB hotspots.
+
+Fig. 6. DSB frequency is correlated with the crossover rate.
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTE3NzY2MzIsLTIwMDgzMTk5MSwxNz
+eyJoaXN0b3J5IjpbLTE4NzE1MjMzMTcsLTIwMDgzMTk5MSwxNz
 Q0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1
 NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OT
 EwNzY2MywtMTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2
