@@ -165,6 +165,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 	96894 ./MESO_peakCalls_fimo_out/fimo.gff
 	84528 ./CESC_peakCalls_fimo_out/fimo.gff
 # Step3 Select peaks containing PRDM9 motif occurrences
+
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -172,11 +173,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MjkzODk4OCwxMTg3ODA3Mjg3LC0xND
-IxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4
-MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLT
-QwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4OSwxNzUyNjA2
-OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNTQwMTksLTUzNj
-gyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3
-MTFdfQ==
+eyJoaXN0b3J5IjpbLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMT
+QyMTU4MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQy
+ODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC
+00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYw
+NjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5LC01Mz
+Y4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIzNTkzLC0xMDYzOTAz
+NzExXX0=
 -->
