@@ -164,7 +164,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 	98454 ./CHOL_peakCalls_fimo_out/fimo.gff
 	96894 ./MESO_peakCalls_fimo_out/fimo.gff
 	84528 ./CESC_peakCalls_fimo_out/fimo.gff
-# Steo
+# Step3 Select peaks containing PRDM9 motif occurrences
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -172,7 +172,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NzUyODczNSwxMTg3ODA3Mjg3LC0xND
+eyJoaXN0b3J5IjpbLTg4MjkzODk4OCwxMTg3ODA3Mjg3LC0xND
 IxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4
 MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLT
 QwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4OSwxNzUyNjA2
