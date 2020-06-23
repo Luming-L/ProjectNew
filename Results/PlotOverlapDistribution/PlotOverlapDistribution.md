@@ -1,3 +1,7 @@
+Select ATAC-seq peaks containing PRDM9 motif
+
+
+
 
 ## 410 samples
 `-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. Restricted by -f and -r. Different PRDM9 motif occurrences (13bp) may overlap with the same DSBhotspots, so we should use `-u` here.
@@ -40,10 +44,10 @@ Fig. 6. DSB frequency is correlated with the crossover rate.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzE1MjMzMTcsLTIwMDgzMTk5MSwxNz
-Q0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1
-NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OT
-EwNzY2MywtMTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2
-NzczNCwxMzExMDk0MjgxLC0yMDEzNDYyNzE4LC0yMTM5NzYyOD
-Q3LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbODUzMjc4NDMxLC0xODcxNTIzMzE3LC0yMD
+A4MzE5OTEsMTc0NDcwMTcxMCwxMTU5NDM4MjQzLDIxMjg4NjQ2
+MSw3NTgzNDQxNTQsLTM3MTU1OTIyNSwtOTI4NDc3MSw0NzU1Mz
+Y4MjMsLTE0OTkxMDc2NjMsLTExNTgyNDYwOTUsLTEwODc1NTQ5
+NzEsLTE1OTczNjc3MzQsMTMxMTA5NDI4MSwtMjAxMzQ2MjcxOC
+wtMjEzOTc2Mjg0Nyw3MzA5OTgxMTZdfQ==
 -->
