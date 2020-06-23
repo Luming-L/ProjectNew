@@ -164,6 +164,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 	98454 ./CHOL_peakCalls_fimo_out/fimo.gff
 	96894 ./MESO_peakCalls_fimo_out/fimo.gff
 	84528 ./CESC_peakCalls_fimo_out/fimo.gff
+# Steo
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -171,11 +172,11 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk3NTk4MTM3LDExODc4MDcyODcsLTE0Mj
-E1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMyMCwtMTAxMTI0Mjgy
-NiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2MTg0MSwtND
-AxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2MTg5LDE3NTI2MDY4
-LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNTI1NDAxOSwtNTM2OD
-I0MjEsLTEwNjgwOTE2OTksLTE2MDQyMzU5MywtMTA2MzkwMzcx
-MV19
+eyJoaXN0b3J5IjpbMTY0NzUyODczNSwxMTg3ODA3Mjg3LC0xND
+IxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4
+MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLT
+QwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4OSwxNzUyNjA2
+OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNTQwMTksLTUzNj
+gyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTMsLTEwNjM5MDM3
+MTFdfQ==
 -->
