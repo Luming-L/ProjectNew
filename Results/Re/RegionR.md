@@ -36,6 +36,7 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 410 before renaming and 404 after
 ### rename files
 **before renaming**
+
 *<cancerType#>_<stanfordUUID#>_<batch#>_<sample#>_<libraryID#>_<bioRep#>_<techRep#>_<pool#>*
 
 For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
@@ -62,6 +63,6 @@ Case_ID: TCGA-XE-AANI-01A
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMDc3MjUyNCwtMTY3MjkyOTI3OCwtNT
+eyJoaXN0b3J5IjpbMTc4ODA0ODMyMiwtMTY3MjkyOTI3OCwtNT
 IwMTE3ODMyLC0xMDE3NzQyOTAyLC0xNDg5NTQxNTgwXX0=
 -->
