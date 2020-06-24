@@ -9,12 +9,15 @@ mutations (SNPs, indels and structural variant breakpoints)
 somatic mutation (SNPs and small INDELs)
 ```bash
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
-gzip -d GDC-PANCAN.muse_snv.tsv
+gzip -d GDC-PANCAN.muse_snv.tsv.gz
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.mutect2_snv.tsv.gz
+gzip -d GDC-PANCAN.mutect2_snv.tsv.gz
+
 ```
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MjI4Mjc3Niw3NDEzMTk0NTIsMTM2Nj
-U1NDk3OSwtMjEwODAwNDkwMCwxODQwNjk0MjM5LDExNzgwNDg4
-NTQsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTI4MDIwNDYzOSwxMzkyMjgyNzc2LDc0MT
+MxOTQ1MiwxMzY2NTU0OTc5LC0yMTA4MDA0OTAwLDE4NDA2OTQy
+MzksMTE3ODA0ODg1NCw3MzA5OTgxMTZdfQ==
 -->
