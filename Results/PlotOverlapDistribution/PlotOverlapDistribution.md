@@ -23,6 +23,9 @@ echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 ```
 # calculate overlap fraction
 overlap fraction = overlapping DSB hotspots counts/total DSB hotspots number*100
+```r
+overlapPercentage_c=hotspotsOverlap_23c$overlapNumber/hotspotsOverlap_23c$totalHotspots*100
+```
 # plot the distribution of overlap fraction
 x axis: overlap fraction (0 - 100%)
 y axis: number of samples. 
@@ -34,11 +37,11 @@ y axis: number of samples.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNDMwMTc0LDY2NjY3MDU0LC0xOTkwMT
-E0OTQ5LDE3NDg1MjM0NTgsOTM2OTI0NzAzLDE0MDQ4Mjc2NSwt
-MTQ4NTE0MDkwNSwtMTEyOTEyNTI5MywtMTQzMTgzNTY3Niw1NT
-U3MjU5OTEsMzI2ODMwNDMwLDg1MzI3ODQzMSwtMTg3MTUyMzMx
-NywtMjAwODMxOTkxLDE3NDQ3MDE3MTAsMTE1OTQzODI0MywyMT
-I4ODY0NjEsNzU4MzQ0MTU0LC0zNzE1NTkyMjUsLTkyODQ3NzFd
-fQ==
+eyJoaXN0b3J5IjpbMjA2NjExNjM4LDIxMjQzMDE3NCw2NjY2Nz
+A1NCwtMTk5MDExNDk0OSwxNzQ4NTIzNDU4LDkzNjkyNDcwMywx
+NDA0ODI3NjUsLTE0ODUxNDA5MDUsLTExMjkxMjUyOTMsLTE0Mz
+E4MzU2NzYsNTU1NzI1OTkxLDMyNjgzMDQzMCw4NTMyNzg0MzEs
+LTE4NzE1MjMzMTcsLTIwMDgzMTk5MSwxNzQ0NzAxNzEwLDExNT
+k0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1NCwtMzcxNTU5MjI1
+XX0=
 -->
