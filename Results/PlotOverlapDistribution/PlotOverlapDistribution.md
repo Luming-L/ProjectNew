@@ -10,7 +10,7 @@ For a specific type of cancer, whether the PRDM9 binding regions in peaks are ov
 # calculate overlap fraction
 overlap fraction = overlapping DSB hotspots counts/total DSB hotspots number*100
 # plot the distribution of overlap fraction
-overlapping DSB hotspots counts/total DSB hotspots number
+Tx axis of this histogram is 0 to 100% overlap, and the y axis is number of samples. 
 
 ## 410 samples
 `-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. Restricted by -f and -r. 
@@ -38,11 +38,11 @@ echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTAxMTQ5NDksMTc0ODUyMzQ1OCw5Mz
-Y5MjQ3MDMsMTQwNDgyNzY1LC0xNDg1MTQwOTA1LC0xMTI5MTI1
-MjkzLC0xNDMxODM1Njc2LDU1NTcyNTk5MSwzMjY4MzA0MzAsOD
-UzMjc4NDMxLC0xODcxNTIzMzE3LC0yMDA4MzE5OTEsMTc0NDcw
-MTcxMCwxMTU5NDM4MjQzLDIxMjg4NjQ2MSw3NTgzNDQxNTQsLT
-M3MTU1OTIyNSwtOTI4NDc3MSw0NzU1MzY4MjMsLTE0OTkxMDc2
-NjNdfQ==
+eyJoaXN0b3J5IjpbMTIwODg5MDE4MywtMTk5MDExNDk0OSwxNz
+Q4NTIzNDU4LDkzNjkyNDcwMywxNDA0ODI3NjUsLTE0ODUxNDA5
+MDUsLTExMjkxMjUyOTMsLTE0MzE4MzU2NzYsNTU1NzI1OTkxLD
+MyNjgzMDQzMCw4NTMyNzg0MzEsLTE4NzE1MjMzMTcsLTIwMDgz
+MTk5MSwxNzQ0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLD
+c1ODM0NDE1NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgy
+M119
 -->
