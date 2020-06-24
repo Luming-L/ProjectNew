@@ -57,8 +57,10 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
 <pool#> - PMRG == Pool "merged" - This represents the pool in which this particular technical replicate was sequenced. If this is "PMRG" that means that multiple sequencing runs were performed on this technical replicate and then merged to acheive sufficient depth.
 
+- after renaming
+Case_ID
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODk1NDE1ODBdfQ==
+eyJoaXN0b3J5IjpbMTY5ODcyMjU3OCwtMTQ4OTU0MTU4MF19
 -->
