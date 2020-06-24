@@ -30,6 +30,7 @@ overlapPercentage_c=hotspotsOverlap_23c$overlapNumber/hotspotsOverlap_23c$totalH
 x axis: overlap fraction (0 - 100%)
 y axis: number of samples. 
 ## 410 samples
+
 ## 23 cancer types
 
 # Reference
@@ -37,11 +38,11 @@ y axis: number of samples.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NjExNjM4LDIxMjQzMDE3NCw2NjY2Nz
-A1NCwtMTk5MDExNDk0OSwxNzQ4NTIzNDU4LDkzNjkyNDcwMywx
-NDA0ODI3NjUsLTE0ODUxNDA5MDUsLTExMjkxMjUyOTMsLTE0Mz
-E4MzU2NzYsNTU1NzI1OTkxLDMyNjgzMDQzMCw4NTMyNzg0MzEs
-LTE4NzE1MjMzMTcsLTIwMDgzMTk5MSwxNzQ0NzAxNzEwLDExNT
-k0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1NCwtMzcxNTU5MjI1
+eyJoaXN0b3J5IjpbMTI1ODcxMDc5MiwyMDY2MTE2MzgsMjEyND
+MwMTc0LDY2NjY3MDU0LC0xOTkwMTE0OTQ5LDE3NDg1MjM0NTgs
+OTM2OTI0NzAzLDE0MDQ4Mjc2NSwtMTQ4NTE0MDkwNSwtMTEyOT
+EyNTI5MywtMTQzMTgzNTY3Niw1NTU3MjU5OTEsMzI2ODMwNDMw
+LDg1MzI3ODQzMSwtMTg3MTUyMzMxNywtMjAwODMxOTkxLDE3ND
+Q3MDE3MTAsMTE1OTQzODI0MywyMTI4ODY0NjEsNzU4MzQ0MTU0
 XX0=
 -->
