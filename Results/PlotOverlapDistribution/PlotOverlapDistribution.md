@@ -1,4 +1,4 @@
-Select ATAC-seq peaks containing PRDM9 motif
+find 
 
 
 
@@ -44,10 +44,10 @@ Fig. 6. DSB frequency is correlated with the crossover rate.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUzMjc4NDMxLC0xODcxNTIzMzE3LC0yMD
-A4MzE5OTEsMTc0NDcwMTcxMCwxMTU5NDM4MjQzLDIxMjg4NjQ2
-MSw3NTgzNDQxNTQsLTM3MTU1OTIyNSwtOTI4NDc3MSw0NzU1Mz
-Y4MjMsLTE0OTkxMDc2NjMsLTExNTgyNDYwOTUsLTEwODc1NTQ5
-NzEsLTE1OTczNjc3MzQsMTMxMTA5NDI4MSwtMjAxMzQ2MjcxOC
-wtMjEzOTc2Mjg0Nyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMzI2ODMwNDMwLDg1MzI3ODQzMSwtMTg3MT
+UyMzMxNywtMjAwODMxOTkxLDE3NDQ3MDE3MTAsMTE1OTQzODI0
+MywyMTI4ODY0NjEsNzU4MzQ0MTU0LC0zNzE1NTkyMjUsLTkyOD
+Q3NzEsNDc1NTM2ODIzLC0xNDk5MTA3NjYzLC0xMTU4MjQ2MDk1
+LC0xMDg3NTU0OTcxLC0xNTk3MzY3NzM0LDEzMTEwOTQyODEsLT
+IwMTM0NjI3MTgsLTIxMzk3NjI4NDcsNzMwOTk4MTE2XX0=
 -->
