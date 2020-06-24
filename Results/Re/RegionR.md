@@ -60,10 +60,9 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 **after renaming**
 
 Case_ID: TCGA-XE-AANI-01A
-# rename files
-RegioneR package
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MDkyODkxMywxNzg4MDQ4MzIyLC0xNj
+eyJoaXN0b3J5IjpbLTQwMzYwMzg0NCwxNzg4MDQ4MzIyLC0xNj
 cyOTI5Mjc4LC01MjAxMTc4MzIsLTEwMTc3NDI5MDIsLTE0ODk1
 NDE1ODBdfQ==
 -->
