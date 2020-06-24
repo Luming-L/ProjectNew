@@ -169,6 +169,19 @@ script `findPRDM9BoundPeaks.sh`
 ```bash
 bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/bed/"${fileName}.bed" -b $file -u -F 1.0 > "${fileName}_PRDM9_bound_peaks.bed"
 ```
+```bash
+wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
+```
+1080239 total
+82325 BRCA_peakCalls_PRDM9_bound_peaks.bed
+				58338 KIRP_peakCalls_PRDM9_bound_peaks.bed
+				57393 LUAD_peakCalls_PRDM9_bound_peaks.bed
+				56079 ESCA_peakCalls_PRDM9_bound_peaks.bed
+				53380 COAD_peakCalls_PRDM9_bound_peaks.bed
+				53233 STAD_peakCalls_PRDM9_bound_peaks.bed
+				50633 LUSC_peakCalls_PRDM9_bound_peaks.bed
+				49255 LIHC_peakCalls_PRDM9_bound_peaks.bed
+				48382 BLCA_peakCalls_PRDM9_bound_peaks.bed
 
 
 
@@ -179,11 +192,11 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-spec
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYwNjA1MSwtMTMzOTQwMjExMCwxMTg3OD
-A3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAs
-LTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwOD
-QyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4
-OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNT
-QwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTNd
-fQ==
+eyJoaXN0b3J5IjpbLTE1OTg3NzI2ODQsLTEzMzk0MDIxMTAsMT
+E4NzgwNzI4NywtMTQyMTU4MTE1Miw2NTU4MDk3MzIsNjM4ODUx
+MzIwLC0xMDExMjQyODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MS
+wyMDg0MjYxODQxLC00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2
+MDYxODksMTc1MjYwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMT
+E1MjU0MDE5LC01MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIz
+NTkzXX0=
 -->
