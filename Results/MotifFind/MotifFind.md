@@ -171,6 +171,7 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-spec
 ```
 
 
+
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -178,11 +179,11 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-spec
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0OTE4NTkwOSwtMTMzOTQwMjExMCwxMT
-g3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEz
-MjAsLTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLD
-IwODQyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYw
-NjE4OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMT
-UyNTQwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1
-OTNdfQ==
+eyJoaXN0b3J5IjpbNzYwNjA1MSwtMTMzOTQwMjExMCwxMTg3OD
+A3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAs
+LTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwOD
+QyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4
+OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNT
+QwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5LC0xNjA0MjM1OTNd
+fQ==
 -->
