@@ -34,12 +34,15 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
 **PRDM9-bound peaks in 410 samples**
 rename files
+before renaming
 <cancerType>_<stanfordUUID>_<batch>_<sample#>_<libraryID>_<bioRep>_<techRep>_<pool#>
+For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
+<cancerType> - TGCT (**note - some cancer types like "LGG" have an extra "x" appended ie "LGGx" to maintain equal 4 character length of this string)
 
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODc3MDI1NSwxNTQ5NzUwMjU5LC00Mj
+eyJoaXN0b3J5IjpbMTM3ODk3NTAwNiwxNTQ5NzUwMjU5LC00Mj
 A2MjU2NjUsMjA0NDQ3MTI2MiwtODQzNDM0NDUsMTI4MDIwNDYz
 OSwxMzkyMjgyNzc2LDc0MTMxOTQ1MiwxMzY2NTU0OTc5LC0yMT
 A4MDA0OTAwLDE4NDA2OTQyMzksMTE3ODA0ODg1NCw3MzA5OTgx
