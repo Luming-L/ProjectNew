@@ -30,13 +30,13 @@ wget https://gdc.xenahubs.net/download/GDC-PANCAN.varscan2_snv.tsv.gz
 gzip -d GDC-PANCAN.varscan2_snv.tsv.gz
 wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562 
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
-
+awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMDYyNTY2NSwyMDQ0NDcxMjYyLC04ND
-M0MzQ0NSwxMjgwMjA0NjM5LDEzOTIyODI3NzYsNzQxMzE5NDUy
-LDEzNjY1NTQ5NzksLTIxMDgwMDQ5MDAsMTg0MDY5NDIzOSwxMT
-c4MDQ4ODU0LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTU0OTc1MDI1OSwtNDIwNjI1NjY1LDIwND
+Q0NzEyNjIsLTg0MzQzNDQ1LDEyODAyMDQ2MzksMTM5MjI4Mjc3
+Niw3NDEzMTk0NTIsMTM2NjU1NDk3OSwtMjEwODAwNDkwMCwxOD
+QwNjk0MjM5LDExNzgwNDg4NTQsNzMwOTk4MTE2XX0=
 -->
