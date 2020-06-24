@@ -1,3 +1,9 @@
+# 
+Visualize the overlap between PRDM9 binding regions in cancer cells and those in testes: This step starts from the PRDM9 binding regions in 404 tumour samples and in testes. A histogram will be plotted to visualize the distribution of overlap fraction between regions in each cancer sample and testes. The x axis of this histogram is 0 to 100% overlap, and the y axis is number of samples. 
+Per cancer level analysis
+For a specific type of cancer, whether the PRDM9 binding regions in peaks are overlapped with those in the breakpoints of testis. How much they overlap?
+
+
 # count DSB hotspots that overlap any PRDM9 bound peaks
 
 # plot the distribution of overlap
@@ -45,11 +51,11 @@ Fig. 6. DSB frequency is correlated with the crossover rate.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjkxMjUyOTMsLTE0MzE4MzU2NzYsNT
-U1NzI1OTkxLDMyNjgzMDQzMCw4NTMyNzg0MzEsLTE4NzE1MjMz
-MTcsLTIwMDgzMTk5MSwxNzQ0NzAxNzEwLDExNTk0MzgyNDMsMj
-EyODg2NDYxLDc1ODM0NDE1NCwtMzcxNTU5MjI1LC05Mjg0Nzcx
-LDQ3NTUzNjgyMywtMTQ5OTEwNzY2MywtMTE1ODI0NjA5NSwtMT
-A4NzU1NDk3MSwtMTU5NzM2NzczNCwxMzExMDk0MjgxLC0yMDEz
-NDYyNzE4XX0=
+eyJoaXN0b3J5IjpbLTE0ODUxNDA5MDUsLTExMjkxMjUyOTMsLT
+E0MzE4MzU2NzYsNTU1NzI1OTkxLDMyNjgzMDQzMCw4NTMyNzg0
+MzEsLTE4NzE1MjMzMTcsLTIwMDgzMTk5MSwxNzQ0NzAxNzEwLD
+ExNTk0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1NCwtMzcxNTU5
+MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OTEwNzY2MywtMT
+E1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2NzczNCwxMzEx
+MDk0MjgxXX0=
 -->
