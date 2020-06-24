@@ -171,6 +171,7 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-spec
 ```
 ```bash
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
+wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 ```
 1080239 total
@@ -186,6 +187,17 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
 	48382 BLCA_peakCalls_PRDM9_bound_peaks.bed
 ...
 
+	42171 TGCT_peakCalls_PRDM9_bound_peaks.bed
+	41971 THCA_peakCalls_PRDM9_bound_peaks.bed
+	41476 PCPG_peakCalls_PRDM9_bound_peaks.bed
+	41062 SKCM_peakCalls_PRDM9_bound_peaks.bed
+	40421 ACC_peakCalls_PRDM9_bound_peaks.bed
+	39970 LGG_peakCalls_PRDM9_bound_peaks.bed
+	38538 GBM_peakCalls_PRDM9_bound_peaks.bed
+	36184 MESO_peakCalls_PRDM9_bound_peaks.bed
+	35584 CHOL_peakCalls_PRDM9_bound_peaks.bed
+	30652 CESC_peakCalls_PRDM9_bound_peaks.bed
+
 
 
 # Reference
@@ -195,7 +207,7 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMwMDQ0ODY2LC0xMzM5NDAyMTEwLDExOD
+eyJoaXN0b3J5IjpbNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExOD
 c4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMy
 MCwtMTAxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMj
 A4NDI2MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2
