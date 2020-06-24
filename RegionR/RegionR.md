@@ -14,12 +14,13 @@ wget https://gdc.xenahubs.net/download/GDC-PANCAN.mutect2_snv.tsv.gz
 gzip -d GDC-PANCAN.mutect2_snv.tsv.gz
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.somaticsniper_snv.tsv.gz
 gzip -d GDC-PANCAN.somaticsniper_snv.tsv.gz
-
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.varscan2_snv.tsv.gz
+gzip -d GDC-PANCAN.varscan2_snv.tsv.gz
 ```
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjUyMDcxLDEyODAyMDQ2MzksMTM5Mj
+eyJoaXN0b3J5IjpbLTg0MzQzNDQ1LDEyODAyMDQ2MzksMTM5Mj
 I4Mjc3Niw3NDEzMTk0NTIsMTM2NjU1NDk3OSwtMjEwODAwNDkw
 MCwxODQwNjk0MjM5LDExNzgwNDg4NTQsNzMwOTk4MTE2XX0=
 -->
