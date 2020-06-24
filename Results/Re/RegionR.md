@@ -37,23 +37,23 @@ rename files
 
 **before renaming**
 
-<cancerType>_<stanfordUUID>_<batch>_<sample#>_<libraryID>_<bioRep>_<techRep>_<pool#>
+<cancerType#>_<stanfordUUID#>_<batch#>_<sample#>_<libraryID#>_<bioRep#>_<techRep#>_<pool#>
 
 For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
-<cancerType> - TGCT (**note - some cancer types like "LGG" have an extra "x" appended ie "LGGx" to maintain equal 4 character length of this string)
+<cancerType#> - TGCT (**note - some cancer types like "LGG" have an extra "x" appended ie "LGGx" to maintain equal 4 character length of this string)
 
-<stanfordUUID> - 1577A485-E047-42CF-8703-42A69E1AED1A - This corresponds to a unique 36-character ID given to each tissue fragment. This is not the same as the 36-character TCGA sample_id/case_id. Hyphens were replaced by underscores.
+<stanfordUUID#> - 1577A485-E047-42CF-8703-42A69E1AED1A - This corresponds to a unique 36-character ID given to each tissue fragment. This is not the same as the 36-character TCGA sample_id/case_id. Hyphens were replaced by underscores.
 
-<batch> - X038 == batch 038 - samples were, almost universally, processed in batches of 12. This number denotes in which batch the tissue was processed.
+<batch#> - X038 == batch 038 - samples were, almost universally, processed in batches of 12. This number denotes in which batch the tissue was processed.
 
 <sample#> - S09 == sample 09 - within a batch, samples were processed consistently in the same order throughout processing. In this case, S09 means that this particular sample was processed 9th within the batch.
 
-<libraryID> - L090 == library 090 - this number does not have inherent meaning and was used to track samples throughout processing.
+<libraryID#> - L090 == library 090 - this number does not have inherent meaning and was used to track samples throughout processing.
 
-<bioRep> - B1 == bioRep #1 (everything is B1, as we defined a bio rep as an individual piece of tissue)
+<bioRep#> - B1 == bioRep #1 (everything is B1, as we defined a bio rep as an individual piece of tissue)
 
-<techRep> - T2 == techRep #2 - Tumor tissue was homogenized prior to ATAC-seq into a nuclei suspension. Each technical replicate represents an individual ATAC-seq reaction performed in a separate tube on different nuclei isolated from the same sample.
+<techRep#> - T2 == techRep #2 - Tumor tissue was homogenized prior to ATAC-seq into a nuclei suspension. Each technical replicate represents an individual ATAC-seq reaction performed in a separate tube on different nuclei isolated from the same sample.
 
 <pool#> - PMRG == Pool "merged" - This represents the pool in which this particular technical replicate was sequenced. If this is "PMRG" that means that multiple sequencing runs were performed on this technical replicate and then merged to acheive sufficient depth.
 
@@ -63,6 +63,6 @@ Case_ID: TCGA-XE-AANI-01A
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3Nzg5NzcxMiwtNTIwMTE3ODMyLC0xMD
+eyJoaXN0b3J5IjpbMTU1NTUwNzIxNCwtNTIwMTE3ODMyLC0xMD
 E3NzQyOTAyLC0xNDg5NTQxNTgwXX0=
 -->
