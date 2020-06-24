@@ -33,14 +33,15 @@ awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
 **PRDM9-bound peaks in 410 samples**
-
+rename files
 <cancerType>_<stanfordUUID>_<batch>_<sample#>_<libraryID>_<bioRep>_<techRep>_<pool#>
+
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDk2ODM1OTIsMTU0OTc1MDI1OSwtND
-IwNjI1NjY1LDIwNDQ0NzEyNjIsLTg0MzQzNDQ1LDEyODAyMDQ2
-MzksMTM5MjI4Mjc3Niw3NDEzMTk0NTIsMTM2NjU1NDk3OSwtMj
-EwODAwNDkwMCwxODQwNjk0MjM5LDExNzgwNDg4NTQsNzMwOTk4
-MTE2XX0=
+eyJoaXN0b3J5IjpbLTEyODc3MDI1NSwxNTQ5NzUwMjU5LC00Mj
+A2MjU2NjUsMjA0NDQ3MTI2MiwtODQzNDM0NDUsMTI4MDIwNDYz
+OSwxMzkyMjgyNzc2LDc0MTMxOTQ1MiwxMzY2NTU0OTc5LC0yMT
+A4MDA0OTAwLDE4NDA2OTQyMzksMTE3ODA0ODg1NCw3MzA5OTgx
+MTZdfQ==
 -->
