@@ -11,10 +11,10 @@ somatic mutation (SNPs and small INDELs)
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
 gzip -d GDC-PANCAN.muse_snv.tsv
 ```
-# 
+# rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzMjA3MTcsNzQxMzE5NDUyLDEzNjY1NT
-Q5NzksLTIxMDgwMDQ5MDAsMTg0MDY5NDIzOSwxMTc4MDQ4ODU0
-LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTM5MjI4Mjc3Niw3NDEzMTk0NTIsMTM2Nj
+U1NDk3OSwtMjEwODAwNDkwMCwxODQwNjk0MjM5LDExNzgwNDg4
+NTQsNzMwOTk4MTE2XX0=
 -->
