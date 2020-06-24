@@ -29,20 +29,21 @@ overlapPercentage_c=hotspotsOverlap_23c$overlapNumber/hotspotsOverlap_23c$totalH
 # plot the distribution of overlap fraction
 x axis: overlap fraction (0 - 100%)
 y axis: number of samples. 
-## 410 samples
-
 ## 23 cancer types
+![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PlotOverlapDistribution/hotspotsOverlap_23.png)
+## 410 samples
+![enter image description here](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PlotOverlapDistribution/hotspotsOverlap_410.png)
 
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1ODcxMDc5MiwyMDY2MTE2MzgsMjEyND
-MwMTc0LDY2NjY3MDU0LC0xOTkwMTE0OTQ5LDE3NDg1MjM0NTgs
-OTM2OTI0NzAzLDE0MDQ4Mjc2NSwtMTQ4NTE0MDkwNSwtMTEyOT
-EyNTI5MywtMTQzMTgzNTY3Niw1NTU3MjU5OTEsMzI2ODMwNDMw
-LDg1MzI3ODQzMSwtMTg3MTUyMzMxNywtMjAwODMxOTkxLDE3ND
-Q3MDE3MTAsMTE1OTQzODI0MywyMTI4ODY0NjEsNzU4MzQ0MTU0
-XX0=
+eyJoaXN0b3J5IjpbMTkxMDkyODA4LDIwNjYxMTYzOCwyMTI0Mz
+AxNzQsNjY2NjcwNTQsLTE5OTAxMTQ5NDksMTc0ODUyMzQ1OCw5
+MzY5MjQ3MDMsMTQwNDgyNzY1LC0xNDg1MTQwOTA1LC0xMTI5MT
+I1MjkzLC0xNDMxODM1Njc2LDU1NTcyNTk5MSwzMjY4MzA0MzAs
+ODUzMjc4NDMxLC0xODcxNTIzMzE3LC0yMDA4MzE5OTEsMTc0ND
+cwMTcxMCwxMTU5NDM4MjQzLDIxMjg4NjQ2MSw3NTgzNDQxNTRd
+fQ==
 -->
