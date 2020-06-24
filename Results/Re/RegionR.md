@@ -6,7 +6,7 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 # input files
-**somatic mutation (SNPs and small INDELs)**
+## somatic mutation (SNPs and small INDELs)
 ```bash
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
 gzip -d GDC-PANCAN.muse_snv.tsv.gz 
@@ -32,10 +32,10 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
-**PRDM9-bound peaks in 410 samples**
+## PRDM9-bound peaks in 410 samples
 rename files
 
-- before renaming
+**before renaming**
 
 <cancerType>_<stanfordUUID>_<batch>_<sample#>_<libraryID>_<bioRep>_<techRep>_<pool#>
 
@@ -57,10 +57,11 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
 <pool#> - PMRG == Pool "merged" - This represents the pool in which this particular technical replicate was sequenced. If this is "PMRG" that means that multiple sequencing runs were performed on this technical replicate and then merged to acheive sufficient depth.
 
-- after renaming
+**after renaming**
 Case_ID: TCGA-XE-AANI-01A-31-A646-42
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5OTcyNTc5OCwtMTQ4OTU0MTU4MF19
+eyJoaXN0b3J5IjpbLTEwMTc3NDI5MDIsLTE0ODk1NDE1ODBdfQ
+==
 -->
