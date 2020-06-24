@@ -1,4 +1,4 @@
-count DSB hotspots that overlap any PRDM9 bound peaks
+count DSB hotspots that overlap PRDM9 bound peaks
 
 
 
@@ -44,7 +44,7 @@ Fig. 6. DSB frequency is correlated with the crossover rate.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjc3MDEwNDEsNTU1NzI1OTkxLDMyNj
+eyJoaXN0b3J5IjpbLTE0ODE4NDI2ODUsNTU1NzI1OTkxLDMyNj
 gzMDQzMCw4NTMyNzg0MzEsLTE4NzE1MjMzMTcsLTIwMDgzMTk5
 MSwxNzQ0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLDc1OD
 M0NDE1NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywt
