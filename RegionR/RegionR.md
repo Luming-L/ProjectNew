@@ -38,11 +38,12 @@ before renaming
 <cancerType>_<stanfordUUID>_<batch>_<sample#>_<libraryID>_<bioRep>_<techRep>_<pool#>
 For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 <cancerType> - TGCT (**note - some cancer types like "LGG" have an extra "x" appended ie "LGGx" to maintain equal 4 character length of this string)
+<stanfordUUID> - 1577A485-E047-42CF-8703-42A69E1AED1A - This corresponds to a unique 36-character ID given to each tissue fragment. This is not the same as the 36-character TCGA sample_id/case_id. Hyphens were replaced by underscores.
 
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3ODk3NTAwNiwxNTQ5NzUwMjU5LC00Mj
+eyJoaXN0b3J5IjpbMTQ3NDI0NDgzNiwxNTQ5NzUwMjU5LC00Mj
 A2MjU2NjUsMjA0NDQ3MTI2MiwtODQzNDM0NDUsMTI4MDIwNDYz
 OSwxMzkyMjgyNzc2LDc0MTMxOTQ1MiwxMzY2NTU0OTc5LC0yMT
 A4MDA0OTAwLDE4NDA2OTQyMzksMTE3ODA0ODg1NCw3MzA5OTgx
