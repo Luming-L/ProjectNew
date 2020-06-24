@@ -60,9 +60,12 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 **after renaming**
 
 Case_ID: TCGA-XE-AANI-01A
+# Reference
+
+[https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMzYwMzg0NCwxNzg4MDQ4MzIyLC0xNj
-cyOTI5Mjc4LC01MjAxMTc4MzIsLTEwMTc3NDI5MDIsLTE0ODk1
-NDE1ODBdfQ==
+eyJoaXN0b3J5IjpbMzY5NzAxMDYxLDE3ODgwNDgzMjIsLTE2Nz
+I5MjkyNzgsLTUyMDExNzgzMiwtMTAxNzc0MjkwMiwtMTQ4OTU0
+MTU4MF19
 -->
