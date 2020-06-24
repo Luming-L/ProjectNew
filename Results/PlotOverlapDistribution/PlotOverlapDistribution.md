@@ -31,33 +31,17 @@ totalHotspots=`wc -l /exports/eddie/scratch/s1949868/humanDSBhotspots/humanDSBho
 echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 ```
 ## 23 cancer types
-Bedtools closest
 
-how they generated the file
-
-colocalization DSB hotspots with chromosome rearrangement breakpoints
-
-Fig. 1. Genome-wide distribution of DSB hotspots in human individuals.
-
-Fig. 2. PRDM9-defined hotspots are found in the human PARs.
-
-Fig. 3. Comparison of LD-based recombinationmaps and DSB hotspots.
-
-Fig. 4. Variation in hotspot strength between the AA1 and AA2 individuals.
-
-Fig. 5. Signatures of increased genetic diversity at DSB hotspots.
-
-Fig. 6. DSB frequency is correlated with the crossover rate.
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwODg1MjEyOSwtMTQ4NTE0MDkwNSwtMT
-EyOTEyNTI5MywtMTQzMTgzNTY3Niw1NTU3MjU5OTEsMzI2ODMw
-NDMwLDg1MzI3ODQzMSwtMTg3MTUyMzMxNywtMjAwODMxOTkxLD
-E3NDQ3MDE3MTAsMTE1OTQzODI0MywyMTI4ODY0NjEsNzU4MzQ0
-MTU0LC0zNzE1NTkyMjUsLTkyODQ3NzEsNDc1NTM2ODIzLC0xND
-k5MTA3NjYzLC0xMTU4MjQ2MDk1LC0xMDg3NTU0OTcxLC0xNTk3
-MzY3NzM0XX0=
+eyJoaXN0b3J5IjpbMTQwNDgyNzY1LC0xNDg1MTQwOTA1LC0xMT
+I5MTI1MjkzLC0xNDMxODM1Njc2LDU1NTcyNTk5MSwzMjY4MzA0
+MzAsODUzMjc4NDMxLC0xODcxNTIzMzE3LC0yMDA4MzE5OTEsMT
+c0NDcwMTcxMCwxMTU5NDM4MjQzLDIxMjg4NjQ2MSw3NTgzNDQx
+NTQsLTM3MTU1OTIyNSwtOTI4NDc3MSw0NzU1MzY4MjMsLTE0OT
+kxMDc2NjMsLTExNTgyNDYwOTUsLTEwODc1NTQ5NzEsLTE1OTcz
+Njc3MzRdfQ==
 -->
