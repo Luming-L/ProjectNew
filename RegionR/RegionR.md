@@ -18,19 +18,19 @@ wget https://gdc.xenahubs.net/download/GDC-PANCAN.mutect2_snv.tsv.gz
 gzip -d GDC-PANCAN.mutect2_snv.tsv.gz
 wc -l GDC-PANCAN.mutect2_snv.tsv # 3175930
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.mutect2_snv.tsv | wc -l # 3068128
-awk '{if($4 != $5){print $0}}' GDC-PANCAN.mutect2_snv.tsv | wc -l
-107802
-
+awk '{if($4 != $5){print $0}}' GDC-PANCAN.mutect2_snv.tsv | wc -l # 107802
 
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.somaticsniper_snv.tsv.gz
 gzip -d GDC-PANCAN.somaticsniper_snv.tsv.gz
+wc -l GDC-PANCAN.somaticsniper_snv.tsv # 2202278
+
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.varscan2_snv.tsv.gz
 gzip -d GDC-PANCAN.varscan2_snv.tsv.gz
 ```
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwOTE2NzAxMiwyMDQ0NDcxMjYyLC04ND
+eyJoaXN0b3J5IjpbMTcwNDEzODM3MiwyMDQ0NDcxMjYyLC04ND
 M0MzQ0NSwxMjgwMjA0NjM5LDEzOTIyODI3NzYsNzQxMzE5NDUy
 LDEzNjY1NTQ5NzksLTIxMDgwMDQ5MDAsMTg0MDY5NDIzOSwxMT
 c4MDQ4ODU0LDczMDk5ODExNl19
