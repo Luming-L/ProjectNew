@@ -3,9 +3,12 @@
 
 mutations (SNPs, indels and structural variant breakpoints)
 
+
+
 # input files
+somatic mutation (SNPs and small INDELs)
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDgwMDQ5MDAsMTg0MDY5NDIzOSwxMT
-c4MDQ4ODU0LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTM2NjU1NDk3OSwtMjEwODAwNDkwMCwxOD
+QwNjk0MjM5LDExNzgwNDg4NTQsNzMwOTk4MTE2XX0=
 -->
