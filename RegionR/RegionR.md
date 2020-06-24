@@ -28,12 +28,15 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.somaticsniper_snv.tsv | wc -l # 1
 
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.varscan2_snv.tsv.gz
 gzip -d GDC-PANCAN.varscan2_snv.tsv.gz
+wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562 
+awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
+
 ```
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDY0MTIwOTcsMjA0NDQ3MTI2MiwtOD
-QzNDM0NDUsMTI4MDIwNDYzOSwxMzkyMjgyNzc2LDc0MTMxOTQ1
-MiwxMzY2NTU0OTc5LC0yMTA4MDA0OTAwLDE4NDA2OTQyMzksMT
-E3ODA0ODg1NCw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTQyMDYyNTY2NSwyMDQ0NDcxMjYyLC04ND
+M0MzQ0NSwxMjgwMjA0NjM5LDEzOTIyODI3NzYsNzQxMzE5NDUy
+LDEzNjY1NTQ5NzksLTIxMDgwMDQ5MDAsMTg0MDY5NDIzOSwxMT
+c4MDQ4ODU0LDczMDk5ODExNl19
 -->
