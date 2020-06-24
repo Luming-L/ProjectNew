@@ -1,8 +1,7 @@
 # 
 Visualize the overlap between PRDM9 bound peaks in cancer cells and DSB hotspots in testes
 
-A histogram will be plotted to visualize the distribution of overlap fraction between regions in each cancer sample and testes. The x axis of this histogram is 0 to 100% overlap, and the y axis is number of samples. 
-Per cancer level analysis
+A histogram will be plotted to visualize the distribution of overlap fraction between regions in each cancer sample and testes. 
 For a specific type of cancer, whether the PRDM9 binding regions in peaks are overlapped with those in the breakpoints of testis. How much they overlap?
 
 
@@ -10,7 +9,8 @@ For a specific type of cancer, whether the PRDM9 binding regions in peaks are ov
 # calculate overlap fraction
 overlap fraction = overlapping DSB hotspots counts/total DSB hotspots number*100
 # plot the distribution of overlap fraction
-Tx axis of this histogram is 0 to 100% overlap, and the y axis is number of samples. 
+x axis: overlap fraction (0 - 100%)
+y axis: number of samples. 
 
 ## 410 samples
 `-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. Restricted by -f and -r. 
@@ -38,7 +38,7 @@ echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwODg5MDE4MywtMTk5MDExNDk0OSwxNz
+eyJoaXN0b3J5IjpbMTEwMjAxNTk3NCwtMTk5MDExNDk0OSwxNz
 Q4NTIzNDU4LDkzNjkyNDcwMywxNDA0ODI3NjUsLTE0ODUxNDA5
 MDUsLTExMjkxMjUyOTMsLTE0MzE4MzU2NzYsNTU1NzI1OTkxLD
 MyNjgzMDQzMCw4NTMyNzg0MzEsLTE4NzE1MjMzMTcsLTIwMDgz
