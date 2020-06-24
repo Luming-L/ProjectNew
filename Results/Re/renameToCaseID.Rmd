@@ -20,7 +20,7 @@ files <- dir(path = "/home/s1949868/PRDM9BoundPeaks_410_Case_ID/",
 ```
 
 ```{r}
-# rename files by TCGA Case_ID
+# rename files to TCGA Case_ID
 plyr::a_ply(files,1, function(file) {
   file.uuid <- stringr::str_extract(file,
   "[:alnum:]{8}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{12}") # get stanfordUUID
