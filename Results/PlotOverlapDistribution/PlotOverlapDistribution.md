@@ -1,4 +1,4 @@
-find 
+count DSB hotspots that overlap 
 
 
 
@@ -44,10 +44,11 @@ Fig. 6. DSB frequency is correlated with the crossover rate.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI2ODMwNDMwLDg1MzI3ODQzMSwtMTg3MT
-UyMzMxNywtMjAwODMxOTkxLDE3NDQ3MDE3MTAsMTE1OTQzODI0
-MywyMTI4ODY0NjEsNzU4MzQ0MTU0LC0zNzE1NTkyMjUsLTkyOD
-Q3NzEsNDc1NTM2ODIzLC0xNDk5MTA3NjYzLC0xMTU4MjQ2MDk1
-LC0xMDg3NTU0OTcxLC0xNTk3MzY3NzM0LDEzMTEwOTQyODEsLT
-IwMTM0NjI3MTgsLTIxMzk3NjI4NDcsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNTU1NzI1OTkxLDMyNjgzMDQzMCw4NTMyNz
+g0MzEsLTE4NzE1MjMzMTcsLTIwMDgzMTk5MSwxNzQ0NzAxNzEw
+LDExNTk0MzgyNDMsMjEyODg2NDYxLDc1ODM0NDE1NCwtMzcxNT
+U5MjI1LC05Mjg0NzcxLDQ3NTUzNjgyMywtMTQ5OTEwNzY2Mywt
+MTE1ODI0NjA5NSwtMTA4NzU1NDk3MSwtMTU5NzM2NzczNCwxMz
+ExMDk0MjgxLC0yMDEzNDYyNzE4LC0yMTM5NzYyODQ3LDczMDk5
+ODExNl19
 -->
