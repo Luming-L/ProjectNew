@@ -1,7 +1,7 @@
 # 
 Visualize the overlap between PRDM9 bound peaks in cancer cells and DSB hotspots in testes
 
-A histogram will be plotted to visualize the distribution of overlap fraction between regions in each cancer sample and testes. 
+
 For a specific type of cancer, whether the PRDM9 binding regions in peaks are overlapped with those in the breakpoints of testis. How much they overlap?
 
 
@@ -14,9 +14,6 @@ y axis: number of samples.
 
 ## 410 samples
 `-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. Restricted by -f and -r. 
-
-
-
 ```bash
 echo -e "sampleName\toverlapNumber\ttotalHotspots" > hotspotsOverlap.txt
 # find the DSB hotspots that overlap any PRDM9 bound peaks by `bedtools intersect`
@@ -38,11 +35,11 @@ echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMjAxNTk3NCwtMTk5MDExNDk0OSwxNz
-Q4NTIzNDU4LDkzNjkyNDcwMywxNDA0ODI3NjUsLTE0ODUxNDA5
-MDUsLTExMjkxMjUyOTMsLTE0MzE4MzU2NzYsNTU1NzI1OTkxLD
-MyNjgzMDQzMCw4NTMyNzg0MzEsLTE4NzE1MjMzMTcsLTIwMDgz
-MTk5MSwxNzQ0NzAxNzEwLDExNTk0MzgyNDMsMjEyODg2NDYxLD
-c1ODM0NDE1NCwtMzcxNTU5MjI1LC05Mjg0NzcxLDQ3NTUzNjgy
-M119
+eyJoaXN0b3J5IjpbNjY2NjcwNTQsLTE5OTAxMTQ5NDksMTc0OD
+UyMzQ1OCw5MzY5MjQ3MDMsMTQwNDgyNzY1LC0xNDg1MTQwOTA1
+LC0xMTI5MTI1MjkzLC0xNDMxODM1Njc2LDU1NTcyNTk5MSwzMj
+Y4MzA0MzAsODUzMjc4NDMxLC0xODcxNTIzMzE3LC0yMDA4MzE5
+OTEsMTc0NDcwMTcxMCwxMTU5NDM4MjQzLDIxMjg4NjQ2MSw3NT
+gzNDQxNTQsLTM3MTU1OTIyNSwtOTI4NDc3MSw0NzU1MzY4MjNd
+fQ==
 -->
