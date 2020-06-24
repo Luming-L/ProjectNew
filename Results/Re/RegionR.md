@@ -32,7 +32,8 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
-## PRDM9-bound peaks in 410 samples
+## PRDM9-bound peaks in 404 samples
+410 before renaming and 404 after
 ### rename files
 
 **before renaming**
@@ -63,6 +64,6 @@ Case_ID: TCGA-XE-AANI-01A
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NjU4Nzg2MywtMTY3MjkyOTI3OCwtNT
-IwMTE3ODMyLC0xMDE3NzQyOTAyLC0xNDg5NTQxNTgwXX0=
+eyJoaXN0b3J5IjpbLTE2NTUzNDA1MjQsLTE2NzI5MjkyNzgsLT
+UyMDExNzgzMiwtMTAxNzc0MjkwMiwtMTQ4OTU0MTU4MF19
 -->
