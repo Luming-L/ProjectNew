@@ -7,8 +7,13 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 # input files
 somatic mutation (SNPs and small INDELs)
+```bash
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
+gzip -d GDC-PANCAN.muse_snv.tsv
+```
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NjU1NDk3OSwtMjEwODAwNDkwMCwxOD
-QwNjk0MjM5LDExNzgwNDg4NTQsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNzQxMzE5NDUyLDEzNjY1NTQ5NzksLTIxMD
+gwMDQ5MDAsMTg0MDY5NDIzOSwxMTc4MDQ4ODU0LDczMDk5ODEx
+Nl19
 -->
