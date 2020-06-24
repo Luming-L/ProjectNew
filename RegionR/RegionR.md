@@ -6,7 +6,7 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 # input files
-somatic mutation (SNPs and small INDELs)
+**somatic mutation (SNPs and small INDELs)**
 ```bash
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
 gzip -d GDC-PANCAN.muse_snv.tsv.gz 
@@ -32,11 +32,15 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
+**PRDM9-bound peaks in 410 samples**
+
+<cancerType>_<stanfordUUID>_<batch>_<sample#>_<libraryID>_<bioRep>_<techRep>_<pool#>
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0OTc1MDI1OSwtNDIwNjI1NjY1LDIwND
-Q0NzEyNjIsLTg0MzQzNDQ1LDEyODAyMDQ2MzksMTM5MjI4Mjc3
-Niw3NDEzMTk0NTIsMTM2NjU1NDk3OSwtMjEwODAwNDkwMCwxOD
-QwNjk0MjM5LDExNzgwNDg4NTQsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE0MDk2ODM1OTIsMTU0OTc1MDI1OSwtND
+IwNjI1NjY1LDIwNDQ0NzEyNjIsLTg0MzQzNDQ1LDEyODAyMDQ2
+MzksMTM5MjI4Mjc3Niw3NDEzMTk0NTIsMTM2NjU1NDk3OSwtMj
+EwODAwNDkwMCwxODQwNjk0MjM5LDExNzgwNDg4NTQsNzMwOTk4
+MTE2XX0=
 -->
