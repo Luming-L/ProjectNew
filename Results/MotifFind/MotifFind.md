@@ -171,17 +171,20 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-spec
 ```
 ```bash
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
+
 ```
 1080239 total
-82325 BRCA_peakCalls_PRDM9_bound_peaks.bed
-				58338 KIRP_peakCalls_PRDM9_bound_peaks.bed
-				57393 LUAD_peakCalls_PRDM9_bound_peaks.bed
-				56079 ESCA_peakCalls_PRDM9_bound_peaks.bed
-				53380 COAD_peakCalls_PRDM9_bound_peaks.bed
-				53233 STAD_peakCalls_PRDM9_bound_peaks.bed
-				50633 LUSC_peakCalls_PRDM9_bound_peaks.bed
-				49255 LIHC_peakCalls_PRDM9_bound_peaks.bed
-				48382 BLCA_peakCalls_PRDM9_bound_peaks.bed
+
+	82325 BRCA_peakCalls_PRDM9_bound_peaks.bed
+	58338 KIRP_peakCalls_PRDM9_bound_peaks.bed
+	57393 LUAD_peakCalls_PRDM9_bound_peaks.bed
+	56079 ESCA_peakCalls_PRDM9_bound_peaks.bed
+	53380 COAD_peakCalls_PRDM9_bound_peaks.bed
+	53233 STAD_peakCalls_PRDM9_bound_peaks.bed
+	50633 LUSC_peakCalls_PRDM9_bound_peaks.bed
+	49255 LIHC_peakCalls_PRDM9_bound_peaks.bed
+	48382 BLCA_peakCalls_PRDM9_bound_peaks.bed
+...
 
 
 
@@ -192,11 +195,11 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTg3NzI2ODQsLTEzMzk0MDIxMTAsMT
-E4NzgwNzI4NywtMTQyMTU4MTE1Miw2NTU4MDk3MzIsNjM4ODUx
-MzIwLC0xMDExMjQyODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MS
-wyMDg0MjYxODQxLC00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2
-MDYxODksMTc1MjYwNjgsLTkxNjUwMzc2MSw0NTY3NjY5MTgsMT
-E1MjU0MDE5LC01MzY4MjQyMSwtMTA2ODA5MTY5OSwtMTYwNDIz
-NTkzXX0=
+eyJoaXN0b3J5IjpbNTMwMDQ0ODY2LC0xMzM5NDAyMTEwLDExOD
+c4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMy
+MCwtMTAxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMj
+A4NDI2MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2
+MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNT
+I1NDAxOSwtNTM2ODI0MjEsLTEwNjgwOTE2OTksLTE2MDQyMzU5
+M119
 -->
