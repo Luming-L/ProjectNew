@@ -11,9 +11,13 @@ somatic mutation (SNPs and small INDELs)
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
 gzip -d GDC-PANCAN.muse_snv.tsv.gz 
 wc -l GDC-PANCAN.muse_snv.tsv # 2684789
+awk '{if($4 == $5){print $0}}' GDC-PANCAN.muse_snv.tsv | wc -l # 2684788
+awk '{if($4 != $5){print $0}}' GDC-PANCAN.muse_snv.tsv | wc -l # 1
 
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.mutect2_snv.tsv.gz
 gzip -d GDC-PANCAN.mutect2_snv.tsv.gz
+wc -l GDC-PANCAN.mutect2_snv.tsv # 3175930
+
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.somaticsniper_snv.tsv.gz
 gzip -d GDC-PANCAN.somaticsniper_snv.tsv.gz
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.varscan2_snv.tsv.gz
@@ -22,7 +26,7 @@ gzip -d GDC-PANCAN.varscan2_snv.tsv.gz
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAwNjg5MTk0LDIwNDQ0NzEyNjIsLTg0Mz
+eyJoaXN0b3J5IjpbNTM3NDQyMzQ5LDIwNDQ0NzEyNjIsLTg0Mz
 QzNDQ1LDEyODAyMDQ2MzksMTM5MjI4Mjc3Niw3NDEzMTk0NTIs
 MTM2NjU1NDk3OSwtMjEwODAwNDkwMCwxODQwNjk0MjM5LDExNz
 gwNDg4NTQsNzMwOTk4MTE2XX0=
