@@ -35,9 +35,7 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ## PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
 ### rename files
-
 **before renaming**
-
 *<cancerType#>_<stanfordUUID#>_<batch#>_<sample#>_<libraryID#>_<bioRep#>_<techRep#>_<pool#>*
 
 For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
@@ -64,6 +62,6 @@ Case_ID: TCGA-XE-AANI-01A
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTUzNDA1MjQsLTE2NzI5MjkyNzgsLT
-UyMDExNzgzMiwtMTAxNzc0MjkwMiwtMTQ4OTU0MTU4MF19
+eyJoaXN0b3J5IjpbLTIzMDc3MjUyNCwtMTY3MjkyOTI3OCwtNT
+IwMTE3ODMyLC0xMDE3NzQyOTAyLC0xNDg5NTQxNTgwXX0=
 -->
