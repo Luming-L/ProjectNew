@@ -1,0 +1,42 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(plyr)
+library(stringr)
+```
+
+```{r}
+# read the "TCGA_identifier_mapping.txt (5 columns, the delimiter is "\t")"
+table <- readr::read_tsv("https://api.gdc.cancer.gov/data/7a3d7067-09d6-4acf-82c8-a1a81febf72c")
+# get all the path of files
+files <- dir(path = "/home/s1949868/PRDM9BoundPeaks_410_Case_ID/", 
+                    pattern = "_PRDM9_bound_peaks.bed", 
+                    all.files = T, 
+                    full.names = T)
+```
+
+```{r}
+# rename files by TCGA Case_ID
+plyr::a_ply(files,1, function(file) {
+  file.uuid <- stringr::str_extract(file,
+  "[:alnum:]{8}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{12}") # get stanfordUUID
+  
+  idx <- grep(file.uuid,gsub("-","_",table$stanfordUUID)) # use stanfordUUID to find the index
+  
+  barcode <- unique(table[idx,]$Case_ID) # get Case_ID and use it as the barcode, and give technical replicates the same barcode
+  barcode <- stringr::str_extract(barcode,
+  "[:alnum:]{4}-[:alnum:]{2}-[:alnum:]{4}-[:alnum:]{3}")
+  
+  filename <- stringr::str_extract(file,
+  "[:alnum:]{4}_[:alnum:]{8}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{12}_[:alnum:]{4}_[:alnum:]{3}") # get the file name
+  
+  to <- gsub(filename,barcode,file) # change uuid in file names to new barcode
+  
+  file.rename(file, to) # rename files
+})
+```
+
