@@ -51,9 +51,13 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
 <libraryID> - L090 == library 090 - this number does not have inherent meaning and was used to track samples throughout processing.
 
+<bioRep> - B1 == bioRep #1 (everything is B1, as we defined a bio rep as an individual piece of tissue)
 
+<techRep> - T2 == techRep #2 - Tumor tissue was homogenized prior to ATAC-seq into a nuclei suspension. Each technical replicate represents an individual ATAC-seq reaction performed in a separate tube on different nuclei isolated from the same sample.
+
+<pool#> - PMRG == Pool "merged" - This represents the pool in which this particular technical replicate was sequenced. If this is "PMRG" that means that multiple sequencing runs were performed on this technical replicate and then merged to acheive sufficient depth.
 # rename files
 RegioneR package
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTgxMTQzNV19
+eyJoaXN0b3J5IjpbLTE5MTk1NDg1NTFdfQ==
 -->
