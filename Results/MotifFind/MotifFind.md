@@ -169,10 +169,10 @@ script `findPRDM9BoundPeaks.sh`
 ```bash
 bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/bed/"${fileName}.bed" -b $file -u -F 1.0 > "${fileName}_PRDM9_bound_peaks.bed"
 ```
+## 23 cancerType
 ```bash
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
-
 ```
 1080239 total
 
@@ -198,6 +198,20 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 	35584 CHOL_peakCalls_PRDM9_bound_peaks.bed
 	30652 CESC_peakCalls_PRDM9_bound_peaks.bed
 
+```bash
+wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | head
+```
+ 12716927 total
+ 
+	42034 KIRP_DB49B30A_EECF_4F76_8E0B_3B0F612996F4_X006_S10_PRDM9_bound_peaks.bed
+	41876 BRCA_0142AAAC_FFE8_43B7_AB99_02F7A1740567_X022_S06_PRDM9_bound_peaks.bed
+	41366 BRCA_1253F1AD_60FD_4536_97A8_E84B756E5E52_X004_S05_PRDM9_bound_peaks.bed
+	40729 BRCA_FB1C995E_6C78_414A_B74C_8C77CD924348_X015_S09_PRDM9_bound_peaks.bed
+	40709 KIRP_0C6C66CE_7D41_4176_8438_F275CDFE7759_X006_S07_PRDM9_bound_peaks.bed
+	40009 BRCA_359C8EB0_48BC_47D5_AD78_38B0AE6C5FB8_X018_S05_PRDM9_bound_peaks.bed
+	39791 BRCA_CC102C17_C1CA_427A_8C7D_D3E79748A0CD_X004_S04_PRDM9_bound_peaks.bed
+	39345 BRCA_08499A64_3FD8_4E62_AF08_3C66AF93CAE7_X003_S05_PRDM9_bound_peaks.bed
+	39026 BRCA_DD69EDE9_142D_46E2_AA06_58D07D3230FB_X016_S08_PRDM9_bound_peaks.bed
 
 
 # Reference
@@ -207,11 +221,11 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExOD
-c4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMy
-MCwtMTAxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMj
-A4NDI2MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2
-MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNT
-I1NDAxOSwtNTM2ODI0MjEsLTEwNjgwOTE2OTksLTE2MDQyMzU5
-M119
+eyJoaXN0b3J5IjpbNDg4Mjc1MjA5LDcyMTA3NjQ3MCwtMTMzOT
+QwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTcz
+Miw2Mzg4NTEzMjAsLTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMD
+kzNjk2NjcxLDIwODQyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0
+NTQ3LDEzNTYwNjE4OSwxNzUyNjA2OCwtOTE2NTAzNzYxLDQ1Nj
+c2NjkxOCwxMTUyNTQwMTksLTUzNjgyNDIxLC0xMDY4MDkxNjk5
+XX0=
 -->
