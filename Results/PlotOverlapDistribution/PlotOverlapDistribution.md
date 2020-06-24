@@ -1,10 +1,3 @@
-# 
-Visualize the overlap between PRDM9 bound peaks in cancer cells and DSB hotspots in testes
-
-
-For a specific type of cancer, whether the PRDM9 binding regions in peaks are overlapped with those in the breakpoints of testis. How much they overlap?
-
-
 # count DSB hotspots that overlap any PRDM9 bound peaks
 `-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. Restricted by -f and -r. 
 ```bash
@@ -39,11 +32,11 @@ y axis: number of samples.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDkyODA4LDIwNjYxMTYzOCwyMTI0Mz
-AxNzQsNjY2NjcwNTQsLTE5OTAxMTQ5NDksMTc0ODUyMzQ1OCw5
-MzY5MjQ3MDMsMTQwNDgyNzY1LC0xNDg1MTQwOTA1LC0xMTI5MT
-I1MjkzLC0xNDMxODM1Njc2LDU1NTcyNTk5MSwzMjY4MzA0MzAs
-ODUzMjc4NDMxLC0xODcxNTIzMzE3LC0yMDA4MzE5OTEsMTc0ND
-cwMTcxMCwxMTU5NDM4MjQzLDIxMjg4NjQ2MSw3NTgzNDQxNTRd
-fQ==
+eyJoaXN0b3J5IjpbMTk3NjExNDc5NSwyMDY2MTE2MzgsMjEyND
+MwMTc0LDY2NjY3MDU0LC0xOTkwMTE0OTQ5LDE3NDg1MjM0NTgs
+OTM2OTI0NzAzLDE0MDQ4Mjc2NSwtMTQ4NTE0MDkwNSwtMTEyOT
+EyNTI5MywtMTQzMTgzNTY3Niw1NTU3MjU5OTEsMzI2ODMwNDMw
+LDg1MzI3ODQzMSwtMTg3MTUyMzMxNywtMjAwODMxOTkxLDE3ND
+Q3MDE3MTAsMTE1OTQzODI0MywyMTI4ODY0NjEsNzU4MzQ0MTU0
+XX0=
 -->
