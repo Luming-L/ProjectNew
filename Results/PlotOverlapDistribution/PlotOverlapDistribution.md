@@ -18,13 +18,7 @@ overlapNumber=`wc -l "${fileName}_PRDM9BoundPeaks_overlap_hotspots.bed" | awk '{
 
 # total hotspots number
 totalHotspots=`wc -l /exports/eddie/scratch/s1949868/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt | awk '{print $1}'`
-```
-For a cancer sample, regions of PRDM motifs that have been observed in ATAC-seq peaks overlap with how many hotspots testis.
-```bash
-# count hotspots that overlap PRDM9 motif
-overlapNumber=`wc -l "${fileName}.hotspots.bed" | awk '{print $1}'`
-# total hotspots number
-totalHotspots=`wc -l /exports/eddie/scratch/s1949868/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt | awk '{print $1}'`
+
 # output the sample name and counts
 echo -e "${fileName}\t${overlapNumber}\t${totalHotspots}" >> hotspotsOverlap.txt
 ```
@@ -51,7 +45,7 @@ Fig. 6. DSB frequency is correlated with the crossover rate.
 
 [Recombination initiation maps of individual human genomes](https://science.sciencemag.org/content/346/6211/1256442)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDU5NDg4MzcsLTE0MzE4MzU2NzYsNT
+eyJoaXN0b3J5IjpbLTExMjkxMjUyOTMsLTE0MzE4MzU2NzYsNT
 U1NzI1OTkxLDMyNjgzMDQzMCw4NTMyNzg0MzEsLTE4NzE1MjMz
 MTcsLTIwMDgzMTk5MSwxNzQ0NzAxNzEwLDExNTk0MzgyNDMsMj
 EyODg2NDYxLDc1ODM0NDE1NCwtMzcxNTU5MjI1LC05Mjg0Nzcx
