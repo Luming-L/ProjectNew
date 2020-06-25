@@ -85,19 +85,14 @@ saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```bash
 for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
 bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l # 157126
-bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l
-453661
-[s1949868@node1h21(eddie) SNPsAndSmallINDELs]$ bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l
-191575
-[s1949868@node1h21(eddie) SNPsAndSmallINDELs]$
-[s1949868@node1h21(eddie) SNPsAndSmallINDELs]$ bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.muse_snv.tsv.sorted -v | wc -l
-72598
-[s1949868@node1h21(eddie) SNPsAndSmallINDELs]$ bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l
-116359
-[s1949868@node1h21(eddie) SNPsAndSmallINDELs]$ bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l
-28011
-[s1949868@node1h21(eddie) SNPsAndSmallINDELs]$ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.muse_snv.tsv.sorted -v | wc -l
-316740
+bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 453661
+bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 191575
+
+bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.muse_snv.tsv.sorted -v | wc -l # 72598
+bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l # 116359
+bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 28011
+
+bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.muse_snv.tsv.sorted -v | wc -l316740
 [s1949868@node1h21(eddie) SNPsAndSmallINDELs]$ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l
 173890
 [s1949868@node1h21(eddie) SNPsAndSmallINDELs]$ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l
@@ -133,11 +128,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjE5Mjg5NDYsLTcxNzEzMzc0NiwxNj
-E4ODI3NzksLTUxNjEzMjI2OCwxNjUwMDkxLDEzMDEwNjkxMzMs
-LTE4Njk2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIzNCwtMjExMz
-YxMDI5OSw0MDM4NzQxNSw3NjAwMTc3MDAsLTEzMzc4MTQxNjAs
-MTMyNTU3ODMwMywtMTQ0MzE1NTEzNiwtMzExNTIxMDc3LDQ2Nj
-g1NDQ4MiwtOTA3Mjg4NDYzLC03NDQzMDM0MTUsLTM5MjkyOTQz
-OV19
+eyJoaXN0b3J5IjpbMTUyMTM2NzQzNSwtNzE3MTMzNzQ2LDE2MT
+g4Mjc3OSwtNTE2MTMyMjY4LDE2NTAwOTEsMTMwMTA2OTEzMywt
+MTg2OTY5NDUzNiw4NTAyNDQ4OTcsNjAzNzUyMjM0LC0yMTEzNj
+EwMjk5LDQwMzg3NDE1LDc2MDAxNzcwMCwtMTMzNzgxNDE2MCwx
+MzI1NTc4MzAzLC0xNDQzMTU1MTM2LC0zMTE1MjEwNzcsNDY2OD
+U0NDgyLC05MDcyODg0NjMsLTc0NDMwMzQxNSwtMzkyOTI5NDM5
+XX0=
 -->
