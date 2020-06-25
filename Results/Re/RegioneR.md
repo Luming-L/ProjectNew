@@ -102,7 +102,7 @@ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.somaticsn
 `GDC-PANCAN.mutect2_snv.tsv` has most mutations and relatively larger overlap with other datasets.
 **check pipeline**
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
-The `MuTect2` pipeline employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the MuTect2 pipeline.
+The `MuTect2` pipeline employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the `MuTect2` pipeline.
 
 GDC data processing Somatic Variant Calling Workflow
 MuSE: Somatic point mutation caller for tumor-normal paired samples in next-generation sequencing data.
@@ -129,11 +129,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTkzMzYxMDYsNDQwNDA1NDg1LC0xNT
-E3MDkwMDQ3LC03MTcxMzM3NDYsMTYxODgyNzc5LC01MTYxMzIy
-NjgsMTY1MDA5MSwxMzAxMDY5MTMzLC0xODY5Njk0NTM2LDg1MD
-I0NDg5Nyw2MDM3NTIyMzQsLTIxMTM2MTAyOTksNDAzODc0MTUs
-NzYwMDE3NzAwLC0xMzM3ODE0MTYwLDEzMjU1NzgzMDMsLTE0ND
-MxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2
-M119
+eyJoaXN0b3J5IjpbMTQzMzY3NDc5MCw0NDA0MDU0ODUsLTE1MT
+cwOTAwNDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2
+OCwxNjUwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMj
+Q0ODk3LDYwMzc1MjIzNCwtMjExMzYxMDI5OSw0MDM4NzQxNSw3
+NjAwMTc3MDAsLTEzMzc4MTQxNjAsMTMyNTU3ODMwMywtMTQ0Mz
+E1NTEzNiwtMzExNTIxMDc3LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYz
+XX0=
 -->
