@@ -83,6 +83,8 @@ saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```
 ### choose one from four datasets (choose variants call pipeline)
 ```bash
+for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
+
 wc -l GDC-PANCAN.mutect2_snv.tsv.sorted # 3175930
 wc -l GDC-PANCAN.muse_snv.tsv.sorted # 2684789
 bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.muse_snv.tsv.sorted -v | wc -l # 542372
@@ -96,6 +98,8 @@ wc -l GDC-PANCAN.varscan2_snv.tsv.sorted # 2854562
 bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 451951
 bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 173890
 ```
+`GDC-PANCAN.mutect2_snv.tsv` have 
+
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
 GDC data processing Somatic Variant Calling Workflow
 MuSE: Somatic point mutation caller for tumor-normal paired samples in next-generation sequencing data.
@@ -122,7 +126,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDk3NDQ5MCwxMzAxMDY5MTMzLC0xOD
+eyJoaXN0b3J5IjpbLTk1NjI0NTQ5NSwxMzAxMDY5MTMzLC0xOD
 Y5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NTIyMzQsLTIxMTM2MTAy
 OTksNDAzODc0MTUsNzYwMDE3NzAwLC0xMzM3ODE0MTYwLDEzMj
 U1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0
