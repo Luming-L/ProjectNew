@@ -61,12 +61,14 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 **after renaming**
 
 Case_ID: TCGA-XE-AANI-01A
+# evaluates the number of overlaps between two sets of regions.
 # Reference
 [https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html](https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html)
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTc3NzU3NTksLTE0MTU2Mjc5MjYsLT
-I3MjA3ODI4LDE3ODgwNDgzMjIsLTE2NzI5MjkyNzgsLTUyMDEx
-NzgzMiwtMTAxNzc0MjkwMiwtMTQ4OTU0MTU4MF19
+eyJoaXN0b3J5IjpbMTMyNDUyOTA5MCwtMTM5Nzc3NTc1OSwtMT
+QxNTYyNzkyNiwtMjcyMDc4MjgsMTc4ODA0ODMyMiwtMTY3Mjky
+OTI3OCwtNTIwMTE3ODMyLC0xMDE3NzQyOTAyLC0xNDg5NTQxNT
+gwXX0=
 -->
