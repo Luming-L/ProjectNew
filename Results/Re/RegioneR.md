@@ -95,7 +95,10 @@ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.somaticsn
 `GDC-PANCAN.mutect2_snv.tsv` has most mutations and relatively larger overlap with other datasets.
 **check pipeline**
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
-The `MuTect2` pipeline employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the `MuTect2` pipeline.
+
+> The `MuTect2` pipeline employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the `MuTect2` pipeline.
+
+Therefore, we choose the 
 ### save snv files as RDS format
 ```r
 # mutect2_snv
@@ -124,11 +127,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjU1MjY1MzcsNDQwNDA1NDg1LC0xNT
-E3MDkwMDQ3LC03MTcxMzM3NDYsMTYxODgyNzc5LC01MTYxMzIy
-NjgsMTY1MDA5MSwxMzAxMDY5MTMzLC0xODY5Njk0NTM2LDg1MD
-I0NDg5Nyw2MDM3NTIyMzQsLTIxMTM2MTAyOTksNDAzODc0MTUs
-NzYwMDE3NzAwLC0xMzM3ODE0MTYwLDEzMjU1NzgzMDMsLTE0ND
-MxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2
-M119
+eyJoaXN0b3J5IjpbMjk2MzkyNzI5LDQ0MDQwNTQ4NSwtMTUxNz
+A5MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4
+LDE2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyND
+Q4OTcsNjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1LDc2
+MDAxNzcwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAzLC0xNDQzMT
+U1MTM2LC0zMTE1MjEwNzcsNDY2ODU0NDgyLC05MDcyODg0NjNd
+fQ==
 -->
