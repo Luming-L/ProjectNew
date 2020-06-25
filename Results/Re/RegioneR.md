@@ -83,6 +83,8 @@ saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```
 ### choose the most appropriate dataset 
 > There is currently no scientific consensus on the best variant calling pipeline so the investigator is responsible for choosing the pipeline(s) most appropriate for the data. 
+
+**ch**
 ```bash
 for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
 bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l # 157126
@@ -98,8 +100,9 @@ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.mutect2_s
 bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 528596
 ```
 `GDC-PANCAN.mutect2_snv.tsv` has most mutations and relatively larger overlap with other datasets.
-
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
+The `MuTect2` pipeline employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the MuTect2 pipeline.
+
 GDC data processing Somatic Variant Calling Workflow
 MuSE: Somatic point mutation caller for tumor-normal paired samples in next-generation sequencing data.
 mutation calling based on the F81 Markov substitution model for molecular evolution
@@ -125,11 +128,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQwNDA1NDg1LC0xNTE3MDkwMDQ3LC03MT
-cxMzM3NDYsMTYxODgyNzc5LC01MTYxMzIyNjgsMTY1MDA5MSwx
-MzAxMDY5MTMzLC0xODY5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NT
-IyMzQsLTIxMTM2MTAyOTksNDAzODc0MTUsNzYwMDE3NzAwLC0x
-MzM3ODE0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMT
-UyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0MzAzNDE1
-XX0=
+eyJoaXN0b3J5IjpbNzM4NDQ5Mzk3LDQ0MDQwNTQ4NSwtMTUxNz
+A5MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4
+LDE2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyND
+Q4OTcsNjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1LDc2
+MDAxNzcwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAzLC0xNDQzMT
+U1MTM2LC0zMTE1MjEwNzcsNDY2ODU0NDgyLC05MDcyODg0NjNd
+fQ==
 -->
