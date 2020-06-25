@@ -1,5 +1,4 @@
 In each of 404 samples, do somatic mutations overlap with PRDM9-bound ATAC-seq peaks more than expected?
-test if A overlaps with B more than expected
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
@@ -77,6 +76,6 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDIzMjUwNywtMTM4NTE5MjcyNSwtMT
-kwMTkxNDM5NV19
+eyJoaXN0b3J5IjpbLTcyMjE5NjksLTIxNDIzMjUwNywtMTM4NT
+E5MjcyNSwtMTkwMTkxNDM5NV19
 -->
