@@ -13,34 +13,8 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 
-# Two set of regions
-## somatic mutation (SNPs and small INDELs)
-```bash
-wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
-gzip -d GDC-PANCAN.muse_snv.tsv.gz 
-wc -l GDC-PANCAN.muse_snv.tsv # 2684789
-awk '{if($4 == $5){print $0}}' GDC-PANCAN.muse_snv.tsv | wc -l # 2684788
-awk '{if($4 != $5){print $0}}' GDC-PANCAN.muse_snv.tsv | wc -l # 1
-
-wget https://gdc.xenahubs.net/download/GDC-PANCAN.mutect2_snv.tsv.gz
-gzip -d GDC-PANCAN.mutect2_snv.tsv.gz
-wc -l GDC-PANCAN.mutect2_snv.tsv # 3175930
-awk '{if($4 == $5){print $0}}' GDC-PANCAN.mutect2_snv.tsv | wc -l # 3068128
-awk '{if($4 != $5){print $0}}' GDC-PANCAN.mutect2_snv.tsv | wc -l # 107802
-
-wget https://gdc.xenahubs.net/download/GDC-PANCAN.somaticsniper_snv.tsv.gz
-gzip -d GDC-PANCAN.somaticsniper_snv.tsv.gz
-wc -l GDC-PANCAN.somaticsniper_snv.tsv # 2202278
-awk '{if($4 == $5){print $0}}' GDC-PANCAN.somaticsniper_snv.tsv | wc -l # 2202277
-awk '{if($4 != $5){print $0}}' GDC-PANCAN.somaticsniper_snv.tsv | wc -l # 1
-
-wget https://gdc.xenahubs.net/download/GDC-PANCAN.varscan2_snv.tsv.gz
-gzip -d GDC-PANCAN.varscan2_snv.tsv.gz
-wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562 
-awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
-awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
-```
-## PRDM9-bound peaks in 404 samples
+# Two sets of regions
+## Set A: PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
 ### rename files
 **before renaming**
@@ -68,13 +42,41 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 **after renaming**
 
 Case_ID: TCGA-XE-AANI-01A
-# evaluates the number of overlaps between two sets of regions.
+
+## SetB: somatic mutation (SNPs and small INDELs)
+```bash
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
+gzip -d GDC-PANCAN.muse_snv.tsv.gz 
+wc -l GDC-PANCAN.muse_snv.tsv # 2684789
+awk '{if($4 == $5){print $0}}' GDC-PANCAN.muse_snv.tsv | wc -l # 2684788
+awk '{if($4 != $5){print $0}}' GDC-PANCAN.muse_snv.tsv | wc -l # 1
+
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.mutect2_snv.tsv.gz
+gzip -d GDC-PANCAN.mutect2_snv.tsv.gz
+wc -l GDC-PANCAN.mutect2_snv.tsv # 3175930
+awk '{if($4 == $5){print $0}}' GDC-PANCAN.mutect2_snv.tsv | wc -l # 3068128
+awk '{if($4 != $5){print $0}}' GDC-PANCAN.mutect2_snv.tsv | wc -l # 107802
+
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.somaticsniper_snv.tsv.gz
+gzip -d GDC-PANCAN.somaticsniper_snv.tsv.gz
+wc -l GDC-PANCAN.somaticsniper_snv.tsv # 2202278
+awk '{if($4 == $5){print $0}}' GDC-PANCAN.somaticsniper_snv.tsv | wc -l # 2202277
+awk '{if($4 != $5){print $0}}' GDC-PANCAN.somaticsniper_snv.tsv | wc -l # 1
+
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.varscan2_snv.tsv.gz
+gzip -d GDC-PANCAN.varscan2_snv.tsv.gz
+wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562 
+awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
+awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
+```
+
+# randomization strategy and an evaluation function
 # Reference
 [https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html](https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html)
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjg3ODUzNTYsLTE2NTgzNjcyNjgsLT
+eyJoaXN0b3J5IjpbLTEyOTY3MzI5MDIsLTE2NTgzNjcyNjgsLT
 EyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC03MjIx
 OTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5MDE5MTQzOT
 VdfQ==
