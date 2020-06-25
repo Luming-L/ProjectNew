@@ -1,5 +1,4 @@
-Do somatic mutations overlap with PRDM9-bound ATAC-seq peaks more than expected? For example: Are my ChIP-seq peaks on the promoters of active genes?
-
+In each of 404 o somatic mutations overlap with PRDM9-bound ATAC-seq peaks more than expected?
 
 **Evaluate the association between PRDM9 binding regions and mutational regions in cancer:** Permutation tests through regioneR package will be performed to assess the overlap between the PRDM9 binding regions and mutations (SNPs, indels and structural variant breakpoints) (Gel _et al._, 2016). In each of the 404 samples, the PRDM9 binding regions will be tested with SNPs plus indels and structural variant breakpoints, respectively. The permutation test includes two steps: randomize the regions and evaluate the association. The randomization function circularRandomizeRegions will be selected for circular permutation and the evaluation function numOverlaps will assess the number of overlaps by p-value. There is a backup plan for structural variants: if the structural variants are low in number, we will use merged pan-cancer PRDM9 binding regions and merged pan-cancer structural variants to do permutation test.
 
@@ -67,7 +66,7 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxOTgxNDA2NywtMTQxNTYyNzkyNiwtMj
-cyMDc4MjgsMTc4ODA0ODMyMiwtMTY3MjkyOTI3OCwtNTIwMTE3
-ODMyLC0xMDE3NzQyOTAyLC0xNDg5NTQxNTgwXX0=
+eyJoaXN0b3J5IjpbMzgzNjg5MzA0LC0xNDE1NjI3OTI2LC0yNz
+IwNzgyOCwxNzg4MDQ4MzIyLC0xNjcyOTI5Mjc4LC01MjAxMTc4
+MzIsLTEwMTc3NDI5MDIsLTE0ODk1NDE1ODBdfQ==
 -->
