@@ -73,7 +73,7 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 # Randomization strategy 
 creates a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set.
 For example, if our original RS comes from an NGS experiment, all of its regions would lie in mappable parts of the genome and wouldn’t make any sense to randomize a region into a centromere or any other non-mappable part of the genome. To help with that, many randomization functions provided by regioneR accept a mask, indicating where a random region cannot be placed.
-`randomizeRegions`
+`randomizeRegions`: given a RS, a genome and an optional mask, returns a new RS with the same number of regions and of the same width as the original ones but randomly placed along the non-masked parts of the genome.
 # Evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between two sets
 in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping somatic mutations.
@@ -82,9 +82,9 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODM2NTE0ODgsLTUxMTA2OTE2LC0yMD
-A1Nzc0OTcxLDE0NjUzOTIwNDMsLTU4OTg0NTUxMiwtMTU2MDUy
-MjY5LC0xMjA2ODYwNTUwLC0xNjU4MzY3MjY4LC0xMjk2ODk1MT
-Q5LDcwOTA5NjI4OSwtMTI3Mjc0MDA2NSwtNzIyMTk2OSwtMjE0
-MjMyNTA3LC0xMzg1MTkyNzI1LC0xOTAxOTE0Mzk1XX0=
+eyJoaXN0b3J5IjpbNTg3MDA5NTYwLC01MTEwNjkxNiwtMjAwNT
+c3NDk3MSwxNDY1MzkyMDQzLC01ODk4NDU1MTIsLTE1NjA1MjI2
+OSwtMTIwNjg2MDU1MCwtMTY1ODM2NzI2OCwtMTI5Njg5NTE0OS
+w3MDkwOTYyODksLTEyNzI3NDAwNjUsLTcyMjE5NjksLTIxNDIz
+MjUwNywtMTM4NTE5MjcyNSwtMTkwMTkxNDM5NV19
 -->
