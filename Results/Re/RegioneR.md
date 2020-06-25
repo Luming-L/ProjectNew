@@ -76,26 +76,10 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
 save snv files as RDS format
 ```r
-muse_snv
 muse_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.muse_snv.tsv",header = TRUE,sep = "\t")
 muse_snv$Sample_ID=as.character(muse_snv$Sample_ID)
 muse_snv$chrom=as.character(muse_snv$chrom)
 saveRDS(object = muse_snv, file = "muse_snv.rds")
-# mutect2_snv
-mutect2_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.mutect2_snv.tsv",header = TRUE,sep = "\t")
-mutect2_snv$Sample_ID=as.character(mutect2_snv$Sample_ID)
-mutect2_snv$chrom=as.character(mutect2_snv$chrom)
-saveRDS(object = mutect2_snv, file = "mutect2_snv.rds")
-# somaticsniper_snv
-somaticsniper_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.somaticsniper_snv.tsv",header = TRUE,sep = "\t")
-somaticsniper_snv$Sample_ID=as.character(somaticsniper_snv$Sample_ID)
-somaticsniper_snv$chrom=as.character(somaticsniper_snv$chrom)
-saveRDS(object = somaticsniper_snv, file = "somaticsniper_snv.rds")
-varscan2_snv
-varscan2_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.varscan2_snv.tsv",header = TRUE,sep = "\t")
-varscan2_snv$Sample_ID=as.character(varscan2_snv$Sample_ID)
-varscan2_snv$chrom=as.character(varscan2_snv$chrom)
-saveRDS(object = varscan2_snv, file = "varscan2_snv.rds")
 ```
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
@@ -116,7 +100,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4ODI4MTkyLDEzMjU1NzgzMDMsLTE0ND
+eyJoaXN0b3J5IjpbODExMDg4MTY4LDEzMjU1NzgzMDMsLTE0ND
 MxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2
 MywtNzQ0MzAzNDE1LC0zOTI5Mjk0MzksNTg3MDA5NTYwLC01MT
 EwNjkxNiwtMjAwNTc3NDk3MSwxNDY1MzkyMDQzLC01ODk4NDU1
