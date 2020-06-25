@@ -70,6 +70,7 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
+RDS format - read into R using the readRDS command. This is a highly compressed file format and is the recommended format for end-users.
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
 
@@ -89,11 +90,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNz
-I4ODQ2MywtNzQ0MzAzNDE1LC0zOTI5Mjk0MzksNTg3MDA5NTYw
-LC01MTEwNjkxNiwtMjAwNTc3NDk3MSwxNDY1MzkyMDQzLC01OD
-k4NDU1MTIsLTE1NjA1MjI2OSwtMTIwNjg2MDU1MCwtMTY1ODM2
-NzI2OCwtMTI5Njg5NTE0OSw3MDkwOTYyODksLTEyNzI3NDAwNj
-UsLTcyMjE5NjksLTIxNDIzMjUwNywtMTM4NTE5MjcyNSwtMTkw
-MTkxNDM5NV19
+eyJoaXN0b3J5IjpbLTE0NDMxNTUxMzYsLTMxMTUyMTA3Nyw0Nj
+Y4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0MzAzNDE1LC0zOTI5Mjk0
+MzksNTg3MDA5NTYwLC01MTEwNjkxNiwtMjAwNTc3NDk3MSwxND
+Y1MzkyMDQzLC01ODk4NDU1MTIsLTE1NjA1MjI2OSwtMTIwNjg2
+MDU1MCwtMTY1ODM2NzI2OCwtMTI5Njg5NTE0OSw3MDkwOTYyOD
+ksLTEyNzI3NDAwNjUsLTcyMjE5NjksLTIxNDIzMjUwNywtMTM4
+NTE5MjcyNV19
 -->
