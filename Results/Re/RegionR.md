@@ -1,5 +1,7 @@
 In each of 404 samples, do somatic mutations overlap with PRDM9-bound ATAC-seq peaks more than expected?
 
+To answer question like these we can use the convenience `overlapPermTest` function in regioneR, that evaluates the number of overlaps between two sets of regions.
+
 **Evaluate the association between PRDM9 binding regions and mutational regions in cancer:** Permutation tests through regioneR package will be performed to assess the overlap between the PRDM9 binding regions and mutations (SNPs, indels and structural variant breakpoints) (Gel _et al._, 2016). In each of the 404 samples, the PRDM9 binding regions will be tested with SNPs plus indels and structural variant breakpoints, respectively. The permutation test includes two steps: randomize the regions and evaluate the association. The randomization function circularRandomizeRegions will be selected for circular permutation and the evaluation function numOverlaps will assess the number of overlaps by p-value. There is a backup plan for structural variants: if the structural variants are low in number, we will use merged pan-cancer PRDM9 binding regions and merged pan-cancer structural variants to do permutation test.
 
 mutations (SNPs, indels and structural variant breakpoints)
@@ -67,8 +69,8 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNDUyOTA5MCwtMTM5Nzc3NTc1OSwtMT
-QxNTYyNzkyNiwtMjcyMDc4MjgsMTc4ODA0ODMyMiwtMTY3Mjky
-OTI3OCwtNTIwMTE3ODMyLC0xMDE3NzQyOTAyLC0xNDg5NTQxNT
-gwXX0=
+eyJoaXN0b3J5IjpbNTI3NDgxNTcyLC0xMzk3Nzc1NzU5LC0xND
+E1NjI3OTI2LC0yNzIwNzgyOCwxNzg4MDQ4MzIyLC0xNjcyOTI5
+Mjc4LC01MjAxMTc4MzIsLTEwMTc3NDI5MDIsLTE0ODk1NDE1OD
+BdfQ==
 -->
