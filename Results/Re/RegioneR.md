@@ -82,7 +82,7 @@ muse_snv$chrom=as.character(muse_snv$chrom)
 saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```
 ### choose one from four datasets (choose variants call pipeline)
-MuSE
+MuSE: Somatic point mutation caller for tumor-normal paired samples in next-generation sequencing data.
 ### choose samples with more mutations
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
@@ -103,11 +103,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NjcxNDE4NCw3NjAwMTc3MDAsLTEzMz
-c4MTQxNjAsMTMyNTU3ODMwMywtMTQ0MzE1NTEzNiwtMzExNTIx
-MDc3LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYzLC03NDQzMDM0MTUsLT
-M5MjkyOTQzOSw1ODcwMDk1NjAsLTUxMTA2OTE2LC0yMDA1Nzc0
-OTcxLDE0NjUzOTIwNDMsLTU4OTg0NTUxMiwtMTU2MDUyMjY5LC
-0xMjA2ODYwNTUwLC0xNjU4MzY3MjY4LC0xMjk2ODk1MTQ5LDcw
-OTA5NjI4OV19
+eyJoaXN0b3J5IjpbNDAzODc0MTUsNzYwMDE3NzAwLC0xMzM3OD
+E0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMTUyMTA3
+Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0MzAzNDE1LC0zOT
+I5Mjk0MzksNTg3MDA5NTYwLC01MTEwNjkxNiwtMjAwNTc3NDk3
+MSwxNDY1MzkyMDQzLC01ODk4NDU1MTIsLTE1NjA1MjI2OSwtMT
+IwNjg2MDU1MCwtMTY1ODM2NzI2OCwtMTI5Njg5NTE0OSw3MDkw
+OTYyODldfQ==
 -->
