@@ -84,7 +84,9 @@ saveRDS(object = muse_snv, file = "muse_snv.rds")
 ### choose one from four datasets (choose variants call pipeline)
 ```bash
 for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
-
+bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l # 157126
+bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 453661
+bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 191575
 
 ```
 `GDC-PANCAN.mutect2_snv.tsv` has most mutations.
@@ -115,11 +117,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxODgyNzc5LC01MTYxMzIyNjgsMTY1MD
-A5MSwxMzAxMDY5MTMzLC0xODY5Njk0NTM2LDg1MDI0NDg5Nyw2
-MDM3NTIyMzQsLTIxMTM2MTAyOTksNDAzODc0MTUsNzYwMDE3Nz
-AwLC0xMzM3ODE0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYs
-LTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0Mz
-AzNDE1LC0zOTI5Mjk0MzksNTg3MDA5NTYwLC01MTEwNjkxNl19
-
+eyJoaXN0b3J5IjpbLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNj
+EzMjI2OCwxNjUwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYs
+ODUwMjQ0ODk3LDYwMzc1MjIzNCwtMjExMzYxMDI5OSw0MDM4Nz
+QxNSw3NjAwMTc3MDAsLTEzMzc4MTQxNjAsMTMyNTU3ODMwMywt
+MTQ0MzE1NTEzNiwtMzExNTIxMDc3LDQ2Njg1NDQ4MiwtOTA3Mj
+g4NDYzLC03NDQzMDM0MTUsLTM5MjkyOTQzOSw1ODcwMDk1NjBd
+fQ==
 -->
