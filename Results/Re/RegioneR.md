@@ -71,6 +71,10 @@ awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
 # Randomization strategy 
+maintains the order and distance of the regions, while changing their position in the chromosome.
+
+
+
 evaluating the original RS, creating a number of randomizations and evaluating them and nally computing the p-value and z-score.
 `ntimes` to specify the number of randomizations, `verbose` to toggle the drawing of a progress bar, `force.parallel` to force or forbid the use of multiple cores to run the analysis…- and it also accepts any additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
 creates a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set.
@@ -85,11 +89,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY2ODU0NDgyLC05MDcyODg0NjMsLTc0ND
-MwMzQxNSwtMzkyOTI5NDM5LDU4NzAwOTU2MCwtNTExMDY5MTYs
-LTIwMDU3NzQ5NzEsMTQ2NTM5MjA0MywtNTg5ODQ1NTEyLC0xNT
-YwNTIyNjksLTEyMDY4NjA1NTAsLTE2NTgzNjcyNjgsLTEyOTY4
-OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC03MjIxOTY5LC
-0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5MDE5MTQzOTVdfQ==
-
+eyJoaXN0b3J5IjpbLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNz
+I4ODQ2MywtNzQ0MzAzNDE1LC0zOTI5Mjk0MzksNTg3MDA5NTYw
+LC01MTEwNjkxNiwtMjAwNTc3NDk3MSwxNDY1MzkyMDQzLC01OD
+k4NDU1MTIsLTE1NjA1MjI2OSwtMTIwNjg2MDU1MCwtMTY1ODM2
+NzI2OCwtMTI5Njg5NTE0OSw3MDkwOTYyODksLTEyNzI3NDAwNj
+UsLTcyMjE5NjksLTIxNDIzMjUwNywtMTM4NTE5MjcyNSwtMTkw
+MTkxNDM5NV19
 -->
