@@ -73,15 +73,15 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 # Randomization strategy 
 # Evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between two sets
-in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping an a.
+in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping somatic mutations.
 # Reference
 [https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html](https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html)
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgyMjA5OTIxLDE0NjUzOTIwNDMsLTU4OT
-g0NTUxMiwtMTU2MDUyMjY5LC0xMjA2ODYwNTUwLC0xNjU4MzY3
-MjY4LC0xMjk2ODk1MTQ5LDcwOTA5NjI4OSwtMTI3Mjc0MDA2NS
-wtNzIyMTk2OSwtMjE0MjMyNTA3LC0xMzg1MTkyNzI1LC0xOTAx
-OTE0Mzk1XX0=
+eyJoaXN0b3J5IjpbLTIwMDU3NzQ5NzEsMTQ2NTM5MjA0MywtNT
+g5ODQ1NTEyLC0xNTYwNTIyNjksLTEyMDY4NjA1NTAsLTE2NTgz
+NjcyNjgsLTEyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMD
+Y1LC03MjIxOTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5
+MDE5MTQzOTVdfQ==
 -->
