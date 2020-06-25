@@ -74,13 +74,6 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
-### save snv files as RDS format
-```r
-muse_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.muse_snv.tsv",header = TRUE,sep = "\t")
-muse_snv$Sample_ID=as.character(muse_snv$Sample_ID)
-muse_snv$chrom=as.character(muse_snv$chrom)
-saveRDS(object = muse_snv, file = "muse_snv.rds")
-```
 ### choose the most appropriate dataset 
 > There is currently no scientific consensus on the best variant calling pipeline so the investigator is responsible for choosing the pipeline(s) most appropriate for the data. 
 
@@ -103,12 +96,14 @@ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.somaticsn
 **check pipeline**
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
 The `MuTect2` pipeline employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the `MuTect2` pipeline.
-
-GDC data processing Somatic Variant Calling Workflow
-MuSE: Somatic point mutation caller for tumor-normal paired samples in next-generation sequencing data.
-mutation calling based on the F81 Markov substitution model for molecular evolution
-[muse/](https://bioinformatics.mdanderson.org/public-software/muse/)
-
+### save snv files as RDS format
+```r
+# mutect2_snv
+mutect2_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.mutect2_snv.tsv",header = TRUE,sep = "\t")
+mutect2_snv$Sample_ID=as.character(mutect2_snv$Sample_ID)
+mutect2_snv$chrom=as.character(mutect2_snv$chrom)
+saveRDS(object = mutect2_snv, file = "mutect2_snv.rds")
+```
 ### choose samples with more mutations
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
@@ -129,11 +124,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMzY3NDc5MCw0NDA0MDU0ODUsLTE1MT
-cwOTAwNDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2
-OCwxNjUwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMj
-Q0ODk3LDYwMzc1MjIzNCwtMjExMzYxMDI5OSw0MDM4NzQxNSw3
-NjAwMTc3MDAsLTEzMzc4MTQxNjAsMTMyNTU3ODMwMywtMTQ0Mz
-E1NTEzNiwtMzExNTIxMDc3LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYz
-XX0=
+eyJoaXN0b3J5IjpbLTEyMjU1MjY1MzcsNDQwNDA1NDg1LC0xNT
+E3MDkwMDQ3LC03MTcxMzM3NDYsMTYxODgyNzc5LC01MTYxMzIy
+NjgsMTY1MDA5MSwxMzAxMDY5MTMzLC0xODY5Njk0NTM2LDg1MD
+I0NDg5Nyw2MDM3NTIyMzQsLTIxMTM2MTAyOTksNDAzODc0MTUs
+NzYwMDE3NzAwLC0xMzM3ODE0MTYwLDEzMjU1NzgzMDMsLTE0ND
+MxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2
+M119
 -->
