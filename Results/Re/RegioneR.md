@@ -104,8 +104,8 @@ bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.somaticsniper
 bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 191575
 bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 316740
 
-bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 
-bedtools intersect -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 
+bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 28011
+bedtools intersect -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 528596
 ```
 `GDC-PANCAN.mutect2_snv.tsv` has most mutations.
 
@@ -135,11 +135,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NzM4MTE3LDE2NTAwOTEsMTMwMTA2OT
-EzMywtMTg2OTY5NDUzNiw4NTAyNDQ4OTcsNjAzNzUyMjM0LC0y
-MTEzNjEwMjk5LDQwMzg3NDE1LDc2MDAxNzcwMCwtMTMzNzgxND
-E2MCwxMzI1NTc4MzAzLC0xNDQzMTU1MTM2LC0zMTE1MjEwNzcs
-NDY2ODU0NDgyLC05MDcyODg0NjMsLTc0NDMwMzQxNSwtMzkyOT
-I5NDM5LDU4NzAwOTU2MCwtNTExMDY5MTYsLTIwMDU3NzQ5NzFd
-fQ==
+eyJoaXN0b3J5IjpbLTUxNjEzMjI2OCwxNjUwMDkxLDEzMDEwNj
+kxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIzNCwt
+MjExMzYxMDI5OSw0MDM4NzQxNSw3NjAwMTc3MDAsLTEzMzc4MT
+QxNjAsMTMyNTU3ODMwMywtMTQ0MzE1NTEzNiwtMzExNTIxMDc3
+LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYzLC03NDQzMDM0MTUsLTM5Mj
+kyOTQzOSw1ODcwMDk1NjAsLTUxMTA2OTE2LC0yMDA1Nzc0OTcx
+XX0=
 -->
