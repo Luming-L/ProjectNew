@@ -93,8 +93,8 @@ bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.somaticsni
 bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 116359
 
 wc -l GDC-PANCAN.varscan2_snv.tsv.sorted # 2854562
-
-
+bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 451951
+bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 173890
 ```
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
 GDC data processing Somatic Variant Calling Workflow
@@ -122,7 +122,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4ODYyNTE2NywxMzAxMDY5MTMzLC0xOD
+eyJoaXN0b3J5IjpbLTM3MDk3NDQ5MCwxMzAxMDY5MTMzLC0xOD
 Y5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NTIyMzQsLTIxMTM2MTAy
 OTksNDAzODc0MTUsNzYwMDE3NzAwLC0xMzM3ODE0MTYwLDEzMj
 U1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0
