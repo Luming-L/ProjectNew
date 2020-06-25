@@ -84,6 +84,7 @@ saveRDS(object = muse_snv, file = "muse_snv.rds")
 ### choose one from four datasets (choose variants call pipeline)
 ```bash
 wc -l GDC-PANCAN.mutect2_snv.tsv.sorted # 3175930
+wc -l GDC-PANCAN.muse_snv.tsv.sorted # 2684789
 bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.muse_snv.tsv.sorted -u | wc -l # 2633557
 
 ```
@@ -113,7 +114,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTcwMjM3MywtMTg2OTY5NDUzNiw4NT
+eyJoaXN0b3J5IjpbMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NT
 AyNDQ4OTcsNjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1
 LDc2MDAxNzcwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAzLC0xND
 QzMTU1MTM2LC0zMTE1MjEwNzcsNDY2ODU0NDgyLC05MDcyODg0
