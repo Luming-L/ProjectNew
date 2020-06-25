@@ -74,7 +74,7 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
-save snv files as RDS format
+### save snv files as RDS format
 ```r
 muse_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.muse_snv.tsv",header = TRUE,sep = "\t")
 muse_snv$Sample_ID=as.character(muse_snv$Sample_ID)
@@ -90,6 +90,7 @@ bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.muse_snv.t
 
 wc -l GDC-PANCAN.somaticsniper_snv.tsv.sorted # 2202278
 bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 894830
+bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 116359
 
 
 ```
@@ -119,7 +120,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE5NDU4MTc5LDEzMDEwNjkxMzMsLTE4Nj
+eyJoaXN0b3J5IjpbNTE1MjYwNTIzLDEzMDEwNjkxMzMsLTE4Nj
 k2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIzNCwtMjExMzYxMDI5
 OSw0MDM4NzQxNSw3NjAwMTc3MDAsLTEzMzc4MTQxNjAsMTMyNT
 U3ODMwMywtMTQ0MzE1NTEzNiwtMzExNTIxMDc3LDQ2Njg1NDQ4
