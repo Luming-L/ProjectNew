@@ -72,15 +72,15 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
 # Randomization strategy 
 # Evaluation function
-`numOverlaps` function, which, given two RS returns the number of overlaps between them
+`numOverlaps` function: given two RS, returns the number of overlaps between two sets
 # Reference
 [https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html](https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html)
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NTM5MjA0MywtNTg5ODQ1NTEyLC0xNT
-YwNTIyNjksLTEyMDY4NjA1NTAsLTE2NTgzNjcyNjgsLTEyOTY4
-OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC03MjIxOTY5LC
-0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5MDE5MTQzOTVdfQ==
-
+eyJoaXN0b3J5IjpbNDYyNDEwMDUsMTQ2NTM5MjA0MywtNTg5OD
+Q1NTEyLC0xNTYwNTIyNjksLTEyMDY4NjA1NTAsLTE2NTgzNjcy
+NjgsLTEyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC
+03MjIxOTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5MDE5
+MTQzOTVdfQ==
 -->
