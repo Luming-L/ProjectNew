@@ -104,11 +104,10 @@ bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.somaticsniper
 bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -u | wc -l # 2493213
 bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -u | wc -l # 2537821
 
-bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -u | wc -l
-2174266
-
+bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -u | wc -l # 2174266
+bedtools intersect -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -u | wc -l # 2325965
 ```
-`GDC-PANCAN.mutect2_snv.tsv` has most mutations and 
+`GDC-PANCAN.mutect2_snv.tsv` has most mutations and the largest overlap with other set
 
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
 GDC data processing Somatic Variant Calling Workflow
@@ -136,11 +135,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MDM1NzUxLDE2NTAwOTEsMTMwMTA2OT
-EzMywtMTg2OTY5NDUzNiw4NTAyNDQ4OTcsNjAzNzUyMjM0LC0y
-MTEzNjEwMjk5LDQwMzg3NDE1LDc2MDAxNzcwMCwtMTMzNzgxND
-E2MCwxMzI1NTc4MzAzLC0xNDQzMTU1MTM2LC0zMTE1MjEwNzcs
-NDY2ODU0NDgyLC05MDcyODg0NjMsLTc0NDMwMzQxNSwtMzkyOT
-I5NDM5LDU4NzAwOTU2MCwtNTExMDY5MTYsLTIwMDU3NzQ5NzFd
-fQ==
+eyJoaXN0b3J5IjpbLTEzMTkyNjUzNzcsMTY1MDA5MSwxMzAxMD
+Y5MTMzLC0xODY5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NTIyMzQs
+LTIxMTM2MTAyOTksNDAzODc0MTUsNzYwMDE3NzAwLC0xMzM3OD
+E0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMTUyMTA3
+Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0MzAzNDE1LC0zOT
+I5Mjk0MzksNTg3MDA5NTYwLC01MTEwNjkxNiwtMjAwNTc3NDk3
+MV19
 -->
