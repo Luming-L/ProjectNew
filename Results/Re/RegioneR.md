@@ -48,6 +48,7 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 Case_ID: TCGA-XE-AANI-01A
 
 ## SetB: somatic mutation (SNPs and small INDELs)
+download and check files
 ```bash
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
 gzip -d GDC-PANCAN.muse_snv.tsv.gz 
@@ -73,7 +74,11 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
+transform 
 RDS format - read into R using the readRDS command. This is a highly compressed file format and is the recommended format for end-users.
+```r
+
+```
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
 
@@ -93,11 +98,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNTU3ODMwMywtMTQ0MzE1NTEzNiwtMz
-ExNTIxMDc3LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYzLC03NDQzMDM0
-MTUsLTM5MjkyOTQzOSw1ODcwMDk1NjAsLTUxMTA2OTE2LC0yMD
-A1Nzc0OTcxLDE0NjUzOTIwNDMsLTU4OTg0NTUxMiwtMTU2MDUy
-MjY5LC0xMjA2ODYwNTUwLC0xNjU4MzY3MjY4LC0xMjk2ODk1MT
-Q5LDcwOTA5NjI4OSwtMTI3Mjc0MDA2NSwtNzIyMTk2OSwtMjE0
-MjMyNTA3XX0=
+eyJoaXN0b3J5IjpbNzY1MDg1MzcsMTMyNTU3ODMwMywtMTQ0Mz
+E1NTEzNiwtMzExNTIxMDc3LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYz
+LC03NDQzMDM0MTUsLTM5MjkyOTQzOSw1ODcwMDk1NjAsLTUxMT
+A2OTE2LC0yMDA1Nzc0OTcxLDE0NjUzOTIwNDMsLTU4OTg0NTUx
+MiwtMTU2MDUyMjY5LC0xMjA2ODYwNTUwLC0xNjU4MzY3MjY4LC
+0xMjk2ODk1MTQ5LDcwOTA5NjI4OSwtMTI3Mjc0MDA2NSwtNzIy
+MTk2OV19
 -->
