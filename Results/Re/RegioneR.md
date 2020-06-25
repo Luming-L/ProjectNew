@@ -81,7 +81,7 @@ muse_snv$Sample_ID=as.character(muse_snv$Sample_ID)
 muse_snv$chrom=as.character(muse_snv$chrom)
 saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```
-choose 
+choose one from four datasets
 
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
@@ -102,11 +102,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NDI1OTg5NSwxMzI1NTc4MzAzLC0xND
-QzMTU1MTM2LC0zMTE1MjEwNzcsNDY2ODU0NDgyLC05MDcyODg0
-NjMsLTc0NDMwMzQxNSwtMzkyOTI5NDM5LDU4NzAwOTU2MCwtNT
-ExMDY5MTYsLTIwMDU3NzQ5NzEsMTQ2NTM5MjA0MywtNTg5ODQ1
-NTEyLC0xNTYwNTIyNjksLTEyMDY4NjA1NTAsLTE2NTgzNjcyNj
-gsLTEyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC03
-MjIxOTY5XX0=
+eyJoaXN0b3J5IjpbLTEzMzc4MTQxNjAsMTMyNTU3ODMwMywtMT
+Q0MzE1NTEzNiwtMzExNTIxMDc3LDQ2Njg1NDQ4MiwtOTA3Mjg4
+NDYzLC03NDQzMDM0MTUsLTM5MjkyOTQzOSw1ODcwMDk1NjAsLT
+UxMTA2OTE2LC0yMDA1Nzc0OTcxLDE0NjUzOTIwNDMsLTU4OTg0
+NTUxMiwtMTU2MDUyMjY5LC0xMjA2ODYwNTUwLC0xNjU4MzY3Mj
+Y4LC0xMjk2ODk1MTQ5LDcwOTA5NjI4OSwtMTI3Mjc0MDA2NSwt
+NzIyMTk2OV19
 -->
