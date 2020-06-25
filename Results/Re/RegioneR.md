@@ -85,27 +85,7 @@ saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```bash
 for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
 
-wc -l GDC-PANCAN.mutect2_snv.tsv.sorted # 3175930
-wc -l GDC-PANCAN.muse_snv.tsv.sorted # 2684789
-bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.muse_snv.tsv.sorted -v | wc -l # 542372
-bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.muse_snv.tsv.sorted -v | wc -l # 157126
 
-wc -l GDC-PANCAN.somaticsniper_snv.tsv.sorted # 2202278
-bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 894830
-bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 116359
-
-wc -l GDC-PANCAN.varscan2_snv.tsv.sorted # 2854562
-bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 451951
-bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 173890
-
-bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 453661
-bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 72598
-
-bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 191575
-bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 316740
-
-bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 28011
-bedtools intersect -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 528596
 ```
 `GDC-PANCAN.mutect2_snv.tsv` has most mutations.
 
@@ -135,11 +115,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNjEzMjI2OCwxNjUwMDkxLDEzMDEwNj
-kxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIzNCwt
-MjExMzYxMDI5OSw0MDM4NzQxNSw3NjAwMTc3MDAsLTEzMzc4MT
-QxNjAsMTMyNTU3ODMwMywtMTQ0MzE1NTEzNiwtMzExNTIxMDc3
-LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYzLC03NDQzMDM0MTUsLTM5Mj
-kyOTQzOSw1ODcwMDk1NjAsLTUxMTA2OTE2LC0yMDA1Nzc0OTcx
-XX0=
+eyJoaXN0b3J5IjpbMTYxODgyNzc5LC01MTYxMzIyNjgsMTY1MD
+A5MSwxMzAxMDY5MTMzLC0xODY5Njk0NTM2LDg1MDI0NDg5Nyw2
+MDM3NTIyMzQsLTIxMTM2MTAyOTksNDAzODc0MTUsNzYwMDE3Nz
+AwLC0xMzM3ODE0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYs
+LTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0Mz
+AzNDE1LC0zOTI5Mjk0MzksNTg3MDA5NTYwLC01MTEwNjkxNl19
+
 -->
