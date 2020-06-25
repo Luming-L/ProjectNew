@@ -74,10 +74,28 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
-transform 
-RDS format - read into R using the readRDS command. This is a highly compressed file format and is the recommended format for end-users.
+save snv files as RDS format
 ```r
-
+muse_snv
+muse_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.muse_snv.tsv",header = TRUE,sep = "\t")
+muse_snv$Sample_ID=as.character(muse_snv$Sample_ID)
+muse_snv$chrom=as.character(muse_snv$chrom)
+saveRDS(object = muse_snv, file = "muse_snv.rds")
+# mutect2_snv
+mutect2_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.mutect2_snv.tsv",header = TRUE,sep = "\t")
+mutect2_snv$Sample_ID=as.character(mutect2_snv$Sample_ID)
+mutect2_snv$chrom=as.character(mutect2_snv$chrom)
+saveRDS(object = mutect2_snv, file = "mutect2_snv.rds")
+# somaticsniper_snv
+somaticsniper_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.somaticsniper_snv.tsv",header = TRUE,sep = "\t")
+somaticsniper_snv$Sample_ID=as.character(somaticsniper_snv$Sample_ID)
+somaticsniper_snv$chrom=as.character(somaticsniper_snv$chrom)
+saveRDS(object = somaticsniper_snv, file = "somaticsniper_snv.rds")
+varscan2_snv
+varscan2_snv <- read.delim("/exports/eddie/scratch/s1949868/SNPsAndSmallINDELs/GDC-PANCAN.varscan2_snv.tsv",header = TRUE,sep = "\t")
+varscan2_snv$Sample_ID=as.character(varscan2_snv$Sample_ID)
+varscan2_snv$chrom=as.character(varscan2_snv$chrom)
+saveRDS(object = varscan2_snv, file = "varscan2_snv.rds")
 ```
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
@@ -98,11 +116,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY1MDg1MzcsMTMyNTU3ODMwMywtMTQ0Mz
-E1NTEzNiwtMzExNTIxMDc3LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYz
-LC03NDQzMDM0MTUsLTM5MjkyOTQzOSw1ODcwMDk1NjAsLTUxMT
-A2OTE2LC0yMDA1Nzc0OTcxLDE0NjUzOTIwNDMsLTU4OTg0NTUx
-MiwtMTU2MDUyMjY5LC0xMjA2ODYwNTUwLC0xNjU4MzY3MjY4LC
-0xMjk2ODk1MTQ5LDcwOTA5NjI4OSwtMTI3Mjc0MDA2NSwtNzIy
-MTk2OV19
+eyJoaXN0b3J5IjpbMTI4ODI4MTkyLDEzMjU1NzgzMDMsLTE0ND
+MxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2
+MywtNzQ0MzAzNDE1LC0zOTI5Mjk0MzksNTg3MDA5NTYwLC01MT
+EwNjkxNiwtMjAwNTc3NDk3MSwxNDY1MzkyMDQzLC01ODk4NDU1
+MTIsLTE1NjA1MjI2OSwtMTIwNjg2MDU1MCwtMTY1ODM2NzI2OC
+wtMTI5Njg5NTE0OSw3MDkwOTYyODksLTEyNzI3NDAwNjUsLTcy
+MjE5NjldfQ==
 -->
