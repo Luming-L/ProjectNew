@@ -13,7 +13,7 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 
-# 
+# Two set of regions
 ## somatic mutation (SNPs and small INDELs)
 ```bash
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
@@ -74,7 +74,8 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTgzNjcyNjgsLTEyOTY4OTUxNDksNz
-A5MDk2Mjg5LC0xMjcyNzQwMDY1LC03MjIxOTY5LC0yMTQyMzI1
-MDcsLTEzODUxOTI3MjUsLTE5MDE5MTQzOTVdfQ==
+eyJoaXN0b3J5IjpbLTEyNjg3ODUzNTYsLTE2NTgzNjcyNjgsLT
+EyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC03MjIx
+OTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5MDE5MTQzOT
+VdfQ==
 -->
