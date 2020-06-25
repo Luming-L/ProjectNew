@@ -5,7 +5,7 @@ We can see a visual representation of the results of the test. In grey the numbe
 
 evaluates the number of overlaps between two sets of regions.
 
-evaluation ()
+evaluation (which type of association to be tested)
 randomization
 test other types of association using different  and applying different types of
 test
@@ -77,6 +77,5 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzMyMzg1MjMsLTE5MDE5MTQzOTVdfQ
-==
+eyJoaXN0b3J5IjpbLTY5NTczNzEyOSwtMTkwMTkxNDM5NV19
 -->
