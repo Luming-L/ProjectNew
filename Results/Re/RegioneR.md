@@ -14,7 +14,7 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 
-# Two sets of regions
+# Two region sets
 ## Set A: PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
 ### rename files
@@ -83,10 +83,10 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MjkyOTQzOSw1ODcwMDk1NjAsLTUxMT
-A2OTE2LC0yMDA1Nzc0OTcxLDE0NjUzOTIwNDMsLTU4OTg0NTUx
-MiwtMTU2MDUyMjY5LC0xMjA2ODYwNTUwLC0xNjU4MzY3MjY4LC
-0xMjk2ODk1MTQ5LDcwOTA5NjI4OSwtMTI3Mjc0MDA2NSwtNzIy
-MTk2OSwtMjE0MjMyNTA3LC0xMzg1MTkyNzI1LC0xOTAxOTE0Mz
-k1XX0=
+eyJoaXN0b3J5IjpbLTc0NDMwMzQxNSwtMzkyOTI5NDM5LDU4Nz
+AwOTU2MCwtNTExMDY5MTYsLTIwMDU3NzQ5NzEsMTQ2NTM5MjA0
+MywtNTg5ODQ1NTEyLC0xNTYwNTIyNjksLTEyMDY4NjA1NTAsLT
+E2NTgzNjcyNjgsLTEyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMjcy
+NzQwMDY1LC03MjIxOTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3Mj
+UsLTE5MDE5MTQzOTVdfQ==
 -->
