@@ -5,6 +5,7 @@ We can see a visual representation of the results of the test. In grey the numbe
 
 evaluates the number of overlaps between two sets of regions.
 
+evaluation functions (the distance, the evaluation of a function over the genomes or custom user-defined functions)
 test other types of association using different  and applying different types of randomizations.
 test
 In addition, we can test if the association between the two region sets is highly dependant on their exact position. To do that, we can use the `localZScore` function.？
@@ -75,5 +76,5 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNjkxNTE1LC0xOTAxOTE0Mzk1XX0=
+eyJoaXN0b3J5IjpbMTI2MTA1OTE5LC0xOTAxOTE0Mzk1XX0=
 -->
