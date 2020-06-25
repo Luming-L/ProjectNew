@@ -81,7 +81,8 @@ muse_snv$Sample_ID=as.character(muse_snv$Sample_ID)
 muse_snv$chrom=as.character(muse_snv$chrom)
 saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```
-### choose one from four datasets (choose variants call pipeline)
+### choose the most appropriate dataset 
+> There is currently no scientific consensus on the best variant calling pipeline so the investigator is responsible for choosing the pipeline(s) most appropriate for the data. 
 ```bash
 for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
 bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l # 157126
@@ -124,11 +125,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTcwOTAwNDcsLTcxNzEzMzc0NiwxNj
-E4ODI3NzksLTUxNjEzMjI2OCwxNjUwMDkxLDEzMDEwNjkxMzMs
-LTE4Njk2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIzNCwtMjExMz
-YxMDI5OSw0MDM4NzQxNSw3NjAwMTc3MDAsLTEzMzc4MTQxNjAs
-MTMyNTU3ODMwMywtMTQ0MzE1NTEzNiwtMzExNTIxMDc3LDQ2Nj
-g1NDQ4MiwtOTA3Mjg4NDYzLC03NDQzMDM0MTUsLTM5MjkyOTQz
-OV19
+eyJoaXN0b3J5IjpbNDQwNDA1NDg1LC0xNTE3MDkwMDQ3LC03MT
+cxMzM3NDYsMTYxODgyNzc5LC01MTYxMzIyNjgsMTY1MDA5MSwx
+MzAxMDY5MTMzLC0xODY5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NT
+IyMzQsLTIxMTM2MTAyOTksNDAzODc0MTUsNzYwMDE3NzAwLC0x
+MzM3ODE0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMT
+UyMTA3Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0MzAzNDE1
+XX0=
 -->
