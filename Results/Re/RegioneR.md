@@ -95,6 +95,7 @@ bedtools intersect -a GDC-PANCAN.varscan2_snv.tsv.sorted -b GDC-PANCAN.somaticsn
 `GDC-PANCAN.mutect2_snv.tsv` has most mutations and relatively larger overlap with other datasets.
 
 **check pipeline**
+
 We have somatic mutations called by 4 separate pipelines: MuSE, MuTect2, SomaticSniper and VarScan2.
 
 > The `MuTect2` pipeline employs a "Panel of Normals" to identify additional germline mutations. This panel is generated using TCGA blood normal genomes from thousands of individuals that were curated and confidently assessed to be cancer-free. This method allows for a higher level of confidence to be assigned to somatic variants that were called by the `MuTect2` pipeline.
@@ -128,7 +129,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk4NDYzOTk5LC0xOTE0MDA3NTA3LDQ0MD
+eyJoaXN0b3J5IjpbNDc5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MD
 QwNTQ4NSwtMTUxNzA5MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3
 OSwtNTE2MTMyMjY4LDE2NTAwOTEsMTMwMTA2OTEzMywtMTg2OT
 Y5NDUzNiw4NTAyNDQ4OTcsNjAzNzUyMjM0LC0yMTEzNjEwMjk5
