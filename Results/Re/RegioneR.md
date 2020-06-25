@@ -82,7 +82,7 @@ muse_snv$chrom=as.character(muse_snv$chrom)
 saveRDS(object = muse_snv, file = "muse_snv.rds")
 ```
 ### choose one from four datasets (choose variants call pipeline)
-GDC d
+GDC data processing Somatic Variant Calling Workflow
 MuSE: Somatic point mutation caller for tumor-normal paired samples in next-generation sequencing data.
 mutation calling based on the F81 Markov substitution model for molecular evolution
 [muse/](https://bioinformatics.mdanderson.org/public-software/muse/)
@@ -107,11 +107,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk1NjI3MzUsLTIxMTM2MTAyOTksNDAzOD
-c0MTUsNzYwMDE3NzAwLC0xMzM3ODE0MTYwLDEzMjU1NzgzMDMs
-LTE0NDMxNTUxMzYsLTMxMTUyMTA3Nyw0NjY4NTQ0ODIsLTkwNz
-I4ODQ2MywtNzQ0MzAzNDE1LC0zOTI5Mjk0MzksNTg3MDA5NTYw
-LC01MTEwNjkxNiwtMjAwNTc3NDk3MSwxNDY1MzkyMDQzLC01OD
-k4NDU1MTIsLTE1NjA1MjI2OSwtMTIwNjg2MDU1MCwtMTY1ODM2
-NzI2OF19
+eyJoaXN0b3J5IjpbNjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMz
+g3NDE1LDc2MDAxNzcwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAz
+LC0xNDQzMTU1MTM2LC0zMTE1MjEwNzcsNDY2ODU0NDgyLC05MD
+cyODg0NjMsLTc0NDMwMzQxNSwtMzkyOTI5NDM5LDU4NzAwOTU2
+MCwtNTExMDY5MTYsLTIwMDU3NzQ5NzEsMTQ2NTM5MjA0MywtNT
+g5ODQ1NTEyLC0xNTYwNTIyNjksLTEyMDY4NjA1NTAsLTE2NTgz
+NjcyNjhdfQ==
 -->
