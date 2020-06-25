@@ -1,5 +1,5 @@
 In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
-Do my regions contain more SNPs than expected by chance?
+
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
 evaluation function (which type of association to be tested)
@@ -74,7 +74,7 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC03Mj
-IxOTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5MDE5MTQz
-OTVdfQ==
+eyJoaXN0b3J5IjpbLTEyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMj
+cyNzQwMDY1LC03MjIxOTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3
+MjUsLTE5MDE5MTQzOTVdfQ==
 -->
