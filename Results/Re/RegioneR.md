@@ -98,10 +98,10 @@ wc -l GDC-PANCAN.varscan2_snv.tsv.sorted # 2854562
 bedtools intersect -a GDC-PANCAN.mutect2_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 451951
 bedtools intersect -b GDC-PANCAN.mutect2_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted  -v | wc -l # 173890
 
-bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 
-bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 
+bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 453661
+bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -v | wc -l # 72598
 
-bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 
+bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 191575
 bedtools intersect -b GDC-PANCAN.muse_snv.tsv.sorted -a GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 
 
 bedtools intersect -a GDC-PANCAN.somaticsniper_snv.tsv.sorted -b GDC-PANCAN.varscan2_snv.tsv.sorted -v | wc -l # 
@@ -135,11 +135,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTczMTc3NTYsMTY1MDA5MSwxMzAxMD
-Y5MTMzLC0xODY5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NTIyMzQs
-LTIxMTM2MTAyOTksNDAzODc0MTUsNzYwMDE3NzAwLC0xMzM3OD
-E0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMTUyMTA3
-Nyw0NjY4NTQ0ODIsLTkwNzI4ODQ2MywtNzQ0MzAzNDE1LC0zOT
-I5Mjk0MzksNTg3MDA5NTYwLC01MTEwNjkxNiwtMjAwNTc3NDk3
-MV19
+eyJoaXN0b3J5IjpbLTE1OTg5NzI0OCwxNjUwMDkxLDEzMDEwNj
+kxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIzNCwt
+MjExMzYxMDI5OSw0MDM4NzQxNSw3NjAwMTc3MDAsLTEzMzc4MT
+QxNjAsMTMyNTU3ODMwMywtMTQ0MzE1NTEzNiwtMzExNTIxMDc3
+LDQ2Njg1NDQ4MiwtOTA3Mjg4NDYzLC03NDQzMDM0MTUsLTM5Mj
+kyOTQzOSw1ODcwMDk1NjAsLTUxMTA2OTE2LC0yMDA1Nzc0OTcx
+XX0=
 -->
