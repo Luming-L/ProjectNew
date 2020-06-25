@@ -69,15 +69,15 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
-
-# Randomization strategy and an evaluation function
+# Randomization strategy 
+# Evaluation function
 # Reference
 [https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html](https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html)
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDY4NjA1NTAsLTE2NTgzNjcyNjgsLT
-EyOTY4OTUxNDksNzA5MDk2Mjg5LC0xMjcyNzQwMDY1LC03MjIx
-OTY5LC0yMTQyMzI1MDcsLTEzODUxOTI3MjUsLTE5MDE5MTQzOT
-VdfQ==
+eyJoaXN0b3J5IjpbLTE1NjA1MjI2OSwtMTIwNjg2MDU1MCwtMT
+Y1ODM2NzI2OCwtMTI5Njg5NTE0OSw3MDkwOTYyODksLTEyNzI3
+NDAwNjUsLTcyMjE5NjksLTIxNDIzMjUwNywtMTM4NTE5MjcyNS
+wtMTkwMTkxNDM5NV19
 -->
