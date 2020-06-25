@@ -1,4 +1,5 @@
 In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
+mutations tend to lie in peaks
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
@@ -76,8 +77,8 @@ awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjA1MjI2OSwtMTIwNjg2MDU1MCwtMT
-Y1ODM2NzI2OCwtMTI5Njg5NTE0OSw3MDkwOTYyODksLTEyNzI3
-NDAwNjUsLTcyMjE5NjksLTIxNDIzMjUwNywtMTM4NTE5MjcyNS
-wtMTkwMTkxNDM5NV19
+eyJoaXN0b3J5IjpbLTU4OTg0NTUxMiwtMTU2MDUyMjY5LC0xMj
+A2ODYwNTUwLC0xNjU4MzY3MjY4LC0xMjk2ODk1MTQ5LDcwOTA5
+NjI4OSwtMTI3Mjc0MDA2NSwtNzIyMTk2OSwtMjE0MjMyNTA3LC
+0xMzg1MTkyNzI1LC0xOTAxOTE0Mzk1XX0=
 -->
