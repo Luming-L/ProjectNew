@@ -2,8 +2,6 @@ In each of 404 samples, do somatic mutations overlap with PRDM9-bound ATAC-seq p
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
-evaluates the number of overlaps between two sets of regions.
-
 evaluation function (which type of association to be tested)
 randomization function (how to randomize regions in a set)
 test (statistically evaluate the association between different RS or between a RS and other genomic features using a permutation test approach)
@@ -76,6 +74,6 @@ Case_ID: TCGA-XE-AANI-01A
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjE5NjksLTIxNDIzMjUwNywtMTM4NT
-E5MjcyNSwtMTkwMTkxNDM5NV19
+eyJoaXN0b3J5IjpbMTU4ODc1NjY3MywtNzIyMTk2OSwtMjE0Mj
+MyNTA3LC0xMzg1MTkyNzI1LC0xOTAxOTE0Mzk1XX0=
 -->
