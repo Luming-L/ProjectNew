@@ -134,6 +134,8 @@ pt <- permTest(A=peaks, B=mutations, ntimes=1000, randomize.function=circularRan
 `mc.set.seed=FALSE` to ensure a reproducible result.
 should pass the name of the parameters passed to `permTest`
 
+To further investigate the nature of the associations, we will use the `localZscore` function, that will move the original regions around and see the effect in the z-score. In this case, we will start with a window of 1000bp and a step of 50bp. To run the local z-score analysis, we need to give it the original region set A, the results of the permutation test and the additional parameters needed by the evaluation function, in this case, `B=HepG2_Ctcf` and `count.once=TRUE`.
+
 614 out of 2000 CpG islands overlap at least one promoter while a mean of only 79.087 islands overlapped a promoter in the randomized region sets. In the plot we can see in grey the distribution of the evaluation of the randomized regions, in green the evaluation of the original region set (in this case, the 614 CpG islands that overlap at least one promoter), and in red the significance limit. The the high z-score and the plot make evident the extreme significance of the association tested.
 
 
@@ -171,7 +173,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyODk0NzQ0NywtMTY4NjQ1ODcyNiwxND
+eyJoaXN0b3J5IjpbLTY0ODY2NjU4MiwtMTY4NjQ1ODcyNiwxND
 AyOTM0MDEyLDEyMjU4MDkzNjQsMjA3NDQ5MzY4MywxNzU2MDEz
 MjYsLTIwMTk4NDY1MDIsLTEzMTQzNzI1MjgsMTcxNjQ5MTU3My
 w4NjQ5NTI1NTIsLTE4NTkwNzgxNywzMzI5MTUzMSwtNjk3MTA4
