@@ -1,7 +1,7 @@
 # question: 
 In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
 ## Brief Problem Description:
-PRDM9 can bind DNA and then recruit the recombination initiation complex. The meiotic recombination protein SPO11 in the complex can introduce DSBs. DSBs will cause crossovers or noncrossovers (Neale and Keeney, 2006). This process normally occurs in testis and introduce genetic variants. However 
+PRDM9 can bind DNA and then recruit the recombination initiation complex. The meiotic recombination protein SPO11 in the complex can introduce DSBs. DSBs will cause crossovers or noncrossovers (Neale and Keeney, 2006). This process will introduce genetic variants. PRDM9 normally just express in testis, but it is also found to 
 
 Gene promoter regions are GC rich and there are many CpG islands that lie inside promoters. However, is there a statistically significant association between them? Do CpG islands overlap with promoters more than one would expect by chance?
 
@@ -149,7 +149,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODI1NjQ0NzgsMTQzNDExNjMxOCwtMT
+eyJoaXN0b3J5IjpbLTE3NDUzMDY1NTgsMTQzNDExNjMxOCwtMT
 M5MzAzMjAxMywtNzc2MTYzNzIsMTA5NTM3MzA1NSw0Nzk0MDY0
 MTcsLTE5MTQwMDc1MDcsNDQwNDA1NDg1LC0xNTE3MDkwMDQ3LC
 03MTcxMzM3NDYsMTYxODgyNzc5LC01MTYxMzIyNjgsMTY1MDA5
