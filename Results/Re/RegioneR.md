@@ -76,9 +76,10 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
+### choose the most appropriate dataset 
+> There is currently no scientific consensus on the best variant calling pipeline so the investigator is responsible for choosing the pipeline(s) most appropriate for the data. 
 
-   
-ts**
+**check the overlap between different datasets**
 ```bash
 for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
 bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l # 157126
@@ -149,11 +150,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NzEwODA5NywxMzQxNTgxNTYwLC0xNj
-MzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkzMDMy
-MDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQxNywtMT
-kxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAwNDcsLTcxNzEz
-Mzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OCwxNjUwMDkxLDEzMD
-EwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIz
-NF19
+eyJoaXN0b3J5IjpbMTU0MDgxMTk4NSwtNjk3MTA4MDk3LDEzND
+E1ODE1NjAsLTE2MzMxMzI0NCwtMzY1MDgxMzczLDE0MzQxMTYz
+MTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMwNTUsND
+c5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5
+MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LD
+E2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyNDQ4
+OTddfQ==
 -->
