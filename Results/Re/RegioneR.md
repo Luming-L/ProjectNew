@@ -110,7 +110,7 @@ mutect2_snv$chrom=as.character(mutect2_snv$chrom)
 saveRDS(object = mutect2_snv, file = "mutect2_snv.rds")
 ```
 ### choose samples with more mutations
-
+```
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
 
@@ -130,11 +130,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NTM3MzA1NSw0Nzk0MDY0MTcsLTE5MT
-QwMDc1MDcsNDQwNDA1NDg1LC0xNTE3MDkwMDQ3LC03MTcxMzM3
-NDYsMTYxODgyNzc5LC01MTYxMzIyNjgsMTY1MDA5MSwxMzAxMD
-Y5MTMzLC0xODY5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NTIyMzQs
-LTIxMTM2MTAyOTksNDAzODc0MTUsNzYwMDE3NzAwLC0xMzM3OD
-E0MTYwLDEzMjU1NzgzMDMsLTE0NDMxNTUxMzYsLTMxMTUyMTA3
-N119
+eyJoaXN0b3J5IjpbLTIyMDQ1NTczLDEwOTUzNzMwNTUsNDc5ND
+A2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5MDA0
+NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LDE2NT
+AwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyNDQ4OTcs
+NjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1LDc2MDAxNz
+cwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAzLC0xNDQzMTU1MTM2
+XX0=
 -->
