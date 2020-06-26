@@ -2,6 +2,9 @@
 In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
 ## Brief Problem Description:
 The binding of PRDM9 will introduce genetic variants in meiotic recombination. PRDM9 normally just has expression in testis, but it is also found to express in cancer cells. However, how does PRDM9 work in cancer cells? Is there a statistically significant association between PRDM9 binding regions and somatic mutations in cancer cells?
+
+
+
 The idea of the test is to randomly move the CpG islands along the genome and count how many of them overlap with a promoter.
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
@@ -15,7 +18,7 @@ In addition, we can test if the association between the two region sets is highl
 mutations (SNPs, indels and structural variant breakpoints)
 
 
-# regioneR
+
 ## Two region sets
 ### Set A: PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
@@ -146,11 +149,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzMxMzI0NCwtMzY1MDgxMzczLDE0Mz
-QxMTYzMTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMw
-NTUsNDc5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMT
-UxNzA5MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMy
-MjY4LDE2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NT
-AyNDQ4OTcsNjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1
-XX0=
+eyJoaXN0b3J5IjpbMTM0MTU4MTU2MCwtMTYzMzEzMjQ0LC0zNj
+UwODEzNzMsMTQzNDExNjMxOCwtMTM5MzAzMjAxMywtNzc2MTYz
+NzIsMTA5NTM3MzA1NSw0Nzk0MDY0MTcsLTE5MTQwMDc1MDcsND
+QwNDA1NDg1LC0xNTE3MDkwMDQ3LC03MTcxMzM3NDYsMTYxODgy
+Nzc5LC01MTYxMzIyNjgsMTY1MDA5MSwxMzAxMDY5MTMzLC0xOD
+Y5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NTIyMzQsLTIxMTM2MTAy
+OTldfQ==
 -->
