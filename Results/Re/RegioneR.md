@@ -120,7 +120,12 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 cpgHMM <- filterChromosomes(cpgHMM, organism="hg", chr.type="canonical") promoters <- filterChromosomes(promoters, organism="hg", chr.type="canonical")
 # count a peak only once even if it overlaps 2 or more mutations, we use the parameter `count.once=TRUE`,
 pt <- overlapPermTest(cpgHMM_2K, promoters, ntimes=1000, genome="hg19", count.once=TRUE, force.parallel=FALSE)
+png("pt.png",width = 960,height = 960)
+plot(pt)
+dev.off()
 ```
+614 out of 2000 CpG islands overlap at least one promoter while a mean of only 79.087 islands overlapped a promoter in the randomized region sets. These results can be summarised in a single plot by plotting the `perTestResults`.
+
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
@@ -156,11 +161,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY0OTUyNTUyLC0xODU5MDc4MTcsMzMyOT
-E1MzEsLTY5NzEwODA5NywxMzQxNTgxNTYwLC0xNjMzMTMyNDQs
-LTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkzMDMyMDEzLC03Nz
-YxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQxNywtMTkxNDAwNzUw
-Nyw0NDA0MDU0ODUsLTE1MTcwOTAwNDcsLTcxNzEzMzc0NiwxNj
-E4ODI3NzksLTUxNjEzMjI2OCwxNjUwMDkxLDEzMDEwNjkxMzNd
+eyJoaXN0b3J5IjpbMTcxNjQ5MTU3Myw4NjQ5NTI1NTIsLTE4NT
+kwNzgxNywzMzI5MTUzMSwtNjk3MTA4MDk3LDEzNDE1ODE1NjAs
+LTE2MzMxMzI0NCwtMzY1MDgxMzczLDE0MzQxMTYzMTgsLTEzOT
+MwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMwNTUsNDc5NDA2NDE3
+LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5MDA0NywtNz
+E3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LDE2NTAwOTFd
 fQ==
 -->
