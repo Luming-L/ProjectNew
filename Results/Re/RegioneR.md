@@ -1,7 +1,7 @@
-**question:** In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
-## Brief Problem Description:
+Question: In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
+# Brief Problem Description:
 The binding of PRDM9 will introduce genetic variants in meiotic recombination. PRDM9 normally just has expression in testis, but it is also found to express in cancer cells. However, how does PRDM9 work in cancer cells? Is there a statistically significant association between PRDM9 binding regions and somatic mutations in cancer cells?
-## Two region sets
+# Datasets: two region sets
 ## Set A: PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
 ### rename files
@@ -149,11 +149,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODg5NTQzODMsLTY5NzEwODA5NywxMz
-QxNTgxNTYwLC0xNjMzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2
-MzE4LC0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LD
-Q3OTQwNjQxNywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcw
-OTAwNDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OC
-wxNjUwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0
-ODk3XX0=
+eyJoaXN0b3J5IjpbLTk3MzExMDA4MCwtNjk3MTA4MDk3LDEzND
+E1ODE1NjAsLTE2MzMxMzI0NCwtMzY1MDgxMzczLDE0MzQxMTYz
+MTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMwNTUsND
+c5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5
+MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LD
+E2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyNDQ4
+OTddfQ==
 -->
