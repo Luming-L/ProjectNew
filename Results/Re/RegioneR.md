@@ -123,6 +123,14 @@ pt <- overlapPermTest(cpgHMM_2K, promoters, ntimes=1000, genome="hg19", count.on
 png("pt.png",width = 960,height = 960)
 plot(pt)
 dev.off()
+pt_Rad21_5k_vs_Ctcf <- permTest(A=HepG2_Rad21_5K, B=HepG2_Ctcf, 
+ntimes=1000, 
+randomize.function=circularRandomizeRegions, 
+evaluate.function=numOverlaps, 
+count.once=TRUE, 
+genome="hg19", 
+mc.set.seed=FALSE, 
+mc.cores=4)
 ```
 614 out of 2000 CpG islands overlap at least one promoter while a mean of only 79.087 islands overlapped a promoter in the randomized region sets. In the plot we can see in grey the distribution of the evaluation of the randomized regions, in green the evaluation of the original region set (in this case, the 614 CpG islands that overlap at least one promoter), and in red the significance limit. The the high z-score and the plot make evident the extreme significance of the association tested.
 
@@ -161,11 +169,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTk4NDY1MDIsLTEzMTQzNzI1MjgsMT
-cxNjQ5MTU3Myw4NjQ5NTI1NTIsLTE4NTkwNzgxNywzMzI5MTUz
-MSwtNjk3MTA4MDk3LDEzNDE1ODE1NjAsLTE2MzMxMzI0NCwtMz
-Y1MDgxMzczLDE0MzQxMTYzMTgsLTEzOTMwMzIwMTMsLTc3NjE2
-MzcyLDEwOTUzNzMwNTUsNDc5NDA2NDE3LC0xOTE0MDA3NTA3LD
-Q0MDQwNTQ4NSwtMTUxNzA5MDA0NywtNzE3MTMzNzQ2LDE2MTg4
-Mjc3OV19
+eyJoaXN0b3J5IjpbMTc1NjAxMzI2LC0yMDE5ODQ2NTAyLC0xMz
+E0MzcyNTI4LDE3MTY0OTE1NzMsODY0OTUyNTUyLC0xODU5MDc4
+MTcsMzMyOTE1MzEsLTY5NzEwODA5NywxMzQxNTgxNTYwLC0xNj
+MzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkzMDMy
+MDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQxNywtMT
+kxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAwNDcsLTcxNzEz
+Mzc0Nl19
 -->
