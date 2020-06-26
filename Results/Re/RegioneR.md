@@ -118,6 +118,7 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 ```r
 # remove the promoters and CpG islands in non-canonical chromosomes
 cpgHMM <- filterChromosomes(cpgHMM, organism="hg", chr.type="canonical") promoters <- filterChromosomes(promoters, organism="hg", chr.type="canonical")
+pt <- overlapPermTest(cpgHMM_2K, promoters, ntimes=1000, genome="hg19", count.once=TRUE, force.parallel=FALSE)
 ```
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
@@ -154,11 +155,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTkwNzgxNywzMzI5MTUzMSwtNjk3MT
-A4MDk3LDEzNDE1ODE1NjAsLTE2MzMxMzI0NCwtMzY1MDgxMzcz
-LDE0MzQxMTYzMTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOT
-UzNzMwNTUsNDc5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4
-NSwtMTUxNzA5MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNT
-E2MTMyMjY4LDE2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUz
-Nl19
+eyJoaXN0b3J5IjpbNTMyODgzMDA5LC0xODU5MDc4MTcsMzMyOT
+E1MzEsLTY5NzEwODA5NywxMzQxNTgxNTYwLC0xNjMzMTMyNDQs
+LTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkzMDMyMDEzLC03Nz
+YxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQxNywtMTkxNDAwNzUw
+Nyw0NDA0MDU0ODUsLTE1MTcwOTAwNDcsLTcxNzEzMzc0NiwxNj
+E4ODI3NzksLTUxNjEzMjI2OCwxNjUwMDkxLDEzMDEwNjkxMzNd
+fQ==
 -->
