@@ -132,6 +132,9 @@ genome="hg19",
 mc.set.seed=FALSE, 
 mc.cores=4)
 ```
+`numOverlaps` as the evaluation function
+`count.once` parameter so each region in A is counted at most once.
+
 614 out of 2000 CpG islands overlap at least one promoter while a mean of only 79.087 islands overlapped a promoter in the randomized region sets. In the plot we can see in grey the distribution of the evaluation of the randomized regions, in green the evaluation of the original region set (in this case, the 614 CpG islands that overlap at least one promoter), and in red the significance limit. The the high z-score and the plot make evident the extreme significance of the association tested.
 
 
@@ -169,11 +172,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NjAxMzI2LC0yMDE5ODQ2NTAyLC0xMz
-E0MzcyNTI4LDE3MTY0OTE1NzMsODY0OTUyNTUyLC0xODU5MDc4
-MTcsMzMyOTE1MzEsLTY5NzEwODA5NywxMzQxNTgxNTYwLC0xNj
-MzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkzMDMy
-MDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQxNywtMT
-kxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAwNDcsLTcxNzEz
-Mzc0Nl19
+eyJoaXN0b3J5IjpbLTE0NTUyMDQ4ODgsMTc1NjAxMzI2LC0yMD
+E5ODQ2NTAyLC0xMzE0MzcyNTI4LDE3MTY0OTE1NzMsODY0OTUy
+NTUyLC0xODU5MDc4MTcsMzMyOTE1MzEsLTY5NzEwODA5NywxMz
+QxNTgxNTYwLC0xNjMzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2
+MzE4LC0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LD
+Q3OTQwNjQxNywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcw
+OTAwNDddfQ==
 -->
