@@ -114,7 +114,23 @@ saveRDS(object = mutect2_snv, file = "mutect2_snv.rds")
 # count somatic mutations of a sample
 num <- nrow(mutect2_snv[mutect2_snv$Sample_ID==ID,])
 ```
-```ba
+```bash
+# 
+grep -v "sampleID" MutNumber.txt | sort -k3,3nr > MutNumber.txt.sorted
+```
+head MutNumber.txt.sorted
+
+	TCGA-AP-A051-01A        UCEC    12041
+	TCGA-AA-A010-01A        COAD    10239
+	TCGA-D9-A6EC-06A        SKCM    5641
+	TCGA-D3-A8GM-06A        SKCM    5137
+	TCGA-F7-A624-01A        HNSC    4050
+	TCGA-NH-A5IV-01A        COAD    3753
+	TCGA-AD-6889-01A        COAD    2685
+	TCGA-AA-A01R-01A        COAD    2522
+	TCGA-BR-A4QL-01A        STAD    2390
+	TCGA-AA-A022-01A        COAD    2276
+
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
 
@@ -134,7 +150,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDc5OTIwOSwxMDk1MzczMDU1LDQ3OT
+eyJoaXN0b3J5IjpbMTAwMTM4ODM1MiwxMDk1MzczMDU1LDQ3OT
 QwNjQxNywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAw
 NDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OCwxNj
 UwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3
