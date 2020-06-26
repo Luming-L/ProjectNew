@@ -132,6 +132,10 @@ genome="hg19",
 mc.set.seed=FALSE, 
 mc.cores=4)
 ```
+```r
+pt <- permTest(A=peaks, B=mutations, ntimes=1000, randomize.function=circularRandomizeRegions, evaluate.function=numOverlaps,)
+
+```
 `numOverlaps` the evaluation function
 `count.once` each region in A is counted at most once.
 `circularRandomizeRegions` keep the internal structure of the region set (won’t change the distance between adjacent regions), faster than `randomizeRegions`
@@ -176,11 +180,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODY0NTg3MjYsMTQwMjkzNDAxMiwxMj
-I1ODA5MzY0LDIwNzQ0OTM2ODMsMTc1NjAxMzI2LC0yMDE5ODQ2
-NTAyLC0xMzE0MzcyNTI4LDE3MTY0OTE1NzMsODY0OTUyNTUyLC
-0xODU5MDc4MTcsMzMyOTE1MzEsLTY5NzEwODA5NywxMzQxNTgx
-NTYwLC0xNjMzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC
-0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQw
-NjQxN119
+eyJoaXN0b3J5IjpbLTE1MzUxNjM0MDgsLTE2ODY0NTg3MjYsMT
+QwMjkzNDAxMiwxMjI1ODA5MzY0LDIwNzQ0OTM2ODMsMTc1NjAx
+MzI2LC0yMDE5ODQ2NTAyLC0xMzE0MzcyNTI4LDE3MTY0OTE1Nz
+MsODY0OTUyNTUyLC0xODU5MDc4MTcsMzMyOTE1MzEsLTY5NzEw
+ODA5NywxMzQxNTgxNTYwLC0xNjMzMTMyNDQsLTM2NTA4MTM3My
+wxNDM0MTE2MzE4LC0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1
+MzczMDU1XX0=
 -->
