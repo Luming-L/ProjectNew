@@ -99,7 +99,7 @@ saveRDS(object = mutect2_snv, file = "mutect2_snv.rds")
 num <- nrow(mutect2_snv[mutect2_snv$Sample_ID==ID,])
 ```
 ```bash
-# 
+# sort samples by mutation number
 grep -v "sampleID" MutNumber.txt | sort -k3,3nr > MutNumber.txt.sorted
 head MutNumber.txt.sorted
 ```
@@ -149,7 +149,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MzExMDA4MCwtNjk3MTA4MDk3LDEzND
+eyJoaXN0b3J5IjpbMTQ4NzU0MzU0MCwtNjk3MTA4MDk3LDEzND
 E1ODE1NjAsLTE2MzMxMzI0NCwtMzY1MDgxMzczLDE0MzQxMTYz
 MTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMwNTUsND
 c5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5
