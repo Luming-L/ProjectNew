@@ -114,7 +114,7 @@ head MutNumber.txt.sorted
 	TCGA-BR-A4QL-01A        STAD    2390
 	TCGA-AA-A022-01A        COAD    2276
 # Permutation test
-The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one mutation.
+The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation.
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
@@ -150,11 +150,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMDA2OTgzMywtNjk3MTA4MDk3LDEzND
-E1ODE1NjAsLTE2MzMxMzI0NCwtMzY1MDgxMzczLDE0MzQxMTYz
-MTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMwNTUsND
-c5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5
-MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LD
-E2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyNDQ4
-OTddfQ==
+eyJoaXN0b3J5IjpbMzMyOTE1MzEsLTY5NzEwODA5NywxMzQxNT
+gxNTYwLC0xNjMzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4
+LC0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OT
+QwNjQxNywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAw
+NDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OCwxNj
+UwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3
+XX0=
 -->
