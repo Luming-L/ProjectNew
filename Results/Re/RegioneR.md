@@ -123,7 +123,7 @@ pt <- overlapPermTest(cpgHMM_2K, promoters, ntimes=1000, genome="hg19", count.on
 png("pt.png",width = 960,height = 960)
 plot(pt)
 dev.off()
-
+lz_Rad21_vs_Ctcf_1 <- localZScore(A=HepG2_Rad21_5K, B=HepG2_Ctcf, pt=pt_Rad21_5k_vs_Ctcf, window=1000, step=50, count.once=TRUE)
 ```
 ```r
 pt <- permTest(A=peaks, B=mutations, ntimes=1000, randomize.function=circularRandomizeRegions, evaluate.function=numOverlaps, count.once=TRUE, genome="hg38", mc.cores=4, mc.set.seed=FALSE)
@@ -174,7 +174,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNTY2NDMxNiwtNjQ4NjY2NTgyLC0xNj
+eyJoaXN0b3J5IjpbMTY1Mzg0MDcwMiwtNjQ4NjY2NTgyLC0xNj
 g2NDU4NzI2LDE0MDI5MzQwMTIsMTIyNTgwOTM2NCwyMDc0NDkz
 NjgzLDE3NTYwMTMyNiwtMjAxOTg0NjUwMiwtMTMxNDM3MjUyOC
 wxNzE2NDkxNTczLDg2NDk1MjU1MiwtMTg1OTA3ODE3LDMzMjkx
