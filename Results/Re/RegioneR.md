@@ -1,25 +1,7 @@
-# question: 
-In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
+**question:** In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
 ## Brief Problem Description:
 The binding of PRDM9 will introduce genetic variants in meiotic recombination. PRDM9 normally just has expression in testis, but it is also found to express in cancer cells. However, how does PRDM9 work in cancer cells? Is there a statistically significant association between PRDM9 binding regions and somatic mutations in cancer cells?
-
-
-
-The idea of the test is to randomly move the CpG islands along the genome and count how many of them overlap with a promoter.
-We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
-
-evaluation function (which type of association to be tested)
-randomization function (how to randomize regions in a set)
-test (performing the permutation tests and producing the statistical evaluation of the results.)
-
-In addition, we can test if the association between the two region sets is highly dependant on their exact position. To do that, we can use the `localZScore` function.？
-**Evaluate the association between PRDM9 binding regions and mutational regions in cancer:** Permutation tests through regioneR package will be performed to assess the overlap between the PRDM9 binding regions and mutations (SNPs, indels and structural variant breakpoints) (Gel _et al._, 2016). In each of the 404 samples, the PRDM9 binding regions will be tested with SNPs plus indels and structural variant breakpoints, respectively. The permutation test includes two steps: randomize the regions and evaluate the association. The randomization function circularRandomizeRegions will be selected for circular permutation and the evaluation function numOverlaps will assess the number of overlaps by p-value. There is a backup plan for structural variants: if the structural variants are low in number, we will use merged pan-cancer PRDM9 binding regions and merged pan-cancer structural variants to do permutation test.
-
-mutations (SNPs, indels and structural variant breakpoints)
-
-
-
-# Two region sets
+## Two region sets
 ## Set A: PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
 ### rename files
@@ -131,6 +113,23 @@ head MutNumber.txt.sorted
 	TCGA-AA-A01R-01A        COAD    2522
 	TCGA-BR-A4QL-01A        STAD    2390
 	TCGA-AA-A022-01A        COAD    2276
+
+The idea of the test is to randomly move the CpG islands along the genome and count how many of them overlap with a promoter.
+We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
+
+evaluation function (which type of association to be tested)
+randomization function (how to randomize regions in a set)
+test (performing the permutation tests and producing the statistical evaluation of the results.)
+
+In addition, we can test if the association between the two region sets is highly dependant on their exact position. To do that, we can use the `localZScore` function.？
+**Evaluate the association between PRDM9 binding regions and mutational regions in cancer:** Permutation tests through regioneR package will be performed to assess the overlap between the PRDM9 binding regions and mutations (SNPs, indels and structural variant breakpoints) (Gel _et al._, 2016). In each of the 404 samples, the PRDM9 binding regions will be tested with SNPs plus indels and structural variant breakpoints, respectively. The permutation test includes two steps: randomize the regions and evaluate the association. The randomization function circularRandomizeRegions will be selected for circular permutation and the evaluation function numOverlaps will assess the number of overlaps by p-value. There is a backup plan for structural variants: if the structural variants are low in number, we will use merged pan-cancer PRDM9 binding regions and merged pan-cancer structural variants to do permutation test.
+
+mutations (SNPs, indels and structural variant breakpoints)
+
+
+
+
+
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
 
@@ -150,11 +149,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MDgxMTk4NSwtNjk3MTA4MDk3LDEzND
-E1ODE1NjAsLTE2MzMxMzI0NCwtMzY1MDgxMzczLDE0MzQxMTYz
-MTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMwNTUsND
-c5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5
-MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LD
-E2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyNDQ4
-OTddfQ==
+eyJoaXN0b3J5IjpbLTE0ODg5NTQzODMsLTY5NzEwODA5NywxMz
+QxNTgxNTYwLC0xNjMzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2
+MzE4LC0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LD
+Q3OTQwNjQxNywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcw
+OTAwNDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OC
+wxNjUwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0
+ODk3XX0=
 -->
