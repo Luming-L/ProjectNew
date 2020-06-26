@@ -19,10 +19,10 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 
-## Two region sets
-### Set A: PRDM9-bound peaks in 404 samples
+# Two region sets
+## Set A: PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
-#### rename files
+### rename files
 **before renaming**
 
 *<cancerType#>_<stanfordUUID#>_<batch#>_<sample#>_<libraryID#>_<bioRep#>_<techRep#><pool#>*
@@ -49,8 +49,8 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
 Case_ID: TCGA-XE-AANI-01A
 
-### SetB: somatic mutation (SNPs and small INDELs)
-#### download and check files
+## SetB: somatic mutation (SNPs and small INDELs)
+### download and check files
 ```bash
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
 gzip -d GDC-PANCAN.muse_snv.tsv.gz 
@@ -149,11 +149,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MTU4MTU2MCwtMTYzMzEzMjQ0LC0zNj
-UwODEzNzMsMTQzNDExNjMxOCwtMTM5MzAzMjAxMywtNzc2MTYz
-NzIsMTA5NTM3MzA1NSw0Nzk0MDY0MTcsLTE5MTQwMDc1MDcsND
-QwNDA1NDg1LC0xNTE3MDkwMDQ3LC03MTcxMzM3NDYsMTYxODgy
-Nzc5LC01MTYxMzIyNjgsMTY1MDA5MSwxMzAxMDY5MTMzLC0xOD
-Y5Njk0NTM2LDg1MDI0NDg5Nyw2MDM3NTIyMzQsLTIxMTM2MTAy
-OTldfQ==
+eyJoaXN0b3J5IjpbLTY5NzEwODA5NywxMzQxNTgxNTYwLC0xNj
+MzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkzMDMy
+MDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQxNywtMT
+kxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAwNDcsLTcxNzEz
+Mzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OCwxNjUwMDkxLDEzMD
+EwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3LDYwMzc1MjIz
+NF19
 -->
