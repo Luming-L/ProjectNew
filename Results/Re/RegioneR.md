@@ -1,9 +1,7 @@
 # question: 
 In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
 ## Brief Problem Description:
-The binding of PRDM9 will introduce genetic variants in meiotic recombination. PRDM9 normally just has expression in testis, but it is also found to express in cancer cells. However, how does PRDM9 work in cancer cells? Is there a  association between PRDM9 binding regions and somatic mutations statistically significant in cancer cells?
-
-Gene promoter regions are GC rich and there are many CpG islands that lie inside promoters. However, is there a statistically significant association between them? Do CpG islands overlap with promoters more than one would expect by chance?
+The binding of PRDM9 will introduce genetic variants in meiotic recombination. PRDM9 normally just has expression in testis, but it is also found to express in cancer cells. However, how does PRDM9 work in cancer cells? Is there a statistically significant association between PRDM9 binding regions and somatic mutations in cancer cells?
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
 
@@ -149,7 +147,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMjE5NTI4MCwxNDM0MTE2MzE4LC0xMz
+eyJoaXN0b3J5IjpbLTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMz
 kzMDMyMDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQx
 NywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAwNDcsLT
 cxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OCwxNjUwMDkx
