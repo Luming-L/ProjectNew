@@ -135,9 +135,9 @@ mc.cores=4)
 `numOverlaps` the evaluation function
 `count.once` each region in A is counted at most once.
 `circularRandomizeRegions` keep the internal structure of the region set (won’t change the distance between adjacent regions), faster than `randomizeRegions`
-`mc.cores=4` so 4 processor cores are used
+`mc.cores=4` use 4 processor cores
 `mc.set.seed=FALSE` to ensure a reproducible result.
-It is very important to pass the name the parameters passed to `permTest`, since it makes use of the ellipsis operator `...` and might produce unexpected errors if arguments are passed without a name.
+should pass the name of the parameters passed to `permTest`
 
 614 out of 2000 CpG islands overlap at least one promoter while a mean of only 79.087 islands overlapped a promoter in the randomized region sets. In the plot we can see in grey the distribution of the evaluation of the randomized regions, in green the evaluation of the original region set (in this case, the 614 CpG islands that overlap at least one promoter), and in red the significance limit. The the high z-score and the plot make evident the extreme significance of the association tested.
 
@@ -176,11 +176,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MTgwNzE5LDE0MDI5MzQwMTIsMTIyNT
-gwOTM2NCwyMDc0NDkzNjgzLDE3NTYwMTMyNiwtMjAxOTg0NjUw
-MiwtMTMxNDM3MjUyOCwxNzE2NDkxNTczLDg2NDk1MjU1MiwtMT
-g1OTA3ODE3LDMzMjkxNTMxLC02OTcxMDgwOTcsMTM0MTU4MTU2
-MCwtMTYzMzEzMjQ0LC0zNjUwODEzNzMsMTQzNDExNjMxOCwtMT
-M5MzAzMjAxMywtNzc2MTYzNzIsMTA5NTM3MzA1NSw0Nzk0MDY0
-MTddfQ==
+eyJoaXN0b3J5IjpbLTE2ODY0NTg3MjYsMTQwMjkzNDAxMiwxMj
+I1ODA5MzY0LDIwNzQ0OTM2ODMsMTc1NjAxMzI2LC0yMDE5ODQ2
+NTAyLC0xMzE0MzcyNTI4LDE3MTY0OTE1NzMsODY0OTUyNTUyLC
+0xODU5MDc4MTcsMzMyOTE1MzEsLTY5NzEwODA5NywxMzQxNTgx
+NTYwLC0xNjMzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC
+0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQw
+NjQxN119
 -->
