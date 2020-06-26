@@ -132,9 +132,9 @@ genome="hg19",
 mc.set.seed=FALSE, 
 mc.cores=4)
 ```
-`numOverlaps` as the evaluation function
-`count.once` parameter so each region in A is counted at most once.
-`circularRandomizeRegions` faster than `randomizeRegions` keep the internal structure of the region set (won’t change the distance between adjacent regions)
+`numOverlaps` the evaluation function
+`count.once` each region in A is counted at most once.
+`circularRandomizeRegions` keep the internal structure of the region set (won’t change the distance between adjacent regions), faster than `randomizeRegions`
 `mc.cores=4` so 4 processor cores are used
 `mc.set.seed=FALSE` to ensure a reproducible result.
 It is very important to pass the name the parameters passed to `permTest`, since it makes use of the ellipsis operator `...` and might produce unexpected errors if arguments are passed without a name.
@@ -176,11 +176,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMjkzNDAxMiwxMjI1ODA5MzY0LDIwNz
-Q0OTM2ODMsMTc1NjAxMzI2LC0yMDE5ODQ2NTAyLC0xMzE0Mzcy
-NTI4LDE3MTY0OTE1NzMsODY0OTUyNTUyLC0xODU5MDc4MTcsMz
-MyOTE1MzEsLTY5NzEwODA5NywxMzQxNTgxNTYwLC0xNjMzMTMy
-NDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkzMDMyMDEzLC
-03NzYxNjM3MiwxMDk1MzczMDU1LDQ3OTQwNjQxNywtMTkxNDAw
-NzUwN119
+eyJoaXN0b3J5IjpbMjA1MTgwNzE5LDE0MDI5MzQwMTIsMTIyNT
+gwOTM2NCwyMDc0NDkzNjgzLDE3NTYwMTMyNiwtMjAxOTg0NjUw
+MiwtMTMxNDM3MjUyOCwxNzE2NDkxNTczLDg2NDk1MjU1MiwtMT
+g1OTA3ODE3LDMzMjkxNTMxLC02OTcxMDgwOTcsMTM0MTU4MTU2
+MCwtMTYzMzEzMjQ0LC0zNjUwODEzNzMsMTQzNDExNjMxOCwtMT
+M5MzAzMjAxMywtNzc2MTYzNzIsMTA5NTM3MzA1NSw0Nzk0MDY0
+MTddfQ==
 -->
