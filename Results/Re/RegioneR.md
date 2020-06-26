@@ -1,7 +1,6 @@
-question: 
+# question: 
 In each of 404 samples, do PRDM9-bound ATAC-seq peaks contain more somatic mutations than expected by chance?
-
-Brief Problem Description:
+## Brief Problem Description:
 Gene promoter regions are GC rich and there are many CpG islands that lie inside promoters. However, is there a statistically significant association between them? Do CpG islands overlap with promoters more than one would expect by chance?
 
 We can see a visual representation of the results of the test. In grey the number of overlaps of the randomized regions with B, clustering around the black bar that represents the mean and in green the number of overlaps of the original region set A, which is much larger than expected. The red line denotes the significance limit.
@@ -148,11 +147,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NjE2MzcyLDEwOTUzNzMwNTUsNDc5ND
-A2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5MDA0
-NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LDE2NT
-AwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyNDQ4OTcs
-NjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1LDc2MDAxNz
-cwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAzLC0xNDQzMTU1MTM2
+eyJoaXN0b3J5IjpbLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOT
+UzNzMwNTUsNDc5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4
+NSwtMTUxNzA5MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNT
+E2MTMyMjY4LDE2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUz
+Niw4NTAyNDQ4OTcsNjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMz
+g3NDE1LDc2MDAxNzcwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAz
 XX0=
 -->
