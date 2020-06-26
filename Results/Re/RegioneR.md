@@ -117,9 +117,8 @@ num <- nrow(mutect2_snv[mutect2_snv$Sample_ID==ID,])
 ```bash
 # 
 grep -v "sampleID" MutNumber.txt | sort -k3,3nr > MutNumber.txt.sorted
-```
 head MutNumber.txt.sorted
-
+```
 	TCGA-AP-A051-01A        UCEC    12041
 	TCGA-AA-A010-01A        COAD    10239
 	TCGA-D9-A6EC-06A        SKCM    5641
@@ -130,7 +129,6 @@ head MutNumber.txt.sorted
 	TCGA-AA-A01R-01A        COAD    2522
 	TCGA-BR-A4QL-01A        STAD    2390
 	TCGA-AA-A022-01A        COAD    2276
-
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
 
@@ -150,11 +148,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTM4ODM1MiwxMDk1MzczMDU1LDQ3OT
-QwNjQxNywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLTE1MTcwOTAw
-NDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEzMjI2OCwxNj
-UwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsODUwMjQ0ODk3
-LDYwMzc1MjIzNCwtMjExMzYxMDI5OSw0MDM4NzQxNSw3NjAwMT
-c3MDAsLTEzMzc4MTQxNjAsMTMyNTU3ODMwMywtMTQ0MzE1NTEz
-Nl19
+eyJoaXN0b3J5IjpbLTc3NjE2MzcyLDEwOTUzNzMwNTUsNDc5ND
+A2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMTUxNzA5MDA0
+NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMyMjY4LDE2NT
+AwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NTAyNDQ4OTcs
+NjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1LDc2MDAxNz
+cwMCwtMTMzNzgxNDE2MCwxMzI1NTc4MzAzLC0xNDQzMTU1MTM2
+XX0=
 -->
