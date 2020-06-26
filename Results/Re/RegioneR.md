@@ -16,10 +16,10 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 # regioneR
-# Two region sets
-## Set A: PRDM9-bound peaks in 404 samples
+## Two region sets
+### Set A: PRDM9-bound peaks in 404 samples
 410 before renaming and 404 after
-### rename files
+#### rename files
 **before renaming**
 
 *<cancerType#>_<stanfordUUID#>_<batch#>_<sample#>_<libraryID#>_<bioRep#>_<techRep#><pool#>*
@@ -46,8 +46,8 @@ For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
 Case_ID: TCGA-XE-AANI-01A
 
-## SetB: somatic mutation (SNPs and small INDELs)
-### download and check files
+### SetB: somatic mutation (SNPs and small INDELs)
+#### download and check files
 ```bash
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.muse_snv.tsv.gz
 gzip -d GDC-PANCAN.muse_snv.tsv.gz 
@@ -73,10 +73,7 @@ wc -l GDC-PANCAN.varscan2_snv.tsv # 2854562
 awk '{if($4 == $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 2776104
 awk '{if($4 != $5){print $0}}' GDC-PANCAN.varscan2_snv.tsv | wc -l # 78458
 ```
-### choose the most appropriate dataset 
-> There is currently no scientific consensus on the best variant calling pipeline so the investigator is responsible for choosing the pipeline(s) most appropriate for the data. 
-
-**check the overlap between different datasets**
+#Its**
 ```bash
 for file in $(ls ./*_snv.tsv); do sort -k3,3 -k4,4n $file | awk '{FS=OFS="\t"}}' > ./${file}.sorted; done
 bedtools intersect -a GDC-PANCAN.muse_snv.tsv.sorted -b GDC-PANCAN.mutect2_snv.tsv.sorted -v | wc -l # 157126
@@ -147,11 +144,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MDg4NDU3MSwtMzY1MDgxMzczLDE0Mz
-QxMTYzMTgsLTEzOTMwMzIwMTMsLTc3NjE2MzcyLDEwOTUzNzMw
-NTUsNDc5NDA2NDE3LC0xOTE0MDA3NTA3LDQ0MDQwNTQ4NSwtMT
-UxNzA5MDA0NywtNzE3MTMzNzQ2LDE2MTg4Mjc3OSwtNTE2MTMy
-MjY4LDE2NTAwOTEsMTMwMTA2OTEzMywtMTg2OTY5NDUzNiw4NT
-AyNDQ4OTcsNjAzNzUyMjM0LC0yMTEzNjEwMjk5LDQwMzg3NDE1
-XX0=
+eyJoaXN0b3J5IjpbLTEzNzg1MDYwODYsLTM2NTA4MTM3MywxND
+M0MTE2MzE4LC0xMzkzMDMyMDEzLC03NzYxNjM3MiwxMDk1Mzcz
+MDU1LDQ3OTQwNjQxNywtMTkxNDAwNzUwNyw0NDA0MDU0ODUsLT
+E1MTcwOTAwNDcsLTcxNzEzMzc0NiwxNjE4ODI3NzksLTUxNjEz
+MjI2OCwxNjUwMDkxLDEzMDEwNjkxMzMsLTE4Njk2OTQ1MzYsOD
+UwMjQ0ODk3LDYwMzc1MjIzNCwtMjExMzYxMDI5OSw0MDM4NzQx
+NV19
 -->
