@@ -114,7 +114,7 @@ genome
 mask
 ## evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
-If we we will build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test.
+we will build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test.
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 
@@ -193,11 +193,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjQ4MDI1MjIsLTg0OTg1ODI4NiwxOT
-M4ODIyMzAxLC0xMDg1MTcwMzA2LDM3NTIwOTU2MSw1OTA1MTMw
-OTAsOTkwMTk2MTIwLDE3ODgzODQ1OTksLTE3OTU4Njk2MTAsLT
-c5MjQ2ODM1NywxMjEyNTY3MjQwLC0xMDI4ODI2MjksLTUyNjUw
-OTQyMCwxNTIzMjU3MTkxLC02MDgyMzI4OTQsMTQ4NTQ3NzU0NC
-w2MTQ0NTkwNDksMTYxMDAzNTY2NywxMjQ5MDA2MDY5LDE2OTgw
-NTMyMzddfQ==
+eyJoaXN0b3J5IjpbOTE0NDA1OTQxLC04NDk4NTgyODYsMTkzOD
+gyMjMwMSwtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkw
+LDk5MDE5NjEyMCwxNzg4Mzg0NTk5LC0xNzk1ODY5NjEwLC03OT
+I0NjgzNTcsMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01MjY1MDk0
+MjAsMTUyMzI1NzE5MSwtNjA4MjMyODk0LDE0ODU0Nzc1NDQsNj
+E0NDU5MDQ5LDE2MTAwMzU2NjcsMTI0OTAwNjA2OSwxNjk4MDUz
+MjM3XX0=
 -->
