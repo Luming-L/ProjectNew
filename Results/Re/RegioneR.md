@@ -110,6 +110,10 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 
 genome
 mask
+randomization
+evaluation
+textual output
+
 
 ```r
 set.seed(12345)
@@ -180,11 +184,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMzQxNTEwNSwtMTc5NTg2OTYxMCwtNz
-kyNDY4MzU3LDEyMTI1NjcyNDAsLTEwMjg4MjYyOSwtNTI2NTA5
-NDIwLDE1MjMyNTcxOTEsLTYwODIzMjg5NCwxNDg1NDc3NTQ0LD
-YxNDQ1OTA0OSwxNjEwMDM1NjY3LDEyNDkwMDYwNjksMTY5ODA1
-MzIzNywtMTQxNjgzODczOCwxNjUzODQwNzAyLC02NDg2NjY1OD
-IsLTE2ODY0NTg3MjYsMTQwMjkzNDAxMiwxMjI1ODA5MzY0LDIw
-NzQ0OTM2ODNdfQ==
+eyJoaXN0b3J5IjpbMzI3NDI5ODc4LC0xNzk1ODY5NjEwLC03OT
+I0NjgzNTcsMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01MjY1MDk0
+MjAsMTUyMzI1NzE5MSwtNjA4MjMyODk0LDE0ODU0Nzc1NDQsNj
+E0NDU5MDQ5LDE2MTAwMzU2NjcsMTI0OTAwNjA2OSwxNjk4MDUz
+MjM3LC0xNDE2ODM4NzM4LDE2NTM4NDA3MDIsLTY0ODY2NjU4Mi
+wtMTY4NjQ1ODcyNiwxNDAyOTM0MDEyLDEyMjU4MDkzNjQsMjA3
+NDQ5MzY4M119
 -->
