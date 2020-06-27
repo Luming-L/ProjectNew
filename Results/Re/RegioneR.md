@@ -201,6 +201,18 @@ Randomization function: circularRandomizeRegions
 attr(,"class")
 [1] "permTestResultsList"
 
+pt.100.circular.count1 <- permTest(A=peaks, B=mutations, ntimes=100, randomize.function=circularRandomizeRegions, evaluate.function=numOverl> pt.100.circular.count1
+$numOverlaps
+P-value: 0.0198019801980198
+Z-score: 2.0763
+Number of iterations: 100
+Alternative: greater
+Evaluation of the original region set: 81
+Evaluation function: numOverlaps
+Randomization function: circularRandomizeRegions
+
+attr(,"class")
+[1] "permTestResultsList"
 ```
 To further investigate the nature of the associations, we will use the `localZscore` function, that will move the original regions around and see the effect in the z-score. In this case, we will start with a window of 1000bp and a step of 50bp. To run the local z-score analysis, we need to give it the original region set A, the results of the permutation test and the additional parameters needed by the evaluation function, in this case, `B=HepG2_Ctcf` and `count.once=TRUE`.
 
@@ -241,7 +253,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0ODMzOTc1NCwtMTQxNjgzODczOCwxNj
+eyJoaXN0b3J5IjpbMTY5ODA1MzIzNywtMTQxNjgzODczOCwxNj
 UzODQwNzAyLC02NDg2NjY1ODIsLTE2ODY0NTg3MjYsMTQwMjkz
 NDAxMiwxMjI1ODA5MzY0LDIwNzQ0OTM2ODMsMTc1NjAxMzI2LC
 0yMDE5ODQ2NTAyLC0xMzE0MzcyNTI4LDE3MTY0OTE1NzMsODY0
