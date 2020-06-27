@@ -119,9 +119,10 @@ Build a distribution of the evaluation obtained from random RS and so, we can co
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 ### other parameters
-parallel package
 `ntimes` the number of randomizations
-`verbose` toggle the drawing of a progress bar, `force.parallel` to force or forbid the use of multiple cores to run the analysis…- and it also accepts any additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
+`verbose` toggle the drawing of a progress bar
+`force.parallel` force or forbid the use of multiple cores to run the analysis
+additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
 ## z-score 
 
 
@@ -198,7 +199,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDAxOTY2ODQsMTE5MzY0MTUyMiwtMj
+eyJoaXN0b3J5IjpbLTE2OTU1MjEzODEsMTE5MzY0MTUyMiwtMj
 A5NDg4NzYxMiw2NDIyNTA3OTIsLTIwOTM5NTcwMTcsOTE0NDA1
 OTQxLC04NDk4NTgyODYsMTkzODgyMjMwMSwtMTA4NTE3MDMwNi
 wzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0
