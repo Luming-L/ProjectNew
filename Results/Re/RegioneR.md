@@ -83,6 +83,11 @@ saveRDS(object = mutect2_snv, file = "mutect2_snv.rds")
 ```r
 # count somatic mutations of a sample
 num <- nrow(mutect2_snv[mutect2_snv$Sample_ID==ID,])
+
+# get the number of overlaps between peaks and mutations for a sample
+mutations <- toGRanges(mutect2_snv[mutect2_snv$Sample_ID==ID,c(3,4,5)])
+peaks <- toGRanges(paste0("/exports/eddie/scratch/s1949868/PRDM9BoundPeaks_410_Case_ID/",ID,"_PRDM9_bound_peaks.bed"))
+numOverlaps <- numOverlaps(A=peaks, B=mutations, count.once=TRUE)
 ```
 ```bash
 # sort samples by mutation number
@@ -170,11 +175,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01Mj
-Y1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMyODk0LDE0ODU0Nzc1
-NDQsNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMTI0OTAwNjA2OSwxNj
-k4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4NDA3MDIsLTY0ODY2
-NjU4MiwtMTY4NjQ1ODcyNiwxNDAyOTM0MDEyLDEyMjU4MDkzNj
-QsMjA3NDQ5MzY4MywxNzU2MDEzMjYsLTIwMTk4NDY1MDIsLTEz
-MTQzNzI1MjhdfQ==
+eyJoaXN0b3J5IjpbLTE5NDc3NjUzMTgsMTIxMjU2NzI0MCwtMT
+AyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMy
+ODk0LDE0ODU0Nzc1NDQsNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMT
+I0OTAwNjA2OSwxNjk4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4
+NDA3MDIsLTY0ODY2NjU4MiwtMTY4NjQ1ODcyNiwxNDAyOTM0MD
+EyLDEyMjU4MDkzNjQsMjA3NDQ5MzY4MywxNzU2MDEzMjYsLTIw
+MTk4NDY1MDJdfQ==
 -->
