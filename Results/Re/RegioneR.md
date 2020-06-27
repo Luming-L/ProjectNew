@@ -118,6 +118,10 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 ```r
 set.seed(12345)
 pt <- overlapPermTest(cpgHMM_2K, promoters, ntimes=1000, genome="hg19", count.once=TRUE, force.parallel=FALSE)
+pt_Rad21_5k_vs_Ctcf <- permTest(A=HepG2_Rad21_5K, B=HepG2_Ctcf, ntimes=1000,
++                                   randomize.function=circularRandomizeRegions,
++                                   evaluate.function=numOverlaps, count.once=TRUE,
++                                   genome="hg19", mc.set.seed=FALSE, mc.cores=4)
 
 ```
 ```r
@@ -180,11 +184,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk5MjM4Njc5LDYxNDQ1OTA0OSwxNjEwMD
-M1NjY3LDEyNDkwMDYwNjksMTY5ODA1MzIzNywtMTQxNjgzODcz
-OCwxNjUzODQwNzAyLC02NDg2NjY1ODIsLTE2ODY0NTg3MjYsMT
-QwMjkzNDAxMiwxMjI1ODA5MzY0LDIwNzQ0OTM2ODMsMTc1NjAx
-MzI2LC0yMDE5ODQ2NTAyLC0xMzE0MzcyNTI4LDE3MTY0OTE1Nz
-MsODY0OTUyNTUyLC0xODU5MDc4MTcsMzMyOTE1MzEsLTY5NzEw
-ODA5N119
+eyJoaXN0b3J5IjpbMTQ4NTQ3NzU0NCw2MTQ0NTkwNDksMTYxMD
+AzNTY2NywxMjQ5MDA2MDY5LDE2OTgwNTMyMzcsLTE0MTY4Mzg3
+MzgsMTY1Mzg0MDcwMiwtNjQ4NjY2NTgyLC0xNjg2NDU4NzI2LD
+E0MDI5MzQwMTIsMTIyNTgwOTM2NCwyMDc0NDkzNjgzLDE3NTYw
+MTMyNiwtMjAxOTg0NjUwMiwtMTMxNDM3MjUyOCwxNzE2NDkxNT
+czLDg2NDk1MjU1MiwtMTg1OTA3ODE3LDMzMjkxNTMxLC02OTcx
+MDgwOTddfQ==
 -->
