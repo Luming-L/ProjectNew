@@ -107,12 +107,13 @@ head MutNumber.noZero.sorted.txt
 	TCGA-85-A4CL-01A        LUSC    989     39
 # Use permutation tests to analyze the association of two sets
 The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation. 
-## randomization function
+## permTest
+### randomization function
 Create a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set. Randomization functions in regioneR can specify the genome and accept a mask, indicating where a random region cannot be placed.
 `randomizeRegions`: given a RS, returns a new RS with the same number of regions and of the same width as the original ones but randomly placed along the non-masked parts of the genome. 
 genome
 mask
-## evaluation function
+### evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test.
 
@@ -194,11 +195,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MzY0MTUyMiwtMjA5NDg4NzYxMiw2ND
-IyNTA3OTIsLTIwOTM5NTcwMTcsOTE0NDA1OTQxLC04NDk4NTgy
-ODYsMTkzODgyMjMwMSwtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNT
-kwNTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0NTk5LC0xNzk1ODY5
-NjEwLC03OTI0NjgzNTcsMTIxMjU2NzI0MCwtMTAyODgyNjI5LC
-01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMyODk0LDE0ODU0
-Nzc1NDRdfQ==
+eyJoaXN0b3J5IjpbMTM5NjE1OTk4MCwxMTkzNjQxNTIyLC0yMD
+k0ODg3NjEyLDY0MjI1MDc5MiwtMjA5Mzk1NzAxNyw5MTQ0MDU5
+NDEsLTg0OTg1ODI4NiwxOTM4ODIyMzAxLC0xMDg1MTcwMzA2LD
+M3NTIwOTU2MSw1OTA1MTMwOTAsOTkwMTk2MTIwLDE3ODgzODQ1
+OTksLTE3OTU4Njk2MTAsLTc5MjQ2ODM1NywxMjEyNTY3MjQwLC
+0xMDI4ODI2MjksLTUyNjUwOTQyMCwxNTIzMjU3MTkxLC02MDgy
+MzI4OTRdfQ==
 -->
