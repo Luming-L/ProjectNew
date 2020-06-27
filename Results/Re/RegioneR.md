@@ -114,7 +114,7 @@ genome
 mask
 ## evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
-we will build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test.
+Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test.
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 
@@ -193,11 +193,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQyMjUwNzkyLC0yMDkzOTU3MDE3LDkxND
-QwNTk0MSwtODQ5ODU4Mjg2LDE5Mzg4MjIzMDEsLTEwODUxNzAz
-MDYsMzc1MjA5NTYxLDU5MDUxMzA5MCw5OTAxOTYxMjAsMTc4OD
-M4NDU5OSwtMTc5NTg2OTYxMCwtNzkyNDY4MzU3LDEyMTI1Njcy
-NDAsLTEwMjg4MjYyOSwtNTI2NTA5NDIwLDE1MjMyNTcxOTEsLT
-YwODIzMjg5NCwxNDg1NDc3NTQ0LDYxNDQ1OTA0OSwxNjEwMDM1
-NjY3XX0=
+eyJoaXN0b3J5IjpbLTIwOTQ4ODc2MTIsNjQyMjUwNzkyLC0yMD
+kzOTU3MDE3LDkxNDQwNTk0MSwtODQ5ODU4Mjg2LDE5Mzg4MjIz
+MDEsLTEwODUxNzAzMDYsMzc1MjA5NTYxLDU5MDUxMzA5MCw5OT
+AxOTYxMjAsMTc4ODM4NDU5OSwtMTc5NTg2OTYxMCwtNzkyNDY4
+MzU3LDEyMTI1NjcyNDAsLTEwMjg4MjYyOSwtNTI2NTA5NDIwLD
+E1MjMyNTcxOTEsLTYwODIzMjg5NCwxNDg1NDc3NTQ0LDYxNDQ1
+OTA0OV19
 -->
