@@ -90,20 +90,22 @@ peaks <- toGRanges(paste0("/exports/eddie/scratch/s1949868/PRDM9BoundPeaks_410_C
 numOverlaps <- numOverlaps(A=peaks, B=mutations, count.once=TRUE)
 ```
 ```bash
-# sort samples by mutation number
-grep -v "sampleID" MutNumber.txt | sort -k3,3nr > MutNumber.txt.sorted
-head MutNumber.txt.sorted
+# sort samples by overlap number
+grep -v "sampleID" MutNumber.txt | awk '{FS=OFS="\t";if($3!=0 && $4!=0){print $0}}'> MutNumber.noZero.txt
+sort -k4,4nr MutNumber.noZero.txt > MutNumber.noZero.sorted.txt
+head MutNumber.noZero.sorted.txt
 ```
-	TCGA-AP-A051-01A        UCEC    12041
-	TCGA-AA-A010-01A        COAD    10239
-	TCGA-D9-A6EC-06A        SKCM    5641
-	TCGA-D3-A8GM-06A        SKCM    5137
-	TCGA-F7-A624-01A        HNSC    4050
-	TCGA-NH-A5IV-01A        COAD    3753
-	TCGA-AD-6889-01A        COAD    2685
-	TCGA-AA-A01R-01A        COAD    2522
-	TCGA-BR-A4QL-01A        STAD    2390
-	TCGA-AA-A022-01A        COAD    2276
+TCGA-AA-A010-01A        COAD    10239   153
+TCGA-NH-A5IV-01A        COAD    3753    111
+TCGA-AP-A051-01A        UCEC    12041   81
+TCGA-F7-A624-01A        HNSC    4050    70
+TCGA-AA-A01R-01A        COAD    2522    61
+TCGA-AD-6889-01A        COAD    2685    60
+TCGA-D9-A6EC-06A        SKCM    5641    56
+TCGA-AA-A022-01A        COAD    2276    43
+TCGA-D3-A8GM-06A        SKCM    5137    43
+TCGA-85-A4CL-01A        LUSC    989     39
+
 # Permutation test
 The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation.
 ```r
@@ -175,11 +177,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDc3NjUzMTgsMTIxMjU2NzI0MCwtMT
-AyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMy
-ODk0LDE0ODU0Nzc1NDQsNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMT
-I0OTAwNjA2OSwxNjk4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4
-NDA3MDIsLTY0ODY2NjU4MiwtMTY4NjQ1ODcyNiwxNDAyOTM0MD
-EyLDEyMjU4MDkzNjQsMjA3NDQ5MzY4MywxNzU2MDEzMjYsLTIw
-MTk4NDY1MDJdfQ==
+eyJoaXN0b3J5IjpbMzk0NzY5ODA1LDEyMTI1NjcyNDAsLTEwMj
+g4MjYyOSwtNTI2NTA5NDIwLDE1MjMyNTcxOTEsLTYwODIzMjg5
+NCwxNDg1NDc3NTQ0LDYxNDQ1OTA0OSwxNjEwMDM1NjY3LDEyND
+kwMDYwNjksMTY5ODA1MzIzNywtMTQxNjgzODczOCwxNjUzODQw
+NzAyLC02NDg2NjY1ODIsLTE2ODY0NTg3MjYsMTQwMjkzNDAxMi
+wxMjI1ODA5MzY0LDIwNzQ0OTM2ODMsMTc1NjAxMzI2LC0yMDE5
+ODQ2NTAyXX0=
 -->
