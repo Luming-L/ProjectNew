@@ -115,12 +115,12 @@ genome
 mask
 ### evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
-Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test.
+Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
-
+## other parameters
 ## z-score 
-the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
+
 
 reproducible
 textual output
@@ -195,7 +195,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjE1OTk4MCwxMTkzNjQxNTIyLC0yMD
+eyJoaXN0b3J5IjpbMTM4MTQyNTUyOCwxMTkzNjQxNTIyLC0yMD
 k0ODg3NjEyLDY0MjI1MDc5MiwtMjA5Mzk1NzAxNyw5MTQ0MDU5
 NDEsLTg0OTg1ODI4NiwxOTM4ODIyMzAxLC0xMDg1MTcwMzA2LD
 M3NTIwOTU2MSw1OTA1MTMwOTAsOTkwMTk2MTIwLDE3ODgzODQ1
