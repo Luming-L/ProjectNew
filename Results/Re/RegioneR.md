@@ -107,10 +107,11 @@ head MutNumber.noZero.sorted.txt
 	TCGA-85-A4CL-01A        LUSC    989     39
 # Analyze the association of two sets based on permutation tests
 The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation.
+## evaluation function
+## randomization function
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 
-two sets
-randomization
+
 evaluation
 genome
 mask
@@ -187,11 +188,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc1MjA5NTYxLDU5MDUxMzA5MCw5OTAxOT
-YxMjAsMTc4ODM4NDU5OSwtMTc5NTg2OTYxMCwtNzkyNDY4MzU3
-LDEyMTI1NjcyNDAsLTEwMjg4MjYyOSwtNTI2NTA5NDIwLDE1Mj
-MyNTcxOTEsLTYwODIzMjg5NCwxNDg1NDc3NTQ0LDYxNDQ1OTA0
-OSwxNjEwMDM1NjY3LDEyNDkwMDYwNjksMTY5ODA1MzIzNywtMT
-QxNjgzODczOCwxNjUzODQwNzAyLC02NDg2NjY1ODIsLTE2ODY0
-NTg3MjZdfQ==
+eyJoaXN0b3J5IjpbLTIxNDIxODA2NCwzNzUyMDk1NjEsNTkwNT
+EzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0NTk5LC0xNzk1ODY5NjEw
+LC03OTI0NjgzNTcsMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01Mj
+Y1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMyODk0LDE0ODU0Nzc1
+NDQsNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMTI0OTAwNjA2OSwxNj
+k4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4NDA3MDIsLTY0ODY2
+NjU4Ml19
 -->
