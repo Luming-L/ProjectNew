@@ -118,7 +118,10 @@ mask
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
-## other parameters
+### other parameters
+parallel package
+`ntimes` the number of randomizations
+`verbose` toggle the drawing of a progress bar, `force.parallel` to force or forbid the use of multiple cores to run the analysis…- and it also accepts any additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
 ## z-score 
 
 
@@ -195,11 +198,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MTQyNTUyOCwxMTkzNjQxNTIyLC0yMD
-k0ODg3NjEyLDY0MjI1MDc5MiwtMjA5Mzk1NzAxNyw5MTQ0MDU5
-NDEsLTg0OTg1ODI4NiwxOTM4ODIyMzAxLC0xMDg1MTcwMzA2LD
-M3NTIwOTU2MSw1OTA1MTMwOTAsOTkwMTk2MTIwLDE3ODgzODQ1
-OTksLTE3OTU4Njk2MTAsLTc5MjQ2ODM1NywxMjEyNTY3MjQwLC
-0xMDI4ODI2MjksLTUyNjUwOTQyMCwxNTIzMjU3MTkxLC02MDgy
-MzI4OTRdfQ==
+eyJoaXN0b3J5IjpbLTEwMDAxOTY2ODQsMTE5MzY0MTUyMiwtMj
+A5NDg4NzYxMiw2NDIyNTA3OTIsLTIwOTM5NTcwMTcsOTE0NDA1
+OTQxLC04NDk4NTgyODYsMTkzODgyMjMwMSwtMTA4NTE3MDMwNi
+wzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0
+NTk5LC0xNzk1ODY5NjEwLC03OTI0NjgzNTcsMTIxMjU2NzI0MC
+wtMTAyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4
+MjMyODk0XX0=
 -->
