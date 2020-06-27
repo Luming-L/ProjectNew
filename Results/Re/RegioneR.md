@@ -178,7 +178,7 @@ mutations (SNPs, indels and structural variant breakpoints)
 
 
 
-
+It depicts a gray histogram representing the evaluation of the randomized RS with a fitted normal, a black bar representing the mean of the randomized evaluations and a green bar representing the evaluation of the original RS. In addition, a red bar (and red shading) represents the significance limit (by default 0.05). Thus, if the green bar is in the red shaded region it means that the original evaluation is extremely unlikely and so the p-value will be significant.
 
 # Randomization strategy 
 maintains the order and distance of the regions, while changing their position in the chromosome.
@@ -199,11 +199,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTU1MjEzODEsMTE5MzY0MTUyMiwtMj
-A5NDg4NzYxMiw2NDIyNTA3OTIsLTIwOTM5NTcwMTcsOTE0NDA1
-OTQxLC04NDk4NTgyODYsMTkzODgyMjMwMSwtMTA4NTE3MDMwNi
-wzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0
-NTk5LC0xNzk1ODY5NjEwLC03OTI0NjgzNTcsMTIxMjU2NzI0MC
-wtMTAyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4
-MjMyODk0XX0=
+eyJoaXN0b3J5IjpbLTE0NzgyNjY0NzQsLTE2OTU1MjEzODEsMT
+E5MzY0MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIwOTM5
+NTcwMTcsOTE0NDA1OTQxLC04NDk4NTgyODYsMTkzODgyMjMwMS
+wtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5
+NjEyMCwxNzg4Mzg0NTk5LC0xNzk1ODY5NjEwLC03OTI0NjgzNT
+csMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01MjY1MDk0MjAsMTUy
+MzI1NzE5MV19
 -->
