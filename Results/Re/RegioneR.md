@@ -114,7 +114,7 @@ genome
 mask
 ## evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
-If we do this many times we will build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not.
+If we do this many times we will build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test.
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 
@@ -193,11 +193,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzY3MDgwMzcsMTkzODgyMjMwMSwtMT
-A4NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEy
-MCwxNzg4Mzg0NTk5LC0xNzk1ODY5NjEwLC03OTI0NjgzNTcsMT
-IxMjU2NzI0MCwtMTAyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1
-NzE5MSwtNjA4MjMyODk0LDE0ODU0Nzc1NDQsNjE0NDU5MDQ5LD
-E2MTAwMzU2NjcsMTI0OTAwNjA2OSwxNjk4MDUzMjM3LC0xNDE2
-ODM4NzM4XX0=
+eyJoaXN0b3J5IjpbLTg0OTg1ODI4NiwxOTM4ODIyMzAxLC0xMD
+g1MTcwMzA2LDM3NTIwOTU2MSw1OTA1MTMwOTAsOTkwMTk2MTIw
+LDE3ODgzODQ1OTksLTE3OTU4Njk2MTAsLTc5MjQ2ODM1NywxMj
+EyNTY3MjQwLC0xMDI4ODI2MjksLTUyNjUwOTQyMCwxNTIzMjU3
+MTkxLC02MDgyMzI4OTQsMTQ4NTQ3NzU0NCw2MTQ0NTkwNDksMT
+YxMDAzNTY2NywxMjQ5MDA2MDY5LDE2OTgwNTMyMzcsLTE0MTY4
+Mzg3MzhdfQ==
 -->
