@@ -9,26 +9,14 @@ The binding of PRDM9 will introduce genetic variants in meiotic recombination. P
 
 *<cancerType#>_<stanfordUUID#>_<batch#>_<sample#>_<libraryID#>_<bioRep#>_<techRep#><pool#>*
 
-For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
+TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
 - <stanfordUUID#> - 1577A485-E047-42CF-8703-42A69E1AED1A - This corresponds to a unique 36-character ID given to each tissue fragment. This is not the same as the 36-character TCGA sample_id/case_id. Hyphens were replaced by underscores.
 
-- <batch#> - X038 == batch 038 - samples were, almost universally, processed in batches of 12. This number denotes in which batch the tissue was processed.
-
-- <sample#> - S09 == sample 09 - within a batch, samples were processed consistently in the same order throughout processing. In this case, S09 means that this particular sample was processed 9th within the batch.
-
-- <libraryID#> - L090 == library 090 - this number does not have inherent meaning and was used to track samples throughout processing.
-
-- <bioRep#> - B1 == bioRep #1 (everything is B1, as we defined a bio rep as an individual piece of tissue)
-
-- <techRep#> - T2 == techRep #2 - Tumor tissue was homogenized prior to ATAC-seq into a nuclei suspension. Each technical replicate represents an individual ATAC-seq reaction performed in a separate tube on different nuclei isolated from the same sample.
-
-- <pool#> - PMRG == Pool "merged" - This represents the pool in which this particular technical replicate was sequenced. If this is "PMRG" that means that multiple sequencing runs were performed on this technical replicate and then merged to acheive sufficient depth.
-
 **after renaming**
 
-Case_ID: TCGA-XE-AANI-01A
-
+Case_ID
+TCGA-XE-AANI-01A
 ## SetB: somatic mutation (SNPs and small INDELs)
 ### download and check files
 ```bash
@@ -182,11 +170,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjg4MjYyOSwtNTI2NTA5NDIwLDE1Mj
-MyNTcxOTEsLTYwODIzMjg5NCwxNDg1NDc3NTQ0LDYxNDQ1OTA0
-OSwxNjEwMDM1NjY3LDEyNDkwMDYwNjksMTY5ODA1MzIzNywtMT
-QxNjgzODczOCwxNjUzODQwNzAyLC02NDg2NjY1ODIsLTE2ODY0
-NTg3MjYsMTQwMjkzNDAxMiwxMjI1ODA5MzY0LDIwNzQ0OTM2OD
-MsMTc1NjAxMzI2LC0yMDE5ODQ2NTAyLC0xMzE0MzcyNTI4LDE3
-MTY0OTE1NzNdfQ==
+eyJoaXN0b3J5IjpbMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01Mj
+Y1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMyODk0LDE0ODU0Nzc1
+NDQsNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMTI0OTAwNjA2OSwxNj
+k4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4NDA3MDIsLTY0ODY2
+NjU4MiwtMTY4NjQ1ODcyNiwxNDAyOTM0MDEyLDEyMjU4MDkzNj
+QsMjA3NDQ5MzY4MywxNzU2MDEzMjYsLTIwMTk4NDY1MDIsLTEz
+MTQzNzI1MjhdfQ==
 -->
