@@ -118,7 +118,8 @@ Build a distribution of the evaluation obtained from random RS and so, we can co
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 
-## z-score which is the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
+## z-score 
+the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
 
 reproducible
 textual output
@@ -193,11 +194,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk1MzU0MDM3LC0yMDk0ODg3NjEyLDY0Mj
-I1MDc5MiwtMjA5Mzk1NzAxNyw5MTQ0MDU5NDEsLTg0OTg1ODI4
-NiwxOTM4ODIyMzAxLC0xMDg1MTcwMzA2LDM3NTIwOTU2MSw1OT
-A1MTMwOTAsOTkwMTk2MTIwLDE3ODgzODQ1OTksLTE3OTU4Njk2
-MTAsLTc5MjQ2ODM1NywxMjEyNTY3MjQwLC0xMDI4ODI2MjksLT
-UyNjUwOTQyMCwxNTIzMjU3MTkxLC02MDgyMzI4OTQsMTQ4NTQ3
-NzU0NF19
+eyJoaXN0b3J5IjpbMTE5MzY0MTUyMiwtMjA5NDg4NzYxMiw2ND
+IyNTA3OTIsLTIwOTM5NTcwMTcsOTE0NDA1OTQxLC04NDk4NTgy
+ODYsMTkzODgyMjMwMSwtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNT
+kwNTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0NTk5LC0xNzk1ODY5
+NjEwLC03OTI0NjgzNTcsMTIxMjU2NzI0MCwtMTAyODgyNjI5LC
+01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMyODk0LDE0ODU0
+Nzc1NDRdfQ==
 -->
