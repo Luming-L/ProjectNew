@@ -107,13 +107,14 @@ head MutNumber.noZero.sorted.txt
 	TCGA-85-A4CL-01A        LUSC    989     39
 # Analyze the association of two sets based on permutation tests
 The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation. 
-## evaluation function
-`numOverlaps` function: given two RS, returns the number of overlaps between them.
 ## randomization function
 creates a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set. many randomization functions provided by regioneR accept a mask, indicating where a random region cannot be placed.
 `randomizeRegions`: given a RS, a genome and an optional mask, returns a new RS with the same number of regions and of the same width as the original ones but randomly placed along the non-masked parts of the genome. 
 genome
 mask
+## evaluation function
+`numOverlaps` function: given two RS, returns the number of overlaps between them.
+If we do this many times we will build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not.
 
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 
@@ -192,11 +193,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzODgyMjMwMSwtMTA4NTE3MDMwNiwzNz
-UyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0NTk5
-LC0xNzk1ODY5NjEwLC03OTI0NjgzNTcsMTIxMjU2NzI0MCwtMT
-AyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMy
-ODk0LDE0ODU0Nzc1NDQsNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMT
-I0OTAwNjA2OSwxNjk4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4
-NDA3MDJdfQ==
+eyJoaXN0b3J5IjpbLTIxMzY3MDgwMzcsMTkzODgyMjMwMSwtMT
+A4NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEy
+MCwxNzg4Mzg0NTk5LC0xNzk1ODY5NjEwLC03OTI0NjgzNTcsMT
+IxMjU2NzI0MCwtMTAyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1
+NzE5MSwtNjA4MjMyODk0LDE0ODU0Nzc1NDQsNjE0NDU5MDQ5LD
+E2MTAwMzU2NjcsMTI0OTAwNjA2OSwxNjk4MDUzMjM3LC0xNDE2
+ODM4NzM4XX0=
 -->
