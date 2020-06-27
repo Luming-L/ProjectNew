@@ -117,6 +117,7 @@ head MutNumber.txt.sorted
 The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation.
 ```r
 set.seed(12345)
+pt <- overlapPermTest(cpgHMM_2K, promoters, ntimes=1000, genome="hg19", count.once=TRUE, force.parallel=FALSE)
 ```
 ```r
 # remove the promoters and CpG islands in non-canonical chromosomes
@@ -178,11 +179,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDAzNTY2NywxMjQ5MDA2MDY5LDE2OT
-gwNTMyMzcsLTE0MTY4Mzg3MzgsMTY1Mzg0MDcwMiwtNjQ4NjY2
-NTgyLC0xNjg2NDU4NzI2LDE0MDI5MzQwMTIsMTIyNTgwOTM2NC
-wyMDc0NDkzNjgzLDE3NTYwMTMyNiwtMjAxOTg0NjUwMiwtMTMx
-NDM3MjUyOCwxNzE2NDkxNTczLDg2NDk1MjU1MiwtMTg1OTA3OD
-E3LDMzMjkxNTMxLC02OTcxMDgwOTcsMTM0MTU4MTU2MCwtMTYz
-MzEzMjQ0XX0=
+eyJoaXN0b3J5IjpbNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMTI0OT
+AwNjA2OSwxNjk4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4NDA3
+MDIsLTY0ODY2NjU4MiwtMTY4NjQ1ODcyNiwxNDAyOTM0MDEyLD
+EyMjU4MDkzNjQsMjA3NDQ5MzY4MywxNzU2MDEzMjYsLTIwMTk4
+NDY1MDIsLTEzMTQzNzI1MjgsMTcxNjQ5MTU3Myw4NjQ5NTI1NT
+IsLTE4NTkwNzgxNywzMzI5MTUzMSwtNjk3MTA4MDk3LDEzNDE1
+ODE1NjBdfQ==
 -->
