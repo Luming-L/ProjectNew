@@ -173,9 +173,9 @@ Alternative: greater
 Evaluation of the original region set: 81
 Evaluation function: numOverlaps
 Randomization function: randomizeRegions
-
 attr(,"class")
 [1] "permTestResultsList"
+
 > pt.50.circular.count1 <- permTest(A=peaks, B=mutations, ntimes=50, randomize.function=circularRandomizeRegions, evaluate.function=numOverlap[1] "Note: The minimum p-value with only 50 permutations is 0.0196078431372549. You should consider increasing the number of permutations."
 > pt.50.circular.count1
 $numOverlaps
@@ -186,7 +186,6 @@ Alternative: greater
 Evaluation of the original region set: 81
 Evaluation function: numOverlaps
 Randomization function: circularRandomizeRegions
-
 attr(,"class")
 [1] "permTestResultsList"
 ```
@@ -229,11 +228,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1OTg3MDAwOCwxNjUzODQwNzAyLC02ND
-g2NjY1ODIsLTE2ODY0NTg3MjYsMTQwMjkzNDAxMiwxMjI1ODA5
-MzY0LDIwNzQ0OTM2ODMsMTc1NjAxMzI2LC0yMDE5ODQ2NTAyLC
-0xMzE0MzcyNTI4LDE3MTY0OTE1NzMsODY0OTUyNTUyLC0xODU5
-MDc4MTcsMzMyOTE1MzEsLTY5NzEwODA5NywxMzQxNTgxNTYwLC
-0xNjMzMTMyNDQsLTM2NTA4MTM3MywxNDM0MTE2MzE4LC0xMzkz
-MDMyMDEzXX0=
+eyJoaXN0b3J5IjpbLTE0MTY4Mzg3MzgsMTY1Mzg0MDcwMiwtNj
+Q4NjY2NTgyLC0xNjg2NDU4NzI2LDE0MDI5MzQwMTIsMTIyNTgw
+OTM2NCwyMDc0NDkzNjgzLDE3NTYwMTMyNiwtMjAxOTg0NjUwMi
+wtMTMxNDM3MjUyOCwxNzE2NDkxNTczLDg2NDk1MjU1MiwtMTg1
+OTA3ODE3LDMzMjkxNTMxLC02OTcxMDgwOTcsMTM0MTU4MTU2MC
+wtMTYzMzEzMjQ0LC0zNjUwODEzNzMsMTQzNDExNjMxOCwtMTM5
+MzAzMjAxM119
 -->
