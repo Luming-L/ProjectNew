@@ -116,6 +116,9 @@ head MutNumber.txt.sorted
 # Permutation test
 The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation.
 ```r
+set.seed(12345)
+```
+```r
 # remove the promoters and CpG islands in non-canonical chromosomes
 cpgHMM <- filterChromosomes(cpgHMM, organism="hg", chr.type="canonical") promoters <- filterChromosomes(promoters, organism="hg", chr.type="canonical")
 # count a peak only once even if it overlaps 2 or more mutations, we use the parameter `count.once=TRUE`,
@@ -124,6 +127,7 @@ png("pt.png",width = 960,height = 960)
 plot(pt)
 dev.off()
 lz_Rad21_vs_Ctcf_1 <- localZScore(A=HepG2_Rad21_5K, B=HepG2_Ctcf, pt=pt_Rad21_5k_vs_Ctcf, window=1000, step=50, count.once=TRUE)
+
 ```
 ```r
 pt <- permTest(A=peaks, B=mutations, ntimes=1000, randomize.function=circularRandomizeRegions, evaluate.function=numOverlaps, count.once=TRUE, genome="hg38", mc.cores=4, mc.set.seed=FALSE)
@@ -134,100 +138,7 @@ pt <- permTest(A=peaks, B=mutations, ntimes=1000, randomize.function=circularRan
 `mc.cores=4` use 4 processor cores
 `mc.set.seed=FALSE` to ensure a reproducible result.
 should pass the name of the parameters passed to `permTest`
-```r
-> pt.50 <- permTest(A=peaks, B=mutations, ntimes=50, randomize.function=randomizeRegions, evaluate.function=numOverlaps)
-[1] "Note: The minimum p-value with only 50 permutations is 0.0196078431372549. You should consider increasing the number of permutations."
-> pt.50
-$numOverlaps
-P-value: 0.0196078431372549
-Z-score: 4.2927
-Number of iterations: 50
-Alternative: greater
-Evaluation of the original region set: 82
-Evaluation function: numOverlaps
-Randomization function: randomizeRegions
-attr(,"class")
-[1] "permTestResultsList"
 
-> pt.50.circular <- permTest(A=peaks, B=mutations, ntimes=50, randomize.function=circularRandomizeRegions, evaluate.function=numOverlaps)
-[1] "Note: The minimum p-value with only 50 permutations is 0.0196078431372549. You should consider increasing the number of permutations."
-> pt.50.circular
-$numOverlaps
-P-value: 0.0392156862745098
-Z-score: 1.987
-Number of iterations: 50
-Alternative: greater
-Evaluation of the original region set: 82
-Evaluation function: numOverlaps
-Randomization function: circularRandomizeRegions
-attr(,"class")
-[1] "permTestResultsList"
-
-> pt.50.count1 <- permTest(A=peaks, B=mutations, ntimes=50, randomize.function=randomizeRegions, evaluate.function=numOverlaps, count.once=TRU[1] "Note: The minimum p-value with only 50 permutations is 0.0196078431372549. You should consider increasing the number of permutations."
-> pt.50.count1
-$numOverlaps
-P-value: 0.0196078431372549
-Z-score: 3.3929
-Number of iterations: 50
-Alternative: greater
-Evaluation of the original region set: 81
-Evaluation function: numOverlaps
-Randomization function: randomizeRegions
-attr(,"class")
-[1] "permTestResultsList"
-
-> pt.50.circular.count1 <- permTest(A=peaks, B=mutations, ntimes=50, randomize.function=circularRandomizeRegions, evaluate.function=numOverlap[1] "Note: The minimum p-value with only 50 permutations is 0.0196078431372549. You should consider increasing the number of permutations."
-> pt.50.circular.count1
-$numOverlaps
-P-value: 0.0392156862745098
-Z-score: 1.5073
-Number of iterations: 50
-Alternative: greater
-Evaluation of the original region set: 81
-Evaluation function: numOverlaps
-Randomization function: circularRandomizeRegions
-attr(,"class")
-[1] "permTestResultsList"
-
-pt.100.circular.count1
-$numOverlaps
-P-value: 0.0396039603960396
-Z-score: 2.0369
-Number of iterations: 100
-Alternative: greater
-Evaluation of the original region set: 81
-Evaluation function: numOverlaps
-Randomization function: circularRandomizeRegions
-attr(,"class")
-[1] "permTestResultsList"
-
-pt.100.circular.count1 <- permTest(A=peaks, B=mutations, ntimes=100, randomize.function=circularRandomizeRegions, evaluate.function=numOverl> pt.100.circular.count1
-$numOverlaps
-P-value: 0.0198019801980198
-Z-score: 2.0763
-Number of iterations: 100
-Alternative: greater
-Evaluation of the original region set: 81
-Evaluation function: numOverlaps
-Randomization function: circularRandomizeRegions
-
-attr(,"class")
-[1] "permTestResultsList"
-
-pt.100.circular.count1 <- permTest(A=peaks, B=mutations, ntimes=100, randomize.function=circularRandomizeRegions, evaluate.function=numOverl> pt.100.circular.count1
-$numOverlaps
-P-value: 0.0693069306930693
-Z-score: 1.7539
-Number of iterations: 100
-Alternative: greater
-Evaluation of the original region set: 81
-Evaluation function: numOverlaps
-Randomization function: circularRandomizeRegions
-
-attr(,"class")
-[1] "permTestResultsList"
-
-```
 To further investigate the nature of the associations, we will use the `localZscore` function, that will move the original regions around and see the effect in the z-score. In this case, we will start with a window of 1000bp and a step of 50bp. To run the local z-score analysis, we need to give it the original region set A, the results of the permutation test and the additional parameters needed by the evaluation function, in this case, `B=HepG2_Ctcf` and `count.once=TRUE`.
 
 614 out of 2000 CpG islands overlap at least one promoter while a mean of only 79.087 islands overlapped a promoter in the randomized region sets. In the plot we can see in grey the distribution of the evaluation of the randomized regions, in green the evaluation of the original region set (in this case, the 614 CpG islands that overlap at least one promoter), and in red the significance limit. The the high z-score and the plot make evident the extreme significance of the association tested.
@@ -267,11 +178,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0OTAwNjA2OSwxNjk4MDUzMjM3LC0xND
-E2ODM4NzM4LDE2NTM4NDA3MDIsLTY0ODY2NjU4MiwtMTY4NjQ1
-ODcyNiwxNDAyOTM0MDEyLDEyMjU4MDkzNjQsMjA3NDQ5MzY4My
-wxNzU2MDEzMjYsLTIwMTk4NDY1MDIsLTEzMTQzNzI1MjgsMTcx
-NjQ5MTU3Myw4NjQ5NTI1NTIsLTE4NTkwNzgxNywzMzI5MTUzMS
-wtNjk3MTA4MDk3LDEzNDE1ODE1NjAsLTE2MzMxMzI0NCwtMzY1
-MDgxMzczXX0=
+eyJoaXN0b3J5IjpbMTYxMDAzNTY2NywxMjQ5MDA2MDY5LDE2OT
+gwNTMyMzcsLTE0MTY4Mzg3MzgsMTY1Mzg0MDcwMiwtNjQ4NjY2
+NTgyLC0xNjg2NDU4NzI2LDE0MDI5MzQwMTIsMTIyNTgwOTM2NC
+wyMDc0NDkzNjgzLDE3NTYwMTMyNiwtMjAxOTg0NjUwMiwtMTMx
+NDM3MjUyOCwxNzE2NDkxNTczLDg2NDk1MjU1MiwtMTg1OTA3OD
+E3LDMzMjkxNTMxLC02OTcxMDgwOTcsMTM0MTU4MTU2MCwtMTYz
+MzEzMjQ0XX0=
 -->
