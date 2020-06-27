@@ -11,8 +11,6 @@ The binding of PRDM9 will introduce genetic variants in meiotic recombination. P
 
 For example - TGCT_1577A485_E047_42CF_8703_42A69E1AED1A_X038_S09_L090_B1_T2_PMRG
 
-- <cancerType#> - TGCT (**note - some cancer types like "LGG" have an extra "x" appended ie "LGGx" to maintain equal 4 character length of this string)
-
 - <stanfordUUID#> - 1577A485-E047-42CF-8703-42A69E1AED1A - This corresponds to a unique 36-character ID given to each tissue fragment. This is not the same as the 36-character TCGA sample_id/case_id. Hyphens were replaced by underscores.
 
 - <batch#> - X038 == batch 038 - samples were, almost universally, processed in batches of 12. This number denotes in which batch the tissue was processed.
@@ -184,11 +182,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NTQ3NzU0NCw2MTQ0NTkwNDksMTYxMD
-AzNTY2NywxMjQ5MDA2MDY5LDE2OTgwNTMyMzcsLTE0MTY4Mzg3
-MzgsMTY1Mzg0MDcwMiwtNjQ4NjY2NTgyLC0xNjg2NDU4NzI2LD
-E0MDI5MzQwMTIsMTIyNTgwOTM2NCwyMDc0NDkzNjgzLDE3NTYw
-MTMyNiwtMjAxOTg0NjUwMiwtMTMxNDM3MjUyOCwxNzE2NDkxNT
-czLDg2NDk1MjU1MiwtMTg1OTA3ODE3LDMzMjkxNTMxLC02OTcx
-MDgwOTddfQ==
+eyJoaXN0b3J5IjpbLTYwODIzMjg5NCwxNDg1NDc3NTQ0LDYxND
+Q1OTA0OSwxNjEwMDM1NjY3LDEyNDkwMDYwNjksMTY5ODA1MzIz
+NywtMTQxNjgzODczOCwxNjUzODQwNzAyLC02NDg2NjY1ODIsLT
+E2ODY0NTg3MjYsMTQwMjkzNDAxMiwxMjI1ODA5MzY0LDIwNzQ0
+OTM2ODMsMTc1NjAxMzI2LC0yMDE5ODQ2NTAyLC0xMzE0MzcyNT
+I4LDE3MTY0OTE1NzMsODY0OTUyNTUyLC0xODU5MDc4MTcsMzMy
+OTE1MzFdfQ==
 -->
