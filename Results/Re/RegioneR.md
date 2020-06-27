@@ -109,7 +109,7 @@ head MutNumber.noZero.sorted.txt
 The idea of the test is to randomly move PRDM9-bound peaks along the genome and count how many of them overlap with at least one somatic mutation. 
 ## randomization function
 creates a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set. Randomization functions in regioneR can specify the genome and accept a mask, indicating where a random region cannot be placed.
-`randomizeRegions`: given a RS, a genome and an optional mask, returns a new RS with the same number of regions and of the same width as the original ones but randomly placed along the non-masked parts of the genome. 
+`randomizeRegions`: given a RS, returns a new RS with the same number of regions and of the same width as the original ones but randomly placed along the non-masked parts of the genome. 
 genome
 mask
 ## evaluation function
@@ -193,7 +193,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDc3ODU0MiwtODQ5ODU4Mjg2LDE5Mz
+eyJoaXN0b3J5IjpbMTM2MzgxNDQwOCwtODQ5ODU4Mjg2LDE5Mz
 g4MjIzMDEsLTEwODUxNzAzMDYsMzc1MjA5NTYxLDU5MDUxMzA5
 MCw5OTAxOTYxMjAsMTc4ODM4NDU5OSwtMTc5NTg2OTYxMCwtNz
 kyNDY4MzU3LDEyMTI1NjcyNDAsLTEwMjg4MjYyOSwtNTI2NTA5
