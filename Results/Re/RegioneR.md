@@ -110,6 +110,8 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 ## evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
 ## randomization function
+creates a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set.
+
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 
 
@@ -189,11 +191,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODUxNzAzMDYsMzc1MjA5NTYxLDU5MD
-UxMzA5MCw5OTAxOTYxMjAsMTc4ODM4NDU5OSwtMTc5NTg2OTYx
-MCwtNzkyNDY4MzU3LDEyMTI1NjcyNDAsLTEwMjg4MjYyOSwtNT
-I2NTA5NDIwLDE1MjMyNTcxOTEsLTYwODIzMjg5NCwxNDg1NDc3
-NTQ0LDYxNDQ1OTA0OSwxNjEwMDM1NjY3LDEyNDkwMDYwNjksMT
-Y5ODA1MzIzNywtMTQxNjgzODczOCwxNjUzODQwNzAyLC02NDg2
-NjY1ODJdfQ==
+eyJoaXN0b3J5IjpbMTE5MDY0MTA0OCwtMTA4NTE3MDMwNiwzNz
+UyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0NTk5
+LC0xNzk1ODY5NjEwLC03OTI0NjgzNTcsMTIxMjU2NzI0MCwtMT
+AyODgyNjI5LC01MjY1MDk0MjAsMTUyMzI1NzE5MSwtNjA4MjMy
+ODk0LDE0ODU0Nzc1NDQsNjE0NDU5MDQ5LDE2MTAwMzU2NjcsMT
+I0OTAwNjA2OSwxNjk4MDUzMjM3LC0xNDE2ODM4NzM4LDE2NTM4
+NDA3MDJdfQ==
 -->
