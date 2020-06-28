@@ -116,8 +116,8 @@ BiocManager::install("BSgenome.Hsapiens.UCSC.hg38", lib = "/exports/eddie/scratc
 library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/library")
 hg38 <- BSgenome.Hsapiens.UCSC.hg38
 ```
+`randomize.function=circularRandomizeRegions`
 `genome=hg38`
-
 ### evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
@@ -210,11 +210,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTExNDczODAsLTEwODk5OTA4ODMsLT
-E1NDA3NDkxMSwtOTkxOTc3MzA2LC0xODAxNTcsMTM5NTA5NDQ3
-OSw0NTY3MjIyNjYsLTE0NzI4MzYzNjYsLTMxODc5MTQ2MCwtMT
-Y1NTQ4MzYyNiwtODU0MjgyODA0LDE1NDY4MjI2NCwtNTU1NzI0
-MDE5LC0xNDc4MjY2NDc0LC0xNDc4MjY2NDc0LC0xNjk1NTIxMz
-gxLDExOTM2NDE1MjIsLTIwOTQ4ODc2MTIsNjQyMjUwNzkyLC0y
-MDkzOTU3MDE3XX0=
+eyJoaXN0b3J5IjpbLTI1OTk1NDA1NywtMTA4OTk5MDg4MywtMT
+U0MDc0OTExLC05OTE5NzczMDYsLTE4MDE1NywxMzk1MDk0NDc5
+LDQ1NjcyMjI2NiwtMTQ3MjgzNjM2NiwtMzE4NzkxNDYwLC0xNj
+U1NDgzNjI2LC04NTQyODI4MDQsMTU0NjgyMjY0LC01NTU3MjQw
+MTksLTE0NzgyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzOD
+EsMTE5MzY0MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIw
+OTM5NTcwMTddfQ==
 -->
