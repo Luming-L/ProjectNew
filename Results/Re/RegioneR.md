@@ -114,6 +114,10 @@ Create a new set of regions that is random with respect to our evaluation functi
 `circularRandomizeRegions`: the randomization process maintains the order and distance of the regions, while changing their position in the chromosome. no mask
 genome BSgenome 
 mask the masked version of the `BSgenome` must be installed.
+```r
+
+library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/library")
+```
 ### evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
@@ -201,11 +205,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODc5MTQ2MCwtMTY1NTQ4MzYyNiwtOD
-U0MjgyODA0LDE1NDY4MjI2NCwtNTU1NzI0MDE5LC0xNDc4MjY2
-NDc0LC0xNDc4MjY2NDc0LC0xNjk1NTIxMzgxLDExOTM2NDE1Mj
-IsLTIwOTQ4ODc2MTIsNjQyMjUwNzkyLC0yMDkzOTU3MDE3LDkx
-NDQwNTk0MSwtODQ5ODU4Mjg2LDE5Mzg4MjIzMDEsLTEwODUxNz
-AzMDYsMzc1MjA5NTYxLDU5MDUxMzA5MCw5OTAxOTYxMjAsMTc4
-ODM4NDU5OV19
+eyJoaXN0b3J5IjpbLTUyNTIxMTY4NiwtMzE4NzkxNDYwLC0xNj
+U1NDgzNjI2LC04NTQyODI4MDQsMTU0NjgyMjY0LC01NTU3MjQw
+MTksLTE0NzgyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzOD
+EsMTE5MzY0MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIw
+OTM5NTcwMTcsOTE0NDA1OTQxLC04NDk4NTgyODYsMTkzODgyMj
+MwMSwtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkwLDk5
+MDE5NjEyMF19
 -->
