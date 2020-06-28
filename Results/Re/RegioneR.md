@@ -123,6 +123,7 @@ hg38 <- BSgenome.Hsapiens.UCSC.hg38
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
 `meanDistance`
 `evaluate.function=numOverlaps`
+`count.once=TRUE`
 alternative
 
 If instead of evaluating the overlap between two RS we want to test their distance, we can use meanDistance, which given two RS A and B, computes the mean of the distance from every region in A to the closest region in B. It is useful to answer question of the type “Are my highly expressed genes closer to a certain TFBS than expected by chance?”
@@ -132,6 +133,7 @@ Moving the regions in A produces a drop in the z-scores shows that the associati
 `mc.set.seed=FALSE`
 `ntimes=1000` the number of randomizations
 `force.parallel=TRUE` use multiple cores to run the analysis
+`mc.cores=4`
 `verbose=TRUE` creates a progress bar to show the computation progress.
 ```r
 
@@ -214,11 +216,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNDI0MTk4NywxODgxNTAzNjkyLC0xMD
-g5OTkwODgzLC0xNTQwNzQ5MTEsLTk5MTk3NzMwNiwtMTgwMTU3
-LDEzOTUwOTQ0NzksNDU2NzIyMjY2LC0xNDcyODM2MzY2LC0zMT
-g3OTE0NjAsLTE2NTU0ODM2MjYsLTg1NDI4MjgwNCwxNTQ2ODIy
-NjQsLTU1NTcyNDAxOSwtMTQ3ODI2NjQ3NCwtMTQ3ODI2NjQ3NC
-wtMTY5NTUyMTM4MSwxMTkzNjQxNTIyLC0yMDk0ODg3NjEyLDY0
-MjI1MDc5Ml19
+eyJoaXN0b3J5IjpbMTM0NzIwNDg1NSwtODM0MjQxOTg3LDE4OD
+E1MDM2OTIsLTEwODk5OTA4ODMsLTE1NDA3NDkxMSwtOTkxOTc3
+MzA2LC0xODAxNTcsMTM5NTA5NDQ3OSw0NTY3MjIyNjYsLTE0Nz
+I4MzYzNjYsLTMxODc5MTQ2MCwtMTY1NTQ4MzYyNiwtODU0Mjgy
+ODA0LDE1NDY4MjI2NCwtNTU1NzI0MDE5LC0xNDc4MjY2NDc0LC
+0xNDc4MjY2NDc0LC0xNjk1NTIxMzgxLDExOTM2NDE1MjIsLTIw
+OTQ4ODc2MTJdfQ==
 -->
