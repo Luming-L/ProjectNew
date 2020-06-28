@@ -128,13 +128,14 @@ alternative
 If instead of evaluating the overlap between two RS we want to test their distance, we can use meanDistance, which given two RS A and B, computes the mean of the distance from every region in A to the closest region in B. It is useful to answer question of the type “Are my highly expressed genes closer to a certain TFBS than expected by chance?”
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 ### other parameters
+`set.seed(123)`
+`mc.set.seed=FALSE`
 `ntimes=1000` the number of randomizations
 `force.parallel=TRUE` use multiple cores to run the analysis
 `verbose=TRUE` creates a progress bar to show the computation progress.
-
 ```r
-set.seed(123) 
-overlapPermTest(A, B, ntimes=10, mc.set.seed=FALSE, force.parallel=TRUE)
+
+overlapPermTest(A, B, ntimes=10, , force.parallel=TRUE)
 ```
 ## z-score 
 
@@ -213,11 +214,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzc1OTgxOCwxODgxNTAzNjkyLC0xMD
-g5OTkwODgzLC0xNTQwNzQ5MTEsLTk5MTk3NzMwNiwtMTgwMTU3
-LDEzOTUwOTQ0NzksNDU2NzIyMjY2LC0xNDcyODM2MzY2LC0zMT
-g3OTE0NjAsLTE2NTU0ODM2MjYsLTg1NDI4MjgwNCwxNTQ2ODIy
-NjQsLTU1NTcyNDAxOSwtMTQ3ODI2NjQ3NCwtMTQ3ODI2NjQ3NC
-wtMTY5NTUyMTM4MSwxMTkzNjQxNTIyLC0yMDk0ODg3NjEyLDY0
-MjI1MDc5Ml19
+eyJoaXN0b3J5IjpbNTc5MDU0MDEyLDE4ODE1MDM2OTIsLTEwOD
+k5OTA4ODMsLTE1NDA3NDkxMSwtOTkxOTc3MzA2LC0xODAxNTcs
+MTM5NTA5NDQ3OSw0NTY3MjIyNjYsLTE0NzI4MzYzNjYsLTMxOD
+c5MTQ2MCwtMTY1NTQ4MzYyNiwtODU0MjgyODA0LDE1NDY4MjI2
+NCwtNTU1NzI0MDE5LC0xNDc4MjY2NDc0LC0xNDc4MjY2NDc0LC
+0xNjk1NTIxMzgxLDExOTM2NDE1MjIsLTIwOTQ4ODc2MTIsNjQy
+MjUwNzkyXX0=
 -->
