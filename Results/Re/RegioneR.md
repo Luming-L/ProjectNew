@@ -129,9 +129,9 @@ If instead of evaluating the overlap between two RS we want to test their distan
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 ### other parameters
 `ntimes=1000` the number of randomizations
-`verbose=TRUE` toggle the drawing of a progress bar
 `force.parallel=TRUE` use multiple cores to run the analysis
-additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
+`verbose=TRUE` creates a progress bar to show the computation progress.
+
 ```r
 set.seed(123) 
 overlapPermTest(A, B, ntimes=10, mc.set.seed=FALSE, force.parallel=TRUE)
@@ -213,7 +213,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MTE4NTgzOCwxODgxNTAzNjkyLC0xMD
+eyJoaXN0b3J5IjpbLTE4Mzc1OTgxOCwxODgxNTAzNjkyLC0xMD
 g5OTkwODgzLC0xNTQwNzQ5MTEsLTk5MTk3NzMwNiwtMTgwMTU3
 LDEzOTUwOTQ0NzksNDU2NzIyMjY2LC0xNDcyODM2MzY2LC0zMT
 g3OTE0NjAsLTE2NTU0ODM2MjYsLTg1NDI4MjgwNCwxNTQ2ODIy
