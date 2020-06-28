@@ -111,13 +111,13 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 ### randomization function
 Create a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set. Randomization functions in regioneR can specify the genome and accept a mask, indicating where a random region cannot be placed.
 `circularRandomizeRegions`: maintains the order and distance of the regions, while changing their position in the chromosome. It is not possible to ensure that no region will overlap the mask. Instead of that the user can specify the maximum proportion of the regions overlapping the mask.
-
-(human.genome, organism="hg")
 ```r
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg38", lib = "/exports/eddie/scratch/s1949868/R/library")
 library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/library")
 hg38 <- BSgenome.Hsapiens.UCSC.hg38
 ```
+`genome=hg38`
+
 ### evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
@@ -210,11 +210,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODk5OTA4ODMsLTE1NDA3NDkxMSwtOT
-kxOTc3MzA2LC0xODAxNTcsMTM5NTA5NDQ3OSw0NTY3MjIyNjYs
-LTE0NzI4MzYzNjYsLTMxODc5MTQ2MCwtMTY1NTQ4MzYyNiwtOD
-U0MjgyODA0LDE1NDY4MjI2NCwtNTU1NzI0MDE5LC0xNDc4MjY2
-NDc0LC0xNDc4MjY2NDc0LC0xNjk1NTIxMzgxLDExOTM2NDE1Mj
-IsLTIwOTQ4ODc2MTIsNjQyMjUwNzkyLC0yMDkzOTU3MDE3LDkx
-NDQwNTk0MV19
+eyJoaXN0b3J5IjpbLTE5NTExNDczODAsLTEwODk5OTA4ODMsLT
+E1NDA3NDkxMSwtOTkxOTc3MzA2LC0xODAxNTcsMTM5NTA5NDQ3
+OSw0NTY3MjIyNjYsLTE0NzI4MzYzNjYsLTMxODc5MTQ2MCwtMT
+Y1NTQ4MzYyNiwtODU0MjgyODA0LDE1NDY4MjI2NCwtNTU1NzI0
+MDE5LC0xNDc4MjY2NDc0LC0xNDc4MjY2NDc0LC0xNjk1NTIxMz
+gxLDExOTM2NDE1MjIsLTIwOTQ4ODc2MTIsNjQyMjUwNzkyLC0y
+MDkzOTU3MDE3XX0=
 -->
