@@ -110,8 +110,7 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 ## permTest
 ### randomization function
 Create a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set. Randomization functions in regioneR can specify the genome and accept a mask, indicating where a random region cannot be placed.
-
-`circularRandomizeRegions`: the randomization process maintains the order and distance of the regions, while changing their position in the chromosome. no mask
+`circularRandomizeRegions`: maintains the order and distance of the regions, while changing their position in the chromosome. no mask
 
 (human.genome, organism="hg")
 ```r
@@ -211,7 +210,7 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNTExMTU5OCwtOTkxOTc3MzA2LC0xOD
+eyJoaXN0b3J5IjpbLTE1NDA3NDkxMSwtOTkxOTc3MzA2LC0xOD
 AxNTcsMTM5NTA5NDQ3OSw0NTY3MjIyNjYsLTE0NzI4MzYzNjYs
 LTMxODc5MTQ2MCwtMTY1NTQ4MzYyNiwtODU0MjgyODA0LDE1ND
 Y4MjI2NCwtNTU1NzI0MDE5LC0xNDc4MjY2NDc0LC0xNDc4MjY2
