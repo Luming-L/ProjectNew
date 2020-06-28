@@ -124,7 +124,7 @@ Build a distribution of the evaluation obtained from random RS and so, we can co
 `meanDistance`
 `evaluate.function=numOverlaps`
 `count.once=TRUE`
-alternative
+
 
 If instead of evaluating the overlap between two RS we want to test their distance, we can use meanDistance, which given two RS A and B, computes the mean of the distance from every region in A to the closest region in B. It is useful to answer question of the type “Are my highly expressed genes closer to a certain TFBS than expected by chance?”
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
@@ -216,11 +216,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NTg2NzYxNiwxMzQ3MjA0ODU1LC04Mz
-QyNDE5ODcsMTg4MTUwMzY5MiwtMTA4OTk5MDg4MywtMTU0MDc0
-OTExLC05OTE5NzczMDYsLTE4MDE1NywxMzk1MDk0NDc5LDQ1Nj
-cyMjI2NiwtMTQ3MjgzNjM2NiwtMzE4NzkxNDYwLC0xNjU1NDgz
-NjI2LC04NTQyODI4MDQsMTU0NjgyMjY0LC01NTU3MjQwMTksLT
-E0NzgyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzODEsMTE5
-MzY0MTUyMl19
+eyJoaXN0b3J5IjpbNjk2OTExMTE5LDEzNDcyMDQ4NTUsLTgzND
+I0MTk4NywxODgxNTAzNjkyLC0xMDg5OTkwODgzLC0xNTQwNzQ5
+MTEsLTk5MTk3NzMwNiwtMTgwMTU3LDEzOTUwOTQ0NzksNDU2Nz
+IyMjY2LC0xNDcyODM2MzY2LC0zMTg3OTE0NjAsLTE2NTU0ODM2
+MjYsLTg1NDI4MjgwNCwxNTQ2ODIyNjQsLTU1NTcyNDAxOSwtMT
+Q3ODI2NjQ3NCwtMTQ3ODI2NjQ3NCwtMTY5NTUyMTM4MSwxMTkz
+NjQxNTIyXX0=
 -->
