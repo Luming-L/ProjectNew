@@ -123,6 +123,7 @@ Moving the regions in A produces a drop in the z-scores shows that the associati
 `verbose` toggle the drawing of a progress bar
 `force.parallel` force or forbid the use of multiple cores to run the analysis
 additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
+`non.overlapping (default=FALSE)` r
 ## z-score 
 
 
@@ -199,11 +200,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzgyNjY0NzQsLTE2OTU1MjEzODEsMT
-E5MzY0MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIwOTM5
-NTcwMTcsOTE0NDA1OTQxLC04NDk4NTgyODYsMTkzODgyMjMwMS
-wtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5
-NjEyMCwxNzg4Mzg0NTk5LC0xNzk1ODY5NjEwLC03OTI0NjgzNT
-csMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01MjY1MDk0MjAsMTUy
-MzI1NzE5MV19
+eyJoaXN0b3J5IjpbLTE0OTQxMDM1ODYsLTE0NzgyNjY0NzQsLT
+E2OTU1MjEzODEsMTE5MzY0MTUyMiwtMjA5NDg4NzYxMiw2NDIy
+NTA3OTIsLTIwOTM5NTcwMTcsOTE0NDA1OTQxLC04NDk4NTgyOD
+YsMTkzODgyMjMwMSwtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNTkw
+NTEzMDkwLDk5MDE5NjEyMCwxNzg4Mzg0NTk5LC0xNzk1ODY5Nj
+EwLC03OTI0NjgzNTcsMTIxMjU2NzI0MCwtMTAyODgyNjI5LC01
+MjY1MDk0MjBdfQ==
 -->
