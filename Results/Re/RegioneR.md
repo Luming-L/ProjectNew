@@ -117,7 +117,7 @@ library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/l
 hg38 <- BSgenome.Hsapiens.UCSC.hg38
 ```
 `randomize.function=circularRandomizeRegions`
-`genome=hg38`
+`genome=BSgenome.Hsapiens.UCSC.hg38`
 ### evaluation function
 `numOverlaps`: given two RS, returns the number of overlaps between them.
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
@@ -216,11 +216,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NzIwNDg1NSwtODM0MjQxOTg3LDE4OD
-E1MDM2OTIsLTEwODk5OTA4ODMsLTE1NDA3NDkxMSwtOTkxOTc3
-MzA2LC0xODAxNTcsMTM5NTA5NDQ3OSw0NTY3MjIyNjYsLTE0Nz
-I4MzYzNjYsLTMxODc5MTQ2MCwtMTY1NTQ4MzYyNiwtODU0Mjgy
-ODA0LDE1NDY4MjI2NCwtNTU1NzI0MDE5LC0xNDc4MjY2NDc0LC
-0xNDc4MjY2NDc0LC0xNjk1NTIxMzgxLDExOTM2NDE1MjIsLTIw
-OTQ4ODc2MTJdfQ==
+eyJoaXN0b3J5IjpbLTI0NTg2NzYxNiwxMzQ3MjA0ODU1LC04Mz
+QyNDE5ODcsMTg4MTUwMzY5MiwtMTA4OTk5MDg4MywtMTU0MDc0
+OTExLC05OTE5NzczMDYsLTE4MDE1NywxMzk1MDk0NDc5LDQ1Nj
+cyMjI2NiwtMTQ3MjgzNjM2NiwtMzE4NzkxNDYwLC0xNjU1NDgz
+NjI2LC04NTQyODI4MDQsMTU0NjgyMjY0LC01NTU3MjQwMTksLT
+E0NzgyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzODEsMTE5
+MzY0MTUyMl19
 -->
