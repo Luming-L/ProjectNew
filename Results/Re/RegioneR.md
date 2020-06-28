@@ -111,7 +111,7 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 ### randomization function
 Create a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set. Randomization functions in regioneR can specify the genome and accept a mask, indicating where a random region cannot be placed.
 `randomizeRegions`: given a RS, returns a new RS with the same number of regions and of the same width as the original ones but randomly placed along the non-masked parts of the genome. 
-`circularRandomizeRegions`: the randomization process maintains the order and distance of the regions, while changing their position in the chromosome.
+`circularRandomizeRegions`: the randomization process maintains the order and distance of the regions, while changing their position in the chromosome. no
 genome
 mask
 ### evaluation function
@@ -200,11 +200,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTcyNDAxOSwtMTQ3ODI2NjQ3NCwtMT
-Q3ODI2NjQ3NCwtMTY5NTUyMTM4MSwxMTkzNjQxNTIyLC0yMDk0
-ODg3NjEyLDY0MjI1MDc5MiwtMjA5Mzk1NzAxNyw5MTQ0MDU5ND
-EsLTg0OTg1ODI4NiwxOTM4ODIyMzAxLC0xMDg1MTcwMzA2LDM3
-NTIwOTU2MSw1OTA1MTMwOTAsOTkwMTk2MTIwLDE3ODgzODQ1OT
-ksLTE3OTU4Njk2MTAsLTc5MjQ2ODM1NywxMjEyNTY3MjQwLC0x
-MDI4ODI2MjldfQ==
+eyJoaXN0b3J5IjpbLTE3NzE1MjYxNzIsLTU1NTcyNDAxOSwtMT
+Q3ODI2NjQ3NCwtMTQ3ODI2NjQ3NCwtMTY5NTUyMTM4MSwxMTkz
+NjQxNTIyLC0yMDk0ODg3NjEyLDY0MjI1MDc5MiwtMjA5Mzk1Nz
+AxNyw5MTQ0MDU5NDEsLTg0OTg1ODI4NiwxOTM4ODIyMzAxLC0x
+MDg1MTcwMzA2LDM3NTIwOTU2MSw1OTA1MTMwOTAsOTkwMTk2MT
+IwLDE3ODgzODQ1OTksLTE3OTU4Njk2MTAsLTc5MjQ2ODM1Nywx
+MjEyNTY3MjQwXX0=
 -->
