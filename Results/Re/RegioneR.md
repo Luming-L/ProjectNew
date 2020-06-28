@@ -130,6 +130,10 @@ Moving the regions in A produces a drop in the z-scores shows that the associati
 `verbose` toggle the drawing of a progress bar
 `force.parallel` force or forbid the use of multiple cores to run the analysis
 additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
+```r
+set.seed(123) 
+overlapPermTest(A, B, ntimes=10, mc.set.seed=FALSE, force.parallel=TRUE)
+```
 ## z-score 
 
 
@@ -207,11 +211,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDE1NywxMzk1MDk0NDc5LDQ1NjcyMj
-I2NiwtMTQ3MjgzNjM2NiwtMzE4NzkxNDYwLC0xNjU1NDgzNjI2
-LC04NTQyODI4MDQsMTU0NjgyMjY0LC01NTU3MjQwMTksLTE0Nz
-gyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzODEsMTE5MzY0
-MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIwOTM5NTcwMT
-csOTE0NDA1OTQxLC04NDk4NTgyODYsMTkzODgyMjMwMSwtMTA4
-NTE3MDMwNl19
+eyJoaXN0b3J5IjpbLTk5MTk3NzMwNiwtMTgwMTU3LDEzOTUwOT
+Q0NzksNDU2NzIyMjY2LC0xNDcyODM2MzY2LC0zMTg3OTE0NjAs
+LTE2NTU0ODM2MjYsLTg1NDI4MjgwNCwxNTQ2ODIyNjQsLTU1NT
+cyNDAxOSwtMTQ3ODI2NjQ3NCwtMTQ3ODI2NjQ3NCwtMTY5NTUy
+MTM4MSwxMTkzNjQxNTIyLC0yMDk0ODg3NjEyLDY0MjI1MDc5Mi
+wtMjA5Mzk1NzAxNyw5MTQ0MDU5NDEsLTg0OTg1ODI4NiwxOTM4
+ODIyMzAxXX0=
 -->
