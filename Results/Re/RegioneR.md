@@ -115,7 +115,7 @@ Create a new set of regions that is random with respect to our evaluation functi
 genome BSgenome 
 mask the masked version of the `BSgenome` must be installed.
 ```r
-
+BiocManager::install("BSgenome.Hsapiens.UCSC.hg38", lib = "/exports/eddie/scratch/s1949868/R/library")
 library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/library")
 ```
 ### evaluation function
@@ -205,11 +205,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNTIxMTY4NiwtMzE4NzkxNDYwLC0xNj
-U1NDgzNjI2LC04NTQyODI4MDQsMTU0NjgyMjY0LC01NTU3MjQw
-MTksLTE0NzgyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzOD
-EsMTE5MzY0MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIw
-OTM5NTcwMTcsOTE0NDA1OTQxLC04NDk4NTgyODYsMTkzODgyMj
-MwMSwtMTA4NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkwLDk5
-MDE5NjEyMF19
+eyJoaXN0b3J5IjpbLTE0NzI4MzYzNjYsLTMxODc5MTQ2MCwtMT
+Y1NTQ4MzYyNiwtODU0MjgyODA0LDE1NDY4MjI2NCwtNTU1NzI0
+MDE5LC0xNDc4MjY2NDc0LC0xNDc4MjY2NDc0LC0xNjk1NTIxMz
+gxLDExOTM2NDE1MjIsLTIwOTQ4ODc2MTIsNjQyMjUwNzkyLC0y
+MDkzOTU3MDE3LDkxNDQwNTk0MSwtODQ5ODU4Mjg2LDE5Mzg4Mj
+IzMDEsLTEwODUxNzAzMDYsMzc1MjA5NTYxLDU5MDUxMzA5MCw5
+OTAxOTYxMjBdfQ==
 -->
