@@ -129,8 +129,8 @@ If instead of evaluating the overlap between two RS we want to test their distan
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 ### other parameters
 `ntimes=1000` the number of randomizations
-`verbose` toggle the drawing of a progress bar
-`force.parallel` force or forbid the use of multiple cores to run the analysis
+`verbose=TRUE` toggle the drawing of a progress bar
+`force.parallel=TRUE` use multiple cores to run the analysis
 additional parameter required by the randomization function (usually a genome and a mask) or the evaluation function.
 ```r
 set.seed(123) 
@@ -213,11 +213,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MTUwMzY5MiwtMTA4OTk5MDg4MywtMT
-U0MDc0OTExLC05OTE5NzczMDYsLTE4MDE1NywxMzk1MDk0NDc5
-LDQ1NjcyMjI2NiwtMTQ3MjgzNjM2NiwtMzE4NzkxNDYwLC0xNj
-U1NDgzNjI2LC04NTQyODI4MDQsMTU0NjgyMjY0LC01NTU3MjQw
-MTksLTE0NzgyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzOD
-EsMTE5MzY0MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIw
-OTM5NTcwMTddfQ==
+eyJoaXN0b3J5IjpbMTg0MTE4NTgzOCwxODgxNTAzNjkyLC0xMD
+g5OTkwODgzLC0xNTQwNzQ5MTEsLTk5MTk3NzMwNiwtMTgwMTU3
+LDEzOTUwOTQ0NzksNDU2NzIyMjY2LC0xNDcyODM2MzY2LC0zMT
+g3OTE0NjAsLTE2NTU0ODM2MjYsLTg1NDI4MjgwNCwxNTQ2ODIy
+NjQsLTU1NTcyNDAxOSwtMTQ3ODI2NjQ3NCwtMTQ3ODI2NjQ3NC
+wtMTY5NTUyMTM4MSwxMTkzNjQxNTIyLC0yMDk0ODg3NjEyLDY0
+MjI1MDc5Ml19
 -->
