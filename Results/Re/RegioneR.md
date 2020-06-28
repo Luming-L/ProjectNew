@@ -204,13 +204,14 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 # Reference
 [https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html](https://bioconductor.org/packages/3.11/bioc/vignettes/regioneR/inst/doc/regioneR.html)
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
+[https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU2NzIyMjY2LC0xNDcyODM2MzY2LC0zMT
-g3OTE0NjAsLTE2NTU0ODM2MjYsLTg1NDI4MjgwNCwxNTQ2ODIy
-NjQsLTU1NTcyNDAxOSwtMTQ3ODI2NjQ3NCwtMTQ3ODI2NjQ3NC
-wtMTY5NTUyMTM4MSwxMTkzNjQxNTIyLC0yMDk0ODg3NjEyLDY0
-MjI1MDc5MiwtMjA5Mzk1NzAxNyw5MTQ0MDU5NDEsLTg0OTg1OD
-I4NiwxOTM4ODIyMzAxLC0xMDg1MTcwMzA2LDM3NTIwOTU2MSw1
-OTA1MTMwOTBdfQ==
+eyJoaXN0b3J5IjpbMTM5NTA5NDQ3OSw0NTY3MjIyNjYsLTE0Nz
+I4MzYzNjYsLTMxODc5MTQ2MCwtMTY1NTQ4MzYyNiwtODU0Mjgy
+ODA0LDE1NDY4MjI2NCwtNTU1NzI0MDE5LC0xNDc4MjY2NDc0LC
+0xNDc4MjY2NDc0LC0xNjk1NTIxMzgxLDExOTM2NDE1MjIsLTIw
+OTQ4ODc2MTIsNjQyMjUwNzkyLC0yMDkzOTU3MDE3LDkxNDQwNT
+k0MSwtODQ5ODU4Mjg2LDE5Mzg4MjIzMDEsLTEwODUxNzAzMDYs
+Mzc1MjA5NTYxXX0=
 -->
