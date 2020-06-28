@@ -117,7 +117,8 @@ mask
 ### evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
 Build a distribution of the evaluation obtained from random RS and so, we can compare our initial evaluation with those obtained randomly and determine whether it is plausible that our original evaluation was obtained by chance or not. Compute the p-value and z-score.Actually, just counting the number of times the evaluation of the random RS is higher (or lower) than our original evaluation, we can compute the probability of seeing our original evaluation by chance, and that value is exactly the p-value of the permutation test. the distance between the evaluation of the original RS and the mean of the random evaluations divided by the standard deviation of the random evaluations. The z-score, although not directly comparable, can help in assessing “the strength” of the evaluation.
-
+`meanDistance`
+If instead of evaluating the overlap between two RS we want to test their distance, we can use meanDistance, which given two RS A and B, computes the mean of the distance from every region in A to the closest region in B. It is useful to answer question of the type “Are my highly expressed genes closer to a certain TFBS than expected by chance?”
 Moving the regions in A produces a drop in the z-scores shows that the association is dependant on the exact position of the regions and is not a regional effect.
 ### other parameters
 `ntimes` the number of randomizations
@@ -200,11 +201,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NjgyMjY0LC01NTU3MjQwMTksLTE0Nz
-gyNjY0NzQsLTE0NzgyNjY0NzQsLTE2OTU1MjEzODEsMTE5MzY0
-MTUyMiwtMjA5NDg4NzYxMiw2NDIyNTA3OTIsLTIwOTM5NTcwMT
-csOTE0NDA1OTQxLC04NDk4NTgyODYsMTkzODgyMjMwMSwtMTA4
-NTE3MDMwNiwzNzUyMDk1NjEsNTkwNTEzMDkwLDk5MDE5NjEyMC
-wxNzg4Mzg0NTk5LC0xNzk1ODY5NjEwLC03OTI0NjgzNTcsMTIx
-MjU2NzI0MF19
+eyJoaXN0b3J5IjpbLTg1NDI4MjgwNCwxNTQ2ODIyNjQsLTU1NT
+cyNDAxOSwtMTQ3ODI2NjQ3NCwtMTQ3ODI2NjQ3NCwtMTY5NTUy
+MTM4MSwxMTkzNjQxNTIyLC0yMDk0ODg3NjEyLDY0MjI1MDc5Mi
+wtMjA5Mzk1NzAxNyw5MTQ0MDU5NDEsLTg0OTg1ODI4NiwxOTM4
+ODIyMzAxLC0xMDg1MTcwMzA2LDM3NTIwOTU2MSw1OTA1MTMwOT
+AsOTkwMTk2MTIwLDE3ODgzODQ1OTksLTE3OTU4Njk2MTAsLTc5
+MjQ2ODM1N119
 -->
