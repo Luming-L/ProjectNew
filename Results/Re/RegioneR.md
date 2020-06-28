@@ -117,6 +117,7 @@ mask the masked version of the `BSgenome` must be installed.
 ```r
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg38", lib = "/exports/eddie/scratch/s1949868/R/library")
 library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/library")
+hg38 <- BSgenome.Hsapiens.UCSC.hg38
 ```
 ### evaluation function
 `numOverlaps` function: given two RS, returns the number of overlaps between them.
@@ -205,11 +206,11 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html](https://bernatgel.github.io/karyoploter_tutorial/Tutorial/PlotRegions/PlotRegions.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzI4MzYzNjYsLTMxODc5MTQ2MCwtMT
-Y1NTQ4MzYyNiwtODU0MjgyODA0LDE1NDY4MjI2NCwtNTU1NzI0
-MDE5LC0xNDc4MjY2NDc0LC0xNDc4MjY2NDc0LC0xNjk1NTIxMz
-gxLDExOTM2NDE1MjIsLTIwOTQ4ODc2MTIsNjQyMjUwNzkyLC0y
-MDkzOTU3MDE3LDkxNDQwNTk0MSwtODQ5ODU4Mjg2LDE5Mzg4Mj
-IzMDEsLTEwODUxNzAzMDYsMzc1MjA5NTYxLDU5MDUxMzA5MCw5
-OTAxOTYxMjBdfQ==
+eyJoaXN0b3J5IjpbNDU2NzIyMjY2LC0xNDcyODM2MzY2LC0zMT
+g3OTE0NjAsLTE2NTU0ODM2MjYsLTg1NDI4MjgwNCwxNTQ2ODIy
+NjQsLTU1NTcyNDAxOSwtMTQ3ODI2NjQ3NCwtMTQ3ODI2NjQ3NC
+wtMTY5NTUyMTM4MSwxMTkzNjQxNTIyLC0yMDk0ODg3NjEyLDY0
+MjI1MDc5MiwtMjA5Mzk1NzAxNyw5MTQ0MDU5NDEsLTg0OTg1OD
+I4NiwxOTM4ODIyMzAxLC0xMDg1MTcwMzA2LDM3NTIwOTU2MSw1
+OTA1MTMwOTBdfQ==
 -->
