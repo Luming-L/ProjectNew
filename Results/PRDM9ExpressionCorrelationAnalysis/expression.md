@@ -4,8 +4,13 @@
 df["ENSG00000164256.8",c()]
 # get number of PRDM9-bound peaks
 for file in $(ls $inputDir/*); do
+
+echo $file
+                fileName=`basename -s ".bw" $file`
+
+
 numPeaks = ` wc -l $ file`
 done
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzAyNTYxNywtMjM5MTI5MTcyXX0=
+eyJoaXN0b3J5IjpbLTc4MzM2OTM1NSwtMjM5MTI5MTcyXX0=
 -->
