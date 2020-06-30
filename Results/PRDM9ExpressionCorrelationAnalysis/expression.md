@@ -11,6 +11,19 @@ echo $file
 
 numPeaks = ` wc -l $ file`
 done
+
+wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A*
+28629 ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A_PRDM9_bound_peaks.bed
+[s1949868@node1h20(eddie) s1949868]$ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-GD-A3OQ-01A*
+29370 ./PRDM9BoundPeaks_404_Case_ID/TCGA-GD-A3OQ-01A_PRDM9_bound_peaks.bed
+[s1949868@node1h20(eddie) s1949868]$ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A12U-01A*
+32724 ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A12U-01A_PRDM9_bound_peaks.bed
+[s1949868@node1h20(eddie) s1949868]$ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A8HR-01A*
+33863 ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A8HR-01A_PRDM9_bound_peaks.bed
+[s1949868@node1h20(eddie) s1949868]$ ll SNPsAndSmallINDELs
+total 1511424
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MzM2OTM1NSwtMjM5MTI5MTcyXX0=
+eyJoaXN0b3J5IjpbNTE1MDE4MzU1LC03ODMzNjkzNTUsLTIzOT
+EyOTE3Ml19
 -->
