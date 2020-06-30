@@ -1,4 +1,11 @@
 # get IDs of 404 samples
+```bash
+for file in $(ls /exports/eddie/scratch/s1949868/PRDM9BoundPeaks_404_Case_ID/*); do
+fileName=`echo ${file#*Case_ID/}`;
+fileName=`echo ${fileName%_PRDM9_bound_peaks*}`;
+echo -e $fileName >> /exports/eddie/scratch/s1949868/geneExpression/404Samples_CaseID.txt
+done
+```
 # get PRDM9 expression value 
 [PRDM9](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164256;r=5:23443586-23528093)
 df["ENSG00000164256.8",c()]
@@ -24,6 +31,6 @@ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A*
 total 1511424
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE1MDE4MzU1LC03ODMzNjkzNTUsLTIzOT
-EyOTE3Ml19
+eyJoaXN0b3J5IjpbLTg3NDI4Mjk3NCw1MTUwMTgzNTUsLTc4Mz
+M2OTM1NSwtMjM5MTI5MTcyXX0=
 -->
