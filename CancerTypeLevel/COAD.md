@@ -1,7 +1,10 @@
 COAD Colon Adenocarcinoma
 PRDM9 expression
+PRDM9 binding
+somatic mutations
+structural variants
 
-> Written with [StackEdit](https://stackedit.io/).
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE1NDk5MzUyXX0=
+eyJoaXN0b3J5IjpbLTc1NzE3Mzk5Ml19
 -->
