@@ -49,6 +49,10 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 `-c 2 -l 150`
 
+**macs2 bdgpeakcall command:**
+```bash
+
+```
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 # Test
 Write **a script** `peakRecall.py` to recall peaks including these three steps above.
@@ -81,10 +85,9 @@ Region: chr1: 777499-1233399
 `-c 2 -l 300`: 124102
 
 `-c 2 -l 400`: 86186
-![-c 2 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c2l400.png)
+
 
 `-c 3 -l 400`: 64905 
-![-c 3 -l 400](https://raw.githubusercontent.com/Luming-L/ProjectNew/master/Results/PeakRecall/peakRecall_chr1_777499_1233399_c3l400.png)
 # Reference
 [Advanced:-Call-peaks-using-MACS2-subcommands](https://github.com/macs3-project/MACS/wiki/Advanced:-Call-peaks-using-MACS2-subcommands)
 
@@ -95,5 +98,5 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMwNDgxOTI1LC0xMjAxMjEyMjk2XX0=
+eyJoaXN0b3J5IjpbLTQyNzEzNTgzMCwtMTIwMTIxMjI5Nl19
 -->
