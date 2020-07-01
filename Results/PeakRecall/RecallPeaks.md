@@ -5,7 +5,8 @@ ATAC-seq signal tracks that have been normalized by the number of reads in peaks
 ## convert BigWig to BedGraph
 ```bash
 # download BigWigs
-
+bigWigLinks.txt
+downloadLinks.sh
 qsub ~/BedGraph/downloadLinks.sh
 ```
 ## call peaks
@@ -42,6 +43,7 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1Mzc5MjgyMywxMDc1MjUyNjEsLTE4ND
-k2MjIwMTEsLTE4OTkxODk0NzYsLTk4NDk2ODE0Ml19
+eyJoaXN0b3J5IjpbLTE4NjQzOTUyMjUsMTM1Mzc5MjgyMywxMD
+c1MjUyNjEsLTE4NDk2MjIwMTEsLTE4OTkxODk0NzYsLTk4NDk2
+ODE0Ml19
 -->
