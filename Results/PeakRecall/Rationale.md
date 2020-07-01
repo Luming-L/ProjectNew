@@ -10,7 +10,7 @@ ATAC-seq signal tracks that have been normalized by the number of reads in peaks
  5. normalize samples by their quality and read depth
 
 **Usage**
-In the BedGraph file converted , the score is the signal in each 100-bp bin. We can take the average signal of all bins as genome background and calculate the statistical significance for signal in each bin.
+In the BedGraph file converted by BigWig, the score is the signal in each 100-bp bin. We can take the average signal of all bins as genome background and calculate the statistical significance for signal in each bin.
 |chr|start|end|score|
 |--|--|--|--|
 |chr1|0|9999|0.000000|
@@ -86,5 +86,5 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NzAxODE2OSwtMTIwMTIxMjI5Nl19
+eyJoaXN0b3J5IjpbMTgzNzQzNDQ5MywtMTIwMTIxMjI5Nl19
 -->
