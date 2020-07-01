@@ -15,21 +15,19 @@ Rscript extractExpression.Rmd
 [PRDM9](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164256;r=5:23443586-23528093)
 df["ENSG00000164256.8",c()]
 # get number of PRDM9-bound peaks
+```bash
+echo -e "ID\texpression\tnumPeaks" > PRDM9ExpressionAndPeaks.txt
 
+for ID in $(cut -f 1 /exports/eddie/scratch/s1949868/geneExpression/PRDM9Expression_375samples.txt); do 
+	numPeaks=`wc -l /exports/eddie/scratch/s1949868/PRDM9BoundPeaks_404_Case_ID/${ID}_PRDM9_bound_peaks.bed | awk '{print $1}'`; 
+	expression=`awk '{FS=OFS="\t";if($1=="'$ID'"){print $2}}' /exports/eddie/scratch/s1949868/geneExpression/PRDM9Expression_375samples.txt`; 
+	echo -e "$ID\t$expression\t$numPeaks" >> PRDM9ExpressionAndPeaks.txt
+done
+```
 
-wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A*
-28629 ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A_PRDM9_bound_peaks.bed
-[s1949868@node1h20(eddie) s1949868]$ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-GD-A3OQ-01A*
-29370 ./PRDM9BoundPeaks_404_Case_ID/TCGA-GD-A3OQ-01A_PRDM9_bound_peaks.bed
-[s1949868@node1h20(eddie) s1949868]$ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A12U-01A*
-32724 ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A12U-01A_PRDM9_bound_peaks.bed
-[s1949868@node1h20(eddie) s1949868]$ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A8HR-01A*
-33863 ./PRDM9BoundPeaks_404_Case_ID/TCGA-C8-A8HR-01A_PRDM9_bound_peaks.bed
-[s1949868@node1h20(eddie) s1949868]$ ll SNPsAndSmallINDELs
-total 1511424
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTU1MDc3Myw5MjIxMjc1MDksLTQzNz
-M2MDkwOCwtODc0MjgyOTc0LDUxNTAxODM1NSwtNzgzMzY5MzU1
-LC0yMzkxMjkxNzJdfQ==
+eyJoaXN0b3J5IjpbMTkzNzk0MzYyOCwyMDY5NTUwNzczLDkyMj
+EyNzUwOSwtNDM3MzYwOTA4LC04NzQyODI5NzQsNTE1MDE4MzU1
+LC03ODMzNjkzNTUsLTIzOTEyOTE3Ml19
 -->
