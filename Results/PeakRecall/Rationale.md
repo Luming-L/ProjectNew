@@ -34,7 +34,7 @@ The ChIP-seq/ATAC-seq signal at each genomic location stored in BedGraph will be
 
 **macs2 bdgcmp command:**
 ```bash
-macs2 bdgcmp -t ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg -c ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.lambda.bg -m ppois -o ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.pvalue.bg
+macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```
 ## Step 7: Call peaks on score track using a cutoff
 It is the final task of peak calling. We need to set three arguments in this step:
@@ -95,5 +95,5 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDEyMTIyOTZdfQ==
+eyJoaXN0b3J5IjpbLTkwODY5Nzc3MywtMTIwMTIxMjI5Nl19
 -->
