@@ -2,16 +2,16 @@
 We want to know wether recurrently mutated regions where have mutations in all samples are associated with  PRDM9 expression. If there is a association, genes in this regions may affect PRDM9 expression.
 ## input
 PRDM9 expression level
-Reccuently mutated regions: First we select regions where at least 2 SNVs were located with 100bp from each other across all tumor samples. Then we concentrate on a subset of regions that have at least one mutation existing in 5% samples.
+Reccuently mutated regions: First we select regions where at least 2 SNVs were located with 100bp from each other across all tumor samples. Then we concentrate on a subset of regions that have at least one mutation existing in 5% samples. 
 ## process
-linear regression: for each region we study, the mutation on it is associated with PRDM9 expression.
+linear regression: maybe for each region, use the number of mutations in it to 
 ## output
 a p-value for each region tested. We found 49% regions are significantly related to PRDM9 expression
 # PRDM9 binding motif analysis
 # Odds rations calculations
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNjk2NzgxMywtNTQwOTA2NzUyLC0yMT
-QzNzY5ODksLTExMzEyMzg1MjUsMjEyMTg3MTAyMyw4OTcwMTk1
-NTYsLTE0NDEzNzgxMDNdfQ==
+eyJoaXN0b3J5IjpbLTgzMzE4MTg1NywxOTE2OTY3ODEzLC01ND
+A5MDY3NTIsLTIxNDM3Njk4OSwtMTEzMTIzODUyNSwyMTIxODcx
+MDIzLDg5NzAxOTU1NiwtMTQ0MTM3ODEwM119
 -->
