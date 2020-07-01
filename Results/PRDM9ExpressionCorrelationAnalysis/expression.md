@@ -16,8 +16,8 @@ Rscript extractExpression.Rmd
 df["ENSG00000164256.8",c()]
 # get number of PRDM9-bound peaks
 for ID in $(cut -f 1 PRDM9ExpressionAndPeaks.txt); do
-
-echo $ID
+/exports/eddie/scratch/s1949868/PRDM9BoundPeaks_404_Case_ID/TCGA-06-A5U0-01A_PRDM9_bound_peaks.bed
+echo "/exports/eddie/scratch/s1949868/PRDM9BoundPeaks_404_Case_ID/$ID_PRDM9_bound_peaks.bed"
                 fileName=`basename -s ".bw" $file`
 
 
@@ -36,7 +36,7 @@ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A*
 total 1511424
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDY0MjgxLDkyMjEyNzUwOSwtNDM3Mz
-YwOTA4LC04NzQyODI5NzQsNTE1MDE4MzU1LC03ODMzNjkzNTUs
-LTIzOTEyOTE3Ml19
+eyJoaXN0b3J5IjpbLTIyNDk1NzA0OCw5MjIxMjc1MDksLTQzNz
+M2MDkwOCwtODc0MjgyOTc0LDUxNTAxODM1NSwtNzgzMzY5MzU1
+LC0yMzkxMjkxNzJdfQ==
 -->
