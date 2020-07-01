@@ -1,6 +1,6 @@
 # Input
-**files**
-ATAC-seq signal tracks that have been normalized by the number of reads in peaks. The format of signal tracks files provided by author are BigWig and we convert them to BedGraph as input.
+**BigWig files**
+ATAC-seq signal tracks that have been normalized by the number of reads in peaks. 
 
 **Method of generating ATAC-seq signal tracks in the paper:**
  1. bin genome into 100-bp intervals
@@ -18,7 +18,8 @@ In the BedGraph file, the score is the signal in each 100-bp bin. We can take th
 |chr1|9999|10099|9.525880|
 |chr1|10099|10199|14.288800|
 # Process
+The format of signal tracks files provided by author are BigWig and we convert them to BedGraph as input.
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDAwNDg1MjFdfQ==
+eyJoaXN0b3J5IjpbLTk4NDk2ODE0Ml19
 -->
