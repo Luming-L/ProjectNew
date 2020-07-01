@@ -8,7 +8,12 @@ ATAC-seq signal tracks that have been normalized by the number of reads in peaks
 bigWigLinks.txt
 downloadLinks.sh
 qsub ~/BedGraph/downloadLinks.sh
-mv oak/stanford/groups/howchang/users/mcorces/temp/bigwigs/* ./
+# decompress files
+for file in $(ls ./*); do
+	tar xvzf $file
+	mv oak/stanford/groups/howchang/users/mcorces/temp/bigwigs/* ./bigwigs
+	rm -r oak
+done
 ```
 ## call peaks
 ### build local bias track from control
@@ -44,7 +49,7 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwOTk2MjE0MiwtMTg2NDM5NTIyNSwxMz
-UzNzkyODIzLDEwNzUyNTI2MSwtMTg0OTYyMjAxMSwtMTg5OTE4
-OTQ3NiwtOTg0OTY4MTQyXX0=
+eyJoaXN0b3J5IjpbMzE3MTAyNDQ4LDE4MDk5NjIxNDIsLTE4Nj
+QzOTUyMjUsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLTE4NDk2MjIw
+MTEsLTE4OTkxODk0NzYsLTk4NDk2ODE0Ml19
 -->
