@@ -20,7 +20,10 @@ In the BedGraph file, the score is the signal in each 100-bp bin. We can take th
 # Process
 ## convert BigWig to BedGraph
 ## call peaks
+### build local bias track from control
+### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
+### call peaks on score track using a cutoff
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMDAyODA2LC05ODQ5NjgxNDJdfQ==
+eyJoaXN0b3J5IjpbLTE4OTkxODk0NzYsLTk4NDk2ODE0Ml19
 -->
