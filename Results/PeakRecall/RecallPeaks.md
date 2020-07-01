@@ -14,7 +14,6 @@ for file in $(ls ./*); do
 	mv oak/stanford/groups/howchang/users/mcorces/temp/bigwigs/* ./bigwigs
 	rm -r oak
 done
-# download BRCA and COAD samples again due to some errors
 ```
 ## call peaks
 ### build local bias track from control
@@ -50,8 +49,8 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNzQ5MzUyNCwzMTcxMDI0NDgsMTgwOT
-k2MjE0MiwtMTg2NDM5NTIyNSwxMzUzNzkyODIzLDEwNzUyNTI2
-MSwtMTg0OTYyMjAxMSwtMTg5OTE4OTQ3NiwtOTg0OTY4MTQyXX
-0=
+eyJoaXN0b3J5IjpbMzE3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MT
+AyNDQ4LDE4MDk5NjIxNDIsLTE4NjQzOTUyMjUsMTM1Mzc5Mjgy
+MywxMDc1MjUyNjEsLTE4NDk2MjIwMTEsLTE4OTkxODk0NzYsLT
+k4NDk2ODE0Ml19
 -->
