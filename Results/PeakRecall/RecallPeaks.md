@@ -9,7 +9,7 @@ ATAC-seq signal tracks that have been normalized by the number of reads in peaks
  4. normalize the total number of reads by a scale factor that converted all samples to a constant 30 million reads within peaks
  5. normalize samples by their quality and read depth
 
-**Usage:**
+**Format:**
 
 In the BedGraph file, the score is the signal in each 100-bp bin. We can take the average signal of all bins as genome background and calculate the statistical significance for signal in each bin.
 |chr|start|end|score|
@@ -22,5 +22,5 @@ In the BedGraph file, the score is the signal in each 100-bp bin. We can take th
 ## 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MjE4NjUyOCwtOTg0OTY4MTQyXX0=
+eyJoaXN0b3J5IjpbMTAyMjAwNTg4NCwtOTg0OTY4MTQyXX0=
 -->
