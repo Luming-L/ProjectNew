@@ -1,21 +1,4 @@
-# Input file
-The input files for peak recalling are ATAC-seq signal tracks that have been normalized by the number of reads in peaks. The format of signal tracks files provided by author are BigWig and we convert them to BedGraph as input.
 
-**Method of generating ATAC-seq signal tracks in the paper:**
- 1. bin genome into 100-bp intervals
- 2. convert the Tn5 offset-corrected insertion sites into a coverage
- 3. calculate the sum of per position coverage in each bin as the number of Tn5 insertions within each bin
- 4. normalize the total number of reads by a scale factor that converted all samples to a constant 30 million reads within peaks
- 5. normalize samples by their quality and read depth
-
-**Usage:**
-
-In the BedGraph file, the score is the signal in each 100-bp bin. We can take the average signal of all bins as genome background and calculate the statistical significance for signal in each bin.
-|chr|start|end|score|
-|--|--|--|--|
-|chr1|0|9999|0.000000|
-|chr1|9999|10099|9.525880|
-|chr1|10099|10199|14.288800|
 # Rationale
 > `callpeak` used by author: For each sample, peak calling was performed on the Tn5-corrected single-base insertions using the MACS2 callpeak command with parameters “--shift -75 --extsize 150 --nomodel --call-summits --nolambda --keep-dup all -p 0.01”. The peak summits were then extended by 250 bp on either side to a final width of 501 bp.
 
@@ -112,11 +95,11 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1Mzk3MjA5MSw2NzQ3ODI5NjksLTM3OD
-cwMzQwMCwtMjA3ODYyNzk3OSw0Njk0MjYwNTcsMTYwNDkwNzM4
-NywtMzg0NjczMSwyMDI0MTAxMTI4LC0xMzE2OTIyOTY0LDE5Mz
-gwNjI2NzksMjA0NDQ1MTAxLDE3MjgzMjM5ODQsOTk2MDc1MTIy
-LC0zNDAwNjc5MzAsMTQ5ODc3NDE1NCwtMTgyMTc2NDQ0NywxNz
-UyNjI1Nzc5LDE5NTE0Mjg3NSwxODY2OTAzMDI3LC0xOTg5NTQz
-MTddfQ==
+eyJoaXN0b3J5IjpbMTU2NjMyMDQyLDEyNTM5NzIwOTEsNjc0Nz
+gyOTY5LC0zNzg3MDM0MDAsLTIwNzg2Mjc5NzksNDY5NDI2MDU3
+LDE2MDQ5MDczODcsLTM4NDY3MzEsMjAyNDEwMTEyOCwtMTMxNj
+kyMjk2NCwxOTM4MDYyNjc5LDIwNDQ0NTEwMSwxNzI4MzIzOTg0
+LDk5NjA3NTEyMiwtMzQwMDY3OTMwLDE0OTg3NzQxNTQsLTE4Mj
+E3NjQ0NDcsMTc1MjYyNTc3OSwxOTUxNDI4NzUsMTg2NjkwMzAy
+N119
 -->
