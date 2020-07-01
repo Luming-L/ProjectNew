@@ -1,0 +1,57 @@
+---
+title: "Extract PRDM9 expression value of samples"
+output: html_notebook
+---
+
+```{r}
+samples404 <- scan("404Samples_CaseID.txt", what = character(0), sep = "\n")
+length(samples404)
+```
+```{r}
+head(samples404)
+```
+
+```{r}
+PRDM9.expression <- readr::read_tsv("PRDM9_htseq_fpkm-uq.tsv", col_names = TRUE)
+PRDM9.expression
+```
+
+```{r}
+# check the intersect of ATAC-seq donors and RNA-seq donors
+length(intersect(x=samples404,y=colnames(PRDM9.expression)))
+```
+
+```{r}
+head(intersect(x=samples404,y=colnames(PRDM9.expression)))
+```
+
+```{r}
+# show ATAC-seq donors without RNA-seq data
+length(setdiff(x=samples404,y=colnames(PRDM9.expression)))
+```
+
+```{r}
+head(setdiff(x=samples404,y=colnames(PRDM9.expression)))
+```
+
+```{r}
+PRDM9.expression.subset <- PRDM9.expression[1,intersect(x=samples404,y=colnames(PRDM9.expression))]
+PRDM9.expression.subset
+```
+```{r}
+PRDM9.expression.subset <- data.frame(t(PRDM9.expression.subset))
+colnames(PRDM9.expression.subset) <- "ENSG00000164256.8"
+PRDM9.expression.subset
+```
+
+```{r}
+write.table(PRDM9.expression.subset,
+	file="PRDM9ExpressionAndPeaks.txt",
+	sep = "\t",
+	append=TRUE,row.names = TRUE,col.names = FALSE,
+	quote =FALSE
+	)
+```
+
+
+
