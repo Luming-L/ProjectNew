@@ -1,6 +1,6 @@
 # Input
-# Input file
-The input files for peak recalling are ATAC-seq signal tracks that have been normalized by the number of reads in peaks. The format of signal tracks files provided by author are BigWig and we convert them to BedGraph as input.
+**files**
+ATAC-seq signal tracks that have been normalized by the number of reads in peaks. The format of signal tracks files provided by author are BigWig and we convert them to BedGraph as input.
 
 **Method of generating ATAC-seq signal tracks in the paper:**
  1. bin genome into 100-bp intervals
@@ -20,5 +20,5 @@ In the BedGraph file, the score is the signal in each 100-bp bin. We can take th
 # Process
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEwODc2NTU0XX0=
+eyJoaXN0b3J5IjpbLTE2NDAwNDg1MjFdfQ==
 -->
