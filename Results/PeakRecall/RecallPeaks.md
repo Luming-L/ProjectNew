@@ -20,7 +20,10 @@ done
 qsub ~/BigWigtoBedGraph_batch.sh
 ```
 ## call peaks
-
+```bash
+peakRecall.py
+qsub ~/peakRecall_batch.sh
+```
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
 macs2 bdgcmp command:
@@ -54,8 +57,8 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY1NTQwMDQ0LDMxNzEwMjQ0OCwtNzA3ND
-kzNTI0LDMxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1MjI1
-LDEzNTM3OTI4MjMsMTA3NTI1MjYxLC0xODQ5NjIyMDExLC0xOD
-k5MTg5NDc2LC05ODQ5NjgxNDJdfQ==
+eyJoaXN0b3J5IjpbLTEyNDg2OTE4MzcsMzE3MTAyNDQ4LC03MD
+c0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5NjIxNDIsLTE4NjQzOTUy
+MjUsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLTE4NDk2MjIwMTEsLT
+E4OTkxODk0NzYsLTk4NDk2ODE0Ml19
 -->
