@@ -1,5 +1,5 @@
 COAD Colon Adenocarcinoma
-Number of Tissue Samples Passed QC: 41
+Number of Tissue Samples Passed QC: 41 (in 410 samples)
 # PRDM9 expression
 ## ID of COAD samples
 # PRDM9 binding
@@ -8,5 +8,5 @@ Number of Tissue Samples Passed QC: 41
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMjA4MDcyMywtMTA1NTI4OTgyXX0=
+eyJoaXN0b3J5IjpbLTE0ODcxNTUxMDMsLTEwNTUyODk4Ml19
 -->
