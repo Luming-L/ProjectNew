@@ -11,7 +11,7 @@ done
 head -1 GDC-PANCAN.htseq_fpkm-uq.tsv > PRDM9_htseq_fpkm-uq.tsv
 awk '{FS=OFS="\t";if($1~/ENSG00000164256/){print $0}}' GDC-PANCAN.htseq_fpkm-uq.tsv >> PRDM9_htseq_fpkm-uq.tsv
 ```
-
+Rscript extractExpression.Rmd
 [PRDM9](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164256;r=5:23443586-23528093)
 df["ENSG00000164256.8",c()]
 # get number of PRDM9-bound peaks
@@ -36,6 +36,7 @@ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A*
 total 1511424
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNzM2MDkwOCwtODc0MjgyOTc0LDUxNT
-AxODM1NSwtNzgzMzY5MzU1LC0yMzkxMjkxNzJdfQ==
+eyJoaXN0b3J5IjpbOTIyMTI3NTA5LC00MzczNjA5MDgsLTg3ND
+I4Mjk3NCw1MTUwMTgzNTUsLTc4MzM2OTM1NSwtMjM5MTI5MTcy
+XX0=
 -->
