@@ -1,4 +1,13 @@
+# Input
+**BigWig files**
+ATAC-seq signal tracks that have been normalized by the number of reads in peaks. 
 
+**Method of generating ATAC-seq signal tracks in the paper:**
+ 1. bin genome into 100-bp intervals
+ 2. convert the Tn5 offset-corrected insertion sites into a coverage
+ 3. calculate the sum of per position coverage in each bin as the number of Tn5 insertions within each bin
+ 4. normalize the total number of reads by a scale factor that converted all samples to a constant 30 million reads within peaks
+ 5. normalize samples by their quality and read depth
 # Rationale
 > `macs2 callpeak` used by author: For each sample, peak calling was performed on the Tn5-corrected single-base insertions using the MACS2 callpeak command with parameters “--shift -75 --extsize 150 --nomodel --call-summits --nolambda --keep-dup all -p 0.01”. The peak summits were then extended by 250 bp on either side to a final width of 501 bp.
 
@@ -69,5 +78,6 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyODc2NjUxMywtMTIwMTIxMjI5Nl19
+eyJoaXN0b3J5IjpbLTExNDEzODA5MjIsLTEyMDEyMTIyOTZdfQ
+==
 -->
