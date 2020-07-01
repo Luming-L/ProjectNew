@@ -15,9 +15,9 @@ Rscript extractExpression.Rmd
 [PRDM9](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164256;r=5:23443586-23528093)
 df["ENSG00000164256.8",c()]
 # get number of PRDM9-bound peaks
-for file in $(ls $inputDir/*); do
+for ID in $(cut -f 1 PRDM9ExpressionAndPeaks.txt); do
 
-echo $file
+echo $ID
                 fileName=`basename -s ".bw" $file`
 
 
@@ -36,7 +36,7 @@ wc -l ./PRDM9BoundPeaks_404_Case_ID/TCGA-D3-A8GP-06A*
 total 1511424
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyMTI3NTA5LC00MzczNjA5MDgsLTg3ND
-I4Mjk3NCw1MTUwMTgzNTUsLTc4MzM2OTM1NSwtMjM5MTI5MTcy
-XX0=
+eyJoaXN0b3J5IjpbMTU2NDY0MjgxLDkyMjEyNzUwOSwtNDM3Mz
+YwOTA4LC04NzQyODI5NzQsNTE1MDE4MzU1LC03ODMzNjkzNTUs
+LTIzOTEyOTE3Ml19
 -->
