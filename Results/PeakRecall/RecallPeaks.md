@@ -1,4 +1,3 @@
-
 # Input
 **BigWig files**
 ATAC-seq signal tracks that have been normalized by the number of reads in peaks. 
@@ -7,8 +6,6 @@ ATAC-seq signal tracks that have been normalized by the number of reads in peaks
 ```bash
 # download BigWigs
 ```
-**BedGraph**
-
 ## call peaks
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
@@ -43,6 +40,6 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEwNDczNDg0LC0xODQ5NjIyMDExLC0xOD
+eyJoaXN0b3J5IjpbMTE2OTI3MzA5LC0xODQ5NjIyMDExLC0xOD
 k5MTg5NDc2LC05ODQ5NjgxNDJdfQ==
 -->
