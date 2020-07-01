@@ -6,12 +6,13 @@ Reccuently mutated regions: First we select regions where at least 2 SNVs were l
 ## process
 linear regression: maybe for each region, use the number of mutations in it to quantify.
 ## output
-obtain a p-value for each region. We found 49% regions are significantly related to PRDM9 expression
+obtain a p-value for each region. We found 49% regions are significantly related to PRDM9 expression. 
 # PRDM9 binding motif analysis
 # Odds rations calculations
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMzA4OTgwMiwxOTE2OTY3ODEzLC01ND
-A5MDY3NTIsLTIxNDM3Njk4OSwtMTEzMTIzODUyNSwyMTIxODcx
-MDIzLDg5NzAxOTU1NiwtMTQ0MTM3ODEwM119
+eyJoaXN0b3J5IjpbLTEzNDY1MzkxMiwtNzIzMDg5ODAyLDE5MT
+Y5Njc4MTMsLTU0MDkwNjc1MiwtMjE0Mzc2OTg5LC0xMTMxMjM4
+NTI1LDIxMjE4NzEwMjMsODk3MDE5NTU2LC0xNDQxMzc4MTAzXX
+0=
 -->
