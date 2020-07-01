@@ -49,6 +49,8 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 `-c 3 -l 400`: We also check `-c 2 -l 501`, `-c 2 -l 150`, `-c 2 -l 300` and `-c 2 -l 400`, and found `-c 3 -l 400` is the best. The peak plots of them are shown in test part.
 
+`-c 2 -l 150`
+
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 # Test
 Write **a script** `peakRecall.py` to recall peaks including these three steps above.
@@ -95,5 +97,5 @@ Region: chr1: 777499-1233399
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwODY5Nzc3MywtMTIwMTIxMjI5Nl19
+eyJoaXN0b3J5IjpbMTkzMjEzNDI4MCwtMTIwMTIxMjI5Nl19
 -->
