@@ -7,9 +7,9 @@ Refine recalled peaks to get a list of peaks for each biological sample
 
 Each text file represents all merged peak calls from each cancer type. 
 
-**Recalled peaks in each technical replicate (796)**
+****
 
-The output of PeakRecall.py, see PeakRecall.md
+
 ## substeps
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
 ### download cancer type-specific PeakCalls
@@ -234,11 +234,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMz
-M5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5
-NzMyLDYzODg1MTMyMCwtMTAxMTI0MjgyNiwtMjYzNTQ1Njc0LD
-EwOTM2OTY2NzEsMjA4NDI2MTg0MSwtNDAxNzQ0MjMzLDIwMDg1
-MDQ1NDcsMTM1NjA2MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsND
-U2NzY2OTE4LDExNTI1NDAxOSwtNTM2ODI0MjEsLTEwNjgwOTE2
-OTldfQ==
+eyJoaXN0b3J5IjpbMTcwMzIyMTU1MSwtMTY0OTgwMTc2OCw3Mj
+EwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4
+MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQyODI2LC
+0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC00MDE3
+NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYwNjgsLT
+kxNjUwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5LC01MzY4MjQy
+MV19
 -->
