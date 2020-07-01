@@ -1,5 +1,5 @@
 # Whether recurrently mutated regions are associated with PRDM9 expression in tumors
-We want to know wether recurrently mutated regions where have mutat
+We want to know wether recurrently mutated regions where have mutations in all samples affect PRDM9 expression.
 Somatic mutations may affect PRDM9 expression. The mutations in which gene may affect the expression of PRDM9. We need regions where SNVs cluster across all samples, because they are comparable.
 ## input
 PRDM9 expression level
@@ -12,7 +12,7 @@ a p-value for each region tested. We found 49% regions are significantly related
 # Odds rations calculations
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODc0OTUwMiwtNTQwOTA2NzUyLC0yMT
+eyJoaXN0b3J5IjpbLTU2NDMxMzAzNywtNTQwOTA2NzUyLC0yMT
 QzNzY5ODksLTExMzEyMzg1MjUsMjEyMTg3MTAyMyw4OTcwMTk1
 NTYsLTE0NDEzNzgxMDNdfQ==
 -->
