@@ -19,8 +19,8 @@ In the BedGraph file, the score is the signal in each 100-bp bin. We can take th
 |chr1|10099|10199|14.288800|
 # Process
 ## convert BigWig to BedGraph
-## 
+## call peaks
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMjAwNTg4NCwtOTg0OTY4MTQyXX0=
+eyJoaXN0b3J5IjpbLTQyMDAyODA2LC05ODQ5NjgxNDJdfQ==
 -->
