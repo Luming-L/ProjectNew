@@ -13,7 +13,6 @@ awk '{FS=OFS="\t";if($1~/ENSG00000164256/){print $0}}' GDC-PANCAN.htseq_fpkm-uq.
 ```
 Rscript extractExpression.Rmd
 [PRDM9](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000164256;r=5:23443586-23528093)
-df["ENSG00000164256.8",c()]
 # get number of PRDM9-bound peaks
 ```bash
 echo -e "ID\texpression\tnumPeaks" > PRDM9ExpressionAndPeaks.txt
@@ -27,7 +26,7 @@ done
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNzk0MzYyOCwyMDY5NTUwNzczLDkyMj
-EyNzUwOSwtNDM3MzYwOTA4LC04NzQyODI5NzQsNTE1MDE4MzU1
-LC03ODMzNjkzNTUsLTIzOTEyOTE3Ml19
+eyJoaXN0b3J5IjpbLTE4OTM0NTU3MDMsMTkzNzk0MzYyOCwyMD
+Y5NTUwNzczLDkyMjEyNzUwOSwtNDM3MzYwOTA4LC04NzQyODI5
+NzQsNTE1MDE4MzU1LC03ODMzNjkzNTUsLTIzOTEyOTE3Ml19
 -->
