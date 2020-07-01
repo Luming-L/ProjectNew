@@ -26,12 +26,10 @@ qsub ~/peakRecall_batch.sh
 ```
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
-macs2 bdgcmp command:
 ```bash
 macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```
 ### call peaks on score track using a cutoff
-macs2 bdgpeakcall command:
 ```bash
 
 ```
@@ -57,8 +55,8 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDg2OTE4MzcsMzE3MTAyNDQ4LC03MD
-c0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5NjIxNDIsLTE4NjQzOTUy
-MjUsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLTE4NDk2MjIwMTEsLT
-E4OTkxODk0NzYsLTk4NDk2ODE0Ml19
+eyJoaXN0b3J5IjpbLTE3MjgyNzE0NzgsLTEyNDg2OTE4MzcsMz
+E3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5NjIx
+NDIsLTE4NjQzOTUyMjUsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLT
+E4NDk2MjIwMTEsLTE4OTkxODk0NzYsLTk4NDk2ODE0Ml19
 -->
