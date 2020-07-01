@@ -31,11 +31,6 @@ The ChIP-seq/ATAC-seq signal at each genomic location stored in BedGraph will be
 |chr7|10099|10199|2.28348|
 
 **In our case**, `callpeak` used by author set `-p 0.01`, so we set `-m ppois` in `bdgcmp` and `-c 2` in `bdgpeakcall`.
-
-**macs2 bdgcmp command:**
-```bash
-macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
-```
 ## Step 7: Call peaks on score track using a cutoff
 It is the final task of peak calling. We need to set three arguments in this step:
 `-c CUTOFF, --cutoff`:  The scores in the output from _bdgcmp_ are in -log10 form. If we want to select positions with p-value lower than 0.01 (-log10(0.01) = 2), we should set `-c 2`.
@@ -49,10 +44,6 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 `-c 2 -l 150`
 
-**macs2 bdgpeakcall command:**
-```bash
-
-```
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 # Test
 Write **a script** `peakRecall.py` to recall peaks including these three steps above.
@@ -78,6 +69,5 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjM4OTg3MjAsLTEyMDEyMTIyOTZdfQ
-==
+eyJoaXN0b3J5IjpbMTkyODc2NjUxMywtMTIwMTIxMjI5Nl19
 -->
