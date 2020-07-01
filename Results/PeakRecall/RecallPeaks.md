@@ -2,21 +2,13 @@
 # Input
 **BigWig files**
 ATAC-seq signal tracks that have been normalized by the number of reads in peaks. 
-**Format:**
-
-In the BedGraph file, the score is the signal in each 100-bp bin. We can take the average signal of all bins as genome background and calculate the statistical significance for signal in each bin.
-
 # Process
 ## convert BigWig to BedGraph
 ```bash
 # download BigWigs
 ```
 **BedGraph**
-|chr|start|end|score|
-|--|--|--|--|
-|chr1|0|9999|0.000000|
-|chr1|9999|10099|9.525880|
-|chr1|10099|10199|14.288800|
+
 ## call peaks
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
@@ -51,6 +43,6 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxODg4NTI5NSwtMTg0OTYyMjAxMSwtMT
-g5OTE4OTQ3NiwtOTg0OTY4MTQyXX0=
+eyJoaXN0b3J5IjpbNDEwNDczNDg0LC0xODQ5NjIyMDExLC0xOD
+k5MTg5NDc2LC05ODQ5NjgxNDJdfQ==
 -->
