@@ -2,7 +2,7 @@
 Somatic mutations may affect PRDM9 expression. The mutations in which gene may affect the expression of PRDM9. We need regions where SNVs cluster across all samples, because they are comparable.
 ## input
 PRDM9 expression level
-Reccuently mutated regions: at least 2 SNVs were located with 100bp from each other across all tumor samples.
+Reccuently mutated regions: First we select regions where at least 2 SNVs were located with 100bp from each other across all tumor samples. Then we concentrate 
 ## process
 linear regression
 ## output
@@ -10,7 +10,7 @@ linear regression
 # Odds rations calculations
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MDkwNjc1MiwtMjE0Mzc2OTg5LC0xMT
-MxMjM4NTI1LDIxMjE4NzEwMjMsODk3MDE5NTU2LC0xNDQxMzc4
-MTAzXX0=
+eyJoaXN0b3J5IjpbMTM5MTcxNzk4NSwtNTQwOTA2NzUyLC0yMT
+QzNzY5ODksLTExMzEyMzg1MjUsMjEyMTg3MTAyMyw4OTcwMTk1
+NTYsLTE0NDEzNzgxMDNdfQ==
 -->
