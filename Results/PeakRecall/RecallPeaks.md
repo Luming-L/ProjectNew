@@ -25,6 +25,10 @@ In the BedGraph file, the score is the signal in each 100-bp bin. We can take th
 ## call peaks
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
+**macs2 bdgcmp command:**
+```bash
+macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
+```
 ### call peaks on score track using a cutoff
 **macs2 bdgpeakcall command:**
 ```bash
@@ -52,6 +56,6 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyOTcyMTU5MywtMTg0OTYyMjAxMSwtMT
+eyJoaXN0b3J5IjpbLTc4MDI1Mzk2NywtMTg0OTYyMjAxMSwtMT
 g5OTE4OTQ3NiwtOTg0OTY4MTQyXX0=
 -->
