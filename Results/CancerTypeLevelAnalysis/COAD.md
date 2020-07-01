@@ -8,6 +8,7 @@ wc -l COAD_peakCalls.txt # 122972
 sample mapping
 ```bash
 awk '{FS=OFS="\t";if($1~/^COAD/){print $1, substr($5,1,16)}}' ../TCGA_identifier_mapping > COAD_ID.txt
+cut -f 2 COAD_ID.txt | sort | uniq | wc -l # 38
 ```
 # PRDM9 expression
 ## ID of COAD samples
@@ -17,7 +18,7 @@ awk '{FS=OFS="\t";if($1~/^COAD/){print $1, substr($5,1,16)}}' ../TCGA_identifier
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDIzNTEwMzgsMTEwNjU1MjkzOCwxMz
-k0MzE3ODExLDU3MjcxODM0MiwtMTQ4NzE1NTEwMywtMTA1NTI4
-OTgyXX0=
+eyJoaXN0b3J5IjpbMTI1NDg0MzgzOCwxMTA2NTUyOTM4LDEzOT
+QzMTc4MTEsNTcyNzE4MzQyLC0xNDg3MTU1MTAzLC0xMDU1Mjg5
+ODJdfQ==
 -->
