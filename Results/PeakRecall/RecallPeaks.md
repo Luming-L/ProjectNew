@@ -9,12 +9,12 @@ ATAC-seq signal tracks that have been normalized by the number of reads in peaks
 ## call peaks
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
-**macs2 bdgcmp command:**
+macs2 bdgcmp command:
 ```bash
 macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```
 ### call peaks on score track using a cutoff
-**macs2 bdgpeakcall command:**
+macs2 bdgpeakcall command:
 ```bash
 
 ```
@@ -40,6 +40,6 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTI3MzA5LC0xODQ5NjIyMDExLC0xOD
+eyJoaXN0b3J5IjpbMTA3NTI1MjYxLC0xODQ5NjIyMDExLC0xOD
 k5MTg5NDc2LC05ODQ5NjgxNDJdfQ==
 -->
