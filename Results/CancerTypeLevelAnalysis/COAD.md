@@ -1,5 +1,6 @@
 COAD Colon Adenocarcinoma
 Number of Tissue Samples Passed QC: 41 (in 410 samples)
+Number of Donors Passed QC: 38 (in 404 dornors)
 ```bash
 cut -f 4 COAD* > COAD_Peaks_list.txt
 sort COAD_Peaks_list.txt | uniq -c | awk '{if($1>1){print $0}}' | wc -l # 112436
@@ -18,7 +19,7 @@ cut -f 2 COAD_ID.txt | sort | uniq | wc -l # 38
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDg0MzgzOCwxMTA2NTUyOTM4LDEzOT
-QzMTc4MTEsNTcyNzE4MzQyLC0xNDg3MTU1MTAzLC0xMDU1Mjg5
-ODJdfQ==
+eyJoaXN0b3J5IjpbMjczMjU0MjgxLDExMDY1NTI5MzgsMTM5ND
+MxNzgxMSw1NzI3MTgzNDIsLTE0ODcxNTUxMDMsLTEwNTUyODk4
+Ml19
 -->
