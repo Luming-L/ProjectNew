@@ -15,7 +15,12 @@ for file in $(ls ./*); do
 	rm -r oak
 done
 ```
+```bash
+# convert BigWig to BedGraph
+qsub ~/BigWigtoBedGraph_batch.sh
+```
 ## call peaks
+
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
 macs2 bdgcmp command:
@@ -49,8 +54,8 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MT
-AyNDQ4LDE4MDk5NjIxNDIsLTE4NjQzOTUyMjUsMTM1Mzc5Mjgy
-MywxMDc1MjUyNjEsLTE4NDk2MjIwMTEsLTE4OTkxODk0NzYsLT
-k4NDk2ODE0Ml19
+eyJoaXN0b3J5IjpbMjY1NTQwMDQ0LDMxNzEwMjQ0OCwtNzA3ND
+kzNTI0LDMxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1MjI1
+LDEzNTM3OTI4MjMsMTA3NTI1MjYxLC0xODQ5NjIyMDExLC0xOD
+k5MTg5NDc2LC05ODQ5NjgxNDJdfQ==
 -->
