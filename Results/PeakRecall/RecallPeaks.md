@@ -26,8 +26,28 @@ In the BedGraph file, the score is the signal in each 100-bp bin. We can take th
 ### build local bias track from control
 ### compare ATAC signal and local lambda to get the scores in pvalue or qvalue
 ### call peaks on score track using a cutoff
+## test on paper data
+**Test file:** `ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg`
+```bash
+./peakRecall.py ./ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg
+```
+**Check peaks number, and Plot signal from BigWig file and peaks recalled to compare**
+
+Region: chr1: 777499-1233399
+
+`-c 2 -l 501`: 52519 
+
+
+`-c 2 -l 150`: 210571
+
+`-c 2 -l 300`: 124102
+
+`-c 2 -l 400`: 86186
+
+
+`-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDk2MjIwMTEsLTE4OTkxODk0NzYsLT
-k4NDk2ODE0Ml19
+eyJoaXN0b3J5IjpbLTE1NDA2ODE5ODAsLTE4NDk2MjIwMTEsLT
+E4OTkxODk0NzYsLTk4NDk2ODE0Ml19
 -->
