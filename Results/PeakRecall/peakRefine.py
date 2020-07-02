@@ -8,9 +8,7 @@ num = int(sys.argv[1])
 print(num)
 
 # some paths
-Cancer_Type_PeakCalls_path = "/exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls"
-peaks_path = "/exports/eddie/scratch/s1949868/PeakRecall_796_c3l400"
-Sample_PeakCalls_path = "/exports/eddie/scratch/s1949868/PeakCall_410_c3l400"
+Sample_PeakCalls_path = "/exports/eddie/scratch/s1949868/RefineRecalledPeaks"
 
 # use the same ID to identify technical replicates from the same biological sample
 l1 = ["_".join(i.split("_")[0:8]) for i in os.listdir(Sample_PeakCalls_path) if i.endswith(".bed.sorted")]
@@ -37,12 +35,12 @@ def peakOverlap(sample, path):
 	'''
 	print(sample)
 	if bioSample_dict[sample] == 1: # 1 technical replicate for a ID
-		os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -u > " + path + "/" + sample+"_peakCalls.bed")
-		print("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -u > " + path + "/" + sample+"_peakCalls.bed")
+		os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -u > " + path + "/" + sample+"_peakCalls.bed")
+		print("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -u > " + path + "/" + sample+"_peakCalls.bed")
 
 	elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
-		os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed")
-		print("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed")
+		os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>0){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed")
+		print("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>0){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed")
 
 
 # ======================================= Main =======================================
