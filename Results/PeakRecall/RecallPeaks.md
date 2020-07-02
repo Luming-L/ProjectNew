@@ -33,6 +33,7 @@ macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```bash
 
 ```
+##
 ## test on paper data
 **Test file:** `ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg`
 ```bash
@@ -55,8 +56,9 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjgyNzE0NzgsLTEyNDg2OTE4MzcsMz
-E3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5NjIx
-NDIsLTE4NjQzOTUyMjUsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLT
-E4NDk2MjIwMTEsLTE4OTkxODk0NzYsLTk4NDk2ODE0Ml19
+eyJoaXN0b3J5IjpbLTIwMDM2OTkxMTIsLTE3MjgyNzE0NzgsLT
+EyNDg2OTE4MzcsMzE3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MTAy
+NDQ4LDE4MDk5NjIxNDIsLTE4NjQzOTUyMjUsMTM1Mzc5MjgyMy
+wxMDc1MjUyNjEsLTE4NDk2MjIwMTEsLTE4OTkxODk0NzYsLTk4
+NDk2ODE0Ml19
 -->
