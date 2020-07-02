@@ -52,7 +52,7 @@ recalled = `cut -f 4 ${cancerType}_PeakRecall.total.txt | sort | uniq -c | awk '
 
 original = `wc -l $peakCalls`
 
-echo -e "$cancerType\t$\t"
+echo -e "$cancerType\t$recalled\t$original"
 
 done
 
@@ -81,7 +81,7 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwOTgzMTA1MywtNDc0Nzg3ODQ4LDE2OD
+eyJoaXN0b3J5IjpbMTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2OD
 Y2NDU2NDUsLTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2
 ODM2LDIwNTI5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC
 0xNzI4MjcxNDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3
