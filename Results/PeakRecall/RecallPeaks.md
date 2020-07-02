@@ -34,6 +34,19 @@ macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 macs2 bdgpeakcall -i .pvalue.bg -c 2 -l 150 -g 75 -o .peaks.bed
 ```
 ## check files
+sort files
+```bash
+# prepare the input of bedtools
+echo "sort start: $(date)"
+# sort and cut files of Cancer Type-specific PeakCalls
+cd /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls # Cancer_Type_PeakCalls_path in peakOverlap.py
+for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > /exports/eddie/scratch/s1949868/RefineRecalledPeaks/${file}.sorted; done
+cd /exports/eddie/scratch/s1949868/RecallPeak # peaks_path in peakOverlap.py
+for file in $(ls ./*insertions.peaks.bed); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/RefineRecalledPeaks/${file}.sorted; done
+echo "sort done: $(date)"
+```
+
+
 ```bash
 for file in $(ls ./ACCx_*); do bedtools intersect -a ACC_peakCalls.txt.sorted -b $file -f 0.5 -u >> ACC_peakRecall.txt; done
 cut -f 4 ACC_peakRecall.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l
@@ -66,11 +79,11 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAwMzM2NTMzLDU1MDkxNDc2MywxOTY3Nz
-g4OTQyLC00NzQ3ODc4NDgsMTY4NjY0NTY0NSwtMjA5NzkyNzk3
-NiwtMzA5ODI0NjQxLC05NTQ4ODY4MzYsMjA1Mjk1OTM0NywtNT
-I2MTQ4NjA0LDEzMjc2MzUyNDYsLTE3MjgyNzE0NzgsLTEyNDg2
-OTE4MzcsMzE3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MTAyNDQ4LD
-E4MDk5NjIxNDIsLTE4NjQzOTUyMjUsMTM1Mzc5MjgyMywxMDc1
-MjUyNjFdfQ==
+eyJoaXN0b3J5IjpbNjM3MjYxNDY3LDcwMDMzNjUzMyw1NTA5MT
+Q3NjMsMTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2ODY2NDU2NDUs
+LTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNT
+I5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC0xNzI4Mjcx
+NDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3NDkzNTI0LD
+MxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1MjI1LDEzNTM3
+OTI4MjNdfQ==
 -->
