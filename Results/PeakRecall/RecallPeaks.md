@@ -51,8 +51,8 @@ compare them with `cancer type-specific peak set`
 echo -e "cancerType\trecalled\toriginal\tfraction" > checkReproduciblePeaks.txt
 for peakCalls in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/*.txt.sorted); do echo $peakCalls; cancerType=`echo ${peakCalls#*/RefineRecalledPeaks/}`; cancerType=`echo ${cancerType%_peakCalls*}`; for file in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/$cancerType*.peaks.bed.sorted); do bedtools intersect -a $peakCalls -b $file -f 0.5 -u >> ${cancerType}_PeakRecall.total.txt; done; a=`cut -f 4 ${cancerType}_PeakRecall.total.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l | awk '{print $1}'`; b=`wc -l $peakCalls | awk '{print $1}'`; echo -e "$cancerType\t$a\t$b" >> checkReproduciblePeaks.txt; done
 ```
-calculate fraction
 ```r
+# calculate fraction
 repr <- read.delim("checkReproduciblePeaks.txt",header = TRUE, sep = "\t")
 repr$fraction <- repr$recalled/repr$original
 write.table(repr,
@@ -62,6 +62,11 @@ write.table(repr,
 	quote =FALSE
 	)
 ```
+```bash
+rm checkReproduciblePeaks.txt
+mv checkReproduciblePeaks2.txt checkReproduciblePeaks.txt
+```
+checkReproduciblePeaks.txt
 ## test on paper data
 **Test file:** `ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg`
 ```bash
@@ -84,11 +89,11 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDIwNDUwNjAsLTE5ODM4Njk4OTgsMj
-g4ODYxNDMsNjM3MjYxNDY3LDcwMDMzNjUzMyw1NTA5MTQ3NjMs
-MTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2ODY2NDU2NDUsLTIwOT
-c5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNTI5NTkz
-NDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC0xNzI4MjcxNDc4LC
-0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3NDkzNTI0LDMxNzEw
-MjQ0OF19
+eyJoaXN0b3J5IjpbLTE5MjIzODc5MywtMTk4Mzg2OTg5OCwyOD
+g4NjE0Myw2MzcyNjE0NjcsNzAwMzM2NTMzLDU1MDkxNDc2Mywx
+OTY3Nzg4OTQyLC00NzQ3ODc4NDgsMTY4NjY0NTY0NSwtMjA5Nz
+kyNzk3NiwtMzA5ODI0NjQxLC05NTQ4ODY4MzYsMjA1Mjk1OTM0
+NywtNTI2MTQ4NjA0LDEzMjc2MzUyNDYsLTE3MjgyNzE0NzgsLT
+EyNDg2OTE4MzcsMzE3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MTAy
+NDQ4XX0=
 -->
