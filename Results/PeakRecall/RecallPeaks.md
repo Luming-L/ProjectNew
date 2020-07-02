@@ -35,8 +35,7 @@ macs2 bdgpeakcall -i .pvalue.bg -c 2 -l 150 -g 75 -o .peaks.bed
 ```
 ## check files
 ```bash
-for file in $(ls ./ACCx_*); do bedtools intersect -a ACC_peakCalls.txt.sorted -b $file -f 0.2 -u | wc -l; done
-for file in $(ls ./ACCx_*); do bedtools intersect -a ACC_peakCalls.txt.sorted -b $file -f 0.3 -u >> ACC_peakRecall.txt; done
+for file in $(ls ./ACCx_*); do bedtools intersect -a ACC_peakCalls.txt.sorted -b $file -f 0.5 -u >> ACC_peakRecall.txt; done
 cut -f 4 ACC_peakRecall.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l
 ```
 ## test on paper data
@@ -61,10 +60,10 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NDg4NjgzNiwyMDUyOTU5MzQ3LC01Mj
-YxNDg2MDQsMTMyNzYzNTI0NiwtMTcyODI3MTQ3OCwtMTI0ODY5
-MTgzNywzMTcxMDI0NDgsLTcwNzQ5MzUyNCwzMTcxMDI0NDgsMT
-gwOTk2MjE0MiwtMTg2NDM5NTIyNSwxMzUzNzkyODIzLDEwNzUy
-NTI2MSwtMTg0OTYyMjAxMSwtMTg5OTE4OTQ3NiwtOTg0OTY4MT
-QyXX0=
+eyJoaXN0b3J5IjpbLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNT
+I5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC0xNzI4Mjcx
+NDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3NDkzNTI0LD
+MxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1MjI1LDEzNTM3
+OTI4MjMsMTA3NTI1MjYxLC0xODQ5NjIyMDExLC0xODk5MTg5ND
+c2LC05ODQ5NjgxNDJdfQ==
 -->
