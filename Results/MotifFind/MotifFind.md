@@ -12,13 +12,8 @@ Each text file represents all merged peak calls from each cancer type.
 
 ## substeps
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
-### download cancer type-specific PeakCalls
-```bash
-wget https://api.gdc.cancer.gov/data/71ccfc55-b428-4a04-bb5a-227f7f3bf91c
-unzip 71ccfc55-b428-4a04-bb5a-227f7f3bf91c
-mkdir TCGA-ATAC_Cancer_Type-specific_PeakCalls
-mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
-```
+### 
+
 ###
 
 ### refine recalled peaks by using `bedtools intersect`
@@ -226,11 +221,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MjAwOTM5NCwtMTY0OTgwMTc2OCw3Mj
-EwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4
-MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQyODI2LC
-0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC00MDE3
-NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYwNjgsLT
-kxNjUwMzc2MSw0NTY3NjY5MTgsMTE1MjU0MDE5LC01MzY4MjQy
-MV19
+eyJoaXN0b3J5IjpbMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMT
+A3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgx
+MTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4MjYsLT
+I2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLTQwMTc0
+NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4OSwxNzUyNjA2OCwtOT
+E2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNTQwMTksLTUzNjgyNDIx
+XX0=
 -->
