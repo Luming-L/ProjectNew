@@ -35,6 +35,7 @@ macs2 bdgpeakcall -i .pvalue.bg -c 2 -l 150 -g 75 -o .peaks.bed
 ```
 ## check files
 ```bash
+for $ (ls ./*.txt.sorted) do
 for file in $(ls ./ACCx_*); do bedtools intersect -a ACC_peakCalls.txt.sorted -b $file -f 0.5 -u >> ACC_peakRecall.txt; done
 cut -f 4 ACC_peakRecall.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l
 ```
@@ -60,10 +61,10 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNT
-I5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC0xNzI4Mjcx
-NDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3NDkzNTI0LD
-MxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1MjI1LDEzNTM3
-OTI4MjMsMTA3NTI1MjYxLC0xODQ5NjIyMDExLC0xODk5MTg5ND
-c2LC05ODQ5NjgxNDJdfQ==
+eyJoaXN0b3J5IjpbLTU1MzE5NjUzNywtMzA5ODI0NjQxLC05NT
+Q4ODY4MzYsMjA1Mjk1OTM0NywtNTI2MTQ4NjA0LDEzMjc2MzUy
+NDYsLTE3MjgyNzE0NzgsLTEyNDg2OTE4MzcsMzE3MTAyNDQ4LC
+03MDc0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5NjIxNDIsLTE4NjQz
+OTUyMjUsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLTE4NDk2MjIwMT
+EsLTE4OTkxODk0NzYsLTk4NDk2ODE0Ml19
 -->
