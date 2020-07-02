@@ -50,9 +50,9 @@ for file in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/$cancerType
 
 recalled = `cut -f 4 ${cancerType}_PeakRecall.total.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l`
 
+original = `wc -l $peakCalls`
 
-
-echo -e "$cancerType\t$numReproduciblePeaks"
+echo -e "$cancerType\t$\t"
 
 done
 
@@ -81,7 +81,7 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNDc4MTE2MCwtNDc0Nzg3ODQ4LDE2OD
+eyJoaXN0b3J5IjpbLTgwOTgzMTA1MywtNDc0Nzg3ODQ4LDE2OD
 Y2NDU2NDUsLTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2
 ODM2LDIwNTI5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC
 0xNzI4MjcxNDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3
