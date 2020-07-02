@@ -22,7 +22,7 @@ cd /exports/eddie/scratch/s1949868/RecallPeak # peaks_path in peakOverlap.py
 for file in $(ls ./*insertions.peaks.bed); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/RefineRecalledPeaks/${file}.sorted; done
 echo "sort done: $(date)"
 ```
-## Refine peaks by overlapping with cancer type-specific peaks
+## Refine peaks by overlapping with cancer type-specific peak sets
 ```python
 if bioSample_dict[sample] == 1: # 1 technical replicate for a ID
 	os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -u > " + path + "/" + sample+"_peakCalls.bed")
@@ -31,6 +31,6 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQxNTE5MjcsMTQ2NjQyNTAzNCwtMT
-I5NDIwNzY5NiwxODQ4NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
+eyJoaXN0b3J5IjpbMTg2Mjg0NTMxOSwxNDY2NDI1MDM0LC0xMj
+k0MjA3Njk2LDE4NDg2NTMxMDAsLTEzODczNzY4OThdfQ==
 -->
