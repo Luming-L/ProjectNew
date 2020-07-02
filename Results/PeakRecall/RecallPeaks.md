@@ -46,7 +46,7 @@ for file in $(ls ./*insertions.peaks.bed); do sort -k1,1 -k2,2n $file | awk '{FS
 echo "sort done: $(date)"
 ```
 check reproducible recalled peak of a specific cancer type
-compare them with 
+compare them with `cancer type-specific peak set`
 ```bash
 echo -e "cancerType\trecalled\toriginal\tfraction" > checkReproduciblePeaks.txt
 for peakCalls in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/*.txt.sorted); do echo $peakCalls; cancerType=`echo ${peakCalls#*/RefineRecalledPeaks/}`; cancerType=`echo ${cancerType%_peakCalls*}`; for file in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/$cancerType*.peaks.bed.sorted); do bedtools intersect -a $peakCalls -b $file -f 0.5 -u >> ${cancerType}_PeakRecall.total.txt; done; a=`cut -f 4 ${cancerType}_PeakRecall.total.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l | awk '{print $1}'`; b=`wc -l $peakCalls | awk '{print $1}'`; c=`echo "sclae=2; $a/$b" | bc` echo -e "$cancerType\t$a\t$b\t$c" >> checkReproduciblePeaks.txt; done
@@ -73,11 +73,11 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDU0MDgyMjksNjM3MjYxNDY3LDcwMD
-MzNjUzMyw1NTA5MTQ3NjMsMTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4
-LDE2ODY2NDU2NDUsLTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOT
-U0ODg2ODM2LDIwNTI5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1
-MjQ2LC0xNzI4MjcxNDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OC
-wtNzA3NDkzNTI0LDMxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0
-Mzk1MjI1XX0=
+eyJoaXN0b3J5IjpbMjg4ODYxNDMsNjM3MjYxNDY3LDcwMDMzNj
+UzMyw1NTA5MTQ3NjMsMTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2
+ODY2NDU2NDUsLTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0OD
+g2ODM2LDIwNTI5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2
+LC0xNzI4MjcxNDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNz
+A3NDkzNTI0LDMxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1
+MjI1XX0=
 -->
