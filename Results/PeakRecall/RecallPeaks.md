@@ -46,7 +46,7 @@ cancerType=`echo ${peakCalls#*/RefineRecalledPeaks/}`;
 cancerType=`echo ${cancerType%_peakCalls*}`;
 echo $cancerType; 
 
-for file in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks//$cancerType*.peaks.bed.sorted); do bedtools intersect -a $peakCalls -b $file -f 0.5 -u >> ${cancerType}_PeakRecall.total.txt; done
+for file in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/$cancerType*.peaks.bed.sorted); do bedtools intersect -a $peakCalls -b $file -f 0.5 -u >> ${cancerType}_PeakRecall.total.txt; done
 done
 
 for file in $(ls ./$cancerType*.peaks.bed.sorted); do bedtools intersect -a $peakCalls -b $file -f 0.5 -u >> ${cancerType}_PeakRecall.total.txt; done
@@ -74,11 +74,11 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NDc4Nzg0OCwxNjg2NjQ1NjQ1LC0yMD
-k3OTI3OTc2LC0zMDk4MjQ2NDEsLTk1NDg4NjgzNiwyMDUyOTU5
-MzQ3LC01MjYxNDg2MDQsMTMyNzYzNTI0NiwtMTcyODI3MTQ3OC
-wtMTI0ODY5MTgzNywzMTcxMDI0NDgsLTcwNzQ5MzUyNCwzMTcx
-MDI0NDgsMTgwOTk2MjE0MiwtMTg2NDM5NTIyNSwxMzUzNzkyOD
-IzLDEwNzUyNTI2MSwtMTg0OTYyMjAxMSwtMTg5OTE4OTQ3Niwt
-OTg0OTY4MTQyXX0=
+eyJoaXN0b3J5IjpbLTEwOTQ4OTE5MDcsLTQ3NDc4Nzg0OCwxNj
+g2NjQ1NjQ1LC0yMDk3OTI3OTc2LC0zMDk4MjQ2NDEsLTk1NDg4
+NjgzNiwyMDUyOTU5MzQ3LC01MjYxNDg2MDQsMTMyNzYzNTI0Ni
+wtMTcyODI3MTQ3OCwtMTI0ODY5MTgzNywzMTcxMDI0NDgsLTcw
+NzQ5MzUyNCwzMTcxMDI0NDgsMTgwOTk2MjE0MiwtMTg2NDM5NT
+IyNSwxMzUzNzkyODIzLDEwNzUyNTI2MSwtMTg0OTYyMjAxMSwt
+MTg5OTE4OTQ3Nl19
 -->
