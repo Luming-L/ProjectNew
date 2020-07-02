@@ -31,7 +31,7 @@ macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```
 ### call peaks on score track using a cutoff
 ```bash
-
+macs2 bdgpeakcall -i "+fileName+".pvalue.bg"+" -c 2 -l 150 -g 75 -o "+fileName+".peaks.bed
 ```
 ## check files
 ```bash
@@ -61,9 +61,9 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC0xNz
-I4MjcxNDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3NDkz
-NTI0LDMxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1MjI1LD
-EzNTM3OTI4MjMsMTA3NTI1MjYxLC0xODQ5NjIyMDExLC0xODk5
-MTg5NDc2LC05ODQ5NjgxNDJdfQ==
+eyJoaXN0b3J5IjpbMjA1Mjk1OTM0NywtNTI2MTQ4NjA0LDEzMj
+c2MzUyNDYsLTE3MjgyNzE0NzgsLTEyNDg2OTE4MzcsMzE3MTAy
+NDQ4LC03MDc0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5NjIxNDIsLT
+E4NjQzOTUyMjUsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLTE4NDk2
+MjIwMTEsLTE4OTkxODk0NzYsLTk4NDk2ODE0Ml19
 -->
