@@ -22,8 +22,15 @@ cd /exports/eddie/scratch/s1949868/RecallPeak # peaks_path in peakOverlap.py
 for file in $(ls ./*insertions.peaks.bed); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/RefineRecalledPeaks/${file}.sorted; done
 echo "sort done: $(date)"
 ```
+Refine
+```python
+if bioSample_dict[sample] == 1: # 1 technical replicate for a ID
+	os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -u > " + path + "/" + sample+"_peakCalls.bed")
+elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
+	os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>0){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed")
+```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTg4MjAwMjMsMTQ2NjQyNTAzNCwtMT
-I5NDIwNzY5NiwxODQ4NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
+eyJoaXN0b3J5IjpbMTI1NzQ3NTcyLDE0NjY0MjUwMzQsLTEyOT
+QyMDc2OTYsMTg0ODY1MzEwMCwtMTM4NzM3Njg5OF19
 -->
