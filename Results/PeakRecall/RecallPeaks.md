@@ -48,7 +48,9 @@ echo $cancerType;
 
 for file in $(ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/$cancerType*.peaks.bed.sorted); do bedtools intersect -a $peakCalls -b $file -f 0.5 -u >> ${cancerType}_PeakRecall.total.txt; done
 
-numReproduciblePeaks = `cut -f 4 ${cancerType}_PeakRecall.total.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l`
+recalled = `cut -f 4 ${cancerType}_PeakRecall.total.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l`
+
+
 
 echo -e "$cancerType\t$numReproduciblePeaks"
 
@@ -79,11 +81,11 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM2Mjg2MjMyLC00NzQ3ODc4NDgsMTY4Nj
-Y0NTY0NSwtMjA5NzkyNzk3NiwtMzA5ODI0NjQxLC05NTQ4ODY4
-MzYsMjA1Mjk1OTM0NywtNTI2MTQ4NjA0LDEzMjc2MzUyNDYsLT
-E3MjgyNzE0NzgsLTEyNDg2OTE4MzcsMzE3MTAyNDQ4LC03MDc0
-OTM1MjQsMzE3MTAyNDQ4LDE4MDk5NjIxNDIsLTE4NjQzOTUyMj
-UsMTM1Mzc5MjgyMywxMDc1MjUyNjEsLTE4NDk2MjIwMTEsLTE4
-OTkxODk0NzZdfQ==
+eyJoaXN0b3J5IjpbMTYwNDc4MTE2MCwtNDc0Nzg3ODQ4LDE2OD
+Y2NDU2NDUsLTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2
+ODM2LDIwNTI5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC
+0xNzI4MjcxNDc4LC0xMjQ4NjkxODM3LDMxNzEwMjQ0OCwtNzA3
+NDkzNTI0LDMxNzEwMjQ0OCwxODA5OTYyMTQyLC0xODY0Mzk1Mj
+I1LDEzNTM3OTI4MjMsMTA3NTI1MjYxLC0xODQ5NjIyMDExLC0x
+ODk5MTg5NDc2XX0=
 -->
