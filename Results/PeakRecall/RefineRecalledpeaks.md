@@ -30,7 +30,9 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 	os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>0){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed")
 ```
 # Output
+ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2Mjg0NTMxOSwxNDY2NDI1MDM0LC0xMj
-k0MjA3Njk2LDE4NDg2NTMxMDAsLTEzODczNzY4OThdfQ==
+eyJoaXN0b3J5IjpbLTc0OTM4MTE1MCwxODYyODQ1MzE5LDE0Nj
+Y0MjUwMzQsLTEyOTQyMDc2OTYsMTg0ODY1MzEwMCwtMTM4NzM3
+Njg5OF19
 -->
