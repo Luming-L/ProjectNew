@@ -39,7 +39,7 @@ for file in $(ls ./ACCx_*); do bedtools intersect -a ACC_peakCalls.txt.sorted -b
 cut -f 4 ACC_peakRecall.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -l
 ```
 ```bash
-for $peakCalls in (ls ./*.txt.sorted); do
+for $peakCalls in (ls /exports/eddie/scratch/s1949868/RefineRecalledPeaks/*.txt.sorted); do
 cancerType=`echo ${peakCalls#*/RefineRecalledPeaks}`
 cancerType=`echo ${cancerType%_peakCalls*}`
 
@@ -68,7 +68,7 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzODQ4NjE0NywtMjA5NzkyNzk3NiwtMz
+eyJoaXN0b3J5IjpbMTY4NjY0NTY0NSwtMjA5NzkyNzk3NiwtMz
 A5ODI0NjQxLC05NTQ4ODY4MzYsMjA1Mjk1OTM0NywtNTI2MTQ4
 NjA0LDEzMjc2MzUyNDYsLTE3MjgyNzE0NzgsLTEyNDg2OTE4Mz
 csMzE3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5
