@@ -3,7 +3,7 @@ This step will output a list of PRDM9 motif occurrences for each of 410 biologic
 # Step1 Refine recalled peaks 
 Refine recalled peaks to get a list of peaks for each biological sample
 ## input files
-**Cancer type-specific peak calls (23)**
+****
 
 Each text file represents all merged peak calls from each cancer type. 
 
@@ -19,16 +19,8 @@ unzip 71ccfc55-b428-4a04-bb5a-227f7f3bf91c
 mkdir TCGA-ATAC_Cancer_Type-specific_PeakCalls
 mv *.txt TCGA-ATAC_Cancer_Type-specific_PeakCalls
 ```
-### prepare the input of bedtools
-sort files
-```bash
-# sort and cut files of Cancer Type-specific PeakCalls
-cd /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls # Cancer_Type_PeakCalls_path in peakOverlap.py
-for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > /exports/eddie/scratch/s1949868/PeakCall_410_c3l400/${file}.sorted; done
-# cut files of recalled peaks in each technical replicate
-cd /exports/eddie/scratch/s1949868/PeakRecall_796_c3l400 # peaks_path in peakOverlap.py
-for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3}}' > /exports/eddie/scratch/s1949868/PeakCall_410_c3l400/${file}.sorted; done
-```
+###
+
 ### refine recalled peaks by using `bedtools intersect`
 1. for each technical replicate (796), the minimum overlap between cancer type peaks and sample recalled peaks should be more than 60% of cancer type peaks. (set by `-f 0.6`) Then output these cancer type peaks.
 2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
@@ -234,7 +226,7 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMzIyMTU1MSwtMTY0OTgwMTc2OCw3Mj
+eyJoaXN0b3J5IjpbMTA2MjAwOTM5NCwtMTY0OTgwMTc2OCw3Mj
 EwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4
 MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQyODI2LC
 0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC00MDE3
