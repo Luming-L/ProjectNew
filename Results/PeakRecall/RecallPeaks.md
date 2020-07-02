@@ -42,7 +42,7 @@ cut -f 4 ACC_peakRecall.txt | sort | uniq -c | awk '{if($1>1){print $0}}' | wc -
 for $peakCalls (ls ./*.txt.sorted) do
 fileName=`echo ${file#*/RefineRecalledPeaks}`
 
-fileName=`echo ${fileName%_PRDM9_bound_peaks*}`
+fileName=`echo ${fileName%_peakCalls*}`
 
 echo $fileName
 for file in $(ls ./ACCx_*); do bedtools intersect -a $peakCalls -b $file -f 0.5 -u >> ACC_peakRecall.txt; done
@@ -70,7 +70,7 @@ Region: chr1: 777499-1233399
 `-c 3 -l 400`: 64905 
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNTUzNDE1NCwtMjA5NzkyNzk3NiwtMz
+eyJoaXN0b3J5IjpbMTUxNzM3NTY3OCwtMjA5NzkyNzk3NiwtMz
 A5ODI0NjQxLC05NTQ4ODY4MzYsMjA1Mjk1OTM0NywtNTI2MTQ4
 NjA0LDEzMjc2MzUyNDYsLTE3MjgyNzE0NzgsLTEyNDg2OTE4Mz
 csMzE3MTAyNDQ4LC03MDc0OTM1MjQsMzE3MTAyNDQ4LDE4MDk5
