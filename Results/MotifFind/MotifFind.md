@@ -165,7 +165,7 @@ renameTo_cancerTypeCaseID.Rmd
 # get number of PRDM9 binding sites in peaks
 ```bash
 echo -e "ID\tnumPRDM9MotifInPeaks" > numPRDM9MotifInPeaks.txt
-# calculate number of PRDM9 binding sites in peaks for each peaks
+# calculate PRDM9 binding sites in peaks for each peaks
 for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/*_fimo.gff); do
 	echo $file
 
@@ -250,11 +250,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDI1MjU4MSwtMTgwMzE3MDI5NCwtOT
-UwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUw
-MTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3NjgsNz
-IxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1
-ODExNTIsNjU1ODA5NzMyLDYzODg1MTMyMCwtMTAxMTI0MjgyNi
-wtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2MTg0MSwtNDAx
-NzQ0MjMzXX0=
+eyJoaXN0b3J5IjpbLTEwODkyMzgxODksLTE4MDMxNzAyOTQsLT
+k1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1
+MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LD
+cyMTA3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIx
+NTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4Mj
+YsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLTQw
+MTc0NDIzM119
 -->
