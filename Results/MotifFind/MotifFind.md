@@ -168,6 +168,8 @@ cd /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF
 R
 ```
 ```r
+library(plyr)
+library(stringr)
 # get all the path of files
 files <- list.files(path ="/exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF",
                     pattern = "fimo.gff", all.files = FALSE, 
@@ -248,11 +250,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMjcxOTUxOCwtNDA3OTYwOTQxLDE3Mz
-IxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3
-NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcyODcsLT
-E0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMyMCwtMTAxMTI0
-MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2MTg0MS
-wtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2MTg5LDE3NTI2
-MDY4XX0=
+eyJoaXN0b3J5IjpbODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMj
+E4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2
+OCw3MjEwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMT
+QyMTU4MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQy
+ODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC
+00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYw
+NjhdfQ==
 -->
