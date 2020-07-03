@@ -165,7 +165,7 @@ renameTo_cancerTypeCaseID.Rmd
 # get number of PRDM9 binding sites in peaks
 ```bash
 echo -e "ID\tnumPRDM9MotifInPeaks" > numPRDM9MotifInPeaks.txt
-# calculate PRDM9 binding sites in peaks for each peaks
+# count PRDM9 binding sites in peaks for each sample
 for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/*_fimo.gff); do
 	echo $file
 
@@ -250,7 +250,7 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODkyMzgxODksLTE4MDMxNzAyOTQsLT
+eyJoaXN0b3J5IjpbLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLT
 k1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1
 MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LD
 cyMTA3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIx
