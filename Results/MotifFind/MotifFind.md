@@ -213,7 +213,14 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
     14538 STAD_CEF81A6C_B09A_4698_BC93_DC029B9CA17A_X028_S06_PRDM9_bound_peaks.bed
     14357 SKCM_4EDE1486_22DD_4DB9_8CB1_B4A058E459D1_X035_S10_PRDM9_bound_peaks.bed
     13500 LUSC_3AD1EA06_AA53_4C53_B436_4417FA2B8A0E_X031_S10_PRDM9_bound_peaks.bed
-
+## rename fimo.gff of 410 samples
+```bash
+for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
+	fileName=`echo ${file#*MotifFind_fimo/}`; 
+	fileName=`echo ${fileName%_out*}`;
+	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
+done
+```
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -221,11 +228,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMT
-A3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgx
-MTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4MjYsLT
-I2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLTQwMTc0
-NDIzMywyMDA4NTA0NTQ3LDEzNTYwNjE4OSwxNzUyNjA2OCwtOT
-E2NTAzNzYxLDQ1Njc2NjkxOCwxMTUyNTQwMTksLTUzNjgyNDIx
-XX0=
+eyJoaXN0b3J5IjpbMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2ND
+k4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcy
+ODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMyMCwtMT
+AxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2
+MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2MTg5LD
+E3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNTI1NDAx
+OV19
 -->
