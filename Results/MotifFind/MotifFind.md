@@ -161,8 +161,17 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 	84528 ./CESC_peakCalls_fimo_out/fimo.gff
 
 # Rename 
+renameTo_cancerTypeCaseID.Rmd
+# get number of PRDM9-bound peaks
+```bash
+echo -e "ID\texpression\tnumPeaks" > PRDM9ExpressionAndPeaks.txt
 
-
+for ID in $(cut -f 1 /exports/eddie/scratch/s1949868/geneExpression/PRDM9Expression_375samples.txt); do 
+	numPeaks=`wc -l /exports/eddie/scratch/s1949868/PRDM9BoundPeaks_404_Case_ID/${ID}_PRDM9_bound_peaks.bed | awk '{print $1}'`; 
+	expression=`awk '{FS=OFS="\t";if($1=="'$ID'"){print $2}}' /exports/eddie/scratch/s1949868/geneExpression/PRDM9Expression_375samples.txt`; 
+	echo -e "$ID\t$expression\t$numPeaks" >> PRDM9ExpressionAndPeaks.txt
+done
+```
 
 # Step3 Select peaks containing PRDM9 motif occurrences
 script `findPRDM9BoundPeaks.sh`
@@ -235,11 +244,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNz
-k2MDk0MSwxNzMyMTg1MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5
-LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3MCwtMTMzOTQwMjExMCwxMT
-g3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEz
-MjAsLTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLD
-IwODQyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYw
-NjE4OV19
+eyJoaXN0b3J5IjpbNTM0MjYzNDY1LC05NTA5MTkzNjAsODMxMj
+Y2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAxOSwxNzA2NDI5NTI1
+LDMxNjA4MjIzOSwtMTY0OTgwMTc2OCw3MjEwNzY0NzAsLTEzMz
+k0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4MTE1Miw2NTU4MDk3
+MzIsNjM4ODUxMzIwLC0xMDExMjQyODI2LC0yNjM1NDU2NzQsMT
+A5MzY5NjY3MSwyMDg0MjYxODQxLC00MDE3NDQyMzMsMjAwODUw
+NDU0N119
 -->
