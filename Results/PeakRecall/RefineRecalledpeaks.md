@@ -33,8 +33,9 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 410 samples from 404 donors
 Some samples are just different in portion.
+[TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTM2NDc1NjUsLTUyOTc2MzQxOCwxOD
+eyJoaXN0b3J5IjpbLTIxMzczNDM5MjMsLTUyOTc2MzQxOCwxOD
 YyODQ1MzE5LDE0NjY0MjUwMzQsLTEyOTQyMDc2OTYsMTg0ODY1
 MzEwMCwtMTM4NzM3Njg5OF19
 -->
