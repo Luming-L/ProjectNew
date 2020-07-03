@@ -165,9 +165,15 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
 cd /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF
-
+R
 ```
 ```r
+# get all the path of files
+files <- list.files(path ="/exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF",
+                    pattern = "fimo.gff", all.files = FALSE, 
+                    full.names = TRUE, recursive =TRUE, 
+                    ignore.case = FALSE, include.dirs =TRUE, no.. = TRUE)
+         
 ```
 
 
@@ -242,11 +248,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk4MDYyNjcwLC00MDc5NjA5NDEsMTczMj
-E4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2
-OCw3MjEwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMT
-QyMTU4MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQy
-ODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC
-00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYw
-NjhdfQ==
+eyJoaXN0b3J5IjpbMTQwMjcxOTUxOCwtNDA3OTYwOTQxLDE3Mz
+IxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3
+NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcyODcsLT
+E0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMyMCwtMTAxMTI0
+MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2MTg0MS
+wtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2MTg5LDE3NTI2
+MDY4XX0=
 -->
