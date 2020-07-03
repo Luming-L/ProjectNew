@@ -106,7 +106,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo
 done
 ```
 # Output
-**a list of PRDM9 motif occurrences for each of 410 samples**
+## a list of PRDM9 motif occurrences for each of 410 samples
 ```bash
  wc -l * | sort -k1,1nr | head
  ```
@@ -230,7 +230,7 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNjEzNDcyNywxNzMyMTg1MDE5LDE3MD
+eyJoaXN0b3J5IjpbLTQwNzk2MDk0MSwxNzMyMTg1MDE5LDE3MD
 Y0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3
 MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgxMTUyLD
 Y1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4MjYsLTI2MzU0
