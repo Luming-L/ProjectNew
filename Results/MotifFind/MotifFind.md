@@ -97,7 +97,15 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
-# Results
+## rename fimo.gff of 410 samples
+```bash
+for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
+	fileName=`echo ${file#*MotifFind_fimo/}`; 
+	fileName=`echo ${fileName%_out*}`;
+	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
+done
+```
+# Output
 **a list of PRDM9 motif occurrences for each of 410 biological samples**
 ```bash
 wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
@@ -213,14 +221,8 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
     14538 STAD_CEF81A6C_B09A_4698_BC93_DC029B9CA17A_X028_S06_PRDM9_bound_peaks.bed
     14357 SKCM_4EDE1486_22DD_4DB9_8CB1_B4A058E459D1_X035_S10_PRDM9_bound_peaks.bed
     13500 LUSC_3AD1EA06_AA53_4C53_B436_4417FA2B8A0E_X031_S10_PRDM9_bound_peaks.bed
-## rename fimo.gff of 410 samples
-```bash
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
-	fileName=`echo ${file#*MotifFind_fimo/}`; 
-	fileName=`echo ${fileName%_out*}`;
-	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
-done
-```
+
+
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -228,11 +230,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2ND
-k4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcy
-ODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1MTMyMCwtMT
-AxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2OTY2NzEsMjA4NDI2
-MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1NDcsMTM1NjA2MTg5LD
-E3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2OTE4LDExNTI1NDAx
-OV19
+eyJoaXN0b3J5IjpbLTE5MDQ5NDM5NTAsMTcwNjQyOTUyNSwzMT
+YwODIyMzksLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAy
+MTEwLDExODc4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLD
+YzODg1MTMyMCwtMTAxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2
+OTY2NzEsMjA4NDI2MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1ND
+csMTM1NjA2MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2
+OTE4XX0=
 -->
