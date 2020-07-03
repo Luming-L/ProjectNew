@@ -106,7 +106,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo
 done
 ```
 # Output
-**a list of PRDM9 motif occurrences for each of 410 biological samples**
+**a list of PRDM9 motif occurrences for each of 410 samples**
 ```bash
 wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 ```
@@ -230,11 +230,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQ5NDM5NTAsMTcwNjQyOTUyNSwzMT
-YwODIyMzksLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAy
-MTEwLDExODc4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLD
-YzODg1MTMyMCwtMTAxMTI0MjgyNiwtMjYzNTQ1Njc0LDEwOTM2
-OTY2NzEsMjA4NDI2MTg0MSwtNDAxNzQ0MjMzLDIwMDg1MDQ1ND
-csMTM1NjA2MTg5LDE3NTI2MDY4LC05MTY1MDM3NjEsNDU2NzY2
-OTE4XX0=
+eyJoaXN0b3J5IjpbMTczMjE4NTAxOSwxNzA2NDI5NTI1LDMxNj
+A4MjIzOSwtMTY0OTgwMTc2OCw3MjEwNzY0NzAsLTEzMzk0MDIx
+MTAsMTE4NzgwNzI4NywtMTQyMTU4MTE1Miw2NTU4MDk3MzIsNj
+M4ODUxMzIwLC0xMDExMjQyODI2LC0yNjM1NDU2NzQsMTA5MzY5
+NjY3MSwyMDg0MjYxODQxLC00MDE3NDQyMzMsMjAwODUwNDU0Ny
+wxMzU2MDYxODksMTc1MjYwNjgsLTkxNjUwMzc2MSw0NTY3NjY5
+MThdfQ==
 -->
