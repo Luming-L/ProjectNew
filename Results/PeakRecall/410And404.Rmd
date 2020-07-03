@@ -1,0 +1,39 @@
+---
+title: "410 samples and 404 donors"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(plyr)
+library(stringr)
+library(TCGAbiolinks)
+```
+
+```{r}
+# read the "TCGA_identifier_mapping.txt (5 columns, the delimiter is "\t")"
+table <- readr::read_tsv("https://api.gdc.cancer.gov/data/7a3d7067-09d6-4acf-82c8-a1a81febf72c")
+table
+```
+
+```{r}
+bam_prefix <- stringr::str_extract(table$bam_prefix,"[:alnum:]{4}-[:alnum:]{8}-[:alnum:]{4}-[:alnum:]{4}-[:alnum:]{4}-[:alnum:]{12}-[:alnum:]{4}-[:alnum:]{3}")
+Case_ID <- stringr::str_extract(table$Case_ID,"[:alnum:]{4}-[:alnum:]{2}-[:alnum:]{4}-[:alnum:]{3}")
+ID <- data.frame(bam_prefix = bam_prefix, Case_ID = Case_ID, stringsAsFactors = FALSE)
+ID <- ID[!duplicated(ID),]
+ID[duplicated(ID$Case_ID),]
+```
+```{r}
+subset(table, grepl("TCGA-A2-A0T4-01A", Case_ID))
+```
+
+```{r}
+subset(table, grepl("TCGA-AA-A010-01A", Case_ID))
+```
+```{r}
+subset(table, grepl("TCGA-AA-A024-01A", Case_ID))
+```
+
+```{r}
+subset(table, grepl("TCGA-EA-A3HT-01A", Case_ID))
+```
