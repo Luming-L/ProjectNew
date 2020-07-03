@@ -161,22 +161,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 	84528 ./CESC_peakCalls_fimo_out/fimo.gff
 
 # Rename 
-```bash
-qlogin -l h_vmem=8G
-module load igmm/apps/R/3.6.3
-cd /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF
-R
-```
-```r
-library(plyr)
-library(stringr)
-# get all the path of files
-files <- list.files(path ="/exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF",
-                    pattern = "fimo.gff", all.files = FALSE, 
-                    full.names = TRUE, recursive =TRUE, 
-                    ignore.case = FALSE, include.dirs =TRUE, no.. = TRUE)
-         
-```
+
 
 
 # Step3 Select peaks containing PRDM9 motif occurrences
@@ -250,11 +235,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMj
-E4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2
-OCw3MjEwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMT
-QyMTU4MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQy
-ODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0MjYxODQxLC
-00MDE3NDQyMzMsMjAwODUwNDU0NywxMzU2MDYxODksMTc1MjYw
-NjhdfQ==
+eyJoaXN0b3J5IjpbLTk1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNz
+k2MDk0MSwxNzMyMTg1MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5
+LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3MCwtMTMzOTQwMjExMCwxMT
+g3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEz
+MjAsLTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLD
+IwODQyNjE4NDEsLTQwMTc0NDIzMywyMDA4NTA0NTQ3LDEzNTYw
+NjE4OV19
 -->
