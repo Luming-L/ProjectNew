@@ -31,8 +31,10 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 ```
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
+410 samples from 404 donors
+some samples 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0OTM4MTE1MCwxODYyODQ1MzE5LDE0Nj
+eyJoaXN0b3J5IjpbLTUyOTc2MzQxOCwxODYyODQ1MzE5LDE0Nj
 Y0MjUwMzQsLTEyOTQyMDc2OTYsMTg0ODY1MzEwMCwtMTM4NzM3
 Njg5OF19
 -->
