@@ -1,0 +1,66 @@
+---
+title: "generate `PRDM9Expression.txt` and `PRDM9_expression_binding.txt`"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(stringr)
+```
+
+```{r}
+# read numPRDM9MotifInPeaks file
+numPRDM9MotifInPeaks <- readr::read_tsv("PRDM9EP/numPRDM9MotifInPeaks.txt",col_names = TRUE)
+
+# use ID as rownames
+numPRDM9MotifInPeaks <- data.frame(numPRDM9MotifInPeaks,row.names = 1)
+
+# get cancerType_CaseID
+cancerType_CaseID <- rownames(numPRDM9MotifInPeaks)
+
+# get CaseID
+CaseID <- stringr::str_extract(cancerType_CaseID,"[:alnum:]{4}-[:alnum:]{2}-[:alnum:]{4}-[:alnum:]{3}")
+
+# make a dataframe for ID conversion
+convertID <- data.frame(CaseID = CaseID, cancerType_CaseID = cancerType_CaseID, row.names = 1, stringsAsFactors = FALSE)
+```
+
+```{r}
+# read PRDM9 expression file
+PRDM9.expression <- readr::read_tsv("PRDM9EP/PRDM9_htseq_fpkm-uq.tsv", col_names = TRUE)
+# select samples having both RNA-seq and ATAC-seq data
+intersectID <- intersect(x=rownames(convertID),y=colnames(PRDM9.expression))
+PRDM9.expression <- PRDM9.expression[,intersectID]
+# revert dataframe
+PRDM9.expression <- data.frame(t(PRDM9.expression))
+# change colname
+colnames(PRDM9.expression) <- "PRDM9Expression"
+# change rownames to cancerType_CaseID
+rownames(PRDM9.expression) <- convertID[intersectID,]
+PRDM9.expression
+```
+
+```{r}
+# combine PRDM9 expression value and numnumPRDM9MotifInPeaks to one dataframe
+PRDM9_expression_binding <- cbind(PRDM9.expression,numPRDM9MotifInPeaks[convertID[intersectID,],])
+colnames(PRDM9_expression_binding) <- c("PRDM9Expression","numPRDM9MotifInPeaks")
+PRDM9_expression_binding
+```
+
+```{r}
+# write files
+write.table(PRDM9.expression,
+	file="PRDM9Expression.txt",
+	sep = "\t",
+	append=TRUE,row.names = TRUE,col.names = TRUE,
+	quote =FALSE
+	)
+
+write.table(PRDM9_expression_binding,
+	file="PRDM9_expression_binding.txt",
+	sep = "\t",
+	append=TRUE,row.names = TRUE,col.names = TRUE,
+	quote =FALSE
+	)
+```
+
