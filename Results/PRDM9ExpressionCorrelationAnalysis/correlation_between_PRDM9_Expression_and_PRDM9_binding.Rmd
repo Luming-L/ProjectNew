@@ -1,0 +1,50 @@
+---
+title: "correlate PRDM9 Expression and PRDM9 binding"
+output: html_notebook
+---
+
+# table containing PRDM9Expression and numPRDM9MotifInPeaks
+```{r}
+PRDM9 <- read.delim("PRDM9_expression_binding.txt", sep = "\t")
+# make a new column to store cancerType
+PRDM9$cancerType <- substr(rownames(PRDM9), 1,4)
+PRDM9
+```
+
+# correlation between PRDM9Expression and numPRDM9MotifInPeaks
+## correlation analysis
+```{r}
+cor.test(x = PRDM9$PRDM9Expression, 
+         y = PRDM9$numPRDM9MotifInPeaks)
+```
+
+## scatter plot
+```{r}
+plot(PRDM9$PRDM9Expression, PRDM9$numPRDM9MotifInPeaks, 
+     main="correlation between PRDM9 expression and PRDM9 binding",
+     xlab="expression", ylab="numPRDM9MotifInPeaks", pch=19)
+```
+# correlation in samples having PRDM9 expression
+```{r}
+cor.test(x = PRDM9[PRDM9$PRDM9Expression != 0,]$PRDM9Expression, 
+         y = PRDM9[PRDM9$PRDM9Expression != 0,]$numPRDM9MotifInPeaks)
+```
+
+```{r}
+wilcox.test(x = PRDM9[PRDM9$PRDM9Expression != 0,]$numPRDM9MotifInPeaks, 
+            y = PRDM9[PRDM9$PRDM9Expression == 0,]$numPRDM9MotifInPeaks,
+            paired = FALSE)
+```
+
+```{r}
+boxplot(PRDM9[PRDM9$PRDM9Expression != 0,]$numPRDM9MotifInPeaks, PRDM9[PRDM9$PRDM9Expression == 0,]$numPRDM9MotifInPeaks,
+        main = "Number of PRDM9 binding sites in peaks",
+        ylab = "numPRDM9MotifInPeaks")
+
+```
+
+
+
+
+
+
