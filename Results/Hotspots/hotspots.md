@@ -1,4 +1,4 @@
-
+## download hotspots
 ```bash
 wget https://science.sciencemag.org/highwire/filestream/596360/field_highwire_adjunct_files/0/1256442_DatafileS1.txt
 # extract A_hotspots_union, i.e.Hotspots found in at least one of the AA1, AA2, AB1 and AB2 individuals
@@ -23,5 +23,5 @@ gzip -d hg19ToHg38.over.chain.gz
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODE3MDExOTddfQ==
+eyJoaXN0b3J5IjpbLTk1OTk3NTk3N119
 -->
