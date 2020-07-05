@@ -3,8 +3,8 @@ count PRDM9 binding sites found in both DSB hotspots (testis) and ATAC-seq peaks
 humanDSBhotspots_AA_AB.txt
 PRDM9 motif occurrences in ATAC-seq peaks for each sample (404)
 (e.g. ACCx_TCGA-OR-A5J2-01A_peakCalls_fimo.gff)
+## download humanDSBhotspots file
 ```bash
-# download 
 wget https://science.sciencemag.org/highwire/filestream/596360/field_highwire_adjunct_files/0/1256442_DatafileS1.txt
 # extract A_hotspots_union, i.e.Hotspots found in at least one of the AA1, AA2, AB1 and AB2 individuals
 grep -v ^# humanDSBhotspots.txt | awk '$17 ==1 {print}' | wc -l # 40598
@@ -12,9 +12,8 @@ grep -v ^# humanDSBhotspots.txt | awk '{FS=OFS="\t";if($17==1){print $1,$2,$3};}
 wc -l humanDSBhotspots_AA_AB.txt # 40598 humanDSBhotspots_AA_AB.txt
 ```
 [Pratto et al. 2014](https://science.sciencemag.org/content/suppl/2014/11/12/346.6211.1256442.DC1?_ga=2.236340424.892408700.1591381155-1358157743.1587248675)
+## liftOver: convert coordinates from one assembly to another.
 
-## liftOver
-convert coordinates from one assembly to another.
 ```bash
 # download liftOver
 wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/c
@@ -28,5 +27,5 @@ gzip -d hg19ToHg38.over.chain.gz
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk0NDI3MDgsLTk1OTk3NTk3N119
+eyJoaXN0b3J5IjpbLTE2ODYzNDg5MDksLTk1OTk3NTk3N119
 -->
