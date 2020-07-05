@@ -2,6 +2,7 @@ count PRDM9 binding sites found in both DSB hotspots (testis) and ATAC-seq peaks
 # input
 humanDSBhotspots_AA_AB.txt
 
+(ACCx_TCGA-OR-A5J2-01A_peakCalls_fimo.gff)
 ```bash
 wget https://science.sciencemag.org/highwire/filestream/596360/field_highwire_adjunct_files/0/1256442_DatafileS1.txt
 # extract A_hotspots_union, i.e.Hotspots found in at least one of the AA1, AA2, AB1 and AB2 individuals
@@ -26,5 +27,5 @@ gzip -d hg19ToHg38.over.chain.gz
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NTYyODc0MywtOTU5OTc1OTc3XX0=
+eyJoaXN0b3J5IjpbLTMzNDgyMzAyNSwtOTU5OTc1OTc3XX0=
 -->
