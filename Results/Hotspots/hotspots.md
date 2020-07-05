@@ -32,10 +32,11 @@ gzip -d hg19ToHg38.over.chain.gz
 ## 
 ```bash
 bedtools intersect -a $file -b /home/s1949868/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt -f 1.0 -u > "${fileName}_MotifInHotspotsAndPeaks.gff"
+numMotifInHotspotsAndPeaks=`wc -l "${fileName}_MotifInHotspotsAndPeaks.gff" | awk '{print $1}'`
 ```
 # Output
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM1MTczMDEyLC0yNDIwNTMzMzUsLTk1OT
-k3NTk3N119
+eyJoaXN0b3J5IjpbMTQ3NzcyOTI2NCwtMjQyMDUzMzM1LC05NT
+k5NzU5NzddfQ==
 -->
