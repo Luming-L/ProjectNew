@@ -1,5 +1,5 @@
 
-This step will output a list of PRDM9 motif occurrences for each of 410 biological samples.
+This step will output a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 410 biological samples.
 # Step1 Refine recalled peaks 
 Refine recalled peaks to get a list of peaks for each biological sample
 ## input files
@@ -250,11 +250,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLT
-k1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1
-MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LD
-cyMTA3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIx
-NTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEyNDI4Mj
-YsLTI2MzU0NTY3NCwxMDkzNjk2NjcxLDIwODQyNjE4NDEsLTQw
-MTc0NDIzM119
+eyJoaXN0b3J5IjpbNjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xOD
+AzMTcwMjk0LC05NTA5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5
+NDEsMTczMjE4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMT
+Y0OTgwMTc2OCw3MjEwNzY0NzAsLTEzMzk0MDIxMTAsMTE4Nzgw
+NzI4NywtMTQyMTU4MTE1Miw2NTU4MDk3MzIsNjM4ODUxMzIwLC
+0xMDExMjQyODI2LC0yNjM1NDU2NzQsMTA5MzY5NjY3MSwyMDg0
+MjYxODQxXX0=
 -->
