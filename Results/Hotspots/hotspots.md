@@ -26,9 +26,16 @@ gzip -d hg19ToHg38.over.chain.gz
 ~/Tools/liftOver humanDSBhotspots_AA_AB.txt ~/Tools/hg19ToHg38.over.chain humanDSBhotspots_AA_AB.hg38.txt unMapped
 ```
 # Process
-
+```bash
+ qsub ~/countMotifInHotspotsAndPeaks.sh
+```
+## 
+```bash
+bedtools intersect -a $file -b /home/s1949868/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt -f 1.0 -u > "${fileName}_MotifInHotspotsAndPeaks.gff"
+```
 # Output
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MjA1MzMzNSwtOTU5OTc1OTc3XX0=
+eyJoaXN0b3J5IjpbMzM1MTczMDEyLC0yNDIwNTMzMzUsLTk1OT
+k3NTk3N119
 -->
