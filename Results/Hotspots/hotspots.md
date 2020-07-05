@@ -1,3 +1,5 @@
+count PRDM9 motif binding sites found in both ATAC-seq peaks
+
 ## download hotspots
 ```bash
 wget https://science.sciencemag.org/highwire/filestream/596360/field_highwire_adjunct_files/0/1256442_DatafileS1.txt
@@ -23,5 +25,5 @@ gzip -d hg19ToHg38.over.chain.gz
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1OTk3NTk3N119
+eyJoaXN0b3J5IjpbLTgzNzMyMzY1LC05NTk5NzU5NzddfQ==
 -->
