@@ -1,4 +1,4 @@
-count PRDM9 binding sites found in both DSB hotspots and ATAC-seq peaks for each s
+count PRDM9 binding sites found in both DSB hotspots (testis) and ATAC-seq peaks for each sample
 
 ## download hotspots
 ```bash
@@ -25,5 +25,5 @@ gzip -d hg19ToHg38.over.chain.gz
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY0NDI1MTI3LC05NTk5NzU5NzddfQ==
+eyJoaXN0b3J5IjpbMTYwNTM3MzY2MSwtOTU5OTc1OTc3XX0=
 -->
