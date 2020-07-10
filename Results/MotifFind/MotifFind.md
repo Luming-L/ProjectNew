@@ -34,7 +34,7 @@ done
 ```bash
 echo -e "ID\tnumPRDM9MotifInPeaks" > numPRDM9MotifInPeaks.txt
 # count PRDM9 binding sites in peaks for each sample
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/*_fimo.gff); do
+for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/*_fimo.gff); do
 	echo $file
 
 	ID=`echo ${file#*allFimoGFF_CaseID/}`; 
@@ -93,11 +93,11 @@ a list of PRDM9 motif occurrences for each of 23 cancer types
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MjcwODcwLDE0MDk3MjUwNiwxNDYwND
-Y1MTg5LC0xNTQyNjU0MzQ1LDgwNjI2MjM3MywyOTQyMjMyNTUs
-MTQxOTU2NTg1MywtNzM4NzQ2MDkwLDE2NTU0MTExMzQsMjYxNT
-QyNTk2LDM3NDQwMTYwLDE0NDQwNjcyNzQsNjA4ODA3NjMyLDEw
-Nzk0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OTUzODgsLTEyMDE3MT
-AxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2MCw4MzEyNjYzMDZd
-fQ==
+eyJoaXN0b3J5IjpbLTEzNDY2ODkwMjcsMTY2MjcwODcwLDE0MD
+k3MjUwNiwxNDYwNDY1MTg5LC0xNTQyNjU0MzQ1LDgwNjI2MjM3
+MywyOTQyMjMyNTUsMTQxOTU2NTg1MywtNzM4NzQ2MDkwLDE2NT
+U0MTExMzQsMjYxNTQyNTk2LDM3NDQwMTYwLDE0NDQwNjcyNzQs
+NjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OT
+UzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2
+MF19
 -->
