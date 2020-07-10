@@ -1,17 +1,17 @@
-# 
-# Input
+# MotifFind for 404 samples
+## Input
 Peak calls in each sample (404, the output of peakRefine.py)
-# Process
-## Find PRDM9 motif occurrences
+## Process
+### Find PRDM9 motif occurrences
 ```bash
 qsub ~/fimo_batch.sh
 ```
-### extracts sequences in FASTA by `bedtools  getfasta`
+#### extracts sequences in FASTA by `bedtools  getfasta`
 `-fo`: Specify an output file name.
 ```bash
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.fasta"
 ```
-### find PRDM9 motif occurrences by `fimo`
+#### find PRDM9 motif occurrences by `fimo`
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
 
 `--thresh num`: The threshold is a p-value of 1e-4.
@@ -22,7 +22,7 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.f
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
-## Rename files
+### Rename files
 ```bash
 for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
 	fileName=`echo ${file#*MotifFind_fimo/}`; 
@@ -30,11 +30,12 @@ for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo
 	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
 done
 ```
-
-# Output
+## Output
 a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
-
-
+# MotifFind for 23 cancerTypes
+## Input
+## Process
+## Output
 
 **By the way, a list of PRDM9 motif occurrences for each of 23 cancer types**
 ```bash
@@ -129,11 +130,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODU4Mjc0MywxNDE5NTY1ODUzLC03Mz
-g3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAs
-MTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOT
-gwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5
-NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3Mz
-IxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3
-NjhdfQ==
+eyJoaXN0b3J5IjpbLTEwMzkxODIzMzQsMTQxOTU2NTg1MywtNz
+M4NzQ2MDkwLDE2NTU0MTExMzQsMjYxNTQyNTk2LDM3NDQwMTYw
+LDE0NDQwNjcyNzQsNjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMD
+k4MDkzOCw2MzE4OTUzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAy
+OTQsLTk1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNz
+MyMTg1MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAx
+NzY4XX0=
 -->
