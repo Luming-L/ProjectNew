@@ -37,6 +37,13 @@ a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
 ## Input
 Cancer type-specific peak calls (23)
 ## Process
+### transform 
+```bash
+for file in $(ls /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/*_peakCalls.txt); do
+> fileName=`basename -s ".txt" $file`
+> awk '{OFS=FS="\t";if($1~/^chr/){print $1,$2,$3,$4}}' $file > "${fileName}.bed";
+> done
+```
 ### Find PRDM9 motif occurrences
 ### Rename files
 ## Output
@@ -137,7 +144,7 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzODIwMTcxMSwyOTQyMjMyNTUsMTQxOT
+eyJoaXN0b3J5IjpbMTg1MjYyMzI1MywyOTQyMjMyNTUsMTQxOT
 U2NTg1MywtNzM4NzQ2MDkwLDE2NTU0MTExMzQsMjYxNTQyNTk2
 LDM3NDQwMTYwLDE0NDQwNjcyNzQsNjA4ODA3NjMyLDEwNzk0MT
 g5MzYsMTcyMDk4MDkzOCw2MzE4OTUzODgsLTEyMDE3MTAxOTAs
