@@ -5,13 +5,12 @@ Peak calls in each sample (404, the output of peakRefine.py)
 ```bash
 qsub ~/selectPRDM9BoundPeaks.sh
 ```
-##
+## 
+```bash
+bedtools intersect -a /exports/eddie/scratch/s1949868/RefineRecalledPeaks/allPeakCalls_CaseID/"${fileName}_peakCalls.bed" -b $file -F 1.0 -u > "${fileName}_PRDM9_bound_peaks.bed"
+```
 # Output
 
-script `findPRDM9BoundPeaks.sh`
-```bash
-bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/bed/"${fileName}.bed" -b $file -u -F 1.0 > "${fileName}_PRDM9_bound_peaks.bed"
-```
 ## 23 cancerType
 ```bash
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
@@ -50,6 +49,6 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDgzMjAxMCwtNDUzNzM5NTkxLDI5NT
+eyJoaXN0b3J5IjpbLTcwMTk1MjQzOCwtNDUzNzM5NTkxLDI5NT
 kwMDk0MiwyMDQ3MTA5NzQwXX0=
 -->
