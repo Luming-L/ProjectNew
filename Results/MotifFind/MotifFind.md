@@ -1,19 +1,8 @@
 This step will output a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 410 biological samples.
 
 
-### refine recalled peaks by using `bedtools intersect`
-1. for each technical replicate (796), the minimum overlap between cancer type peaks and sample recalled peaks should be more than 60% of cancer type peaks. (set by `-f 0.6`) Then output these cancer type peaks.
-2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
-3. finally get a list of peaks for each of 410 biological samples
 
-**options**
-`-f`： Minimum overlap required as **a fraction of A**. 
 
-`-c`: For each entry in A, report the number of hits in B while restricting to -f.
-
-`-wa`: Write the original entry in A for each overlap.
-
-`-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. 
 
 
 ```bash
@@ -228,7 +217,7 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMjI4MTI0MSw2MDg4MDc2MzIsMTA3OT
+eyJoaXN0b3J5IjpbLTE2MDk2MjgzOCw2MDg4MDc2MzIsMTA3OT
 QxODkzNiwxNzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5
 MCwtMTgwMzE3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtND
 A3OTYwOTQxLDE3MzIxODUwMTksMTcwNjQyOTUyNSwzMTYwODIy
