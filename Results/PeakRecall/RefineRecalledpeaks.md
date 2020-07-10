@@ -45,6 +45,7 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 ```
 ## Rename PeakCalls of 410 samples
 ```r
+table <- readr::read_tsv("https://api.gdc.cancer.gov/data/7a3d7067-09d6-4acf-82c8-a1a81febf72c")
 
 ```
 
@@ -54,8 +55,9 @@ ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ3NzgzNTEsLTE4MTA2NzU3MzMsNDkwMj
-kyOTI2LDE1NDc5OTYxODcsLTQzOTg2NDEzMywtMjEzNzM0Mzky
-MywtNTI5NzYzNDE4LDE4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMT
-I5NDIwNzY5NiwxODQ4NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
+eyJoaXN0b3J5IjpbLTY0OTg0OTA3MCwtMTgxMDY3NTczMyw0OT
+AyOTI5MjYsMTU0Nzk5NjE4NywtNDM5ODY0MTMzLC0yMTM3MzQz
+OTIzLC01Mjk3NjM0MTgsMTg2Mjg0NTMxOSwxNDY2NDI1MDM0LC
+0xMjk0MjA3Njk2LDE4NDg2NTMxMDAsLTEzODczNzY4OThdfQ==
+
 -->
