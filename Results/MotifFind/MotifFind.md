@@ -3,6 +3,10 @@ This step will output a list of PRDM9 motif occurrences in ATAC-seq peaks for ea
 # Input
 Peak calls in each sample (404, the output of peakRefine.py)
 # Process
+## Find PRDM9 motif occurrences
+```bash
+fimo_batch.sh
+```
 
 # Output
 
@@ -10,7 +14,7 @@ Peak calls in each sample (404, the output of peakRefine.py)
 
 
 
-# Find PRDM9 motif occurrences
+
 The script `fimo_batch.sh` includes these two steps.
 ## extracts sequences in FASTA by `bedtools  getfasta`
 **version**: BEDTools/2.27.1
@@ -174,11 +178,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mzk3ODE3MTEsMzc0NDAxNjAsMTQ0ND
-A2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOTgwOTM4
-LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5NCwtOT
-UwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUw
-MTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3NjgsNz
-IxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1
-ODExNTJdfQ==
+eyJoaXN0b3J5IjpbMTQ0NTI4NTI5MywzNzQ0MDE2MCwxNDQ0MD
+Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzgs
+NjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0LC05NT
+A5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAx
+OSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2OCw3Mj
+EwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4
+MTE1Ml19
 -->
