@@ -2,7 +2,10 @@
 PRDM9 motif occurrences in each sample (404, the output of fimo_batch.sh)
 Peak calls in each sample (404, the output of peakRefine.py)
 # Process
-
+```bash
+qsub ~/selectPRDM9BoundPeaks.sh
+```
+##
 # Output
 
 script `findPRDM9BoundPeaks.sh`
@@ -47,6 +50,6 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MzczOTU5MSwyOTU5MDA5NDIsMjA0Nz
-EwOTc0MF19
+eyJoaXN0b3J5IjpbMTQ3NDgzMjAxMCwtNDUzNzM5NTkxLDI5NT
+kwMDk0MiwyMDQ3MTA5NzQwXX0=
 -->
