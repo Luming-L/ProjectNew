@@ -77,16 +77,15 @@ file.rename(file, to) # rename files
 })
 ```
 # Output
-404 _peakCalls.bed
+404 `_peakCalls.bed` files
 keep one sample for each donor (404 donors)
 Samples from the same donor are just different in portion.
-
 # Reference
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MjY1ODk0OSwxMTEzMDgzNzM4LC02ND
-k4NDkwNzAsLTE4MTA2NzU3MzMsNDkwMjkyOTI2LDE1NDc5OTYx
-ODcsLTQzOTg2NDEzMywtMjEzNzM0MzkyMywtNTI5NzYzNDE4LD
-E4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMTI5NDIwNzY5NiwxODQ4
-NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
+eyJoaXN0b3J5IjpbMjkyODg3MTIwLDExMTMwODM3MzgsLTY0OT
+g0OTA3MCwtMTgxMDY3NTczMyw0OTAyOTI5MjYsMTU0Nzk5NjE4
+NywtNDM5ODY0MTMzLC0yMTM3MzQzOTIzLC01Mjk3NjM0MTgsMT
+g2Mjg0NTMxOSwxNDY2NDI1MDM0LC0xMjk0MjA3Njk2LDE4NDg2
+NTMxMDAsLTEzODczNzY4OThdfQ==
 -->
