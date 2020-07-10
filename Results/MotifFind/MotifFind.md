@@ -124,7 +124,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseI
 done
 ```
 
-# Step3 Select peaks containing PRDM9 motif occurrences
+
 script `findPRDM9BoundPeaks.sh`
 ```bash
 bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/bed/"${fileName}.bed" -b $file -u -F 1.0 > "${fileName}_PRDM9_bound_peaks.bed"
@@ -195,11 +195,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OT
-QxODkzNiwxNzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5
-MCwtMTgwMzE3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtND
-A3OTYwOTQxLDE3MzIxODUwMTksMTcwNjQyOTUyNSwzMTYwODIy
-MzksLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLD
-ExODc4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1
-MTMyMF19
+eyJoaXN0b3J5IjpbOTI4MjQwNjYxLDE0NDQwNjcyNzQsNjA4OD
+A3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OTUzODgs
+LTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2MCw4Mz
+EyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1MDE5LDE3MDY0Mjk1
+MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3MCwtMT
+MzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgw
+OTczMl19
 -->
