@@ -21,7 +21,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/*_PRD
 	ID=`echo ${ID%_PRDM9_bound_peaks*}`;
 	echo $ID
 
-	numPRDM9BoundPeaks=`wc -l $file` | awk `{print $1}`; 
+	numPRDM9BoundPeaks=`wc -l $file | awk '{print $1}'`; 
 
 	echo -e "$ID\t$numPRDM9BoundPeaks" >> numPRDM9BoundPeaks.txt
 done
@@ -47,7 +47,7 @@ a set of PRDM9-bound peaks for each cancerType
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyMDg3OTUwLC0xOTU3NzYxNTE5LC0xND
+eyJoaXN0b3J5IjpbNzQ1ODYyMzEyLC0xOTU3NzYxNTE5LC0xND
 Q2MzA4OTkxLC05Nzk1NjQxMTIsMTYzOTEyMTY2NSwtNDUzNzM5
 NTkxLDI5NTkwMDk0MiwyMDQ3MTA5NzQwXX0=
 -->
