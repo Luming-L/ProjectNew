@@ -134,29 +134,7 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-spec
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 ```
-1080239 total
 
-	82325 BRCA_peakCalls_PRDM9_bound_peaks.bed
-	58338 KIRP_peakCalls_PRDM9_bound_peaks.bed
-	57393 LUAD_peakCalls_PRDM9_bound_peaks.bed
-	56079 ESCA_peakCalls_PRDM9_bound_peaks.bed
-	53380 COAD_peakCalls_PRDM9_bound_peaks.bed
-	53233 STAD_peakCalls_PRDM9_bound_peaks.bed
-	50633 LUSC_peakCalls_PRDM9_bound_peaks.bed
-	49255 LIHC_peakCalls_PRDM9_bound_peaks.bed
-	48382 BLCA_peakCalls_PRDM9_bound_peaks.bed
-...
-
-	42171 TGCT_peakCalls_PRDM9_bound_peaks.bed
-	41971 THCA_peakCalls_PRDM9_bound_peaks.bed
-	41476 PCPG_peakCalls_PRDM9_bound_peaks.bed
-	41062 SKCM_peakCalls_PRDM9_bound_peaks.bed
-	40421 ACC_peakCalls_PRDM9_bound_peaks.bed
-	39970 LGG_peakCalls_PRDM9_bound_peaks.bed
-	38538 GBM_peakCalls_PRDM9_bound_peaks.bed
-	36184 MESO_peakCalls_PRDM9_bound_peaks.bed
-	35584 CHOL_peakCalls_PRDM9_bound_peaks.bed
-	30652 CESC_peakCalls_PRDM9_bound_peaks.bed
 
 ## 410 samples
 ```bash
@@ -195,11 +173,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI4MjQwNjYxLDE0NDQwNjcyNzQsNjA4OD
-A3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OTUzODgs
-LTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2MCw4Mz
-EyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1MDE5LDE3MDY0Mjk1
-MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3MCwtMT
-MzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgw
-OTczMl19
+eyJoaXN0b3J5IjpbMzc0NDAxNjAsMTQ0NDA2NzI3NCw2MDg4MD
+c2MzIsMTA3OTQxODkzNiwxNzIwOTgwOTM4LDYzMTg5NTM4OCwt
+MTIwMTcxMDE5MCwtMTgwMzE3MDI5NCwtOTUwOTE5MzYwLDgzMT
+I2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUwMTksMTcwNjQyOTUy
+NSwzMTYwODIyMzksLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMz
+M5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5
+NzMyXX0=
 -->
