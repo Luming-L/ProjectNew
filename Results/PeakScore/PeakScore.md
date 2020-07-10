@@ -1,12 +1,8 @@
 ## download files
 ```bash
-# README
-wget https://api.gdc.cancer.gov/data/416324da-d838-4328-8243-065c19d95093
-mv 416324da-d838-4328-8243-065c19d95093 README_PeakCalls
-# All cancer type-specific peak sets (include PeakScore)
-wget https://api.gdc.cancer.gov/data/71ccfc55-b428-4a04-bb5a-227f7f3bf91c
-unzip 71ccfc55-b428-4a04-bb5a-227f7f3bf91c
+# Cancer_Type-specific_Count_Matrices_log2norm_counts
+wget https://api.gdc.cancer.gov/data/38b8f311-f3a4-4746-9829-b8e3edb9c157
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDEzMzk2MjddfQ==
+eyJoaXN0b3J5IjpbMTg0MjI1NTc5MiwtMTQ0MTMzOTYyN119
 -->
