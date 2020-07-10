@@ -15,6 +15,9 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/RefineRecalledPeaks/allPea
 a set of PRDM9-bound peaks for each sample
 # Select PRDM9-bound peaks for 23 cancerTypes
 ## Input
+PRDM9 motif occurrences in each cancer type (23, the output of fimo_batch.sh)
+Peak calls in each cancer type (404, the output of peakRefine.py)
+
 ## Process
 ## Output
 ```bash
@@ -27,6 +30,6 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDY5MTkyMTcsMTYzOTEyMTY2NSwtND
-UzNzM5NTkxLDI5NTkwMDk0MiwyMDQ3MTA5NzQwXX0=
+eyJoaXN0b3J5IjpbMTI5NTYwMDczNywxNjM5MTIxNjY1LC00NT
+M3Mzk1OTEsMjk1OTAwOTQyLDIwNDcxMDk3NDBdfQ==
 -->
