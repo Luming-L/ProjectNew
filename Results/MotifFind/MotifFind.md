@@ -7,15 +7,7 @@ Peak calls in each sample (404, the output of peakRefine.py)
 ```bash
 fimo_batch.sh
 ```
-
-# Output
-
-
-
-
-
-
-## extracts sequences in FASTA by `bedtools  getfasta`
+### extracts sequences in FASTA by `bedtools  getfasta`
 
 `-fo`: Specify an output file name.
 
@@ -23,7 +15,7 @@ fimo_batch.sh
 ```bash
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.fasta"
 ```
-## find PRDM9 motif occurrences by `fimo`
+### find PRDM9 motif occurrences by `fimo`
 **version**: meme/4.11.1
 
 **options**
@@ -44,6 +36,17 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
+
+
+# Output
+
+
+
+
+
+
+
+
 
 
 # Output
@@ -174,11 +177,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYxNTQyNTk2LDM3NDQwMTYwLDE0NDQwNj
-cyNzQsNjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2
-MzE4OTUzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MD
-kxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1MDE5
-LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMT
-A3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgx
-MTUyXX0=
+eyJoaXN0b3J5IjpbMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0ND
+AxNjAsMTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwx
+NzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMz
+E3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQx
+LDE3MzIxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2ND
+k4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcy
+ODddfQ==
 -->
