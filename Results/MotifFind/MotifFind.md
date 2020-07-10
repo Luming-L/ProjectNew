@@ -30,6 +30,22 @@ for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo
 	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/${fileName}.gff
 done
 ```
+### get number of PRDM9 binding sites in peaks
+```bash
+echo -e "ID\tnumPRDM9MotifInPeaks" > numPRDM9MotifInPeaks.txt
+# count PRDM9 binding sites in peaks for each sample
+for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/*_fimo.gff); do
+	echo $file
+
+	ID=`echo ${file#*allFimoGFF_CaseID/}`; 
+	ID=`echo ${ID%_peakCalls_fimo*}`;
+	echo $ID
+
+	numPRDM9MotifInPeaks=`grep -v "#" $file | wc -l`; 
+
+	echo -e "$ID\t$numPRDM9MotifInPeaks" >> numPRDM9MotifInPeaks.txt
+done
+```
 ## Output
 404 `_peakCalls_fimo.gff`
 a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
@@ -64,22 +80,8 @@ a list of PRDM9 motif occurrences for each of 23 cancer types
 
 
 
-# get number of PRDM9 binding sites in peaks
-```bash
-echo -e "ID\tnumPRDM9MotifInPeaks" > numPRDM9MotifInPeaks.txt
-# count PRDM9 binding sites in peaks for each sample
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/*_fimo.gff); do
-	echo $file
 
-	ID=`echo ${file#*allFimoGFF_CaseID/}`; 
-	ID=`echo ${ID%_peakCalls_fimo*}`;
-	echo $ID
 
-	numPRDM9MotifInPeaks=`grep -v "#" $file | wc -l`; 
-
-	echo -e "$ID\t$numPRDM9MotifInPeaks" >> numPRDM9MotifInPeaks.txt
-done
-```
 
 
 
@@ -91,11 +93,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwOTcyNTA2LDE0NjA0NjUxODksLTE1ND
-I2NTQzNDUsODA2MjYyMzczLDI5NDIyMzI1NSwxNDE5NTY1ODUz
-LC03Mzg3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0ND
-AxNjAsMTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwx
-NzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMz
-E3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQx
-XX0=
+eyJoaXN0b3J5IjpbMTY2MjcwODcwLDE0MDk3MjUwNiwxNDYwND
+Y1MTg5LC0xNTQyNjU0MzQ1LDgwNjI2MjM3MywyOTQyMjMyNTUs
+MTQxOTU2NTg1MywtNzM4NzQ2MDkwLDE2NTU0MTExMzQsMjYxNT
+QyNTk2LDM3NDQwMTYwLDE0NDQwNjcyNzQsNjA4ODA3NjMyLDEw
+Nzk0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OTUzODgsLTEyMDE3MT
+AxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2MCw4MzEyNjYzMDZd
+fQ==
 -->
