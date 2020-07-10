@@ -22,6 +22,9 @@ for file in $(ls ./*insertions.peaks.bed); do sort -k1,1 -k2,2n $file | awk '{FS
 echo "sort done: $(date)"
 ```
 ## Refine peaks by overlapping with cancer type-specific peak sets
+```bash
+qsub ~/peakRefine_batch.sh
+```
 ```python
 if bioSample_dict[sample] == 1: # 1 technical replicate for a ID
 	os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -u > " + path + "/" + sample+"_peakCalls.bed")
@@ -34,7 +37,8 @@ ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTg2NDEzMywtMjEzNzM0MzkyMywtNT
-I5NzYzNDE4LDE4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMTI5NDIw
-NzY5NiwxODQ4NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
+eyJoaXN0b3J5IjpbMTU0Nzk5NjE4NywtNDM5ODY0MTMzLC0yMT
+M3MzQzOTIzLC01Mjk3NjM0MTgsMTg2Mjg0NTMxOSwxNDY2NDI1
+MDM0LC0xMjk0MjA3Njk2LDE4NDg2NTMxMDAsLTEzODczNzY4OT
+hdfQ==
 -->
