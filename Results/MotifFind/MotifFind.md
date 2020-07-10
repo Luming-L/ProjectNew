@@ -8,7 +8,6 @@ Peak calls in each sample (404, the output of peakRefine.py)
 qsub ~/fimo_batch.sh
 ```
 ### extracts sequences in FASTA by `bedtools  getfasta`
-
 `-fo`: Specify an output file name.
 ```bash
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.fasta"
@@ -127,11 +126,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDg0NTU0MywxNDE5NTY1ODUzLC03Mz
-g3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAs
-MTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOT
-gwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5
-NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3Mz
-IxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3
-NjhdfQ==
+eyJoaXN0b3J5IjpbMTU3NTMyNDg3LDE0MTk1NjU4NTMsLTczOD
+c0NjA5MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwx
+NDQ0MDY3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5OD
+A5MzgsNjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0
+LC05NTA5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMj
+E4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2
+OF19
 -->
