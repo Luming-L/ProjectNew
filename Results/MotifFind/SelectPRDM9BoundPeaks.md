@@ -11,6 +11,8 @@ qsub ~/selectPRDM9BoundPeaks.sh
 bedtools intersect -a /exports/eddie/scratch/s1949868/RefineRecalledPeaks/allPeakCalls_CaseID/"${fileName}_peakCalls.bed" -b $file -F 1.0 -u > "${fileName}_PRDM9_bound_peaks.bed"
 ```
 ## Output
+404 `_PRDM9_bound_peaks.bed` files
+
 # Select PRDM9-bound peaks for 23 cancerTypes
 ```bash
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
@@ -22,6 +24,6 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzOTEyMTY2NSwtNDUzNzM5NTkxLDI5NT
-kwMDk0MiwyMDQ3MTA5NzQwXX0=
+eyJoaXN0b3J5IjpbMTgxMDkyODMzNCwxNjM5MTIxNjY1LC00NT
+M3Mzk1OTEsMjk1OTAwOTQyLDIwNDcxMDk3NDBdfQ==
 -->
