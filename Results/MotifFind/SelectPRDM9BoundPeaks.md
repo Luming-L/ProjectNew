@@ -17,13 +17,13 @@ echo -e "ID\tnumPRDM9BoundPeaks" > numPRDM9BoundPeaks.txt
 for file in $(ls /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/*_PRDM9_bound_peaks.bed); do
 	echo $file
 
-	ID=`echo ${file#*allFimoGFF_CaseID/}`; 
-	ID=`echo ${ID%_peakCalls_fimo*}`;
+	ID=`echo ${file#*SelectPRDM9BoundPeaks_404/}`; 
+	ID=`echo ${ID%_PRDM9_bound_peaks*}`;
 	echo $ID
 
-	numPRDM9MotifInPeaks=`grep -v "#" $file | wc -l`; 
+	numPRDM9BoundPeaks=`grep -v "#" $file | wc -l`; 
 
-	echo -e "$ID\t$numPRDM9MotifInPeaks" >> numPRDM9MotifInPeaks.txt
+	echo -e "$ID\t$numPRDM9BoundPeaks" >> numPRDM9BoundPeaks.txt
 done
 ```
 ## Output
@@ -47,7 +47,7 @@ a set of PRDM9-bound peaks for each cancerType
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDU3OTA0NzcsLTE0NDYzMDg5OTEsLT
+eyJoaXN0b3J5IjpbLTE5NTc3NjE1MTksLTE0NDYzMDg5OTEsLT
 k3OTU2NDExMiwxNjM5MTIxNjY1LC00NTM3Mzk1OTEsMjk1OTAw
 OTQyLDIwNDcxMDk3NDBdfQ==
 -->
