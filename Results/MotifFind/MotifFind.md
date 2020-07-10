@@ -50,8 +50,8 @@ qsub ~/fimo_batch.sh
 ```
 ### Rename files
 ```bash
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
-	fileName=`echo ${file#*MotifFind_fimo/}`; 
+for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo_23/*_peakCalls_fimo_out/fimo.gff); do
+	fileName=`echo ${file#*MotifFind_fimo_23/}`; 
 	fileName=`echo ${fileName%_out*}`;
 	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/${fileName}.gff
 done
@@ -62,27 +62,6 @@ a list of PRDM9 motif occurrences for each of 23 cancer types
 
 
 
-```bash
-
-qsub qsub ~/fimo_batch.sh
-wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
-```
-
-  2845652 total
-  
-	184385 ./BRCA_peakCalls_fimo_out/fimo.gff
-	175572 ./BLCA_peakCalls_fimo_out/fimo.gff
-	163170 ./PRAD_peakCalls_fimo_out/fimo.gff
-	142972 ./KIRP_peakCalls_fimo_out/fimo.gff
-	137216 ./ESCA_peakCalls_fimo_out/fimo.gff
-
-...
-
-	106200 ./SKCM_peakCalls_fimo_out/fimo.gff
-	106092 ./ACC_peakCalls_fimo_out/fimo.gff
-	98454 ./CHOL_peakCalls_fimo_out/fimo.gff
-	96894 ./MESO_peakCalls_fimo_out/fimo.gff
-	84528 ./CESC_peakCalls_fimo_out/fimo.gff
 
 
 # get number of PRDM9 binding sites in peaks
@@ -151,11 +130,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyMTM1MTMyLC0xNTQyNjU0MzQ1LDgwNj
-I2MjM3MywyOTQyMjMyNTUsMTQxOTU2NTg1MywtNzM4NzQ2MDkw
-LDE2NTU0MTExMzQsMjYxNTQyNTk2LDM3NDQwMTYwLDE0NDQwNj
-cyNzQsNjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2
-MzE4OTUzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MD
-kxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1MDE5
-XX0=
+eyJoaXN0b3J5IjpbMTA4NDk1NDI4OSwtMTU0MjY1NDM0NSw4MD
+YyNjIzNzMsMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczODc0NjA5
+MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwxNDQ0MD
+Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzgs
+NjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0LC05NT
+A5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAx
+OV19
 -->
