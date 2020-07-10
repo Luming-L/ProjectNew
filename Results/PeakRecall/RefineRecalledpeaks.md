@@ -44,10 +44,8 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 	os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>0){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed")
 ```
 ## Rename PeakCalls of 410 samples
-```bash
-mkdir allPeakCalls
-mv ./*_peakCalls.bed allPeakCalls
-cd allPeakCalls/
+```r
+
 ```
 
 # Output
@@ -56,8 +54,8 @@ ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTA2NzU3MzMsNDkwMjkyOTI2LDE1ND
-c5OTYxODcsLTQzOTg2NDEzMywtMjEzNzM0MzkyMywtNTI5NzYz
-NDE4LDE4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMTI5NDIwNzY5Ni
-wxODQ4NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
+eyJoaXN0b3J5IjpbODQ3NzgzNTEsLTE4MTA2NzU3MzMsNDkwMj
+kyOTI2LDE1NDc5OTYxODcsLTQzOTg2NDEzMywtMjEzNzM0Mzky
+MywtNTI5NzYzNDE4LDE4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMT
+I5NDIwNzY5NiwxODQ4NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
 -->
