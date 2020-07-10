@@ -1,5 +1,3 @@
-a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
-
 # Input
 Peak calls in each sample (404, the output of peakRefine.py)
 # Process
@@ -24,7 +22,8 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.f
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
 # Output
-## a list of PRDM9 motif occurrences for each of 410 samples
+a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
+
 
 
 **By the way, a list of PRDM9 motif occurrences for each of 23 cancer types**
@@ -126,11 +125,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NTMyNDg3LDE0MTk1NjU4NTMsLTczOD
-c0NjA5MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwx
-NDQ0MDY3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5OD
-A5MzgsNjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0
-LC05NTA5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMj
-E4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2
-OF19
+eyJoaXN0b3J5IjpbLTQzMzY5MjgyNSwxNDE5NTY1ODUzLC03Mz
+g3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAs
+MTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOT
+gwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5
+NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3Mz
+IxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3
+NjhdfQ==
 -->
