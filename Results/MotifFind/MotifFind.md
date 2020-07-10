@@ -1,3 +1,4 @@
+# 
 # Input
 Peak calls in each sample (404, the output of peakRefine.py)
 # Process
@@ -21,6 +22,15 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.f
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
+## Rename files
+```bash
+for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
+	fileName=`echo ${file#*MotifFind_fimo/}`; 
+	fileName=`echo ${fileName%_out*}`;
+	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
+done
+```
+
 # Output
 a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
 
@@ -111,13 +121,7 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
     14357 SKCM_4EDE1486_22DD_4DB9_8CB1_B4A058E459D1_X035_S10_PRDM9_bound_peaks.bed
     13500 LUSC_3AD1EA06_AA53_4C53_B436_4417FA2B8A0E_X031_S10_PRDM9_bound_peaks.bed
 
-```bash
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
-	fileName=`echo ${file#*MotifFind_fimo/}`; 
-	fileName=`echo ${fileName%_out*}`;
-	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
-done
-```
+
 # Reference
 [bedtools intersect](https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html)
 
@@ -125,7 +129,7 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzY5MjgyNSwxNDE5NTY1ODUzLC03Mz
+eyJoaXN0b3J5IjpbLTE4ODU4Mjc0MywxNDE5NTY1ODUzLC03Mz
 g3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAs
 MTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOT
 gwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5
