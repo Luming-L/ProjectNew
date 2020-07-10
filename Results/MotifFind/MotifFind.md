@@ -15,11 +15,7 @@ fimo_batch.sh
 
 
 
-The script `fimo_batch.sh` includes these two steps.
 ## extracts sequences in FASTA by `bedtools  getfasta`
-**version**: BEDTools/2.27.1
-
-**options**
 
 `-fo`: Specify an output file name.
 
@@ -178,11 +174,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NTI4NTI5MywzNzQ0MDE2MCwxNDQ0MD
-Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzgs
-NjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0LC05NT
-A5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAx
-OSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2OCw3Mj
-EwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4
-MTE1Ml19
+eyJoaXN0b3J5IjpbMjYxNTQyNTk2LDM3NDQwMTYwLDE0NDQwNj
+cyNzQsNjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2
+MzE4OTUzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MD
+kxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1MDE5
+LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMT
+A3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgx
+MTUyXX0=
 -->
