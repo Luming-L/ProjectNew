@@ -16,9 +16,11 @@ a set of PRDM9-bound peaks for each sample
 # Select PRDM9-bound peaks for 23 cancerTypes
 ## Input
 PRDM9 motif occurrences in each cancer type (23, the output of fimo_batch.sh)
-Peak calls in each cancer type (404, the output of peakRefine.py)
-
+Cancer type-specific peak calls (23)
 ## Process
+```bash
+qsub ~/selectPRDM9BoundPeaks.sh
+```
 ## Output
 ```bash
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
@@ -30,6 +32,6 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NTYwMDczNywxNjM5MTIxNjY1LC00NT
+eyJoaXN0b3J5IjpbLTk3OTU2NDExMiwxNjM5MTIxNjY1LC00NT
 M3Mzk1OTEsMjk1OTAwOTQyLDIwNDcxMDk3NDBdfQ==
 -->
