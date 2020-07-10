@@ -3,9 +3,6 @@ This step will output a list of PRDM9 motif occurrences in ATAC-seq peaks for ea
 
 ## substeps
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
-### 
-
-###
 
 ### refine recalled peaks by using `bedtools intersect`
 1. for each technical replicate (796), the minimum overlap between cancer type peaks and sample recalled peaks should be more than 60% of cancer type peaks. (set by `-f 0.6`) Then output these cancer type peaks.
@@ -241,11 +238,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3OTQxODkzNiwxNzIwOTgwOTM4LDYzMT
-g5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5NCwtOTUwOTE5
-MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUwMTksMT
-cwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3NjgsNzIxMDc2
-NDcwLC0xMzM5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1ODExNT
-IsNjU1ODA5NzMyLDYzODg1MTMyMCwtMTAxMTI0MjgyNiwtMjYz
-NTQ1Njc0XX0=
+eyJoaXN0b3J5IjpbNjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMD
+k4MDkzOCw2MzE4OTUzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAy
+OTQsLTk1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNz
+MyMTg1MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAx
+NzY4LDcyMTA3NjQ3MCwtMTMzOTQwMjExMCwxMTg3ODA3Mjg3LC
+0xNDIxNTgxMTUyLDY1NTgwOTczMiw2Mzg4NTEzMjAsLTEwMTEy
+NDI4MjZdfQ==
 -->
