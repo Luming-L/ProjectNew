@@ -15,14 +15,7 @@ This step will output a list of PRDM9 motif occurrences in ATAC-seq peaks for ea
 
 `-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. 
 
-**command for a sample with 1 technical replicate**
-```bash
-bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -u > " + path + "/" + sample+"_peakCalls.bed
-```
-**command for a sample with 2 technical replicates**
-```bash
-bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.6 -c -wa" + " | awk '{FS=OFS=" + r'"\t"' + ";if($5>1){print $1,$2,$3,$4}}'" + " > " + path + "/" + sample+"_peakCalls.bed
-```
+
 ```bash
 wc -l * | sort -k1,1nr | head
 ```
@@ -235,11 +228,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTY3MjQ4NTgsNjA4ODA3NjMyLDEwNz
-k0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OTUzODgsLTEyMDE3MTAx
-OTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2MCw4MzEyNjYzMDYsLT
-QwNzk2MDk0MSwxNzMyMTg1MDE5LDE3MDY0Mjk1MjUsMzE2MDgy
-MjM5LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3MCwtMTMzOTQwMjExMC
-wxMTg3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTczMiw2Mzg4
-NTEzMjBdfQ==
+eyJoaXN0b3J5IjpbMjAxMjI4MTI0MSw2MDg4MDc2MzIsMTA3OT
+QxODkzNiwxNzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5
+MCwtMTgwMzE3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtND
+A3OTYwOTQxLDE3MzIxODUwMTksMTcwNjQyOTUyNSwzMTYwODIy
+MzksLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLD
+ExODc4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5NzMyLDYzODg1
+MTMyMF19
 -->
