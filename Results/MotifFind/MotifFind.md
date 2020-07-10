@@ -50,7 +50,11 @@ qsub ~/fimo_batch.sh
 ```
 ### Rename files
 ```bash
-
+for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
+	fileName=`echo ${file#*MotifFind_fimo/}`; 
+	fileName=`echo ${fileName%_out*}`;
+	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/${fileName}.gff
+done
 ```
 ## Output
 a list of PRDM9 motif occurrences for each of 23 cancer types
@@ -150,11 +154,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQ3NTM3NjgsLTE1NDI2NTQzNDUsOD
-A2MjYyMzczLDI5NDIyMzI1NSwxNDE5NTY1ODUzLC03Mzg3NDYw
-OTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAsMTQ0ND
-A2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOTgwOTM4
-LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5NCwtOT
-UwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUw
-MTldfQ==
+eyJoaXN0b3J5IjpbLTExMTI3MjE3OSwtMTU0MjY1NDM0NSw4MD
+YyNjIzNzMsMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczODc0NjA5
+MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwxNDQ0MD
+Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzgs
+NjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0LC05NT
+A5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAx
+OV19
 -->
