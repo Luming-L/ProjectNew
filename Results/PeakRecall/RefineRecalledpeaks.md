@@ -53,7 +53,39 @@ files <- list.files(path ="/exports/eddie/scratch/s1949868/RefineRecalledPeaks/a
 head(files)
 
 # rename files to (cancerType + TCGA Case_ID)
+# rename files to (cancerType + TCGA Case_ID)
 
+plyr::a_ply(files,1, function(file) {
+
+file.uuid <- stringr::str_extract(file,
+
+"[:alnum:]{8}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{12}") # get stanfordUUID
+
+print(file.uuid)
+
+idx <- grep(file.uuid,gsub("-","_",table$stanfordUUID)) # use stanfordUUID to find the index
+
+barcode <- unique(table[idx,]$Case_ID) # get Case_ID and use it as the barcode, and give technical replicates the same barcode
+
+barcode <- stringr::str_extract(barcode, "[:alnum:]{4}-[:alnum:]{2}-[:alnum:]{4}-[:alnum:]{3}")
+
+cancerType <- strsplit(strsplit(file,split='//')[[1]][2], split='_')[[1]][1]
+
+cancerType_barcode <- paste0(c(cancerType, barcode), collapse='_')
+
+print(cancerType_barcode)
+
+filename <- stringr::str_extract(file,"[:alnum:]{4}_[:alnum:]{8}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{12}_[:alnum:]{4}_[:alnum:]{3}") # get the file name
+
+print (filename)
+
+to <- gsub(filename,cancerType_barcode,file) # change uuid in file names to new barcode
+
+print(to)
+
+file.rename(file, to) # rename files
+
+})
 ```
 
 # Output
@@ -62,9 +94,9 @@ ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzA4MzczOCwtNjQ5ODQ5MDcwLC0xOD
-EwNjc1NzMzLDQ5MDI5MjkyNiwxNTQ3OTk2MTg3LC00Mzk4NjQx
-MzMsLTIxMzczNDM5MjMsLTUyOTc2MzQxOCwxODYyODQ1MzE5LD
-E0NjY0MjUwMzQsLTEyOTQyMDc2OTYsMTg0ODY1MzEwMCwtMTM4
-NzM3Njg5OF19
+eyJoaXN0b3J5IjpbMTA1NjAyNjIyNywxMTEzMDgzNzM4LC02ND
+k4NDkwNzAsLTE4MTA2NzU3MzMsNDkwMjkyOTI2LDE1NDc5OTYx
+ODcsLTQzOTg2NDEzMywtMjEzNzM0MzkyMywtNTI5NzYzNDE4LD
+E4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMTI5NDIwNzY5NiwxODQ4
+NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
 -->
