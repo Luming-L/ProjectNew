@@ -5,7 +5,7 @@ Peak calls in each sample (404, the output of peakRefine.py)
 # Process
 ## Find PRDM9 motif occurrences
 ```bash
-fimo_batch.sh
+qsub ~/fimo_batch.sh
 ```
 ### extracts sequences in FASTA by `bedtools  getfasta`
 
@@ -127,11 +127,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxOTU2NTg1MywtNzM4NzQ2MDkwLDE2NT
-U0MTExMzQsMjYxNTQyNTk2LDM3NDQwMTYwLDE0NDQwNjcyNzQs
-NjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OT
-UzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2
-MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNzMyMTg1MDE5LDE3MD
-Y0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3
-MF19
+eyJoaXN0b3J5IjpbLTkwNDg0NTU0MywxNDE5NTY1ODUzLC03Mz
+g3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAs
+MTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOT
+gwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5
+NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3Mz
+IxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3
+NjhdfQ==
 -->
