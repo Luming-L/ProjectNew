@@ -7,7 +7,10 @@ for identifying sites that are **differentially enriched between two sample grou
 # Input
 # Process
 # Output
+
+# Reference
+[DiffBind](http://bioconductor.riken.jp/packages/release/bioc/vignettes/DiffBind/inst/doc/DiffBind.pdf)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTQzNzE3NzgsLTEzODE0NjE2MTYsMT
-kyMTEzNTc5NywxNjc5ODAzMDddfQ==
+eyJoaXN0b3J5IjpbLTI2NTU3MTcxNSwtMTUxNDM3MTc3OCwtMT
+M4MTQ2MTYxNiwxOTIxMTM1Nzk3LDE2Nzk4MDMwN119
 -->
