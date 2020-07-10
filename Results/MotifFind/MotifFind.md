@@ -53,7 +53,7 @@ qsub ~/fimo_batch.sh
 for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo_23/*_peakCalls_fimo_out/fimo.gff); do
 	fileName=`echo ${file#*MotifFind_fimo_23/}`; 
 	fileName=`echo ${fileName%_out*}`;
-	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/${fileName}.gff
+	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo_23/allFimoGFF_CaseID_23/${fileName}.gff
 done
 ```
 ## Output
@@ -130,7 +130,7 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDk1NDI4OSwtMTU0MjY1NDM0NSw4MD
+eyJoaXN0b3J5IjpbMTQ2MDQ2NTE4OSwtMTU0MjY1NDM0NSw4MD
 YyNjIzNzMsMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczODc0NjA5
 MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwxNDQ0MD
 Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzgs
