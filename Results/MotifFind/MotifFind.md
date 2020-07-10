@@ -27,7 +27,7 @@ fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${f
 for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
 	fileName=`echo ${file#*MotifFind_fimo/}`; 
 	fileName=`echo ${fileName%_out*}`;
-	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
+	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF_CaseID/${fileName}.gff
 done
 ```
 ## Output
@@ -135,11 +135,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczOD
-c0NjA5MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwx
-NDQ0MDY3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5OD
-A5MzgsNjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0
-LC05NTA5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMj
-E4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2
-OF19
+eyJoaXN0b3J5IjpbLTE5ODc2NzIyMTUsMjk0MjIzMjU1LDE0MT
+k1NjU4NTMsLTczODc0NjA5MCwxNjU1NDExMTM0LDI2MTU0MjU5
+NiwzNzQ0MDE2MCwxNDQ0MDY3Mjc0LDYwODgwNzYzMiwxMDc5ND
+E4OTM2LDE3MjA5ODA5MzgsNjMxODk1Mzg4LC0xMjAxNzEwMTkw
+LC0xODAzMTcwMjk0LC05NTA5MTkzNjAsODMxMjY2MzA2LC00MD
+c5NjA5NDEsMTczMjE4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIz
+OV19
 -->
