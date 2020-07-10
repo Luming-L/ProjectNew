@@ -25,6 +25,18 @@ echo "sort done: $(date)"
 ```bash
 qsub ~/peakRefine_batch.sh
 ```
+1. for each technical replicate (796), the minimum overlap between cancer type peaks and sample recalled peaks should be more than 60% of cancer type peaks. (set by `-f 0.6`) Then output these cancer type peaks.
+2. refined peaks in two replicates from the same sample will be merged. only report peaks obeserved in two replicates (set by `-c`)
+3. finally get a list of peaks for each of 410 biological samples
+
+**options**
+`-f`： Minimum overlap required as **a fraction of A**. 
+
+`-c`: For each entry in A, report the number of hits in B while restricting to -f.
+
+`-wa`: Write the original entry in A for each overlap.
+
+`-u`: Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B. 
 ```python
 if bioSample_dict[sample] == 1: # 1 technical replicate for a ID
 	os.system("bedtools intersect -a " + path + "/" + sample.split("_")[0].replace('x', '') + "*txt.sorted -b " + path + "/" + sample + "*bed.sorted -f 0.5 -u > " + path + "/" + sample+"_peakCalls.bed")
@@ -37,8 +49,8 @@ ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0Nzk5NjE4NywtNDM5ODY0MTMzLC0yMT
-M3MzQzOTIzLC01Mjk3NjM0MTgsMTg2Mjg0NTMxOSwxNDY2NDI1
-MDM0LC0xMjk0MjA3Njk2LDE4NDg2NTMxMDAsLTEzODczNzY4OT
-hdfQ==
+eyJoaXN0b3J5IjpbNDkwMjkyOTI2LDE1NDc5OTYxODcsLTQzOT
+g2NDEzMywtMjEzNzM0MzkyMywtNTI5NzYzNDE4LDE4NjI4NDUz
+MTksMTQ2NjQyNTAzNCwtMTI5NDIwNzY5NiwxODQ4NjUzMTAwLC
+0xMzg3Mzc2ODk4XX0=
 -->
