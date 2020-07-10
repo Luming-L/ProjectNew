@@ -37,7 +37,7 @@ a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
 ## Input
 Cancer type-specific peak calls (23)
 ## Process
-### transform 
+### transform `.txt` to `.bed`
 ```bash
 for file in $(ls /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/*_peakCalls.txt); do
 > fileName=`basename -s ".txt" $file`
@@ -144,11 +144,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MjYyMzI1MywyOTQyMjMyNTUsMTQxOT
-U2NTg1MywtNzM4NzQ2MDkwLDE2NTU0MTExMzQsMjYxNTQyNTk2
-LDM3NDQwMTYwLDE0NDQwNjcyNzQsNjA4ODA3NjMyLDEwNzk0MT
-g5MzYsMTcyMDk4MDkzOCw2MzE4OTUzODgsLTEyMDE3MTAxOTAs
-LTE4MDMxNzAyOTQsLTk1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNz
-k2MDk0MSwxNzMyMTg1MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5
-XX0=
+eyJoaXN0b3J5IjpbODA2MjYyMzczLDI5NDIyMzI1NSwxNDE5NT
+Y1ODUzLC03Mzg3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYs
+Mzc0NDAxNjAsMTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxOD
+kzNiwxNzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwt
+MTgwMzE3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OT
+YwOTQxLDE3MzIxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzld
+fQ==
 -->
