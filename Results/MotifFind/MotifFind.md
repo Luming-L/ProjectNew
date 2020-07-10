@@ -35,7 +35,12 @@ a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 404 samples.
 # MotifFind for 23 cancerTypes
 ## Input
 ## Process
+### Find PRDM9 motif occurrences
+### Rename files
 ## Output
+
+
+
 
 **By the way, a list of PRDM9 motif occurrences for each of 23 cancer types**
 ```bash
@@ -130,11 +135,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzkxODIzMzQsMTQxOTU2NTg1MywtNz
-M4NzQ2MDkwLDE2NTU0MTExMzQsMjYxNTQyNTk2LDM3NDQwMTYw
-LDE0NDQwNjcyNzQsNjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMD
-k4MDkzOCw2MzE4OTUzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAy
-OTQsLTk1MDkxOTM2MCw4MzEyNjYzMDYsLTQwNzk2MDk0MSwxNz
-MyMTg1MDE5LDE3MDY0Mjk1MjUsMzE2MDgyMjM5LC0xNjQ5ODAx
-NzY4XX0=
+eyJoaXN0b3J5IjpbMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczOD
+c0NjA5MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwx
+NDQ0MDY3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5OD
+A5MzgsNjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0
+LC05NTA5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMj
+E4NTAxOSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2
+OF19
 -->
