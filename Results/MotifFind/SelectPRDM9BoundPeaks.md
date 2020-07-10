@@ -22,7 +22,8 @@ Cancer type-specific peak calls (23)
 qsub ~/selectPRDM9BoundPeaks.sh
 ```
 ## Output
-
+23 `_PRDM9_bound_peaks.bed` files
+a set of PRDM9-bound peaks for each cancerType
 ```bash
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | head
 wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
@@ -33,7 +34,7 @@ wc -l *PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDE4NTM3OCwtOTc5NTY0MTEyLDE2Mz
-kxMjE2NjUsLTQ1MzczOTU5MSwyOTU5MDA5NDIsMjA0NzEwOTc0
-MF19
+eyJoaXN0b3J5IjpbLTIwMzAxMjI2MDksLTk3OTU2NDExMiwxNj
+M5MTIxNjY1LC00NTM3Mzk1OTEsMjk1OTAwOTQyLDIwNDcxMDk3
+NDBdfQ==
 -->
