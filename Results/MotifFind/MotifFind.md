@@ -42,14 +42,8 @@ The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stor
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
-## rename fimo.gff of 410 samples
-```bash
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
-	fileName=`echo ${file#*MotifFind_fimo/}`; 
-	fileName=`echo ${fileName%_out*}`;
-	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
-done
-```
+
+
 # Output
 ## a list of PRDM9 motif occurrences for each of 410 samples
 ```bash
@@ -173,11 +167,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc0NDAxNjAsMTQ0NDA2NzI3NCw2MDg4MD
-c2MzIsMTA3OTQxODkzNiwxNzIwOTgwOTM4LDYzMTg5NTM4OCwt
-MTIwMTcxMDE5MCwtMTgwMzE3MDI5NCwtOTUwOTE5MzYwLDgzMT
-I2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUwMTksMTcwNjQyOTUy
-NSwzMTYwODIyMzksLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMz
-M5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1ODExNTIsNjU1ODA5
-NzMyXX0=
+eyJoaXN0b3J5IjpbLTE3MDM5NTYzNDQsMzc0NDAxNjAsMTQ0ND
+A2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOTgwOTM4
+LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5NCwtOT
+UwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUw
+MTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3NjgsNz
+IxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1
+ODExNTJdfQ==
 -->
