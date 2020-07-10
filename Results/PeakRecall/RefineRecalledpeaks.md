@@ -53,13 +53,9 @@ files <- list.files(path ="/exports/eddie/scratch/s1949868/RefineRecalledPeaks/a
 head(files)
 
 # rename files to (cancerType + TCGA Case_ID)
-# rename files to (cancerType + TCGA Case_ID)
-
 plyr::a_ply(files,1, function(file) {
 
-file.uuid <- stringr::str_extract(file,
-
-"[:alnum:]{8}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{12}") # get stanfordUUID
+file.uuid <- stringr::str_extract(file, "[:alnum:]{8}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{4}_[:alnum:]{12}") # get stanfordUUID
 
 print(file.uuid)
 
@@ -94,7 +90,7 @@ ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NjAyNjIyNywxMTEzMDgzNzM4LC02ND
+eyJoaXN0b3J5IjpbMTk3ODczNTg5NSwxMTEzMDgzNzM4LC02ND
 k4NDkwNzAsLTE4MTA2NzU3MzMsNDkwMjkyOTI2LDE1NDc5OTYx
 ODcsLTQzOTg2NDEzMywtMjEzNzM0MzkyMywtNTI5NzYzNDE4LD
 E4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMTI5NDIwNzY5NiwxODQ4
