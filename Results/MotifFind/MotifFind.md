@@ -1,7 +1,9 @@
 This step will output a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 410 biological samples.
 
 # Input
+Peak calls in each sample (404, the output of peakRefine.py)
 # Process
+
 # Output
 
 
@@ -172,11 +174,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMzcyOTkzNiwzNzQ0MDE2MCwxNDQ0MD
-Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzgs
-NjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0LC05NT
-A5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAx
-OSwxNzA2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2OCw3Mj
-EwNzY0NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4
-MTE1Ml19
+eyJoaXN0b3J5IjpbLTE5Mzk3ODE3MTEsMzc0NDAxNjAsMTQ0ND
+A2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOTgwOTM4
+LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5NCwtOT
+UwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQxLDE3MzIxODUw
+MTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2NDk4MDE3NjgsNz
+IxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcyODcsLTE0MjE1
+ODExNTJdfQ==
 -->
