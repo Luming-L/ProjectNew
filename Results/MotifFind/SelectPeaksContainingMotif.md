@@ -1,6 +1,8 @@
 # Input
+coordinates of PRDM9 motif in each samples
+Peaks in each samples
 # Process
-# Out
+# Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTY4Mzc3Ml19
+eyJoaXN0b3J5IjpbLTgyMTczODgxNF19
 -->
