@@ -10,45 +10,20 @@ fimo_batch.sh
 ### extracts sequences in FASTA by `bedtools  getfasta`
 
 `-fo`: Specify an output file name.
-
-**command**
 ```bash
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed $file -fo "${fileName}.fasta"
 ```
 ### find PRDM9 motif occurrences by `fimo`
-**version**: meme/4.11.1
-
-**options**
-
 `--parse-genomic-coord`: When this option is specified, each FASTA sequence header is checked for UCSC style genomic coordinates (e.g., `chr1:156887119-156887619`). The sequence ID in the FASTA header should have the form: >sequence name:starting position-ending position. If genomic coordinates are found they is used as the coordinates in the output. 
 
 `--thresh num`: The threshold is a p-value of 1e-4.
 
 `--oc dir`: Create a folder called dir but if it already exists allow overwriting the contents.
 
-`--max-stored-scores`: Set the maximum number of scores that will be stored. The maximum number of stored matches is 100,000.
-
-**note**
-
-The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to **10,000,000**.
-
-**command**
+`--max-stored-scores`: Set the maximum number of scores that will be stored. The maximum number of stored matches is 100,000. The number of scores in `ACC_peakCalls_fimo_out` exceeds 100,000, so `--max-stored-scores` is set to **10,000,000**.
 ```bash
 fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc "${fileName}_fimo_out" /home/s1949868/PRDM9.pwm.meme "${fileName}.fasta"
 ```
-
-
-# Output
-
-
-
-
-
-
-
-
-
-
 # Output
 ## a list of PRDM9 motif occurrences for each of 410 samples
 ```bash
@@ -177,11 +152,11 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0ND
-AxNjAsMTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwx
-NzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMz
-E3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwtNDA3OTYwOTQx
-LDE3MzIxODUwMTksMTcwNjQyOTUyNSwzMTYwODIyMzksLTE2ND
-k4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEwLDExODc4MDcy
-ODddfQ==
+eyJoaXN0b3J5IjpbODkyNzgyNjIsMTY1NTQxMTEzNCwyNjE1ND
+I1OTYsMzc0NDAxNjAsMTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3
+OTQxODkzNiwxNzIwOTgwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMD
+E5MCwtMTgwMzE3MDI5NCwtOTUwOTE5MzYwLDgzMTI2NjMwNiwt
+NDA3OTYwOTQxLDE3MzIxODUwMTksMTcwNjQyOTUyNSwzMTYwOD
+IyMzksLTE2NDk4MDE3NjgsNzIxMDc2NDcwLC0xMzM5NDAyMTEw
+XX0=
 -->
