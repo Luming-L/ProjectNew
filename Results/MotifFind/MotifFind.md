@@ -1,13 +1,6 @@
 This step will output a list of PRDM9 motif occurrences in ATAC-seq peaks for each of 410 biological samples.
 # Step1 Refine recalled peaks 
 Refine recalled peaks to get a list of peaks for each biological sample
-## input files
-****
-
-Each text file represents all merged peak calls from each cancer type. 
-
-****
-
 
 ## substeps
 **Two scripts `peakOverlap.py` and `peakOverlap_batch.sh` (run `peakOverlap.py` on eddie) contain these steps.**
@@ -249,11 +242,11 @@ wc -l *_PRDM9_bound_peaks.bed* | sort -k1,1nr | tail
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDk4MDkzOCw2MzE4OTUzODgsLTEyMD
-E3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2MCw4MzEyNjYz
-MDYsLTQwNzk2MDk0MSwxNzMyMTg1MDE5LDE3MDY0Mjk1MjUsMz
-E2MDgyMjM5LC0xNjQ5ODAxNzY4LDcyMTA3NjQ3MCwtMTMzOTQw
-MjExMCwxMTg3ODA3Mjg3LC0xNDIxNTgxMTUyLDY1NTgwOTczMi
-w2Mzg4NTEzMjAsLTEwMTEyNDI4MjYsLTI2MzU0NTY3NCwxMDkz
-Njk2NjcxXX0=
+eyJoaXN0b3J5IjpbLTQzODY4OTYyLDE3MjA5ODA5MzgsNjMxOD
+k1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0LC05NTA5MTkz
+NjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAxOSwxNz
+A2NDI5NTI1LDMxNjA4MjIzOSwtMTY0OTgwMTc2OCw3MjEwNzY0
+NzAsLTEzMzk0MDIxMTAsMTE4NzgwNzI4NywtMTQyMTU4MTE1Mi
+w2NTU4MDk3MzIsNjM4ODUxMzIwLC0xMDExMjQyODI2LC0yNjM1
+NDU2NzRdfQ==
 -->
