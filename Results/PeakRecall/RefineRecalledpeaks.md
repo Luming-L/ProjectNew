@@ -47,26 +47,17 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 ```bash
 mkdir allPeakCalls
 mv ./*_peakCalls.bed allPeakCalls
-
- 1017  cd allPeakCalls/
- 1018  ll
- 1019  ll | wc -l
-
-```bash
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo/*_peakCalls_fimo_out/fimo.gff); do
-	fileName=`echo ${file#*MotifFind_fimo/}`; 
-	fileName=`echo ${fileName%_out*}`;
-	mv $file /exports/eddie/scratch/s1949868/MotifFind_fimo/allFimoGFF/${fileName}.gff
-done
+cd allPeakCalls/
 ```
+
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 410 samples from 404 donors
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MjAxMzMyNyw0OTAyOTI5MjYsMTU0Nz
-k5NjE4NywtNDM5ODY0MTMzLC0yMTM3MzQzOTIzLC01Mjk3NjM0
-MTgsMTg2Mjg0NTMxOSwxNDY2NDI1MDM0LC0xMjk0MjA3Njk2LD
-E4NDg2NTMxMDAsLTEzODczNzY4OThdfQ==
+eyJoaXN0b3J5IjpbLTE4MTA2NzU3MzMsNDkwMjkyOTI2LDE1ND
+c5OTYxODcsLTQzOTg2NDEzMywtMjEzNzM0MzkyMywtNTI5NzYz
+NDE4LDE4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMTI5NDIwNzY5Ni
+wxODQ4NjUzMTAwLC0xMzg3Mzc2ODk4XX0=
 -->
