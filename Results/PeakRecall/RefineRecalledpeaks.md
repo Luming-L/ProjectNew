@@ -45,8 +45,14 @@ elif bioSample_dict[sample] == 2: # 2 technical replicates for a ID
 ```
 ## Rename PeakCalls of 410 samples
 ```r
+# read mapping table
 table <- readr::read_tsv("https://api.gdc.cancer.gov/data/7a3d7067-09d6-4acf-82c8-a1a81febf72c")
+
+# get all the path of files
 files <- list.files(path ="/exports/eddie/scratch/s1949868/RefineRecalledPeaks/allPeakCalls_CaseID/", pattern = "peakCalls.bed", all.files = FALSE, full.names = TRUE, recursive =TRUE, ignore.case = FALSE, include.dirs =TRUE, no.. = TRUE)
+head(files)
+
+# rename files to (cancerType + TCGA Case_ID)
 
 ```
 
@@ -56,7 +62,7 @@ ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMDE5OTU3NSwtNjQ5ODQ5MDcwLC0xOD
+eyJoaXN0b3J5IjpbMTExMzA4MzczOCwtNjQ5ODQ5MDcwLC0xOD
 EwNjc1NzMzLDQ5MDI5MjkyNiwxNTQ3OTk2MTg3LC00Mzk4NjQx
 MzMsLTIxMzczNDM5MjMsLTUyOTc2MzQxOCwxODYyODQ1MzE5LD
 E0NjY0MjUwMzQsLTEyOTQyMDc2OTYsMTg0ODY1MzEwMCwtMTM4
