@@ -77,12 +77,13 @@ file.rename(file, to) # rename files
 })
 ```
 # Output
-ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_peakCalls.bed
+UCEC_TCGA-BK-A13B-01A_peakCalls.bed
+keep one sample for each donor
 410 samples from 404 donors
 Some samples are just different in portion.
 [TCGA_Barcode/](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MDkwNDI5NSwxMTEzMDgzNzM4LC02ND
+eyJoaXN0b3J5IjpbMTI2MzM3NTI4NiwxMTEzMDgzNzM4LC02ND
 k4NDkwNzAsLTE4MTA2NzU3MzMsNDkwMjkyOTI2LDE1NDc5OTYx
 ODcsLTQzOTg2NDEzMywtMjEzNzM0MzkyMywtNTI5NzYzNDE4LD
 E4NjI4NDUzMTksMTQ2NjQyNTAzNCwtMTI5NDIwNzY5NiwxODQ4
