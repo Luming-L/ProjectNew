@@ -99,8 +99,7 @@ wc -l ./*_fimo_out/fimo.gff | sort -k1,1nr
 	96894 ./MESO_peakCalls_fimo_out/fimo.gff
 	84528 ./CESC_peakCalls_fimo_out/fimo.gff
 
-# Rename 
-renameTo_cancerTypeCaseID.Rmd
+
 # get number of PRDM9 binding sites in peaks
 ```bash
 echo -e "ID\tnumPRDM9MotifInPeaks" > numPRDM9MotifInPeaks.txt
@@ -173,7 +172,7 @@ done
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NjY0Mjk0NSwzNzQ0MDE2MCwxNDQ0MD
+eyJoaXN0b3J5IjpbMTYxMzcyOTkzNiwzNzQ0MDE2MCwxNDQ0MD
 Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzgs
 NjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0LC05NT
 A5MTkzNjAsODMxMjY2MzA2LC00MDc5NjA5NDEsMTczMjE4NTAx
