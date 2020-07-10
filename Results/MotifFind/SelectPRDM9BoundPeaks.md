@@ -13,8 +13,8 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/RefineRecalledPeaks/allPea
 ### get number of PRDM9-bound peaks
 ```bash
 echo -e "ID\tnumPRDM9BoundPeaks" > numPRDM9BoundPeaks.txt
-# count PRDM9 binding sites in peaks for each sample
-for file in $(ls /exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/*_fimo.gff); do
+# count PRDM9-bound peaks for each sample
+for file in $(ls /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/*_PRDM9_bound_peaks.bed); do
 	echo $file
 
 	ID=`echo ${file#*allFimoGFF_CaseID/}`; 
@@ -47,7 +47,7 @@ a set of PRDM9-bound peaks for each cancerType
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDYzMDg5OTEsLTk3OTU2NDExMiwxNj
-M5MTIxNjY1LC00NTM3Mzk1OTEsMjk1OTAwOTQyLDIwNDcxMDk3
-NDBdfQ==
+eyJoaXN0b3J5IjpbLTEzNDU3OTA0NzcsLTE0NDYzMDg5OTEsLT
+k3OTU2NDExMiwxNjM5MTIxNjY1LC00NTM3Mzk1OTEsMjk1OTAw
+OTQyLDIwNDcxMDk3NDBdfQ==
 -->
