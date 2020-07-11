@@ -74,7 +74,7 @@ done
 ```
 ## Output
 a list of PRDM9 motif occurrences for each of 23 cancer types
-
+# MotifFind for 
 
 
 
@@ -93,11 +93,11 @@ a list of PRDM9 motif occurrences for each of 23 cancer types
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDY2ODkwMjcsMTY2MjcwODcwLDE0MD
-k3MjUwNiwxNDYwNDY1MTg5LC0xNTQyNjU0MzQ1LDgwNjI2MjM3
-MywyOTQyMjMyNTUsMTQxOTU2NTg1MywtNzM4NzQ2MDkwLDE2NT
-U0MTExMzQsMjYxNTQyNTk2LDM3NDQwMTYwLDE0NDQwNjcyNzQs
-NjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOCw2MzE4OT
-UzODgsLTEyMDE3MTAxOTAsLTE4MDMxNzAyOTQsLTk1MDkxOTM2
-MF19
+eyJoaXN0b3J5IjpbMTEyNDMyOTI2NSwtMTM0NjY4OTAyNywxNj
+YyNzA4NzAsMTQwOTcyNTA2LDE0NjA0NjUxODksLTE1NDI2NTQz
+NDUsODA2MjYyMzczLDI5NDIyMzI1NSwxNDE5NTY1ODUzLC03Mz
+g3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAs
+MTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOT
+gwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5
+NF19
 -->
