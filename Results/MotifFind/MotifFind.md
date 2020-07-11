@@ -82,6 +82,9 @@ TCGA-ATAC_PanCancer_PeakSet (1)
 ```bash
 awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' TCGA-ATAC_PanCancer_PeakSet > TCGA-ATAC_PanCancer_PeakSet.bed
 
+bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed TCGA-ATAC_PanCancer_PeakSet.bed -fo TCGA-ATAC_PanCancer_PeakSet.fasta
+
+
 ```
 ## Output
 
@@ -101,11 +104,11 @@ awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' TCGA-ATAC_PanCancer_PeakS
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxOTE3MzA0MSwyNDg5ODI5MzUsNTM2MD
-U5MzQzLC0xMzQ2Njg5MDI3LDE2NjI3MDg3MCwxNDA5NzI1MDYs
-MTQ2MDQ2NTE4OSwtMTU0MjY1NDM0NSw4MDYyNjIzNzMsMjk0Mj
-IzMjU1LDE0MTk1NjU4NTMsLTczODc0NjA5MCwxNjU1NDExMTM0
-LDI2MTU0MjU5NiwzNzQ0MDE2MCwxNDQ0MDY3Mjc0LDYwODgwNz
-YzMiwxMDc5NDE4OTM2LDE3MjA5ODA5MzgsNjMxODk1Mzg4XX0=
-
+eyJoaXN0b3J5IjpbLTEwMzExNTI4OTMsMTkxOTE3MzA0MSwyND
+g5ODI5MzUsNTM2MDU5MzQzLC0xMzQ2Njg5MDI3LDE2NjI3MDg3
+MCwxNDA5NzI1MDYsMTQ2MDQ2NTE4OSwtMTU0MjY1NDM0NSw4MD
+YyNjIzNzMsMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczODc0NjA5
+MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwxNDQ0MD
+Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzhd
+fQ==
 -->
