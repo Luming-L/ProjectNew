@@ -84,7 +84,7 @@ awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' TCGA-ATAC_PanCancer_PeakS
 
 bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed TCGA-ATAC_PanCancer_PeakSet.bed -fo TCGA-ATAC_PanCancer_PeakSet.fasta
 
-
+fimo  --verbosity 4 --parse-genomic-coord --max-stored-scores 10000000 --oc TCGA-ATAC_PanCancer_PeakSet_fimo_out /home/s1949868/PRDM9.pwm.meme TCGA-ATAC_PanCancer_PeakSet.fasta
 ```
 ## Output
 a list of PRDM9 motif occurrences in PanCancer PeakSet
@@ -104,11 +104,11 @@ a list of PRDM9 motif occurrences in PanCancer PeakSet
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTA1MDI4MjUsMTkxOTE3MzA0MSwyND
-g5ODI5MzUsNTM2MDU5MzQzLC0xMzQ2Njg5MDI3LDE2NjI3MDg3
-MCwxNDA5NzI1MDYsMTQ2MDQ2NTE4OSwtMTU0MjY1NDM0NSw4MD
-YyNjIzNzMsMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczODc0NjA5
-MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwxNDQ0MD
-Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzhd
+eyJoaXN0b3J5IjpbMTEyNjk5NjI5NiwtMTg5MDUwMjgyNSwxOT
+E5MTczMDQxLDI0ODk4MjkzNSw1MzYwNTkzNDMsLTEzNDY2ODkw
+MjcsMTY2MjcwODcwLDE0MDk3MjUwNiwxNDYwNDY1MTg5LC0xNT
+QyNjU0MzQ1LDgwNjI2MjM3MywyOTQyMjMyNTUsMTQxOTU2NTg1
+MywtNzM4NzQ2MDkwLDE2NTU0MTExMzQsMjYxNTQyNTk2LDM3ND
+QwMTYwLDE0NDQwNjcyNzQsNjA4ODA3NjMyLDEwNzk0MTg5MzZd
 fQ==
 -->
