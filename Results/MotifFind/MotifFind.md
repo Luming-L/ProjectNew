@@ -87,7 +87,7 @@ bedtools getfasta -fi /home/s1949868/Tools/hg38.fa -bed TCGA-ATAC_PanCancer_Peak
 
 ```
 ## Output
-a list of PRDM9 motif occurrences i
+a list of PRDM9 motif occurrences in PanCancer PeakSet
 
 
 
@@ -104,11 +104,11 @@ a list of PRDM9 motif occurrences i
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NjE2ODg1NywxOTE5MTczMDQxLDI0OD
-k4MjkzNSw1MzYwNTkzNDMsLTEzNDY2ODkwMjcsMTY2MjcwODcw
-LDE0MDk3MjUwNiwxNDYwNDY1MTg5LC0xNTQyNjU0MzQ1LDgwNj
-I2MjM3MywyOTQyMjMyNTUsMTQxOTU2NTg1MywtNzM4NzQ2MDkw
-LDE2NTU0MTExMzQsMjYxNTQyNTk2LDM3NDQwMTYwLDE0NDQwNj
-cyNzQsNjA4ODA3NjMyLDEwNzk0MTg5MzYsMTcyMDk4MDkzOF19
-
+eyJoaXN0b3J5IjpbLTE4OTA1MDI4MjUsMTkxOTE3MzA0MSwyND
+g5ODI5MzUsNTM2MDU5MzQzLC0xMzQ2Njg5MDI3LDE2NjI3MDg3
+MCwxNDA5NzI1MDYsMTQ2MDQ2NTE4OSwtMTU0MjY1NDM0NSw4MD
+YyNjIzNzMsMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczODc0NjA5
+MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwxNDQ0MD
+Y3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5ODA5Mzhd
+fQ==
 -->
