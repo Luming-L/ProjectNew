@@ -42,15 +42,19 @@ qsub ~/selectPRDM9BoundPeaks.sh
 a set of PRDM9-bound peaks for each cancerType
 # Select PRDM9-bound peaks for PanCancer PeakSet
 ## Input
+PRDM9 motif occurrences in PanCancer PeakSet
 ## Process
+```bash
+bedtools intersect -a TCGA-ATAC_PanCancer_PeakSet.bed -b TCGA-ATAC_PanCancer_PeakSet_fimo.gff -F 1.0 -u > TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed
+```
 ## Output
-
+a set of PRDM9-bound peaks 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUxOTkzMjI5LDk3NzIwNTQ0NSw3NDU4Nj
-IzMTIsLTE5NTc3NjE1MTksLTE0NDYzMDg5OTEsLTk3OTU2NDEx
-MiwxNjM5MTIxNjY1LC00NTM3Mzk1OTEsMjk1OTAwOTQyLDIwND
-cxMDk3NDBdfQ==
+eyJoaXN0b3J5IjpbLTE0NzE2NDM1NzUsNzUxOTkzMjI5LDk3Nz
+IwNTQ0NSw3NDU4NjIzMTIsLTE5NTc3NjE1MTksLTE0NDYzMDg5
+OTEsLTk3OTU2NDExMiwxNjM5MTIxNjY1LC00NTM3Mzk1OTEsMj
+k1OTAwOTQyLDIwNDcxMDk3NDBdfQ==
 -->
