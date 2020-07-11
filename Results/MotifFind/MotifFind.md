@@ -74,8 +74,13 @@ done
 ```
 ## Output
 a list of PRDM9 motif occurrences for each of 23 cancer types
-# MotifFind for 
+# MotifFind for PanCancer PeakSet
+## Input
+TCGA-ATAC_PanCancer_PeakSet (1)
+## Process
+### Find PRDM9 motif occurrences
 
+## Output
 
 
 
@@ -93,11 +98,11 @@ a list of PRDM9 motif occurrences for each of 23 cancer types
 
 [fimo](http://meme-suite.org/doc/fimo.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNDMyOTI2NSwtMTM0NjY4OTAyNywxNj
-YyNzA4NzAsMTQwOTcyNTA2LDE0NjA0NjUxODksLTE1NDI2NTQz
-NDUsODA2MjYyMzczLDI5NDIyMzI1NSwxNDE5NTY1ODUzLC03Mz
-g3NDYwOTAsMTY1NTQxMTEzNCwyNjE1NDI1OTYsMzc0NDAxNjAs
-MTQ0NDA2NzI3NCw2MDg4MDc2MzIsMTA3OTQxODkzNiwxNzIwOT
-gwOTM4LDYzMTg5NTM4OCwtMTIwMTcxMDE5MCwtMTgwMzE3MDI5
-NF19
+eyJoaXN0b3J5IjpbNTM2MDU5MzQzLC0xMzQ2Njg5MDI3LDE2Nj
+I3MDg3MCwxNDA5NzI1MDYsMTQ2MDQ2NTE4OSwtMTU0MjY1NDM0
+NSw4MDYyNjIzNzMsMjk0MjIzMjU1LDE0MTk1NjU4NTMsLTczOD
+c0NjA5MCwxNjU1NDExMTM0LDI2MTU0MjU5NiwzNzQ0MDE2MCwx
+NDQ0MDY3Mjc0LDYwODgwNzYzMiwxMDc5NDE4OTM2LDE3MjA5OD
+A5MzgsNjMxODk1Mzg4LC0xMjAxNzEwMTkwLC0xODAzMTcwMjk0
+XX0=
 -->
