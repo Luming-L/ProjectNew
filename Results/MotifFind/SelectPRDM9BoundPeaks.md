@@ -48,13 +48,13 @@ PRDM9 motif occurrences in PanCancer PeakSet
 bedtools intersect -a TCGA-ATAC_PanCancer_PeakSet.bed -b TCGA-ATAC_PanCancer_PeakSet_fimo.gff -F 1.0 -u > TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed
 ```
 ## Output
-a set of PRDM9-bound peaks 
+a set of PRDM9-bound peaks for PanCancer PeakSet
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzE2NDM1NzUsNzUxOTkzMjI5LDk3Nz
-IwNTQ0NSw3NDU4NjIzMTIsLTE5NTc3NjE1MTksLTE0NDYzMDg5
-OTEsLTk3OTU2NDExMiwxNjM5MTIxNjY1LC00NTM3Mzk1OTEsMj
-k1OTAwOTQyLDIwNDcxMDk3NDBdfQ==
+eyJoaXN0b3J5IjpbLTcyNTkwODkwNiw3NTE5OTMyMjksOTc3Mj
+A1NDQ1LDc0NTg2MjMxMiwtMTk1Nzc2MTUxOSwtMTQ0NjMwODk5
+MSwtOTc5NTY0MTEyLDE2MzkxMjE2NjUsLTQ1MzczOTU5MSwyOT
+U5MDA5NDIsMjA0NzEwOTc0MF19
 -->
