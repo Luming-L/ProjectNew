@@ -41,12 +41,16 @@ qsub ~/selectPRDM9BoundPeaks.sh
 23 `_PRDM9_bound_peaks.bed` files
 a set of PRDM9-bound peaks for each cancerType
 # Select PRDM9-bound peaks for PanCancer PeakSet
+## Input
+## Process
+## Output
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc3MjA1NDQ1LDc0NTg2MjMxMiwtMTk1Nz
-c2MTUxOSwtMTQ0NjMwODk5MSwtOTc5NTY0MTEyLDE2MzkxMjE2
-NjUsLTQ1MzczOTU5MSwyOTU5MDA5NDIsMjA0NzEwOTc0MF19
+eyJoaXN0b3J5IjpbNzUxOTkzMjI5LDk3NzIwNTQ0NSw3NDU4Nj
+IzMTIsLTE5NTc3NjE1MTksLTE0NDYzMDg5OTEsLTk3OTU2NDEx
+MiwxNjM5MTIxNjY1LC00NTM3Mzk1OTEsMjk1OTAwOTQyLDIwND
+cxMDk3NDBdfQ==
 -->
