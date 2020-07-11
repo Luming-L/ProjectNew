@@ -4,7 +4,7 @@
 #$ -l h_rt=00:05:00 # 8G 29s
 #$ -l h_vmem=8G # 2G is not enough for `bedtools getfasta`
  
-#$ -t 1-410
+#$ -t 1-23
 
 # Configure modules
 . /etc/profile.d/modules.sh
@@ -12,7 +12,7 @@ module load igmm/apps/meme/4.11.1
 module load igmm/apps/BEDTools/2.27.1
 
 # find PRDM9 motif occurrence
-for file in $(ls /exports/eddie/scratch/s1949868/PeakCall_410_c3l400/* | head -n $SGE_TASK_ID | tail -n1); do
+for file in $(ls /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/bed/*_peakCalls.bed | head -n $SGE_TASK_ID | tail -n1); do
 	echo $file
 	fileName=`basename -s ".bed" $file`
 	echo $fileName
