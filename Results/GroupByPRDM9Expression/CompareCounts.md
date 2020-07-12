@@ -5,11 +5,11 @@ Reference
 # PanCancer PeakSet
 # Cancer type-specific PeakSet
 # Input
-PRDM9 bound peaks
-
+CancerType-specific PRDM9 bound peaks
+CancerType-specific Count Matrices log2norm counts
 # Process
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MzYzMzY2Miw0NzQwNzMzOTUsLTExMj
+eyJoaXN0b3J5IjpbLTY1OTA5NzkxNyw0NzQwNzMzOTUsLTExMj
 QxOTQ2MzhdfQ==
 -->
