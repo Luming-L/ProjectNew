@@ -27,7 +27,9 @@ for file in $(ls /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/*_PRD
 done
 ```
 # Output
+5 types of cancer don't have enough observations to perform t-test
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNzYzNTYxNCwxNTEyMzk5MywyNzM2OD
-MyNTgsNDc0MDczMzk1LC0xMTI0MTk0NjM4XX0=
+eyJoaXN0b3J5IjpbMTUxNDQ0MTYwOSwtNTA3NjM1NjE0LDE1MT
+IzOTkzLDI3MzY4MzI1OCw0NzQwNzMzOTUsLTExMjQxOTQ2Mzhd
+fQ==
 -->
