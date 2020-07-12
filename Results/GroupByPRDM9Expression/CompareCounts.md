@@ -3,13 +3,13 @@ Reference
 [volcano plot example](https://www.biostars.org/p/268514/)
 
 # PanCancer PeakSet
-# Cancer type-specific PeakSet
+# CancerType-specific PeakSet
 # Input
 CancerType-specific PRDM9 bound peaks
-CancerType-specific Count Matrices log2norm counts
+CancerType-specific Count Matrices - log2normCounts
 # Process
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1OTA5NzkxNyw0NzQwNzMzOTUsLTExMj
-QxOTQ2MzhdfQ==
+eyJoaXN0b3J5IjpbMjczNjgzMjU4LDQ3NDA3MzM5NSwtMTEyND
+E5NDYzOF19
 -->
