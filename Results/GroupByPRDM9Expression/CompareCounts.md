@@ -13,25 +13,25 @@ qsub ~/CompareCounts_batch.sh
 ```
 ```bash
 echo -e "cancerType\tp.adj<0.05\tabs(log2FoldChange)>1\tBoth" > CompareCounts.txt
-echo -e "ID\tnumPRDM9BoundPeaks" > numPRDM9BoundPeaks.txt
-# count PRDM9-bound peaks for each sample
-for file in $( ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_WithAndWithoutPRDM9.txt | wc -l
-); do
+
+for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_WithAndWithoutPRDM9.txt); do
+
 	echo $file
 
-	ID=`echo ${file#*SelectPRDM9BoundPeaks_404/}`; 
-	ID=`echo ${ID%_PRDM9_bound_peaks*}`;
-	echo $ID
+	cancerType=`echo ${file#*CompareCounts/}`; 
+	cancerType=`echo ${cancerType%_CompareCounts_WithAndWithoutPRDM9*}`;
+	echo $cancerType
 
-	numPRDM9BoundPeaks=`wc -l $file | awk '{print $1}'`; 
-
-	echo -e "$ID\t$numPRDM9BoundPeaks" >> numPRDM9BoundPeaks.txt
+	padj=`awk '{FS=OFS="\t";if($7 < 0.05){print $0}}' $file | wc -l`;
+	log2FC=`awk '{FS=OFS="\t";if($6 > 1 || $6 < -1){print $0}}' $file | wc -l`
+	Both=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' $file | wc -l`
+	echo -e "$cancerType\t$padj\t$log2FC\t$Both" >> CompareCounts.txt
 done
 ```
 # Output
 5 types of cancer don't have enough observations to perform t-test 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1MzAyNDQyLDEzMDM4ODEwMDgsLTUwNz
-YzNTYxNCwxNTEyMzk5MywyNzM2ODMyNTgsNDc0MDczMzk1LC0x
-MTI0MTk0NjM4XX0=
+eyJoaXN0b3J5IjpbMjkxMDc3MjcwLDM5NTMwMjQ0MiwxMzAzOD
+gxMDA4LC01MDc2MzU2MTQsMTUxMjM5OTMsMjczNjgzMjU4LDQ3
+NDA3MzM5NSwtMTEyNDE5NDYzOF19
 -->
