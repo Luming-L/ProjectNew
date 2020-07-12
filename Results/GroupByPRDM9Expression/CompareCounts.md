@@ -8,8 +8,11 @@ Reference
 CancerType-specific PRDM9 bound peaks
 CancerType-specific Count Matrices - log2normCounts
 # Process
+```bash
+qsub ~/CompareCounts_batch.sh
+```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczNjgzMjU4LDQ3NDA3MzM5NSwtMTEyND
-E5NDYzOF19
+eyJoaXN0b3J5IjpbMTUxMjM5OTMsMjczNjgzMjU4LDQ3NDA3Mz
+M5NSwtMTEyNDE5NDYzOF19
 -->
