@@ -14,7 +14,8 @@ qsub ~/CompareCounts_batch.sh
 ```bash
 echo -e "ID\tnumPRDM9BoundPeaks" > numPRDM9BoundPeaks.txt
 # count PRDM9-bound peaks for each sample
-for file in $(ls /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/*_PRDM9_bound_peaks.bed); do
+for file in $( ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_WithAndWithoutPRDM9.txt | wc -l
+); do
 	echo $file
 
 	ID=`echo ${file#*SelectPRDM9BoundPeaks_404/}`; 
@@ -27,9 +28,9 @@ for file in $(ls /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/*_PRD
 done
 ```
 # Output
-5 types of cancer don't have enough observations to perform t-test
+5 types of cancer don't have enough observations to perform t-test 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNDQ0MTYwOSwtNTA3NjM1NjE0LDE1MT
+eyJoaXN0b3J5IjpbMTMwMzg4MTAwOCwtNTA3NjM1NjE0LDE1MT
 IzOTkzLDI3MzY4MzI1OCw0NzQwNzMzOTUsLTExMjQxOTQ2Mzhd
 fQ==
 -->
