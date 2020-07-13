@@ -30,8 +30,12 @@ done
 ```
 # Output
 5 types of cancer don't have enough observations to perform t-test 
+
+```bash
+awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxMDc3MjcwLDM5NTMwMjQ0MiwxMzAzOD
-gxMDA4LC01MDc2MzU2MTQsMTUxMjM5OTMsMjczNjgzMjU4LDQ3
-NDA3MzM5NSwtMTEyNDE5NDYzOF19
+eyJoaXN0b3J5IjpbMTUwOTU4MTQ0LDI5MTA3NzI3MCwzOTUzMD
+I0NDIsMTMwMzg4MTAwOCwtNTA3NjM1NjE0LDE1MTIzOTkzLDI3
+MzY4MzI1OCw0NzQwNzMzOTUsLTExMjQxOTQ2MzhdfQ==
 -->
