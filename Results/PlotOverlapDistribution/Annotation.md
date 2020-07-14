@@ -2,8 +2,8 @@ DSB hotspots
 significantly more accessible PRDM9 bound peaks in PanCancer dataset
 
 Annotate genomic intervals
-da'ta
+data mining to find significant overlap datasets for inferring co-regulation or transcription factor complex for further investigation.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NTM5NTM1MywtMTgxNzkzMjk4NywxNz
-I2Nzc5Njk2LDE0NzQwNjI4MDldfQ==
+eyJoaXN0b3J5IjpbLTEyOTA3ODQ2MTYsLTE4MTc5MzI5ODcsMT
+cyNjc3OTY5NiwxNDc0MDYyODA5XX0=
 -->
