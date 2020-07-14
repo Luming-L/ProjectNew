@@ -1,6 +1,6 @@
 DSB hotspots 
-PanCancer PRDM9 bound peaks
+significantly more accessible PanCancer PRDM9 bound peaks 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyOTM2OTM2MCwxNzI2Nzc5Njk2LDE0Nz
-QwNjI4MDldfQ==
+eyJoaXN0b3J5IjpbLTE4MTc5MzI5ODcsMTcyNjc3OTY5NiwxND
+c0MDYyODA5XX0=
 -->
