@@ -8,8 +8,9 @@ at least six samples
 [https://felixfan.github.io/stacking-plots-same-x/](https://felixfan.github.io/stacking-plots-same-x/)
 
 [https://stackoverflow.com/questions/60057291/aligning-multiple-plot-in-eggggarrange](https://stackoverflow.com/questions/60057291/aligning-multiple-plot-in-eggggarrange)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MTU4OTA0LDEzMzQ0NDk0OSwtMTk0OT
-U2Mjk3NiwtMTkyMzg4MTksLTkzMDY1NjY2NCwtMTM3OTk0NzAw
-M119
+eyJoaXN0b3J5IjpbNjQwMjQwODcwLDEyODE1ODkwNCwxMzM0ND
+Q5NDksLTE5NDk1NjI5NzYsLTE5MjM4ODE5LC05MzA2NTY2NjQs
+LTEzNzk5NDcwMDNdfQ==
 -->
