@@ -9,8 +9,9 @@ at least six samples
 
 [https://stackoverflow.com/questions/60057291/aligning-multiple-plot-in-eggggarrange](https://stackoverflow.com/questions/60057291/aligning-multiple-plot-in-eggggarrange)
 
+[https://stackoverflow.com/questions/13297995/changing-font-size-and-direction-of-axes-text-in-ggplot2](https://stackoverflow.com/questions/13297995/changing-font-size-and-direction-of-axes-text-in-ggplot2)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQwMjQwODcwLDEyODE1ODkwNCwxMzM0ND
+eyJoaXN0b3J5IjpbMTA1MDk1MDY3LDEyODE1ODkwNCwxMzM0ND
 Q5NDksLTE5NDk1NjI5NzYsLTE5MjM4ODE5LC05MzA2NTY2NjQs
 LTEzNzk5NDcwMDNdfQ==
 -->
