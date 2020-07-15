@@ -26,7 +26,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_W
 	P05LFC0=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 0)){print $0}}' $file | wc -l`
 	P05LFC1=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1)){print $0}}' $file | wc -l`
 
-	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05LFC0\t$P05LFC1" >> CompareCounts2.txt
+	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05LFC0\t$P05LFC1" >> CompareCounts.txt
 done
 ```
 # Output
@@ -36,7 +36,7 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMTIyMDk0OCwtMjA5ODI5NzYzMCwtND
+eyJoaXN0b3J5IjpbMTM1NTA3MTUwOCwtMjA5ODI5NzYzMCwtND
 E0ODQwMDg3LC0xNTY1ODgwNjUyLC0xNzc1ODQ1NTk5LDEwNjIy
 MTMwMzIsMTUwOTU4MTQ0LDI5MTA3NzI3MCwzOTUzMDI0NDIsMT
 MwMzg4MTAwOCwtNTA3NjM1NjE0LDE1MTIzOTkzLDI3MzY4MzI1
