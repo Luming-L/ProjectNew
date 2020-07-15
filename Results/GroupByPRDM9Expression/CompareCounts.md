@@ -22,11 +22,11 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_W
 	cancerType=`echo ${cancerType%_CompareCounts_WithAndWithoutPRDM9*}`;
 	echo $cancerType
 	
-	total=`grep "chr" $file | wc -l`
+	totalPRDM9BoundPeaks=`grep "chr" $file | wc -l`
 	padj=`awk '{FS=OFS="\t";if($7 < 0.05){print $0}}' $file | wc -l`;
 	log2FC=`awk '{FS=OFS="\t";if($6 > 1 || $6 < -1){print $0}}' $file | wc -l`
 	Both=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' $file | wc -l`
-	echo -e "$cancerType\t$padj\t$log2FC\t$Both" >> CompareCounts.txt
+	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$padj\t$log2FC\t$Both" >> CompareCounts.txt
 done
 ```
 # Output
@@ -36,8 +36,8 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzOTMxMzAxNSwxMDYyMjEzMDMyLDE1MD
-k1ODE0NCwyOTEwNzcyNzAsMzk1MzAyNDQyLDEzMDM4ODEwMDgs
-LTUwNzYzNTYxNCwxNTEyMzk5MywyNzM2ODMyNTgsNDc0MDczMz
-k1LC0xMTI0MTk0NjM4XX0=
+eyJoaXN0b3J5IjpbLTIwNzg4MTc5MjksMTA2MjIxMzAzMiwxNT
+A5NTgxNDQsMjkxMDc3MjcwLDM5NTMwMjQ0MiwxMzAzODgxMDA4
+LC01MDc2MzU2MTQsMTUxMjM5OTMsMjczNjgzMjU4LDQ3NDA3Mz
+M5NSwtMTEyNDE5NDYzOF19
 -->
