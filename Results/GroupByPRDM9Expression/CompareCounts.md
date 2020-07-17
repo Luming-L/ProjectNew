@@ -29,6 +29,10 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_W
 	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05LFC0\t$P05LFC1" >> CompareCounts.txt
 done
 ```
+```bash
+# 0
+# 
+```
 # Output
 5 types of cancer don't have enough observations to perform t-test 
 
@@ -36,9 +40,9 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NTA3MTUwOCwtMjA5ODI5NzYzMCwtND
-E0ODQwMDg3LC0xNTY1ODgwNjUyLC0xNzc1ODQ1NTk5LDEwNjIy
-MTMwMzIsMTUwOTU4MTQ0LDI5MTA3NzI3MCwzOTUzMDI0NDIsMT
-MwMzg4MTAwOCwtNTA3NjM1NjE0LDE1MTIzOTkzLDI3MzY4MzI1
-OCw0NzQwNzMzOTUsLTExMjQxOTQ2MzhdfQ==
+eyJoaXN0b3J5IjpbMTIxMDY3MDcwNiwxMzU1MDcxNTA4LC0yMD
+k4Mjk3NjMwLC00MTQ4NDAwODcsLTE1NjU4ODA2NTIsLTE3NzU4
+NDU1OTksMTA2MjIxMzAzMiwxNTA5NTgxNDQsMjkxMDc3MjcwLD
+M5NTMwMjQ0MiwxMzAzODgxMDA4LC01MDc2MzU2MTQsMTUxMjM5
+OTMsMjczNjgzMjU4LDQ3NDA3MzM5NSwtMTEyNDE5NDYzOF19
 -->
