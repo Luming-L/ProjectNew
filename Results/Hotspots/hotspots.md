@@ -44,9 +44,10 @@ Most PRDM9-bound loci do not become recombination hotspots.
 
 human PRDM9 binding sites
 transfected human cell line
-PRDM9-induced histone modifications.
+PRDM9-induced histone modifications
+human PRDM9 frequently binds promoters, despite their low recombination rates, and it can activate expression of a small number of genes including _CTCFL_ and _VCX_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTc1OTU5MiwxNjc1OTEwODgsMTk0Nz
-U2MTc3MiwtMTMyNzU0MDAzNSwxNDc3NzI5MjY0LC0yNDIwNTMz
-MzUsLTk1OTk3NTk3N119
+eyJoaXN0b3J5IjpbMTE5NDMzOTQ1NSwtMTQxNzU5NTkyLDE2Nz
+U5MTA4OCwxOTQ3NTYxNzcyLC0xMzI3NTQwMDM1LDE0Nzc3Mjky
+NjQsLTI0MjA1MzMzNSwtOTU5OTc1OTc3XX0=
 -->
