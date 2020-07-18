@@ -35,9 +35,12 @@ bedtools intersect -a $file -b /home/s1949868/humanDSBhotspots/humanDSBhotspots_
 numMotifInHotspotsAndPeaks=`wc -l "${fileName}_MotifInHotspotsAndPeaks.gff" | awk '{print $1}'`
 ```
 # Output
+
+
 # Reference
 [https://elifesciences.org/articles/28383](https://elifesciences.org/articles/28383)
+PRDM9 binds almost all meiotic recombination sites in humans and mice.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjc1NDAwMzUsMTQ3NzcyOTI2NCwtMj
-QyMDUzMzM1LC05NTk5NzU5NzddfQ==
+eyJoaXN0b3J5IjpbLTY2OTcwOTI0NCwtMTMyNzU0MDAzNSwxND
+c3NzI5MjY0LC0yNDIwNTMzMzUsLTk1OTk3NTk3N119
 -->
