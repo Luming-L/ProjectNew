@@ -12,13 +12,13 @@ CancerType-specific Count Matrices - log2normCounts
 qsub ~/CompareCounts_batch.sh
 ```
 ```bash
-echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t6.txt
+echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t7.txt
 
-for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold6/*_CompareCounts_WithAndWithoutPRDM9.txt); do
+for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold7/*_CompareCounts_WithAndWithoutPRDM9.txt); do
 
 	echo $file
 
-	cancerType=`echo ${file#*PRDM9_Threshold6/}`; 
+	cancerType=`echo ${file#*PRDM9_Threshold7/}`; 
 	cancerType=`echo ${cancerType%_CompareCounts_WithAndWithoutPRDM9*}`;
 	echo $cancerType
 	
@@ -27,7 +27,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold6/
 	P05LFC0=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 0)){print $0}}' $file | wc -l`
 	P05LFC1=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1)){print $0}}' $file | wc -l`
 
-	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t6.txt
+	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t7.txt
 done
 ```
 0
@@ -44,11 +44,11 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMTY0NDU5MywxMTQwMTY2Nzk5LC0xNT
-M2MDYyNTIyLC0xNzEwOTc4OTI3LDE3ODkxNjA0MTIsMTM1NTA3
-MTUwOCwtMjA5ODI5NzYzMCwtNDE0ODQwMDg3LC0xNTY1ODgwNj
-UyLC0xNzc1ODQ1NTk5LDEwNjIyMTMwMzIsMTUwOTU4MTQ0LDI5
-MTA3NzI3MCwzOTUzMDI0NDIsMTMwMzg4MTAwOCwtNTA3NjM1Nj
-E0LDE1MTIzOTkzLDI3MzY4MzI1OCw0NzQwNzMzOTUsLTExMjQx
-OTQ2MzhdfQ==
+eyJoaXN0b3J5IjpbLTExNzE4NDQ5MDksMjEzMTY0NDU5MywxMT
+QwMTY2Nzk5LC0xNTM2MDYyNTIyLC0xNzEwOTc4OTI3LDE3ODkx
+NjA0MTIsMTM1NTA3MTUwOCwtMjA5ODI5NzYzMCwtNDE0ODQwMD
+g3LC0xNTY1ODgwNjUyLC0xNzc1ODQ1NTk5LDEwNjIyMTMwMzIs
+MTUwOTU4MTQ0LDI5MTA3NzI3MCwzOTUzMDI0NDIsMTMwMzg4MT
+AwOCwtNTA3NjM1NjE0LDE1MTIzOTkzLDI3MzY4MzI1OCw0NzQw
+NzMzOTVdfQ==
 -->
