@@ -44,8 +44,9 @@ Most PRDM9-bound loci do not become recombination hotspots.
 
 human PRDM9 binding sites
 transfected human cell line
+PRDM9-induced histone modifications.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NTkxMDg4LDE5NDc1NjE3NzIsLTEzMj
-c1NDAwMzUsMTQ3NzcyOTI2NCwtMjQyMDUzMzM1LC05NTk5NzU5
-NzddfQ==
+eyJoaXN0b3J5IjpbLTE0MTc1OTU5MiwxNjc1OTEwODgsMTk0Nz
+U2MTc3MiwtMTMyNzU0MDAzNSwxNDc3NzI5MjY0LC0yNDIwNTMz
+MzUsLTk1OTk3NTk3N119
 -->
