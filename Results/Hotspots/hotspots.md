@@ -42,9 +42,10 @@ numMotifInHotspotsAndPeaks=`wc -l "${fileName}_MotifInHotspotsAndPeaks.gff" | aw
 PRDM9 binds almost all meiotic recombination sites in humans and mice.
 Most PRDM9-bound loci do not become recombination hotspots.
 
-
+human PRDM9 binding sites
+transfected human cell line
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODc1MjU2LDE5NDc1NjE3NzIsLTEzMj
+eyJoaXN0b3J5IjpbMTY3NTkxMDg4LDE5NDc1NjE3NzIsLTEzMj
 c1NDAwMzUsMTQ3NzcyOTI2NCwtMjQyMDUzMzM1LC05NTk5NzU5
 NzddfQ==
 -->
