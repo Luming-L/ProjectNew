@@ -14,11 +14,11 @@ qsub ~/CompareCounts_batch.sh
 ```bash
 echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t8.txt
 
-for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold7/*_CompareCounts_WithAndWithoutPRDM9.txt); do
+for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold8/*_CompareCounts_WithAndWithoutPRDM9.txt); do
 
 	echo $file
 
-	cancerType=`echo ${file#*PRDM9_Threshold7/}`; 
+	cancerType=`echo ${file#*PRDM9_Threshold8/}`; 
 	cancerType=`echo ${cancerType%_CompareCounts_WithAndWithoutPRDM9*}`;
 	echo $cancerType
 	
@@ -27,7 +27,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold7/
 	P05LFC0=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 0)){print $0}}' $file | wc -l`
 	P05LFC1=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1)){print $0}}' $file | wc -l`
 
-	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t7.txt
+	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t8.txt
 done
 ```
 0
@@ -44,11 +44,11 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE1MTc3Mzk0LC0xMTcxODQ0OTA5LDIxMz
-E2NDQ1OTMsMTE0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMTcxMDk3
-ODkyNywxNzg5MTYwNDEyLDEzNTUwNzE1MDgsLTIwOTgyOTc2Mz
-AsLTQxNDg0MDA4NywtMTU2NTg4MDY1MiwtMTc3NTg0NTU5OSwx
-MDYyMjEzMDMyLDE1MDk1ODE0NCwyOTEwNzcyNzAsMzk1MzAyND
-QyLDEzMDM4ODEwMDgsLTUwNzYzNTYxNCwxNTEyMzk5MywyNzM2
-ODMyNThdfQ==
+eyJoaXN0b3J5IjpbLTE4MDM2NzExNSwtMTE3MTg0NDkwOSwyMT
+MxNjQ0NTkzLDExNDAxNjY3OTksLTE1MzYwNjI1MjIsLTE3MTA5
+Nzg5MjcsMTc4OTE2MDQxMiwxMzU1MDcxNTA4LC0yMDk4Mjk3Nj
+MwLC00MTQ4NDAwODcsLTE1NjU4ODA2NTIsLTE3NzU4NDU1OTks
+MTA2MjIxMzAzMiwxNTA5NTgxNDQsMjkxMDc3MjcwLDM5NTMwMj
+Q0MiwxMzAzODgxMDA4LC01MDc2MzU2MTQsMTUxMjM5OTMsMjcz
+NjgzMjU4XX0=
 -->
