@@ -12,13 +12,13 @@ CancerType-specific Count Matrices - log2normCounts
 qsub ~/CompareCounts_batch.sh
 ```
 ```bash
-echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t0.txt
+echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t5.txt
 
-for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold0/*_CompareCounts_WithAndWithoutPRDM9.txt); do
+for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold5/*_CompareCounts_WithAndWithoutPRDM9.txt); do
 
 	echo $file
 
-	cancerType=`echo ${file#*PRDM9_Threshold0/}`; 
+	cancerType=`echo ${file#*PRDM9_Threshold5/}`; 
 	cancerType=`echo ${cancerType%_CompareCounts_WithAndWithoutPRDM9*}`;
 	echo $cancerType
 	
@@ -27,7 +27,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold0/
 	P05LFC0=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 0)){print $0}}' $file | wc -l`
 	P05LFC1=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1)){print $0}}' $file | wc -l`
 
-	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t0.txt
+	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t5.txt
 done
 ```
 0
@@ -44,10 +44,10 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc3NzQ1MTI1LC0xNTM2MDYyNTIyLC0xNz
-EwOTc4OTI3LDE3ODkxNjA0MTIsMTM1NTA3MTUwOCwtMjA5ODI5
-NzYzMCwtNDE0ODQwMDg3LC0xNTY1ODgwNjUyLC0xNzc1ODQ1NT
-k5LDEwNjIyMTMwMzIsMTUwOTU4MTQ0LDI5MTA3NzI3MCwzOTUz
-MDI0NDIsMTMwMzg4MTAwOCwtNTA3NjM1NjE0LDE1MTIzOTkzLD
-I3MzY4MzI1OCw0NzQwNzMzOTUsLTExMjQxOTQ2MzhdfQ==
+eyJoaXN0b3J5IjpbMTE0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMT
+cxMDk3ODkyNywxNzg5MTYwNDEyLDEzNTUwNzE1MDgsLTIwOTgy
+OTc2MzAsLTQxNDg0MDA4NywtMTU2NTg4MDY1MiwtMTc3NTg0NT
+U5OSwxMDYyMjEzMDMyLDE1MDk1ODE0NCwyOTEwNzcyNzAsMzk1
+MzAyNDQyLDEzMDM4ODEwMDgsLTUwNzYzNTYxNCwxNTEyMzk5My
+wyNzM2ODMyNTgsNDc0MDczMzk1LC0xMTI0MTk0NjM4XX0=
 -->
