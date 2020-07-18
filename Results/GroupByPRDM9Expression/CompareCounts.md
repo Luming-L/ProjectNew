@@ -14,7 +14,7 @@ qsub ~/CompareCounts_batch.sh
 ```bash
 echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t0.txt
 
-for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_WithAndWithoutPRDM9.txt); do
+for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold0/*_CompareCounts_WithAndWithoutPRDM9.txt); do
 
 	echo $file
 
@@ -44,10 +44,10 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTA5Nzg5MjcsMTc4OTE2MDQxMiwxMz
-U1MDcxNTA4LC0yMDk4Mjk3NjMwLC00MTQ4NDAwODcsLTE1NjU4
-ODA2NTIsLTE3NzU4NDU1OTksMTA2MjIxMzAzMiwxNTA5NTgxND
-QsMjkxMDc3MjcwLDM5NTMwMjQ0MiwxMzAzODgxMDA4LC01MDc2
-MzU2MTQsMTUxMjM5OTMsMjczNjgzMjU4LDQ3NDA3MzM5NSwtMT
-EyNDE5NDYzOF19
+eyJoaXN0b3J5IjpbLTE1MzYwNjI1MjIsLTE3MTA5Nzg5MjcsMT
+c4OTE2MDQxMiwxMzU1MDcxNTA4LC0yMDk4Mjk3NjMwLC00MTQ4
+NDAwODcsLTE1NjU4ODA2NTIsLTE3NzU4NDU1OTksMTA2MjIxMz
+AzMiwxNTA5NTgxNDQsMjkxMDc3MjcwLDM5NTMwMjQ0MiwxMzAz
+ODgxMDA4LC01MDc2MzU2MTQsMTUxMjM5OTMsMjczNjgzMjU4LD
+Q3NDA3MzM5NSwtMTEyNDE5NDYzOF19
 -->
