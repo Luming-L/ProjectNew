@@ -12,7 +12,7 @@ CancerType-specific Count Matrices - log2normCounts
 qsub ~/CompareCounts_batch.sh
 ```
 ```bash
-echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05LFC0\tP05LFC1" > CompareCounts.txt
+echo -e "cancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t0.txt
 
 for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_WithAndWithoutPRDM9.txt); do
 
@@ -27,7 +27,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/*_CompareCounts_W
 	P05LFC0=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 0)){print $0}}' $file | wc -l`
 	P05LFC1=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1)){print $0}}' $file | wc -l`
 
-	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts.txt
+	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t0.txt
 done
 ```
 0
@@ -44,10 +44,10 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NTYxMTI2LDE3ODkxNjA0MTIsMTM1NT
-A3MTUwOCwtMjA5ODI5NzYzMCwtNDE0ODQwMDg3LC0xNTY1ODgw
-NjUyLC0xNzc1ODQ1NTk5LDEwNjIyMTMwMzIsMTUwOTU4MTQ0LD
-I5MTA3NzI3MCwzOTUzMDI0NDIsMTMwMzg4MTAwOCwtNTA3NjM1
-NjE0LDE1MTIzOTkzLDI3MzY4MzI1OCw0NzQwNzMzOTUsLTExMj
-QxOTQ2MzhdfQ==
+eyJoaXN0b3J5IjpbLTE3MTA5Nzg5MjcsMTc4OTE2MDQxMiwxMz
+U1MDcxNTA4LC0yMDk4Mjk3NjMwLC00MTQ4NDAwODcsLTE1NjU4
+ODA2NTIsLTE3NzU4NDU1OTksMTA2MjIxMzAzMiwxNTA5NTgxND
+QsMjkxMDc3MjcwLDM5NTMwMjQ0MiwxMzAzODgxMDA4LC01MDc2
+MzU2MTQsMTUxMjM5OTMsMjczNjgzMjU4LDQ3NDA3MzM5NSwtMT
+EyNDE5NDYzOF19
 -->
