@@ -47,9 +47,11 @@ transfected human cell line
 PRDM9-induced histone modifications
 human PRDM9 frequently binds promoters, despite their low recombination rates, and it can activate expression of a small number of genes including _CTCFL_ and _VCX_.
 specific sequence motifs that predict consistent, localized meiotic recombination suppression around a subset of PRDM9 binding sites.
+
+PRDM9 human kidney cells grown in the laboratory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDg0ODk2NCwxMTk0MzM5NDU1LC0xND
-E3NTk1OTIsMTY3NTkxMDg4LDE5NDc1NjE3NzIsLTEzMjc1NDAw
-MzUsMTQ3NzcyOTI2NCwtMjQyMDUzMzM1LC05NTk5NzU5NzddfQ
-==
+eyJoaXN0b3J5IjpbLTE5NzA4MjY5MjAsLTUzNDg0ODk2NCwxMT
+k0MzM5NDU1LC0xNDE3NTk1OTIsMTY3NTkxMDg4LDE5NDc1NjE3
+NzIsLTEzMjc1NDAwMzUsMTQ3NzcyOTI2NCwtMjQyMDUzMzM1LC
+05NTk5NzU5NzddfQ==
 -->
