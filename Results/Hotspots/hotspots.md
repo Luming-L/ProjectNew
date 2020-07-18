@@ -39,6 +39,14 @@ numMotifInHotspotsAndPeaks=`wc -l "${fileName}_MotifInHotspotsAndPeaks.gff" | aw
 
 # Reference
 [https://elifesciences.org/articles/28383](https://elifesciences.org/articles/28383)
+
+H3K4me3 mark in testis tissue mice
+DMC1 mark in testis tissue mice
+H3K4me3 mark in testis tissue human
+DMC1 mark in testis tissue human
+
+
+
 PRDM9 binds almost all meiotic recombination sites in humans and mice.
 Most PRDM9-bound loci do not become recombination hotspots.
 
@@ -50,8 +58,8 @@ specific sequence motifs that predict consistent, localized meiotic recombinatio
 
 PRDM9 human kidney cells grown in the laboratory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzA4MjY5MjAsLTUzNDg0ODk2NCwxMT
-k0MzM5NDU1LC0xNDE3NTk1OTIsMTY3NTkxMDg4LDE5NDc1NjE3
-NzIsLTEzMjc1NDAwMzUsMTQ3NzcyOTI2NCwtMjQyMDUzMzM1LC
-05NTk5NzU5NzddfQ==
+eyJoaXN0b3J5IjpbLTQxMjQ2MzczMCwtMTk3MDgyNjkyMCwtNT
+M0ODQ4OTY0LDExOTQzMzk0NTUsLTE0MTc1OTU5MiwxNjc1OTEw
+ODgsMTk0NzU2MTc3MiwtMTMyNzU0MDAzNSwxNDc3NzI5MjY0LC
+0yNDIwNTMzMzUsLTk1OTk3NTk3N119
 -->
