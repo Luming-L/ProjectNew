@@ -35,8 +35,9 @@ bedtools intersect -a $file -b /home/s1949868/humanDSBhotspots/humanDSBhotspots_
 numMotifInHotspotsAndPeaks=`wc -l "${fileName}_MotifInHotspotsAndPeaks.gff" | awk '{print $1}'`
 ```
 # Output
-
+# Reference
+[https://elifesciences.org/articles/28383](https://elifesciences.org/articles/28383)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NzcyOTI2NCwtMjQyMDUzMzM1LC05NT
-k5NzU5NzddfQ==
+eyJoaXN0b3J5IjpbLTEzMjc1NDAwMzUsMTQ3NzcyOTI2NCwtMj
+QyMDUzMzM1LC05NTk5NzU5NzddfQ==
 -->
