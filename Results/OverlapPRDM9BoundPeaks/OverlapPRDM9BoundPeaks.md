@@ -18,7 +18,9 @@ human DSB hotspots
 ```bash
 cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./
 ```
-
+```bash
+cp /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_pan/TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed ./
+```
 # Process
 ### count overlap
 ```bash
@@ -31,7 +33,7 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwMjQyNjExLC01MjQzMjM2MDAsODc1OT
-IxODUsLTEyOTQ1NjMyNzIsMzk1MTI4MTgxLC0xOTk1OTQ4NzYx
-LDE5OTM2MTI1MiwxMDg1OTU2MjQ0XX0=
+eyJoaXN0b3J5IjpbLTU5Mzg5NDQxOCw3OTAyNDI2MTEsLTUyND
+MyMzYwMCw4NzU5MjE4NSwtMTI5NDU2MzI3MiwzOTUxMjgxODEs
+LTE5OTU5NDg3NjEsMTk5MzYxMjUyLDEwODU5NTYyNDRdfQ==
 -->
