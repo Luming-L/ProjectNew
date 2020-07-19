@@ -3,7 +3,7 @@ human DSB hotspots vs direct PRDM9 binding sites
 human DSB hotspots vs pan cancer PRDM9 bound peaks
 direct PRDM9 binding sites vs pan cancer PRDM9 bound peaks
 # Input 
-PRDM9 binding sites in laboratory human kidney cells transfected with PRDM9
+direct PRDM9 binding sites
 ```bash
 # download
 wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE99nnn/GSE99407/suppl/GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt.gz
@@ -31,7 +31,7 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTgzMzg5Niw4NzU5MjE4NSwtMTI5ND
+eyJoaXN0b3J5IjpbLTUyNDMyMzYwMCw4NzU5MjE4NSwtMTI5ND
 U2MzI3MiwzOTUxMjgxODEsLTE5OTU5NDg3NjEsMTk5MzYxMjUy
 LDEwODU5NTYyNDRdfQ==
 -->
