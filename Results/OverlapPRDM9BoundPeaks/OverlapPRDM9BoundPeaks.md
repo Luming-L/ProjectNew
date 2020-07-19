@@ -12,10 +12,13 @@ grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p
 ~/Tools/liftOver PRDM9BindingSites_PeakCenter_Kidney.bed ~/Tools/hg19ToHg38.over.chain PRDM9BindingSites_PeakCenter_Kidney.hg38.bed unMapped
 ```
 human DSB hotspots
+```bahs
+cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./
+```
 
 ## Process
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5OTI3OTg2OCwxOTkzNjEyNTIsMTA4NT
-k1NjI0NF19
+eyJoaXN0b3J5IjpbLTE5OTU5NDg3NjEsMTk5MzYxMjUyLDEwOD
+U5NTYyNDRdfQ==
 -->
