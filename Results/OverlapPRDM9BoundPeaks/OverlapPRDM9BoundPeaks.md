@@ -9,13 +9,16 @@ direct PRDM9 binding sites
 wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE99nnn/GSE99407/suppl/GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt.gz
 # uncompress
 gzip -d GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt.gz
-# extract peak center
+
+# extract peak centers
 grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt | awk '{FS=OFS="\t"; print $1,$2,$3;}' > HEK293T_PRDM9Binding_PeakCenters.bed
 # liftOver to hg38
 ~/Tools/liftOver HEK293T_PRDM9Binding_PeakCenters.bed ~/Tools/hg19ToHg38.over.chain HEK293T_PRDM9Binding_PeakCenters.hg38.bed unMapped
-```
-```bash
+
+# extract peaks
 grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt | awk '{FS=OFS="\t"; print $1,$4,$5;}' > HEK293T_PRDM9Binding_Peaks.bed
+# liftOver to hg38
+OverlapPRDM9BoundPeaks]$ ~/Tools/liftOver HEK293T_PRDM9Binding_Peaks.bed ~/Tools/hg19ToHg38.over.chain HEK293T_PRDM9Binding_Peaks.hg38.bed unMapped
 ```
 human DSB hotspots
 ```bash
@@ -56,8 +59,8 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDYyNTY3NzksMTc0MjY0MjE2MSwtMT
-U0NzMzOTYxNSwtNTkzODk0NDE4LDc5MDI0MjYxMSwtNTI0MzIz
-NjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcyLDM5NTEyODE4MSwtMT
-k5NTk0ODc2MSwxOTkzNjEyNTIsMTA4NTk1NjI0NF19
+eyJoaXN0b3J5IjpbMzcxMjY5MTA3LDE3NDI2NDIxNjEsLTE1ND
+czMzk2MTUsLTU5Mzg5NDQxOCw3OTAyNDI2MTEsLTUyNDMyMzYw
+MCw4NzU5MjE4NSwtMTI5NDU2MzI3MiwzOTUxMjgxODEsLTE5OT
+U5NDg3NjEsMTk5MzYxMjUyLDEwODU5NTYyNDRdfQ==
 -->
