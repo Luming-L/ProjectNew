@@ -23,7 +23,9 @@ pan cancer PRDM9 bound peaks
 cp /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_pan/TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed ./
 ```
 ```bash
-
+qlogin -l h_vmem=8G
+module load igmm/apps/R/3.6.3
+cd /exports/eddie/scratch/s1949868/OverlapPRDM9BoundPeaks
 ```
 ```r
 pan_PRDM9BoundPeaks_df <- read.delim(file = "~/TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed", sep = "\t", header = FALSE)
@@ -50,8 +52,8 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk0NjQ0NTEwLC01OTM4OTQ0MTgsNzkwMj
-QyNjExLC01MjQzMjM2MDAsODc1OTIxODUsLTEyOTQ1NjMyNzIs
-Mzk1MTI4MTgxLC0xOTk1OTQ4NzYxLDE5OTM2MTI1MiwxMDg1OT
-U2MjQ0XX0=
+eyJoaXN0b3J5IjpbLTQ0MDk4MDIzNywtNTkzODk0NDE4LDc5MD
+I0MjYxMSwtNTI0MzIzNjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcy
+LDM5NTEyODE4MSwtMTk5NTk0ODc2MSwxOTkzNjEyNTIsMTA4NT
+k1NjI0NF19
 -->
