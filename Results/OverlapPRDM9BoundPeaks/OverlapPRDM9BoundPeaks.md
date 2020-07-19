@@ -12,10 +12,10 @@ gzip -d GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.An
 # extract peak center
 grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt | awk '{FS=OFS="\t"; print $1,$2,$3;}' > HEK293T_PRDM9Binding_PeakCenters.bed
 # liftOver to hg38
-~/Tools/liftOver PRDM9BindingSites_PeakCenter_Kidney.bed ~/Tools/hg19ToHg38.over.chain PRDM9BindingSites_PeakCenter_Kidney.hg38.bed unMapped
+~/Tools/liftOver HEK293T_PRDM9Binding_PeakCenters.bed ~/Tools/hg19ToHg38.over.chain HEK293T_PRDM9Binding_PeakCenters.hg38.bed unMapped
 ```
 human DSB hotspots
-```bahs
+```bash
 cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./
 ```
 
@@ -31,7 +31,7 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI0Njk5MzY5LC01MjQzMjM2MDAsODc1OT
+eyJoaXN0b3J5IjpbNzkwMjQyNjExLC01MjQzMjM2MDAsODc1OT
 IxODUsLTEyOTQ1NjMyNzIsMzk1MTI4MTgxLC0xOTk1OTQ4NzYx
 LDE5OTM2MTI1MiwxMDg1OTU2MjQ0XX0=
 -->
