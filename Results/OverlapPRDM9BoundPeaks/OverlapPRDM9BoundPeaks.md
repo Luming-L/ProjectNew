@@ -16,7 +16,7 @@ grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p
 ```
 human DSB hotspots
 ```bash
-cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./
+cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./humanDSBhotspots_AA_AB.hg38.bed
 ```
 pan cancer PRDM9 bound peaks
 ```bash
@@ -53,8 +53,8 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDczMzk2MTUsLTU5Mzg5NDQxOCw3OT
-AyNDI2MTEsLTUyNDMyMzYwMCw4NzU5MjE4NSwtMTI5NDU2MzI3
-MiwzOTUxMjgxODEsLTE5OTU5NDg3NjEsMTk5MzYxMjUyLDEwOD
-U5NTYyNDRdfQ==
+eyJoaXN0b3J5IjpbMTc0MjY0MjE2MSwtMTU0NzMzOTYxNSwtNT
+kzODk0NDE4LDc5MDI0MjYxMSwtNTI0MzIzNjAwLDg3NTkyMTg1
+LC0xMjk0NTYzMjcyLDM5NTEyODE4MSwtMTk5NTk0ODc2MSwxOT
+kzNjEyNTIsMTA4NTk1NjI0NF19
 -->
