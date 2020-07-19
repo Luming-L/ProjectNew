@@ -17,8 +17,12 @@ cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./
 ```
 
 ## Process
+```bash
+bedtools intersect -a humanDSBhotspots_AA_AB.hg38.txt -b PRDM9BindingSites_PeakCenter_Kidney.hg38.bed -u | wc -l
+19589
+```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTU5NDg3NjEsMTk5MzYxMjUyLDEwOD
-U5NTYyNDRdfQ==
+eyJoaXN0b3J5IjpbMzk1MTI4MTgxLC0xOTk1OTQ4NzYxLDE5OT
+M2MTI1MiwxMDg1OTU2MjQ0XX0=
 -->
