@@ -15,7 +15,7 @@ grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p
 ~/Tools/liftOver HEK293T_PRDM9Binding_PeakCenters.bed ~/Tools/hg19ToHg38.over.chain HEK293T_PRDM9Binding_PeakCenters.hg38.bed unMapped
 ```
 ```bash
-grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt | awk '{FS=OFS="\t"; print $1,$4,$5;}' > HEK293T_PRDM9Binding_Peak.bed
+grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt | awk '{FS=OFS="\t"; print $1,$4,$5;}' > HEK293T_PRDM9Binding_Peaks.bed
 ```
 human DSB hotspots
 ```bash
@@ -56,7 +56,7 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDc4MzEwOTIsMTc0MjY0MjE2MSwtMT
+eyJoaXN0b3J5IjpbLTE1NDYyNTY3NzksMTc0MjY0MjE2MSwtMT
 U0NzMzOTYxNSwtNTkzODk0NDE4LDc5MDI0MjYxMSwtNTI0MzIz
 NjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcyLDM5NTEyODE4MSwtMT
 k5NTk0ODc2MSwxOTkzNjEyNTIsMTA4NTk1NjI0NF19
