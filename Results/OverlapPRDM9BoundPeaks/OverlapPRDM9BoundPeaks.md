@@ -1,4 +1,5 @@
-Overlap 
+Overlap
+direct PRDM9 binding sites 
 PRDM9 binding sites in laboratory human kidney cells transfected with PRDM9 with human DSB hotspots
 # Input 
 PRDM9 binding sites in laboratory human kidney cells transfected with PRDM9
@@ -29,7 +30,7 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIxMDI0OTU5LDg3NTkyMTg1LC0xMjk0NT
-YzMjcyLDM5NTEyODE4MSwtMTk5NTk0ODc2MSwxOTkzNjEyNTIs
-MTA4NTk1NjI0NF19
+eyJoaXN0b3J5IjpbLTExODIwNzYxMSw4NzU5MjE4NSwtMTI5ND
+U2MzI3MiwzOTUxMjgxODEsLTE5OTU5NDg3NjEsMTk5MzYxMjUy
+LDEwODU5NTYyNDRdfQ==
 -->
