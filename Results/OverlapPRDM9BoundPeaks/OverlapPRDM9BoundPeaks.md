@@ -26,9 +26,10 @@ cp /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_pan/TCGA-ATAC_PanCancer
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
 cd /exports/eddie/scratch/s1949868/OverlapPRDM9BoundPeaks
+R
 ```
 ```r
-pan_PRDM9BoundPeaks_df <- read.delim(file = "~/TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed", sep = "\t", header = FALSE)
+pan_PRDM9BoundPeaks_df <- read.delim(file = "/exports/eddie/scratch/s1949868/OverlapPRDM9BoundPeaks/TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed", sep = "\t", header = FALSE)
 colnames(pan_PRDM9BoundPeaks_df) <- c("chrom","start","end","name")
 pan_PRDM9BoundPeaks_df$start <- pan_PRDM9BoundPeaks_df$start + 250
 pan_PRDM9BoundPeaks_df$end <- pan_PRDM9BoundPeaks_df$end - 250
@@ -52,8 +53,8 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MDk4MDIzNywtNTkzODk0NDE4LDc5MD
-I0MjYxMSwtNTI0MzIzNjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcy
-LDM5NTEyODE4MSwtMTk5NTk0ODc2MSwxOTkzNjEyNTIsMTA4NT
-k1NjI0NF19
+eyJoaXN0b3J5IjpbLTE1NDczMzk2MTUsLTU5Mzg5NDQxOCw3OT
+AyNDI2MTEsLTUyNDMyMzYwMCw4NzU5MjE4NSwtMTI5NDU2MzI3
+MiwzOTUxMjgxODEsLTE5OTU5NDg3NjEsMTk5MzYxMjUyLDEwOD
+U5NTYyNDRdfQ==
 -->
