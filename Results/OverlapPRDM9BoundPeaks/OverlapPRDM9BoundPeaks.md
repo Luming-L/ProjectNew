@@ -18,8 +18,25 @@ human DSB hotspots
 ```bash
 cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./
 ```
+pan cancer PRDM9 bound peaks
 ```bash
 cp /exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_pan/TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed ./
+```
+```bash
+
+```
+```r
+pan_PRDM9BoundPeaks_df <- read.delim(file = "~/TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed", sep = "\t", header = FALSE)
+colnames(pan_PRDM9BoundPeaks_df) <- c("chrom","start","end","name")
+pan_PRDM9BoundPeaks_df$start <- pan_PRDM9BoundPeaks_df$start + 250
+pan_PRDM9BoundPeaks_df$end <- pan_PRDM9BoundPeaks_df$end - 250
+
+write.table(pan_PRDM9BoundPeaks_df,
+	file="TCGA-ATAC_PanCancer_PRDM9_bound_peaks_peakCenters.bed",
+	sep = "\t",
+	append=FALSE,row.names = FALSE,col.names = FALSE,
+	quote =FALSE
+	)
 ```
 # Process
 ### count overlap
@@ -33,7 +50,8 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5Mzg5NDQxOCw3OTAyNDI2MTEsLTUyND
-MyMzYwMCw4NzU5MjE4NSwtMTI5NDU2MzI3MiwzOTUxMjgxODEs
-LTE5OTU5NDg3NjEsMTk5MzYxMjUyLDEwODU5NTYyNDRdfQ==
+eyJoaXN0b3J5IjpbOTk0NjQ0NTEwLC01OTM4OTQ0MTgsNzkwMj
+QyNjExLC01MjQzMjM2MDAsODc1OTIxODUsLTEyOTQ1NjMyNzIs
+Mzk1MTI4MTgxLC0xOTk1OTQ4NzYxLDE5OTM2MTI1MiwxMDg1OT
+U2MjQ0XX0=
 -->
