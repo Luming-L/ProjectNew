@@ -18,11 +18,15 @@ cp ~/humanDSBhotspots/humanDSBhotspots_AA_AB.hg38.txt ./
 
 ## Process
 ```bash
+# count overlap
 bedtools intersect -a humanDSBhotspots_AA_AB.hg38.txt -b PRDM9BindingSites_PeakCenter_Kidney.hg38.bed -u | wc -l # 19589
-
+# total
+wc -l humanDSBhotspots_AA_AB.hg38.txt # 40541
+```
+```bash
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NDc2NjA2LDM5NTEyODE4MSwtMTk5NT
-k0ODc2MSwxOTkzNjEyNTIsMTA4NTk1NjI0NF19
+eyJoaXN0b3J5IjpbMTUzMjYzMTYzNSwzOTUxMjgxODEsLTE5OT
+U5NDg3NjEsMTk5MzYxMjUyLDEwODU5NTYyNDRdfQ==
 -->
