@@ -10,7 +10,7 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE99nnn/GSE99407/suppl/GSE99407_Ch
 # uncompress
 gzip -d GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt.gz
 # extract peak center
-grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt | awk '{FS=OFS="\t"; print $1,$2,$3;}' > PRDM9BindingSites_PeakCenter_Kidney.bed
+grep -v "center_start" GSE99407_ChIPseq_Peaks.YFP_HumanPRDM9.antiGFP.protocolN.p10e-5.sep250.Annotated.txt | awk '{FS=OFS="\t"; print $1,$2,$3;}' > HEK293T_PRDM9Binding_PeakCenters.bed
 # liftOver to hg38
 ~/Tools/liftOver PRDM9BindingSites_PeakCenter_Kidney.bed ~/Tools/hg19ToHg38.over.chain PRDM9BindingSites_PeakCenter_Kidney.hg38.bed unMapped
 ```
@@ -31,7 +31,7 @@ bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNDMyMzYwMCw4NzU5MjE4NSwtMTI5ND
-U2MzI3MiwzOTUxMjgxODEsLTE5OTU5NDg3NjEsMTk5MzYxMjUy
-LDEwODU5NTYyNDRdfQ==
+eyJoaXN0b3J5IjpbMjI0Njk5MzY5LC01MjQzMjM2MDAsODc1OT
+IxODUsLTEyOTQ1NjMyNzIsMzk1MTI4MTgxLC0xOTk1OTQ4NzYx
+LDE5OTM2MTI1MiwxMDg1OTU2MjQ0XX0=
 -->
