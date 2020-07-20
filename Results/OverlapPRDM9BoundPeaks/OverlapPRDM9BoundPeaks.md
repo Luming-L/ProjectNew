@@ -48,19 +48,17 @@ write.table(pan_PRDM9BoundPeaks_df,
 	)
 ```
 # Process
-### count overlap
+## human DSB hotspots vs direct PRDM9 binding sites
 ```bash
-# count overlap
-bedtools intersect -a ~/project/OverlapPRDM9BoundPeaks/humanDSBhotspots_AA_AB.hg38.txt.temp -b ~/project/OverlapPRDM9BoundPeaks/PRDM9BindingSites_PeakCenter_Kidney.hg38.bed.temp -u | wc -l
+Rscript overlapPeaksCentersWithIntervals.R HEK293T_PRDM9Binding_PeakCenters.hg38.bed humanDSBhotspots_AA_AB.hg38.bed
 ```
-### Overlap correction
-```bash
-
-```
+human DSB hotspots vs pan cancer PRDM9 bound peaks
+direct PRDM9 binding sites vs pan cancer PRDM9 bound peaks
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcxMjY5MTA3LDE3NDI2NDIxNjEsLTE1ND
-czMzk2MTUsLTU5Mzg5NDQxOCw3OTAyNDI2MTEsLTUyNDMyMzYw
-MCw4NzU5MjE4NSwtMTI5NDU2MzI3MiwzOTUxMjgxODEsLTE5OT
-U5NDg3NjEsMTk5MzYxMjUyLDEwODU5NTYyNDRdfQ==
+eyJoaXN0b3J5IjpbLTc2ODA0MjY2MywzNzEyNjkxMDcsMTc0Mj
+Y0MjE2MSwtMTU0NzMzOTYxNSwtNTkzODk0NDE4LDc5MDI0MjYx
+MSwtNTI0MzIzNjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcyLDM5NT
+EyODE4MSwtMTk5NTk0ODc2MSwxOTkzNjEyNTIsMTA4NTk1NjI0
+NF19
 -->
