@@ -50,13 +50,13 @@ write.table(pan_PRDM9BoundPeaks_df,
 # Process
 ## human DSB hotspots vs direct PRDM9 binding sites
 ```bash
-Rscript overlapPeaksCentersWithIntervals.R HEK293T_PRDM9Binding_PeakCenters.hg38.bed humanDSBhotspots_AA_AB.hg38.bed
+
 ```
 human DSB hotspots vs pan cancer PRDM9 bound peaks
 direct PRDM9 binding sites vs pan cancer PRDM9 bound peaks
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2ODA0MjY2MywzNzEyNjkxMDcsMTc0Mj
+eyJoaXN0b3J5IjpbLTI4ODY0NDIyOCwzNzEyNjkxMDcsMTc0Mj
 Y0MjE2MSwtMTU0NzMzOTYxNSwtNTkzODk0NDE4LDc5MDI0MjYx
 MSwtNTI0MzIzNjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcyLDM5NT
 EyODE4MSwtMTk5NTk0ODc2MSwxOTkzNjEyNTIsMTA4NTk1NjI0
