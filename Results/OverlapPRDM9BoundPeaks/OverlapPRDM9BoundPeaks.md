@@ -48,17 +48,17 @@ write.table(pan_PRDM9BoundPeaks_df,
 	)
 ```
 # Process
-## human DSB hotspots vs direct PRDM9 binding sites
+human DSB hotspots vs direct PRDM9 binding sites
 ```bash
-
+Rscript overlapPeaksCentersWithIntervals.R HEK293T_PRDM9Binding_PeakCenters.hg38.bed humanDSBhotspots_AA_AB.hg38.bed
 ```
-## human DSB hotspots vs pan cancer PRDM9 bound peaks
-## direct PRDM9 binding sites vs pan cancer PRDM9 bound peaks
+human DSB hotspots vs pan cancer PRDM9 bound peaks
+direct PRDM9 binding sites vs pan cancer PRDM9 bound peaks
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMzkyNjUxNiwtMjg4NjQ0MjI4LDM3MT
-I2OTEwNywxNzQyNjQyMTYxLC0xNTQ3MzM5NjE1LC01OTM4OTQ0
-MTgsNzkwMjQyNjExLC01MjQzMjM2MDAsODc1OTIxODUsLTEyOT
-Q1NjMyNzIsMzk1MTI4MTgxLC0xOTk1OTQ4NzYxLDE5OTM2MTI1
-MiwxMDg1OTU2MjQ0XX0=
+eyJoaXN0b3J5IjpbMTc0MTI3Mjc0NywyMTEzOTI2NTE2LC0yOD
+g2NDQyMjgsMzcxMjY5MTA3LDE3NDI2NDIxNjEsLTE1NDczMzk2
+MTUsLTU5Mzg5NDQxOCw3OTAyNDI2MTEsLTUyNDMyMzYwMCw4Nz
+U5MjE4NSwtMTI5NDU2MzI3MiwzOTUxMjgxODEsLTE5OTU5NDg3
+NjEsMTk5MzYxMjUyLDEwODU5NTYyNDRdfQ==
 -->
