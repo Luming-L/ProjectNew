@@ -1,5 +1,6 @@
 
 ```bash
+# load 
 module load anaconda/5.0.1
 conda config --add envs_dirs /exports/eddie/scratch/s1949868/anaconda/envs
 conda config --add pkgs_dirs /exports/eddie/scratch/s1949868/anaconda/pkgs/
@@ -10,6 +11,6 @@ Install Snakemake
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzMyMDg5NzMsLTE4NTQyNjYxNDNdfQ
-==
+eyJoaXN0b3J5IjpbLTc3MjkzMTA4OCwtMTA3MzIwODk3MywtMT
+g1NDI2NjE0M119
 -->
