@@ -17,15 +17,18 @@ source activate mypython
 # Deactivate the environment
 source deactivate
 ```
-Install Snakemake
+# Install Snakemake
 ```bash
+# specify --user
 pip install --user --upgrade pip
-
 pip install --user snakemake
+
+cd ~  
+vi .bashrc
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NjY0NTU1MywtMTM2OTcyODExNSwtNz
-c4MTM1NzMzLC0yNDc3NzI5MzUsLTEwNzMyMDg5NzMsLTE4NTQy
-NjYxNDNdfQ==
+eyJoaXN0b3J5IjpbMjc0ODkxMTIwLDIwNzY2NDU1NTMsLTEzNj
+k3MjgxMTUsLTc3ODEzNTczMywtMjQ3NzcyOTM1LC0xMDczMjA4
+OTczLC0xODU0MjY2MTQzXX0=
 -->
