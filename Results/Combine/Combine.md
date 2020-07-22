@@ -24,14 +24,15 @@ pip install --user --upgrade pip
 pip install --user snakemake
 
 # get snakemake path
-which snakemake # 
+which snakemake # ~/.local/bin/snakemake
 
+# 
 cd ~  
 vim .bashrc
-
+PATH=$PATH:/home/s1949868/.local/bin/
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MzE4Mzg2NSwtMTU2NDc3NDI0MSwyMD
-c2NjQ1NTUzLC0xMzY5NzI4MTE1LC03NzgxMzU3MzMsLTI0Nzc3
-MjkzNSwtMTA3MzIwODk3MywtMTg1NDI2NjE0M119
+eyJoaXN0b3J5IjpbLTE3MDM1NzkyOTQsLTE1NjQ3NzQyNDEsMj
+A3NjY0NTU1MywtMTM2OTcyODExNSwtNzc4MTM1NzMzLC0yNDc3
+NzI5MzUsLTEwNzMyMDg5NzMsLTE4NTQyNjYxNDNdfQ==
 -->
