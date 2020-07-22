@@ -23,12 +23,15 @@ source deactivate
 pip install --user --upgrade pip
 pip install --user snakemake
 
+# get snakemake path
+which snakemake # 
+
 cd ~  
 vim .bashrc
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjQ3NzQyNDEsMjA3NjY0NTU1MywtMT
-M2OTcyODExNSwtNzc4MTM1NzMzLC0yNDc3NzI5MzUsLTEwNzMy
-MDg5NzMsLTE4NTQyNjYxNDNdfQ==
+eyJoaXN0b3J5IjpbMTY2MzE4Mzg2NSwtMTU2NDc3NDI0MSwyMD
+c2NjQ1NTUzLC0xMzY5NzI4MTE1LC03NzgxMzU3MzMsLTI0Nzc3
+MjkzNSwtMTA3MzIwODk3MywtMTg1NDI2NjE0M119
 -->
