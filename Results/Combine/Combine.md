@@ -19,10 +19,13 @@ source deactivate
 ```
 Install Snakemake
 ```bash
-# Install via Conda
+pip install --user --upgrade pip
+
+
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjk3MjgxMTUsLTc3ODEzNTczMywtMj
-Q3NzcyOTM1LC0xMDczMjA4OTczLC0xODU0MjY2MTQzXX0=
+eyJoaXN0b3J5IjpbNTQ0OTk0ODU4LC0xMzY5NzI4MTE1LC03Nz
+gxMzU3MzMsLTI0Nzc3MjkzNSwtMTA3MzIwODk3MywtMTg1NDI2
+NjE0M119
 -->
