@@ -24,11 +24,11 @@ pip install --user --upgrade pip
 pip install --user snakemake
 
 cd ~  
-vi .bashrc
+vim .bashrc
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc0ODkxMTIwLDIwNzY2NDU1NTMsLTEzNj
-k3MjgxMTUsLTc3ODEzNTczMywtMjQ3NzcyOTM1LC0xMDczMjA4
-OTczLC0xODU0MjY2MTQzXX0=
+eyJoaXN0b3J5IjpbLTE1NjQ3NzQyNDEsMjA3NjY0NTU1MywtMT
+M2OTcyODExNSwtNzc4MTM1NzMzLC0yNDc3NzI5MzUsLTEwNzMy
+MDg5NzMsLTE4NTQyNjYxNDNdfQ==
 -->
