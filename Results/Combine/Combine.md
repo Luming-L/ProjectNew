@@ -29,10 +29,10 @@ which snakemake # ~/.local/bin/snakemake
 # 
 cd ~  
 vim .bashrc
-PATH=$PATH:/home/s1949868/.local/bin/
+export PATH="$PATH:/home/s1949868/.local/bin/"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDM1NzkyOTQsLTE1NjQ3NzQyNDEsMj
+eyJoaXN0b3J5IjpbLTIwOTM3MjY1NDAsLTE1NjQ3NzQyNDEsMj
 A3NjY0NTU1MywtMTM2OTcyODExNSwtNzc4MTM1NzMzLC0yNDc3
 NzI5MzUsLTEwNzMyMDg5NzMsLTE4NTQyNjYxNDNdfQ==
 -->
