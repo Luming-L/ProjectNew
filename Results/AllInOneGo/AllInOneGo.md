@@ -47,11 +47,12 @@ snakemake -s Snakefile1 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_
 ```
 ```bash
 cd /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls
+mkdir sorted
 for file in $(ls); do sort -k1,1 -k2,2n $file | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > /exports/eddie/scratch/s1949868/TCGA-ATAC_Cancer_Type-specific_PeakCalls/sorted/${file}.sorted; done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMzcwNDYzMiwtMjA2MDI5Mzk0NywyMT
+eyJoaXN0b3J5IjpbLTg2NjczNTg0OCwtMjA2MDI5Mzk0NywyMT
 c5NzExOTIsLTU4MjQ1MjAyNSwtMTE3NzQ1MjUzLC0xNzU2NDg3
 NjYxXX0=
 -->
