@@ -34,8 +34,9 @@ export PATH="$PATH:/home/s1949868/.local/bin/"
 ```
 # 
 ```bash
-# -pn: `p` display the actual shell commands as it runs them; `n` means just do a dry-run, without actually doing it all (an excellent idea always!)
+# -pn: `p` display the actual shell commands as it runs them; `n` means just do a dry-run, without actually doing it all
+snakemake -pn ds1_plot.pdf -s Snakefile1
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTgzMDMxODBdfQ==
+eyJoaXN0b3J5IjpbLTE3NTY0ODc2NjFdfQ==
 -->
