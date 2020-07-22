@@ -35,6 +35,8 @@ export PATH="$PATH:/home/s1949868/.local/bin/"
 # load module
 ```bash
 qlogin -l h_vmem=8G
+cd /exports/eddie/scratch/s1949868/AllInOneGo
+
 module load igmm/apps/MACS2/2.1.1
 module load python/3.4.3
 ```
@@ -43,6 +45,6 @@ module load python/3.4.3
 snakemake -s Snakefile1 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg -j1
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1OTg0ODk0LC01ODI0NTIwMjUsLTExNz
+eyJoaXN0b3J5IjpbMjE3OTcxMTkyLC01ODI0NTIwMjUsLTExNz
 c0NTI1MywtMTc1NjQ4NzY2MV19
 -->
