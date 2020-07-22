@@ -21,11 +21,11 @@ Install Snakemake
 ```bash
 pip install --user --upgrade pip
 
-
+pip install --user snakemake
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ0OTk0ODU4LC0xMzY5NzI4MTE1LC03Nz
-gxMzU3MzMsLTI0Nzc3MjkzNSwtMTA3MzIwODk3MywtMTg1NDI2
-NjE0M119
+eyJoaXN0b3J5IjpbMjA3NjY0NTU1MywtMTM2OTcyODExNSwtNz
+c4MTM1NzMzLC0yNDc3NzI5MzUsLTEwNzMyMDg5NzMsLTE4NTQy
+NjYxNDNdfQ==
 -->
