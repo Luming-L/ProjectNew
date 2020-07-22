@@ -32,11 +32,16 @@ vim .bashrc
 # in .bashrc, add
 export PATH="$PATH:/home/s1949868/.local/bin/"
 ```
-# 
+# load module
+```bash
+module load igmm/apps/MACS2/2.1.1
+module load python/3.4.3
+```
 ```bash
 # -pn: `p` display the actual shell commands as it runs them; `n` means just do a dry-run, without actually doing it all
 snakemake -s Snakefile1 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.bg -j1
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzc0NTI1MywtMTc1NjQ4NzY2MV19
+eyJoaXN0b3J5IjpbLTU4MjQ1MjAyNSwtMTE3NzQ1MjUzLC0xNz
+U2NDg3NjYxXX0=
 -->
