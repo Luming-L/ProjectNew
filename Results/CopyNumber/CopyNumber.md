@@ -22,6 +22,7 @@ PRDM9.expression <- read.delim("/home/s1949868/Results/PRDM9ExpressionAndBinding
 # store sampleID in a new column
 PRDM9.expression$sampleID <- substr(rownames(PRDM9.expression),6,21)
 
+# read cnv
 masked_cnv <- read.delim("GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
 masked_cnv$sample <- as.character(masked_cnv$sample)
 masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
@@ -36,7 +37,7 @@ masked_cnv$End <- masked_cnv$End+100
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjU1MzgxMTUsLTEzMjcxODIwOTcsND
-gzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYz
-MjgzODJdfQ==
+eyJoaXN0b3J5IjpbMjA3NDA3MTcsLTEzMjcxODIwOTcsNDgzNT
+YzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgz
+ODJdfQ==
 -->
