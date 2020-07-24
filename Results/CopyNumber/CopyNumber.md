@@ -17,7 +17,10 @@ cd /exports/eddie/scratch/s1949868/CopyNumber
 R
 ```
 ```r
+# read PRDM9 expression
 PRDM9.expression <- read.delim("/home/s1949868/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
+# get samp
+PRDM9.expression$sampleID <- substr(rownames(PRDM9.expression),6,21)
 
 masked_cnv <- read.delim("GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
 masked_cnv$sample <- as.character(masked_cnv$sample)
@@ -33,6 +36,7 @@ masked_cnv$End <- masked_cnv$End+100
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNj
-k2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
+eyJoaXN0b3J5IjpbMTE3NDc4NTg0NiwtMTMyNzE4MjA5Nyw0OD
+M1NjM2MjYsLTE2OTYzODkxMzIsLTExMjEyNDE0OTgsMTUwNjMy
+ODM4Ml19
 -->
