@@ -13,12 +13,12 @@ Copy Number Estimation
 ```bash
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
-
+R
 ```
 ```r
 PRDM9.expression <- read.delim("/home/s1949868/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
 
-masked_cnv <- read.delim("~/GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
+masked_cnv <- read.delim("GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
 masked_cnv$sample <- as.character(masked_cnv$sample)
 masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
 masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
@@ -32,6 +32,6 @@ masked_cnv$End <- masked_cnv$End+100
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MzkxMjc4NCw0ODM1NjM2MjYsLTE2OT
-YzODkxMzIsLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbLTEwMTkzMDAxODcsNDgzNTYzNjI2LC0xNj
+k2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
