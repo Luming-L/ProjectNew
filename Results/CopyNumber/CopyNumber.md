@@ -44,14 +44,17 @@ for (i in unique(masked_cnv$sample)) {
 }
 ```
 ```bash
+/exports/eddie/scratch/s1949868/CopyNumber
 cd /exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID
 UCEC_TCGA-BK-A13B-01A.masked_cnv.txt
 UCEC_TCGA-BK-A13B-01A_peakCalls_fimo.gff
 
+bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A13B-01A.masked_cnv.txt -b /exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/UCEC_TCGA-BK-A13B-01A_peakCalls_fimo.gff
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNDk2Mjk2LC0xMzI4MDI1NDEyLC0xNz
-Q3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMDc0MDcx
-NywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OTYzODkxMzIsLT
-ExMjEyNDE0OTgsMTUwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbMTc1NDc2NjE2MSwtMTMyODAyNTQxMiwtMT
+c0Nzk2NjcxLC01MjMyODQ2NjMsLTE2OTkwMTIyODEsMjA3NDA3
+MTcsLTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC
+0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
