@@ -13,6 +13,7 @@ Copy Number Estimation
 ```bash
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
+cd /exports/eddie/scratch/s1949868/CopyNumber
 R
 ```
 ```r
@@ -32,6 +33,6 @@ masked_cnv$End <- masked_cnv$End+100
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTkzMDAxODcsNDgzNTYzNjI2LC0xNj
+eyJoaXN0b3J5IjpbLTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNj
 k2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
