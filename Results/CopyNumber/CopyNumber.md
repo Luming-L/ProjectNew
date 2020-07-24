@@ -46,7 +46,7 @@ for (i in unique(masked_cnv$sample)) {
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
-for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/BRCA*); do 
+for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*); do 
 	echo $cnv_file; 
 	sampleID=${cnv_file#*CopyNumber/}; 
 	sampleID=${sampleID%.masked_cnv.txt*};
@@ -59,17 +59,17 @@ for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/BRCA*); do
 	b=`bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l`
 	
 	c=`echo "scale=2;$b/$a" | bc`
-	echo -e "$sampleID\t$a\t$b\t$c"
+	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_cnv_VS_motif.txt
 done
 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NzIxNjkxNSw0MTYyNzMyMjQsMTM2Mj
-Q5MTkwOSwtOTU5ODc0OTI2LDI5MTY3MTY3NSw5NDg3ODM3MCwt
-MTMyODAyNTQxMiwtMTc0Nzk2NjcxLC01MjMyODQ2NjMsLTE2OT
-kwMTIyODEsMjA3NDA3MTcsLTEzMjcxODIwOTcsNDgzNTYzNjI2
-LC0xNjk2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ
-==
+eyJoaXN0b3J5IjpbLTE5MjIwNjczOTgsNDE2MjczMjI0LDEzNj
+I0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzAs
+LTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNj
+k5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYy
+NiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4MzgyXX
+0=
 -->
