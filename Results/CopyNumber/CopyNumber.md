@@ -18,11 +18,15 @@ masked_cnv$sample <- as.character(masked_cnv$sample)
 masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
 masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
 
+
 masked_cnv[masked_cnv$sample %in% substr(rownames(PRDM9.expression),6,21),]
 saveRDS(object = masked_cnv, file = "masked_cnv.rds")
+
+masked_cnv$Start <- masked_cnv$Start-100
+masked_cnv$End <- masked_cnv$End+100
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTYzODkxMzIsLTExMjEyNDE0OTgsMT
-UwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMT
+IxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
