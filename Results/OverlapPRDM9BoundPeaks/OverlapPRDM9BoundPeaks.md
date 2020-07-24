@@ -48,6 +48,11 @@ write.table(pan_PRDM9BoundPeaks_df,
 	)
 ```
 # Process
+```bash
+qlogin -l h_vmem=8G
+module load igmm/apps/R/3.6.3
+module load igmm/apps/BEDTools/2.27.1
+```
 ## human DSB hotspots vs direct PRDM9 binding sites
 ```bash
 Rscript overlapPeaksCentersWithIntervals.R humanDSBhotspots_AA_AB.hg38.bed HEK293T_PRDM9Binding_PeakCenters.hg38.bed
@@ -62,11 +67,11 @@ Rscript overlapPeaksCentersWithIntervals.R TCGA-ATAC_PanCancer_PRDM9_bound_peaks
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY0Mzc1NzA4LDE0ODQ4NTEyNTksLTQzMD
-AxNzk5NCwtMTk1ODg2Njk1NiwxMzE5MzY4NDAxLDE3NDEyNzI3
-NDcsMjExMzkyNjUxNiwtMjg4NjQ0MjI4LDM3MTI2OTEwNywxNz
-QyNjQyMTYxLC0xNTQ3MzM5NjE1LC01OTM4OTQ0MTgsNzkwMjQy
-NjExLC01MjQzMjM2MDAsODc1OTIxODUsLTEyOTQ1NjMyNzIsMz
-k1MTI4MTgxLC0xOTk1OTQ4NzYxLDE5OTM2MTI1MiwxMDg1OTU2
-MjQ0XX0=
+eyJoaXN0b3J5IjpbNjA5MDYwODEsNTY0Mzc1NzA4LDE0ODQ4NT
+EyNTksLTQzMDAxNzk5NCwtMTk1ODg2Njk1NiwxMzE5MzY4NDAx
+LDE3NDEyNzI3NDcsMjExMzkyNjUxNiwtMjg4NjQ0MjI4LDM3MT
+I2OTEwNywxNzQyNjQyMTYxLC0xNTQ3MzM5NjE1LC01OTM4OTQ0
+MTgsNzkwMjQyNjExLC01MjQzMjM2MDAsODc1OTIxODUsLTEyOT
+Q1NjMyNzIsMzk1MTI4MTgxLC0xOTk1OTQ4NzYxLDE5OTM2MTI1
+Ml19
 -->
