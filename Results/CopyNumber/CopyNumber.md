@@ -44,11 +44,13 @@ for (i in unique(masked_cnv$sample)) {
 }
 ```
 ```bash
+cd /exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID
+
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNj
-k5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYy
-NiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4MzgyXX
-0=
+eyJoaXN0b3J5IjpbLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNT
+IzMjg0NjYzLC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgy
+MDk3LDQ4MzU2MzYyNiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OC
+wxNTA2MzI4MzgyXX0=
 -->
