@@ -11,7 +11,7 @@ Copy Number Estimation
 -   Genes with focal CNV values between and including -0.3 and 0.3 are categorized as "neutral" (0).
 
 ```bash
-PRDM9.expression <- read.delim("/home/s1949868/Results/GroupByPRDM9Expression/PRDM9Expression.txt", sep = "\t",header = TRUE)
+PRDM9.expression <- read.delim("/home/s1949868/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
 
 masked_cnv <- read.delim("~/GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
 masked_cnv$sample <- as.character(masked_cnv$sample)
@@ -27,6 +27,6 @@ masked_cnv$End <- masked_cnv$End+100
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMT
-IxMjQxNDk4LDE1MDYzMjgzODJdfQ==
+eyJoaXN0b3J5IjpbMjU2NDg2MDAwLDQ4MzU2MzYyNiwtMTY5Nj
+M4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4MzgyXX0=
 -->
