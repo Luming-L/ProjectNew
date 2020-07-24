@@ -43,9 +43,12 @@ for (i in unique(masked_cnv$sample)) {
 	)
 }
 ```
+```bash
 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMD
-c0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OTYzODkx
-MzIsLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbLTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNj
+k5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYy
+NiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4MzgyXX
+0=
 -->
