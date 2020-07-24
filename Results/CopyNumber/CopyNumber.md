@@ -38,7 +38,7 @@ for (i in unique(masked_cnv$sample)) {
   write.table(output,
 	file=paste0(cType_sampleID,".masked_cnv.txt"),
 	sep = "\t",
-	append=FALSE,row.names = FALSE,col.names = TRUE,
+	append=FALSE,row.names = FALSE,col.names = FALSE,
 	quote =FALSE
 	)
 }
@@ -49,8 +49,8 @@ cd /exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNT
-IzMjg0NjYzLC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgy
-MDk3LDQ4MzU2MzYyNiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OC
-wxNTA2MzI4MzgyXX0=
+eyJoaXN0b3J5IjpbMjEyNjg5NTg5MSwtMTMyODAyNTQxMiwtMT
+c0Nzk2NjcxLC01MjMyODQ2NjMsLTE2OTkwMTIyODEsMjA3NDA3
+MTcsLTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC
+0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
