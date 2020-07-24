@@ -31,14 +31,21 @@ masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
 # just keep samples containing RNA-seq, ATAC-seq and cnv data.
 masked_cnv <- masked_cnv[masked_cnv$sample %in% PRDM9.expression$sampleID,]
 
-saveRDS(object = masked_cnv, file = "masked_cnv.rds")
-
-masked_cnv$Start <- masked_cnv$Start-100
-masked_cnv$End <- masked_cnv$End+100
+for (i in unique(masked_cnv$sample)) {
+  output <- masked_cnv[masked_cnv$sample == i,c(2,3,4,5)]
+  cType_sampleID <- rownames(PRDM9.expression[PRDM9.expression$sampleID == i,])
+  
+  write.table(output,
+	file=paste0(cType_sampleID,".masked_cnv.txt"),
+	sep = "\t",
+	append=FALSE,row.names = FALSE,col.names = TRUE,
+	quote =FALSE
+	)
+}
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTkwMTIyODEsMjA3NDA3MTcsLTEzMj
-cxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQx
-NDk4LDE1MDYzMjgzODJdfQ==
+eyJoaXN0b3J5IjpbLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMD
+c0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OTYzODkx
+MzIsLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
 -->
