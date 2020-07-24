@@ -44,6 +44,8 @@ for (i in unique(masked_cnv$sample)) {
 }
 ```
 ```bash
+module load igmm/apps/BEDTools/2.27.1
+
 /exports/eddie/scratch/s1949868/CopyNumber
 cd /exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID
 UCEC_TCGA-BK-A13B-01A.masked_cnv.txt
@@ -53,8 +55,8 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A1
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDc2NjE2MSwtMTMyODAyNTQxMiwtMT
-c0Nzk2NjcxLC01MjMyODQ2NjMsLTE2OTkwMTIyODEsMjA3NDA3
-MTcsLTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC
-0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
+eyJoaXN0b3J5IjpbOTQ4NzgzNzAsLTEzMjgwMjU0MTIsLTE3ND
+c5NjY3MSwtNTIzMjg0NjYzLC0xNjk5MDEyMjgxLDIwNzQwNzE3
+LC0xMzI3MTgyMDk3LDQ4MzU2MzYyNiwtMTY5NjM4OTEzMiwtMT
+EyMTI0MTQ5OCwxNTA2MzI4MzgyXX0=
 -->
