@@ -46,7 +46,7 @@ for (i in unique(masked_cnv$sample)) {
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
-echo -e "sampleID\tnumCNV\tnumOverlap\tOverlapFraction" > overlap_cnv_VS_motif.txt
+echo -e "sampleID\tnumCNV\tnumOverlap\toverlapFraction" > overlap_cnv_VS_motif.txt
 
 for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*); do 
 	echo $cnv_file; 
@@ -68,7 +68,7 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzI2NzIxNCw0MTYyNzMyMjQsMTM2Mj
+eyJoaXN0b3J5IjpbMTI3NzQwNjgwMiw0MTYyNzMyMjQsMTM2Mj
 Q5MTkwOSwtOTU5ODc0OTI2LDI5MTY3MTY3NSw5NDg3ODM3MCwt
 MTMyODAyNTQxMiwtMTc0Nzk2NjcxLC01MjMyODQ2NjMsLTE2OT
 kwMTIyODEsMjA3NDA3MTcsLTEzMjcxODIwOTcsNDgzNTYzNjI2
