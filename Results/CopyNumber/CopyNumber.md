@@ -10,6 +10,18 @@ Copy Number Estimation
 -   Genes with focal CNV values larger than 0.3 are categorized as a "gain" (+1)
 -   Genes with focal CNV values between and including -0.3 and 0.3 are categorized as "neutral" (0).
 
+```bash
+PRDM9.expression <- read.delim("~/MscProject/Results/GroupByPRDM9Expression/PRDM9Expression.txt", sep = "\t",header = TRUE)
+
+masked_cnv <- read.delim("~/GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
+masked_cnv$sample <- as.character(masked_cnv$sample)
+masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
+masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
+
+masked_cnv[masked_cnv$sample %in% substr(rownames(PRDM9.expression),6,21),]
+saveRDS(object = masked_cnv, file = "masked_cnv.rds")
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
 -->
