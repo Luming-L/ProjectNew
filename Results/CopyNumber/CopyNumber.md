@@ -46,7 +46,7 @@ for (i in unique(masked_cnv$sample)) {
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
-for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/ACC*); do 
+for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/BRCA*); do 
 	echo $cnv_file; 
 	sampleID=${cnv_file#*CopyNumber/}; 
 	sampleID=${sampleID%.masked_cnv.txt*};
@@ -76,9 +76,9 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A1
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNzIzMTIyNywxMzYyNDkxOTA5LC05NT
-k4NzQ5MjYsMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MDI1NDEy
-LC0xNzQ3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMD
-c0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OTYzODkx
-MzIsLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbNDE2MjczMjI0LDEzNjI0OTE5MDksLTk1OT
+g3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzAsLTEzMjgwMjU0MTIs
+LTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNjk5MDEyMjgxLDIwNz
+QwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYyNiwtMTY5NjM4OTEz
+MiwtMTEyMTI0MTQ5OCwxNTA2MzI4MzgyXX0=
 -->
