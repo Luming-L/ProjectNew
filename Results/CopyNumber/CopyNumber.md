@@ -55,8 +55,11 @@ for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/ACC*); do
 	motif_file=/exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
 	echo $motif_file
 	
-	wc -l $cnv_file
-	bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l
+	a = `cat $cnv_file | wc -l`
+	b = `bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l`
+	
+	let r=b/a  
+	echo $r
 done
 
 
@@ -73,8 +76,9 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A1
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MD
-I1NDEyLC0xNzQ3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4
-MSwyMDc0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OT
-YzODkxMzIsLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbLTgwMjI3NzMyOSwyOTE2NzE2NzUsOTQ4Nz
+gzNzAsLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYz
+LC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4Mz
+U2MzYyNiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4
+MzgyXX0=
 -->
