@@ -58,9 +58,8 @@ for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/ACC*); do
 	a=`cat $cnv_file | wc -l`
 	b=`bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l`
 	
-	awk 'BEGIN{printf "%.2f%\n",(’$b‘/’$a‘)*100}'
-	let r=a/b
-	echo -e "$a\t$b\t$r"
+	c=`echo "sclae=4; $b/$a" | bc`
+	echo -e "$a\t$b\t$c"
 done
 
 
@@ -77,9 +76,9 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A1
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MjQ5MTkwOSwtOTU5ODc0OTI2LDI5MT
-Y3MTY3NSw5NDg3ODM3MCwtMTMyODAyNTQxMiwtMTc0Nzk2Njcx
-LC01MjMyODQ2NjMsLTE2OTkwMTIyODEsMjA3NDA3MTcsLTEzMj
-cxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQx
-NDk4LDE1MDYzMjgzODJdfQ==
+eyJoaXN0b3J5IjpbMTU0NTUyMDg1OSwxMzYyNDkxOTA5LC05NT
+k4NzQ5MjYsMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MDI1NDEy
+LC0xNzQ3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMD
+c0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OTYzODkx
+MzIsLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
 -->
