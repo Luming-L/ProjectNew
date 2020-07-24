@@ -48,6 +48,9 @@ module load igmm/apps/BEDTools/2.27.1
 
 for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/ACC*); do 
 	echo $cnv_file; 
+	sampleID=${cnv_file#*CopyNumber/}; 
+	sampleID=${sampleID%.masked_cnv.txt
+*};
 done
 
 
@@ -64,8 +67,8 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A1
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzk3Njg3OTYsOTQ4NzgzNzAsLTEzMj
-gwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNjk5MDEy
-MjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYyNiwtMT
-Y5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4MzgyXX0=
+eyJoaXN0b3J5IjpbMTk2MDA5Nzk5Nyw5NDg3ODM3MCwtMTMyOD
+AyNTQxMiwtMTc0Nzk2NjcxLC01MjMyODQ2NjMsLTE2OTkwMTIy
+ODEsMjA3NDA3MTcsLTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNj
+k2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
