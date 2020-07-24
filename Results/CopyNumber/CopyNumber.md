@@ -28,8 +28,9 @@ masked_cnv$sample <- as.character(masked_cnv$sample)
 masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
 masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
 
+# just keep samples containing RNA-seq, ATAC-seq and cnv data.
+masked_cnv <- masked_cnv[masked_cnv$sample %in% PRDM9.expression$sampleID,]
 
-masked_cnv[masked_cnv$sample %in% substr(rownames(PRDM9.expression),6,21),]
 saveRDS(object = masked_cnv, file = "masked_cnv.rds")
 
 masked_cnv$Start <- masked_cnv$Start-100
@@ -37,7 +38,7 @@ masked_cnv$End <- masked_cnv$End+100
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NDA3MTcsLTEzMjcxODIwOTcsNDgzNT
-YzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgz
-ODJdfQ==
+eyJoaXN0b3J5IjpbLTE2OTkwMTIyODEsMjA3NDA3MTcsLTEzMj
+cxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQx
+NDk4LDE1MDYzMjgzODJdfQ==
 -->
