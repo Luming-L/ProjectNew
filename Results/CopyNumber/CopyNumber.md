@@ -55,10 +55,11 @@ for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/ACC*); do
 	motif_file=/exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
 	echo $motif_file
 	
-	a= `cat $cnv_file | wc -l`
-	b = `bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l`
-	totalPRDM9BoundPeaks=`grep "chr" $file | wc -l`
+	a=`cat $cnv_file | wc -l`
+	b=`bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l`
 
+	let r=a/b
+	echo -e "$a\t$b\t$r"
 done
 
 
@@ -75,9 +76,9 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A1
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQwMzM1NTI3LDI5MTY3MTY3NSw5NDg3OD
-M3MCwtMTMyODAyNTQxMiwtMTc0Nzk2NjcxLC01MjMyODQ2NjMs
-LTE2OTkwMTIyODEsMjA3NDA3MTcsLTEzMjcxODIwOTcsNDgzNT
-YzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgz
-ODJdfQ==
+eyJoaXN0b3J5IjpbLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4Nz
+gzNzAsLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYz
+LC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4Mz
+U2MzYyNiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4
+MzgyXX0=
 -->
