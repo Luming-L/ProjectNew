@@ -52,8 +52,11 @@ for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/ACC*); do
 	sampleID=${sampleID%.masked_cnv.txt*};
 	echo $sampleID
 	
-	motif_file=${sampleID}_peakCalls_fimo.gff
-	echo
+	motif_file=/exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
+	echo $motif_file
+	
+	bedtools intersect -a $cnv_file -b $motif_file
+
 done
 
 
@@ -70,8 +73,8 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CopyNumber/UCEC_TCGA-BK-A1
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4NTY3MDYwLDk0ODc4MzcwLC0xMzI4MD
-I1NDEyLC0xNzQ3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4
-MSwyMDc0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OT
-YzODkxMzIsLTExMjEyNDE0OTgsMTUwNjMyODM4Ml19
+eyJoaXN0b3J5IjpbLTYyOTI2OTUxNyw5NDg3ODM3MCwtMTMyOD
+AyNTQxMiwtMTc0Nzk2NjcxLC01MjMyODQ2NjMsLTE2OTkwMTIy
+ODEsMjA3NDA3MTcsLTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNj
+k2Mzg5MTMyLC0xMTIxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
