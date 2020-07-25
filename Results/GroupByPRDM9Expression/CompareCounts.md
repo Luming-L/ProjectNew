@@ -61,9 +61,10 @@ module load igmm/apps/R/3.6.3
 R --no-restore
 ```
 ```r
-pan_norm_ct_distal_top250000var <- readRDS(file="pan_norm_ct_distal_top250000var.rds")
 install.packages('Rtsne',lib = "/exports/eddie/scratch/s1949868/R/library")
-library(Rtsne)
+library(Rtsne,lib.loc = "/exports/eddie/scratch/s1949868/R/library")
+
+pan_norm_ct_distal_top250000var <- readRDS(file="pan_norm_ct_distal_top250000var.rds")
 
 install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
 library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
@@ -75,11 +76,11 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDE3MzY4NSwtMzU2OTgxMzAwLDYwMT
-A3Mzc3MiwtMjE0NDI4NzUwOCwtODM3NDU1NDM1LDE1MTI3NTUw
-NjIsLTE1MDczNjIyMDIsMjA3NDIxNjc5OSw3MDQyMjg5ODksOD
-ExMTEwNjc5LC0xODAzNjcxMTUsLTExNzE4NDQ5MDksMjEzMTY0
-NDU5MywxMTQwMTY2Nzk5LC0xNTM2MDYyNTIyLC0xNzEwOTc4OT
-I3LDE3ODkxNjA0MTIsMTM1NTA3MTUwOCwtMjA5ODI5NzYzMCwt
-NDE0ODQwMDg3XX0=
+eyJoaXN0b3J5IjpbLTEyNDA4MTU4NTQsLTU4MDE3MzY4NSwtMz
+U2OTgxMzAwLDYwMTA3Mzc3MiwtMjE0NDI4NzUwOCwtODM3NDU1
+NDM1LDE1MTI3NTUwNjIsLTE1MDczNjIyMDIsMjA3NDIxNjc5OS
+w3MDQyMjg5ODksODExMTEwNjc5LC0xODAzNjcxMTUsLTExNzE4
+NDQ5MDksMjEzMTY0NDU5MywxMTQwMTY2Nzk5LC0xNTM2MDYyNT
+IyLC0xNzEwOTc4OTI3LDE3ODkxNjA0MTIsMTM1NTA3MTUwOCwt
+MjA5ODI5NzYzMF19
 -->
