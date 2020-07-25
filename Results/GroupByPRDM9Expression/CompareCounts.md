@@ -47,11 +47,13 @@ awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareC
 ```bash
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
-R --no-environ
+R --no-restore
 ```
 ```r
 pan_norm_ct <- readRDS(file="TCGA-ATAC_PanCan_Log2Norm_Counts.rds")
-pan_norm_ct_distal <- pan_norm_ct[!pan_norm_ct$annotation == "Promoter",]
+
+
+pan_norm_ct_distal <- pan_norm_ct[!pan_norm_ct$annotation == "Promoter",-c(1:7)]
 
 
 pan_norm_ct_distal <- data.matrix(pan_norm_ct_distal[,-c(1:7)])
@@ -67,11 +69,11 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5OTQyMjQ0OCwtMjE0NDI4NzUwOCwtOD
-M3NDU1NDM1LDE1MTI3NTUwNjIsLTE1MDczNjIyMDIsMjA3NDIx
-Njc5OSw3MDQyMjg5ODksODExMTEwNjc5LC0xODAzNjcxMTUsLT
-ExNzE4NDQ5MDksMjEzMTY0NDU5MywxMTQwMTY2Nzk5LC0xNTM2
-MDYyNTIyLC0xNzEwOTc4OTI3LDE3ODkxNjA0MTIsMTM1NTA3MT
-UwOCwtMjA5ODI5NzYzMCwtNDE0ODQwMDg3LC0xNTY1ODgwNjUy
-LC0xNzc1ODQ1NTk5XX0=
+eyJoaXN0b3J5IjpbNjAxMDczNzcyLC0yMTQ0Mjg3NTA4LC04Mz
+c0NTU0MzUsMTUxMjc1NTA2MiwtMTUwNzM2MjIwMiwyMDc0MjE2
+Nzk5LDcwNDIyODk4OSw4MTExMTA2NzksLTE4MDM2NzExNSwtMT
+E3MTg0NDkwOSwyMTMxNjQ0NTkzLDExNDAxNjY3OTksLTE1MzYw
+NjI1MjIsLTE3MTA5Nzg5MjcsMTc4OTE2MDQxMiwxMzU1MDcxNT
+A4LC0yMDk4Mjk3NjMwLC00MTQ4NDAwODcsLTE1NjU4ODA2NTIs
+LTE3NzU4NDU1OTldfQ==
 -->
