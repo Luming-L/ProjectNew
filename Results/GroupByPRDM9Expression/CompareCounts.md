@@ -61,13 +61,8 @@ module load igmm/apps/R/3.6.3
 R --no-restore
 ```
 ```r
-pan_norm_ct <- readRDS(file="TCGA-ATAC_PanCan_Log2Norm_Counts.rds")
-
-
-pan_norm_ct_distal <- pan_norm_ct[!pan_norm_ct$annotation == "Promoter",-c(1:7)]
-
-
-pan_norm_ct_distal <- data.matrix(pan_norm_ct_distal[,-c(1:7)])
+pan_norm_ct_distal_top250000var <- readRDS(file="pan_norm_ct_distal_top250000var.rds")
+install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
 
 
 install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
@@ -80,11 +75,11 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1Njk4MTMwMCw2MDEwNzM3NzIsLTIxND
-QyODc1MDgsLTgzNzQ1NTQzNSwxNTEyNzU1MDYyLC0xNTA3MzYy
-MjAyLDIwNzQyMTY3OTksNzA0MjI4OTg5LDgxMTExMDY3OSwtMT
-gwMzY3MTE1LC0xMTcxODQ0OTA5LDIxMzE2NDQ1OTMsMTE0MDE2
-Njc5OSwtMTUzNjA2MjUyMiwtMTcxMDk3ODkyNywxNzg5MTYwND
-EyLDEzNTUwNzE1MDgsLTIwOTgyOTc2MzAsLTQxNDg0MDA4Nywt
-MTU2NTg4MDY1Ml19
+eyJoaXN0b3J5IjpbLTExNTU2MDA1NDQsLTM1Njk4MTMwMCw2MD
+EwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNSwxNTEyNzU1
+MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4OTg5LD
+gxMTExMDY3OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LDIxMzE2
+NDQ1OTMsMTE0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMTcxMDk3OD
+kyNywxNzg5MTYwNDEyLDEzNTUwNzE1MDgsLTIwOTgyOTc2MzAs
+LTQxNDg0MDA4N119
 -->
