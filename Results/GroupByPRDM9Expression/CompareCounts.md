@@ -44,19 +44,28 @@ done
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
 
+```bash
+qlogin -l h_vmem=8G
+module load igmm/apps/R/3.6.3
+```
 ```r
+
+
 install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
 library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 
 ```
+
+
+
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMjc1NTA2MiwtMTUwNzM2MjIwMiwyMD
-c0MjE2Nzk5LDcwNDIyODk4OSw4MTExMTA2NzksLTE4MDM2NzEx
-NSwtMTE3MTg0NDkwOSwyMTMxNjQ0NTkzLDExNDAxNjY3OTksLT
-E1MzYwNjI1MjIsLTE3MTA5Nzg5MjcsMTc4OTE2MDQxMiwxMzU1
-MDcxNTA4LC0yMDk4Mjk3NjMwLC00MTQ4NDAwODcsLTE1NjU4OD
-A2NTIsLTE3NzU4NDU1OTksMTA2MjIxMzAzMiwxNTA5NTgxNDQs
-MjkxMDc3MjcwXX0=
+eyJoaXN0b3J5IjpbMTMzMDE4NzIzNiwxNTEyNzU1MDYyLC0xNT
+A3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4OTg5LDgxMTExMDY3
+OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LDIxMzE2NDQ1OTMsMT
+E0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMTcxMDk3ODkyNywxNzg5
+MTYwNDEyLDEzNTUwNzE1MDgsLTIwOTgyOTc2MzAsLTQxNDg0MD
+A4NywtMTU2NTg4MDY1MiwtMTc3NTg0NTU5OSwxMDYyMjEzMDMy
+LDE1MDk1ODE0NF19
 -->
