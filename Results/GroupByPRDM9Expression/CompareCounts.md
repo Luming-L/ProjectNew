@@ -43,12 +43,18 @@ done
 ```bash
 awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareCounts_WithAndWithoutPRDM9.txt | awk '{FS=OFS="\t"; if($1~/^chr/){print $1,$2,$3,$4;}}' > THCA.txt
 ```
+
+```r
+install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
+library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NDIxNjc5OSw3MDQyMjg5ODksODExMT
-EwNjc5LC0xODAzNjcxMTUsLTExNzE4NDQ5MDksMjEzMTY0NDU5
-MywxMTQwMTY2Nzk5LC0xNTM2MDYyNTIyLC0xNzEwOTc4OTI3LD
-E3ODkxNjA0MTIsMTM1NTA3MTUwOCwtMjA5ODI5NzYzMCwtNDE0
-ODQwMDg3LC0xNTY1ODgwNjUyLC0xNzc1ODQ1NTk5LDEwNjIyMT
-MwMzIsMTUwOTU4MTQ0LDI5MTA3NzI3MCwzOTUzMDI0NDIsMTMw
-Mzg4MTAwOF19
+eyJoaXN0b3J5IjpbLTE1MDczNjIyMDIsMjA3NDIxNjc5OSw3MD
+QyMjg5ODksODExMTEwNjc5LC0xODAzNjcxMTUsLTExNzE4NDQ5
+MDksMjEzMTY0NDU5MywxMTQwMTY2Nzk5LC0xNTM2MDYyNTIyLC
+0xNzEwOTc4OTI3LDE3ODkxNjA0MTIsMTM1NTA3MTUwOCwtMjA5
+ODI5NzYzMCwtNDE0ODQwMDg3LC0xNTY1ODgwNjUyLC0xNzc1OD
+Q1NTk5LDEwNjIyMTMwMzIsMTUwOTU4MTQ0LDI5MTA3NzI3MCwz
+OTUzMDI0NDJdfQ==
 -->
