@@ -49,6 +49,9 @@ qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
 ```
 ```r
+pan_norm_ct <- readRDS(file="TCGA-ATAC_PanCan_Log2Norm_Counts.rds")
+pan_norm_ct_distal <- pan_norm_ct[!pan_norm_ct$annotation == "Promoter",]
+pan_norm_ct_distal <- data.matrix(pan_norm_ct_distal[,-c(1:7)])
 
 
 install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
@@ -61,7 +64,7 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMDE4NzIzNiwxNTEyNzU1MDYyLC0xNT
+eyJoaXN0b3J5IjpbLTgzNzQ1NTQzNSwxNTEyNzU1MDYyLC0xNT
 A3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4OTg5LDgxMTExMDY3
 OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LDIxMzE2NDQ1OTMsMT
 E0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMTcxMDk3ODkyNywxNzg5
