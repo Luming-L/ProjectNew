@@ -52,6 +52,8 @@ R --no-environ
 ```r
 pan_norm_ct <- readRDS(file="TCGA-ATAC_PanCan_Log2Norm_Counts.rds")
 pan_norm_ct_distal <- pan_norm_ct[!pan_norm_ct$annotation == "Promoter",]
+
+
 pan_norm_ct_distal <- data.matrix(pan_norm_ct_distal[,-c(1:7)])
 
 
@@ -65,11 +67,11 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQyODc1MDgsLTgzNzQ1NTQzNSwxNT
-EyNzU1MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4
-OTg5LDgxMTExMDY3OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LD
-IxMzE2NDQ1OTMsMTE0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMTcx
-MDk3ODkyNywxNzg5MTYwNDEyLDEzNTUwNzE1MDgsLTIwOTgyOT
-c2MzAsLTQxNDg0MDA4NywtMTU2NTg4MDY1MiwtMTc3NTg0NTU5
-OSwxMDYyMjEzMDMyXX0=
+eyJoaXN0b3J5IjpbLTQ5OTQyMjQ0OCwtMjE0NDI4NzUwOCwtOD
+M3NDU1NDM1LDE1MTI3NTUwNjIsLTE1MDczNjIyMDIsMjA3NDIx
+Njc5OSw3MDQyMjg5ODksODExMTEwNjc5LC0xODAzNjcxMTUsLT
+ExNzE4NDQ5MDksMjEzMTY0NDU5MywxMTQwMTY2Nzk5LC0xNTM2
+MDYyNTIyLC0xNzEwOTc4OTI3LDE3ODkxNjA0MTIsMTM1NTA3MT
+UwOCwtMjA5ODI5NzYzMCwtNDE0ODQwMDg3LC0xNTY1ODgwNjUy
+LC0xNzc1ODQ1NTk5XX0=
 -->
