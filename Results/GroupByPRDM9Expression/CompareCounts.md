@@ -47,6 +47,7 @@ awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1 || $6 < -1)){print $0}}' THCA_CompareC
 ```bash
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
+R --no-environ
 ```
 ```r
 pan_norm_ct <- readRDS(file="TCGA-ATAC_PanCan_Log2Norm_Counts.rds")
@@ -64,11 +65,11 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNzQ1NTQzNSwxNTEyNzU1MDYyLC0xNT
-A3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4OTg5LDgxMTExMDY3
-OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LDIxMzE2NDQ1OTMsMT
-E0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMTcxMDk3ODkyNywxNzg5
-MTYwNDEyLDEzNTUwNzE1MDgsLTIwOTgyOTc2MzAsLTQxNDg0MD
-A4NywtMTU2NTg4MDY1MiwtMTc3NTg0NTU5OSwxMDYyMjEzMDMy
-LDE1MDk1ODE0NF19
+eyJoaXN0b3J5IjpbLTIxNDQyODc1MDgsLTgzNzQ1NTQzNSwxNT
+EyNzU1MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4
+OTg5LDgxMTExMDY3OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LD
+IxMzE2NDQ1OTMsMTE0MDE2Njc5OSwtMTUzNjA2MjUyMiwtMTcx
+MDk3ODkyNywxNzg5MTYwNDEyLDEzNTUwNzE1MDgsLTIwOTgyOT
+c2MzAsLTQxNDg0MDA4NywtMTU2NTg4MDY1MiwtMTc3NTg0NTU5
+OSwxMDYyMjEzMDMyXX0=
 -->
