@@ -3,8 +3,7 @@ compare samples with PRDM9 expression and samples without PRDM9 expression
 TCGA-ATAC_PanCancer_PeakSet
 # Motif Find
 
-```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTM4NjE1ODQsLTIwMjAxNTYxMDAsLT
-IwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMjg2ODA3MDYyLC0yMDIwMTU2MTAwLC0yMD
+g4NzQ2NjEyXX0=
 -->
