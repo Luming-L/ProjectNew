@@ -55,6 +55,52 @@ pan_norm_ct_distal_top250000var <- pan_norm_ct_distal[order(Pvars, decreasing=TR
 # save to rds
 saveRDS(object = pan_norm_ct_distal_top250000var, file = "pan_norm_ct_distal_top250000var.rds")
 ```
+
+```r
+# read ID conversion table
+samples.ids <- read.delim(file = "~/TCGA_identifier_mapping",sep = "\t",header=TRUE)
+samples.ids$bam_prefix <- as.character(samples.ids$bam_prefix)
+samples.ids$Case_ID <- as.character(samples.ids$Case_ID)
+# add ID
+samples.ids$cancerType <- substr(samples.ids$bam_prefix,1,4)
+samples.ids$sample <- substr(samples.ids$Case_ID,1,16)
+samples.ids$cancerType_sample <- paste0(samples.ids$cancerType,"_",samples.ids$sample)
+
+# read normalized counts
+pan_norm_ct <- readRDS(file="~/TCGA-ATAC_PanCan_Log2Norm_Counts.rds")
+# get index of sampleID in pan_norm_ct
+idx <- match(gsub("_","-",colnames(pan_norm_ct)[-c(1:7)]),samples.ids$bam_prefix)
+# rename colnames of pan_norm_ct
+colnames(pan_norm_ct)[-c(1:7)] <- samples.ids[idx,"cancerType_sample"]
+
+# mark replicates 
+duplicated.idx <- duplicated(colnames(pan_norm_ct)[-c(1:7)])
+# mark rep1
+colnames(pan_norm_ct)[-c(1:7)][!duplicated.idx] <- 
+  paste0(colnames(pan_norm_ct)[-c(1:7)][!duplicated.idx],"_rep1")
+# mark rep2
+colnames(pan_norm_ct)[-c(1:7)][duplicated.idx] <- 
+  paste0(colnames(pan_norm_ct)[-c(1:7)][duplicated.idx],"_rep2")
+
+## calculate the mean of replicates
+# This function will calculate the Means of the peaks for a given group
+groupMeans <- function(df, groups, na.rm = TRUE){
+  gm <- lapply(unique(groups), function(x){
+    rowMeans(df[,grepl(x,colnames(df)),drop = F],na.rm=TRUE)
+  }) %>% Reduce("cbind",.) # calculate rowMean and combine
+  
+  colnames(gm) <- unique(groups) # specify colnames to sampleID
+  
+  return(gm)
+}
+
+# calculate the mean of the replicates of each patient.  
+matMerged <- groupMeans(df = pan_norm_ct, 
+                        groups =  unique(samples.ids[idx,"cancerType_sample"]))
+pan_norm_ct_merge <- matMerged
+```
+
+
 ```bash
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
@@ -79,7 +125,7 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NjM0NTQ1OCwtMTI0MDgxNTg1NCwxNT
+eyJoaXN0b3J5IjpbMTI5MzU2NzgwNiwtMTI0MDgxNTg1NCwxNT
 YzNjg0MjIzLC0xMjQwODE1ODU0LC01ODAxNzM2ODUsLTM1Njk4
 MTMwMCw2MDEwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNS
 wxNTEyNzU1MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0
