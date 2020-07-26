@@ -97,6 +97,23 @@ groupMeans <- function(df, groups, na.rm = TRUE){
 matMerged <- groupMeans(df = pan_norm_ct, 
                         groups =  unique(samples.ids[idx,"cancerType_sample"]))
 pan_norm_ct_merge <- matMerged
+
+# select peaks annotated as distal
+peaks_distal<-rownames(pan_norm_ct[!pan_norm_ct$annotation == "Promoter",])
+pan_norm_ct_merge_distal<-pan_norm_ct_merge[peaks_distal,]
+# var
+Pvars<-rowVars(pan_norm_ct_merge_distal)
+# top 250000 var
+pan_norm_ct_merge_distal_top250000var <- pan_norm_ct_merge_distal[order(Pvars, decreasing=TRUE)[1:250000],]
+# Transpose
+pan_norm_ct_merge_distal_top250000var_t <- t(pan_norm_ct_merge_distal_top250000var)
+# to dataframe
+pan_norm_ct_merge_distal_top250000var_t<-data.frame(pan_norm_ct_merge_distal_top250000var_t)
+# add cancerType
+pan_norm_ct_merge_distal_top250000var_t$cancerType <- substr(rownames(pan_norm_ct_merge_distal_top250000var_t),1,4)
+# save rds
+saveRDS(object = pan_norm_ct_merge_distal_top250000var_t, 
+        file = "pan_norm_ct_merge_distal_top250000var_t.rds")
 ```
 
 
@@ -124,7 +141,7 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMjM5NDMzNiwxMjkzNTY3ODA2LC0xMj
+eyJoaXN0b3J5IjpbMjEzODY2NTM2NCwxMjkzNTY3ODA2LC0xMj
 QwODE1ODU0LDE1NjM2ODQyMjMsLTEyNDA4MTU4NTQsLTU4MDE3
 MzY4NSwtMzU2OTgxMzAwLDYwMTA3Mzc3MiwtMjE0NDI4NzUwOC
 wtODM3NDU1NDM1LDE1MTI3NTUwNjIsLTE1MDczNjIyMDIsMjA3
