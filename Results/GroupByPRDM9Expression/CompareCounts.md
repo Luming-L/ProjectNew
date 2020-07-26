@@ -64,9 +64,10 @@ R --no-restore
 install.packages('Rtsne',lib = "/exports/eddie/scratch/s1949868/R/library")
 library(Rtsne,lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 
-pan_norm_ct_merge_distal_top250000var_t.rds <- readRDS(file="pan_norm_ct_merge_distal_top250000var_t.rds")
-
 pan_norm_ct_merge_distal_top250000var_t <- readRDS(file="pan_norm_ct_merge_distal_top250000var_t.rds")
+
+pan_norm_ct_merge_distal_top250000var_t_matrix <- as.matrix(pan_norm_ct_merge_distal_top250000var_t[,-250001])
+
 
 install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
 library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
@@ -78,7 +79,7 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwODgzNzkzNCwtMTI0MDgxNTg1NCwxNT
+eyJoaXN0b3J5IjpbLTQ2NjM0NTQ1OCwtMTI0MDgxNTg1NCwxNT
 YzNjg0MjIzLC0xMjQwODE1ODU0LC01ODAxNzM2ODUsLTM1Njk4
 MTMwMCw2MDEwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNS
 wxNTEyNzU1MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0
