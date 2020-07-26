@@ -93,7 +93,6 @@ groupMeans <- function(df, groups, na.rm = TRUE){
   
   return(gm)
 }
-
 # calculate the mean of the replicates of each patient.  
 matMerged <- groupMeans(df = pan_norm_ct, 
                         groups =  unique(samples.ids[idx,"cancerType_sample"]))
@@ -111,9 +110,9 @@ install.packages('Rtsne',lib = "/exports/eddie/scratch/s1949868/R/library")
 library(Rtsne,lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 
 pan_norm_ct_merge_distal_top250000var_t <- readRDS(file="pan_norm_ct_merge_distal_top250000var_t.rds")
-
 pan_norm_ct_merge_distal_top250000var_t_matrix <- as.matrix(pan_norm_ct_merge_distal_top250000var_t[,-250001])
-
+tsne_out <- Rtsne(pan_norm_ct_merge_distal_top250000var_t_matrix,pca=FALSE,perplexity=30,theta=0.0)
+plot(tsne_out$Y, asp=1)
 
 install.packages('bigmemory',lib = "/exports/eddie/scratch/s1949868/R/library")
 library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
@@ -125,11 +124,11 @@ library('bigmemory',lib.loc = "/exports/eddie/scratch/s1949868/R/library")
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MzU2NzgwNiwtMTI0MDgxNTg1NCwxNT
-YzNjg0MjIzLC0xMjQwODE1ODU0LC01ODAxNzM2ODUsLTM1Njk4
-MTMwMCw2MDEwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNS
-wxNTEyNzU1MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0
-MjI4OTg5LDgxMTExMDY3OSwtMTgwMzY3MTE1LC0xMTcxODQ0OT
-A5LDIxMzE2NDQ1OTMsMTE0MDE2Njc5OSwtMTUzNjA2MjUyMiwt
-MTcxMDk3ODkyN119
+eyJoaXN0b3J5IjpbMTkwMjM5NDMzNiwxMjkzNTY3ODA2LC0xMj
+QwODE1ODU0LDE1NjM2ODQyMjMsLTEyNDA4MTU4NTQsLTU4MDE3
+MzY4NSwtMzU2OTgxMzAwLDYwMTA3Mzc3MiwtMjE0NDI4NzUwOC
+wtODM3NDU1NDM1LDE1MTI3NTUwNjIsLTE1MDczNjIyMDIsMjA3
+NDIxNjc5OSw3MDQyMjg5ODksODExMTEwNjc5LC0xODAzNjcxMT
+UsLTExNzE4NDQ5MDksMjEzMTY0NDU5MywxMTQwMTY2Nzk5LC0x
+NTM2MDYyNTIyXX0=
 -->
