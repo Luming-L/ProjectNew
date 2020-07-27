@@ -43,8 +43,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/pan_CompareCounts
 	c=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 > 1)){print $0}}' $file | wc -l`
 	d=`awk '{FS=OFS="\t";if(($7 < 0.05)&&($6 < -1)){print $0}}' $file | wc -l`
 
-	echo -e "$threshold\t$a\t$b\t$c\t$d" >> CompareCounts_t11.txt
-	
+	echo -e "$threshold\t$a\t$b\t$c\t$d" >> pan_CompareCounts.txt	
 done
 ```
 # Output
@@ -154,11 +153,11 @@ bedtools intersect -a  -b  -u
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDc0MjcwNCwtNDM5OTEzMTUwLDIxMz
-g2NjUzNjQsMTI5MzU2NzgwNiwtMTI0MDgxNTg1NCwxNTYzNjg0
-MjIzLC0xMjQwODE1ODU0LC01ODAxNzM2ODUsLTM1Njk4MTMwMC
-w2MDEwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNSwxNTEy
-NzU1MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4OT
-g5LDgxMTExMDY3OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LDIx
-MzE2NDQ1OTNdfQ==
+eyJoaXN0b3J5IjpbLTczNjE5NzU2MSwtODcwNzQyNzA0LC00Mz
+k5MTMxNTAsMjEzODY2NTM2NCwxMjkzNTY3ODA2LC0xMjQwODE1
+ODU0LDE1NjM2ODQyMjMsLTEyNDA4MTU4NTQsLTU4MDE3MzY4NS
+wtMzU2OTgxMzAwLDYwMTA3Mzc3MiwtMjE0NDI4NzUwOCwtODM3
+NDU1NDM1LDE1MTI3NTUwNjIsLTE1MDczNjIyMDIsMjA3NDIxNj
+c5OSw3MDQyMjg5ODksODExMTEwNjc5LC0xODAzNjcxMTUsLTEx
+NzE4NDQ5MDldfQ==
 -->
