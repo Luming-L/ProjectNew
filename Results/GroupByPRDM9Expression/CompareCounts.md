@@ -30,13 +30,9 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold11
 	echo -e "$cancerType\t$totalPRDM9BoundPeaks\t$P05\t$P05LFC0\t$P05LFC1" >> CompareCounts_t11.txt
 done
 ```
-0
-5
-6
-7
-8
-9
-10
+```bash
+echo -e "PRDM9threshold\tcancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t11.txt
+```
 # Output
 5 types of cancer don't have enough observations to perform t-test 
 
@@ -144,11 +140,11 @@ bedtools intersect -a  -b  -u
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTkxMzE1MCwyMTM4NjY1MzY0LDEyOT
-M1Njc4MDYsLTEyNDA4MTU4NTQsMTU2MzY4NDIyMywtMTI0MDgx
-NTg1NCwtNTgwMTczNjg1LC0zNTY5ODEzMDAsNjAxMDczNzcyLC
-0yMTQ0Mjg3NTA4LC04Mzc0NTU0MzUsMTUxMjc1NTA2MiwtMTUw
-NzM2MjIwMiwyMDc0MjE2Nzk5LDcwNDIyODk4OSw4MTExMTA2Nz
-ksLTE4MDM2NzExNSwtMTE3MTg0NDkwOSwyMTMxNjQ0NTkzLDEx
-NDAxNjY3OTldfQ==
+eyJoaXN0b3J5IjpbMjA1MTQ2Mzg1MiwtNDM5OTEzMTUwLDIxMz
+g2NjUzNjQsMTI5MzU2NzgwNiwtMTI0MDgxNTg1NCwxNTYzNjg0
+MjIzLC0xMjQwODE1ODU0LC01ODAxNzM2ODUsLTM1Njk4MTMwMC
+w2MDEwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNSwxNTEy
+NzU1MDYyLC0xNTA3MzYyMjAyLDIwNzQyMTY3OTksNzA0MjI4OT
+g5LDgxMTExMDY3OSwtMTgwMzY3MTE1LC0xMTcxODQ0OTA5LDIx
+MzE2NDQ1OTNdfQ==
 -->
