@@ -31,7 +31,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold11
 done
 ```
 ```bash
-echo -e "PRDM9threshold\tcancerType\ttotalPRDM9BoundPeaks\tP05\tP05LFC0\tP05LFC1" > CompareCounts_t11.txt
+echo -e "threshold\tpadj<05&log2FC>0\tpadj<05&log2FC<0\tpadj<05&log2FC>1\tpadj<0.05&log2FC<-1." > pan_CompareCounts.txt
 ```
 # Output
 5 types of cancer don't have enough observations to perform t-test 
@@ -140,7 +140,7 @@ bedtools intersect -a  -b  -u
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MTQ2Mzg1MiwtNDM5OTEzMTUwLDIxMz
+eyJoaXN0b3J5IjpbMTIzMDI1NDkzMiwtNDM5OTEzMTUwLDIxMz
 g2NjUzNjQsMTI5MzU2NzgwNiwtMTI0MDgxNTg1NCwxNTYzNjg0
 MjIzLC0xMjQwODE1ODU0LC01ODAxNzM2ODUsLTM1Njk4MTMwMC
 w2MDEwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNSwxNTEy
