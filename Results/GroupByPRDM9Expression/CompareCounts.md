@@ -34,8 +34,7 @@ done
 echo -e "threshold\tpadj<05&log2FC>0\tpadj<05&log2FC<0\tpadj<05&log2FC>1\tpadj<05&log2FC<-1." > pan_CompareCounts.txt
 for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/pan_CompareCounts/*_t*); do
 	echo $file
-	
-	threshold=`echo ${file#*_t}`; 
+	threshold=`echo ${file#*_t}`;
 	threshold=`echo ${threshold%.txt*}`;
 	echo $threshold
 done
@@ -147,7 +146,7 @@ bedtools intersect -a  -b  -u
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMzc0NDYyMSwtNDM5OTEzMTUwLDIxMz
+eyJoaXN0b3J5IjpbMTUyNzkwNzk5NSwtNDM5OTEzMTUwLDIxMz
 g2NjUzNjQsMTI5MzU2NzgwNiwtMTI0MDgxNTg1NCwxNTYzNjg0
 MjIzLC0xMjQwODE1ODU0LC01ODAxNzM2ODUsLTM1Njk4MTMwMC
 w2MDEwNzM3NzIsLTIxNDQyODc1MDgsLTgzNzQ1NTQzNSwxNTEy
