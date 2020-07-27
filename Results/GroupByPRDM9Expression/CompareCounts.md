@@ -32,8 +32,12 @@ done
 ```
 ```bash
 echo -e "threshold\tpadj<05&log2FC>0\tpadj<05&log2FC<0\tpadj<05&log2FC>1\tpadj<05&log2FC<-1." > pan_CompareCounts.txt
-for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/pan_CompareCounts/*_CompareCounts_WithAndWithoutPRDM9.txt); do
-
+for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/pan_CompareCounts/*_t*); do
+	echo $file
+	
+	cancerType=`echo ${file#*PRDM9_Threshold11/}`; 
+	cancerType=`echo ${cancerType%_CompareCounts_WithAndWithoutPRDM9*}`;
+	echo $cancerType
 
 ```
 # Output
@@ -143,11 +147,11 @@ bedtools intersect -a  -b  -u
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMDAzMjk5LC00Mzk5MTMxNTAsMjEzOD
-Y2NTM2NCwxMjkzNTY3ODA2LC0xMjQwODE1ODU0LDE1NjM2ODQy
-MjMsLTEyNDA4MTU4NTQsLTU4MDE3MzY4NSwtMzU2OTgxMzAwLD
-YwMTA3Mzc3MiwtMjE0NDI4NzUwOCwtODM3NDU1NDM1LDE1MTI3
-NTUwNjIsLTE1MDczNjIyMDIsMjA3NDIxNjc5OSw3MDQyMjg5OD
-ksODExMTEwNjc5LC0xODAzNjcxMTUsLTExNzE4NDQ5MDksMjEz
-MTY0NDU5M119
+eyJoaXN0b3J5IjpbLTE2OTc2OTE1NDUsLTQzOTkxMzE1MCwyMT
+M4NjY1MzY0LDEyOTM1Njc4MDYsLTEyNDA4MTU4NTQsMTU2MzY4
+NDIyMywtMTI0MDgxNTg1NCwtNTgwMTczNjg1LC0zNTY5ODEzMD
+AsNjAxMDczNzcyLC0yMTQ0Mjg3NTA4LC04Mzc0NTU0MzUsMTUx
+Mjc1NTA2MiwtMTUwNzM2MjIwMiwyMDc0MjE2Nzk5LDcwNDIyOD
+k4OSw4MTExMTA2NzksLTE4MDM2NzExNSwtMTE3MTg0NDkwOSwy
+MTMxNjQ0NTkzXX0=
 -->
