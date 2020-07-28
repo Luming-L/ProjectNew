@@ -14,11 +14,11 @@ Copy Number Estimation
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
 cd /exports/eddie/scratch/s1949868/CopyNumber
- R --no-restore
+R --no-restore
 ```
 ```r
 # read PRDM9 expression
-PRDM9.expression <- read.delim("/home/s1949868/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
+PRDM9.expression <- read.delim("/home/s1949868/MScProject/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
 # store sampleID in a new column
 PRDM9.expression$sampleID <- substr(rownames(PRDM9.expression),6,21)
 
@@ -79,7 +79,7 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwODkwNjg1NiwtNjQ1ODc2MDcwLDE5ND
+eyJoaXN0b3J5IjpbMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5ND
 gxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDky
 OTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNj
 I0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzAs
