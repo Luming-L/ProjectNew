@@ -94,8 +94,7 @@ for SVBFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/BRCA*); do
 	sampleID=${sampleID%.masked*};
 	echo $sampleID
 	
-	motifFile=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/
-MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
+	PRDM9BoundPeaks=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/${sampleID}_PRDM9_bound_peaks.bed
 	echo $motifFile
 	
 	a=`cat $SVBSFile | wc -l`
@@ -107,7 +106,7 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDE4MzIwMzAsLTc0NDg0MDM5NiwxOT
+eyJoaXN0b3J5IjpbLTIwNTQ5OTEzMjMsLTc0NDg0MDM5NiwxOT
 c2Nzc1MzE1LC0xMTcwMDk3NTk5LDE0MTI5Mzc3OCw4MTMyNzUx
 OTcsLTEyOTUyNTQ4OTEsODE2OTMwMDcxLC03MDU3NTEwNTEsNj
 c4NDMwMTY0LDE0OTE0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2
