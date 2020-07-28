@@ -59,9 +59,9 @@ module load igmm/apps/BEDTools/2.27.1
 
 echo -e "sampleID\tnumCNV\tnumOverlap\toverlapFraction" > overlap_cnv_VS_motif.txt
 
-for cnv_file in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*.masked_cnv.txt); do 
-	echo $cnv_file; 
-	sampleID=${cnv_file#*CopyNumber/}; 
+for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt); do 
+	echo $bpFile; 
+	sampleID=${bpFile#*CopyNumber/}; 
 	sampleID=${sampleID%.masked_cnv.txt*};
 	echo $sampleID
 	
@@ -79,11 +79,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5ND
-gxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDky
-OTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNj
-I0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzAs
-LTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNj
-k5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYy
-Nl19
+eyJoaXN0b3J5IjpbLTE4NjQ0NTE5MDIsMTQ5MTQ2MDQ3MywtNj
+Q1ODc2MDcwLDE5NDgxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3
+MTg2LDEzNTUwMDkyOTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsND
+E2MjczMjI0LDEzNjI0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2
+NzUsOTQ4NzgzNzAsLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNT
+IzMjg0NjYzLC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgy
+MDk3XX0=
 -->
