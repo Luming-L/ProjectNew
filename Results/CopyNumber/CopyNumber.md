@@ -57,12 +57,12 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
-for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt); do 
+for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.txt); do 
 	echo $bpFile; 
 	sampleID=${bpFile#*CopyNumber/}; 
 	sampleID=${sampleID%.masked_cnv*};
 	echo $sampleID
-bedtools slop -i /exports/eddie/scratch/s1949868/CopyNumber/ACCx_TCGA-OR-A5J2-01A.masked_cnv_breakpoints.txt -g /home/s1949868/Tools/chr_length.hg38.txt -b 100
+	bedtools slop -i /exports/eddie/scratch/s1949868/CopyNumber/ACCx_TCGA-OR-A5J2-01A.masked_cnv_breakpoints.txt -g /home/s1949868/Tools/chr_length.hg38.txt -b 100
 ```
 ```bash
 
@@ -89,11 +89,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MTQ4NTY2NywxNDEyOTM3NzgsODEzMj
-c1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3MSwtNzA1NzUxMDUx
-LDY3ODQzMDE2NCwxNDkxNDYwNDczLC02NDU4NzYwNzAsMTk0OD
-E4Njg2NiwtMTYxOTg1MzA3MywzOTU5OTcxODYsMTM1NTAwOTI5
-OSwzMDE1NzY5OTEsMTI3NzQwNjgwMiw0MTYyNzMyMjQsMTM2Mj
-Q5MTkwOSwtOTU5ODc0OTI2LDI5MTY3MTY3NSw5NDg3ODM3MF19
-
+eyJoaXN0b3J5IjpbLTE1MjIwMTUxNDcsMTQxMjkzNzc4LDgxMz
+I3NTE5NywtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1
+MSw2Nzg0MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5ND
+gxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDky
+OTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNj
+I0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzBd
+fQ==
 -->
