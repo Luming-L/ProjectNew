@@ -16,6 +16,7 @@ module load igmm/apps/R/3.6.3
 cd /exports/eddie/scratch/s1949868/CopyNumber
 R --no-restore
 ```
+get breakpoints
 ```r
 # read PRDM9 expression
 PRDM9.expression <- read.delim("/home/s1949868/MScProject/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
@@ -54,6 +55,7 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 	)
 }
 ```
+get SVBSs (100/200bp)
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
@@ -67,8 +69,6 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 	done
 ```
 ```bash
-
-
 echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs200.txt
 
 for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS200/*SVBS200.txt); do 
@@ -91,11 +91,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NDg0MDM5NiwxOTc2Nzc1MzE1LC0xMT
-cwMDk3NTk5LDE0MTI5Mzc3OCw4MTMyNzUxOTcsLTEyOTUyNTQ4
-OTEsODE2OTMwMDcxLC03MDU3NTEwNTEsNjc4NDMwMTY0LDE0OT
-E0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUz
-MDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LDMwMTU3Njk5MSwxMj
-c3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkxOTA5LC05NTk4NzQ5
-MjZdfQ==
+eyJoaXN0b3J5IjpbMTQyODc0NDQzNiwtNzQ0ODQwMzk2LDE5Nz
+Y3NzUzMTUsLTExNzAwOTc1OTksMTQxMjkzNzc4LDgxMzI3NTE5
+NywtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nz
+g0MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4
+NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDkyOTksMz
+AxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNjI0OTE5
+MDldfQ==
 -->
