@@ -71,9 +71,9 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 
 echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_PRDM9BoundPeaks_VS_SVBs.txt
 
-for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt); do 
-	echo $bpFile; 
-	sampleID=${bpFile#*CopyNumber/}; 
+for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS/*SVBS.txt); do 
+	echo $SVBSFile; 
+	sampleID=${SVBSFile#*SVBS/}; 
 	sampleID=${sampleID%.masked_cnv*};
 	echo $sampleID
 	
@@ -91,11 +91,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQwNjIzOTYyLDE0MTI5Mzc3OCw4MTMyNz
-UxOTcsLTEyOTUyNTQ4OTEsODE2OTMwMDcxLC03MDU3NTEwNTEs
-Njc4NDMwMTY0LDE0OTE0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MT
-g2ODY2LC0xNjE5ODUzMDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5
-LDMwMTU3Njk5MSwxMjc3NDA2ODAyLDQxNjI3MzIyNCwxMzYyND
-kxOTA5LC05NTk4NzQ5MjYsMjkxNjcxNjc1LDk0ODc4MzcwXX0=
-
+eyJoaXN0b3J5IjpbLTIwMTE5ODc0NTcsMTQxMjkzNzc4LDgxMz
+I3NTE5NywtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1
+MSw2Nzg0MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5ND
+gxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDky
+OTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNj
+I0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzBd
+fQ==
 -->
