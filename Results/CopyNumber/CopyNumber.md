@@ -62,11 +62,11 @@ echo -e "sampleID\tnumCNV\tnumOverlap\toverlapFraction" > overlap_cnv_VS_motif.t
 for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt); do 
 	echo $bpFile; 
 	sampleID=${bpFile#*CopyNumber/}; 
-	sampleID=${sampleID%.masked_cnv.txt*};
+	sampleID=${sampleID%.masked_cnv*};
 	echo $sampleID
 	
-	motif_file=/exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
-	echo $motif_file
+	motif_file=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/${sampleID}_PRDM9_bound_peaks.bed
+	echo $PRDM9BoundPeaks
 	
 	a=`cat $cnv_file | wc -l`
 	b=`bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l`
@@ -79,11 +79,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjQ0NTE5MDIsMTQ5MTQ2MDQ3MywtNj
-Q1ODc2MDcwLDE5NDgxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3
-MTg2LDEzNTUwMDkyOTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsND
-E2MjczMjI0LDEzNjI0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2
-NzUsOTQ4NzgzNzAsLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNT
-IzMjg0NjYzLC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgy
-MDk3XX0=
+eyJoaXN0b3J5IjpbNjc4NDMwMTY0LDE0OTE0NjA0NzMsLTY0NT
+g3NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUzMDczLDM5NTk5NzE4
+NiwxMzU1MDA5Mjk5LDMwMTU3Njk5MSwxMjc3NDA2ODAyLDQxNj
+I3MzIyNCwxMzYyNDkxOTA5LC05NTk4NzQ5MjYsMjkxNjcxNjc1
+LDk0ODc4MzcwLC0xMzI4MDI1NDEyLC0xNzQ3OTY2NzEsLTUyMz
+I4NDY2MywtMTY5OTAxMjI4MSwyMDc0MDcxNywtMTMyNzE4MjA5
+N119
 -->
