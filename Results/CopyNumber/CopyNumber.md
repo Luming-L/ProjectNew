@@ -94,7 +94,8 @@ for SVBFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/BRCA*); do
 	sampleID=${sampleID%.masked*};
 	echo $sampleID
 	
-	motifFile=/exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
+	motifFile=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/
+MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
 	echo $motifFile
 	
 	a=`cat $SVBSFile | wc -l`
@@ -106,11 +107,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3ODQzMzMxMCwtNzQ0ODQwMzk2LDE5Nz
-Y3NzUzMTUsLTExNzAwOTc1OTksMTQxMjkzNzc4LDgxMzI3NTE5
-NywtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nz
-g0MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4
-NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDkyOTksMz
-AxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNjI0OTE5
-MDldfQ==
+eyJoaXN0b3J5IjpbLTE5MDE4MzIwMzAsLTc0NDg0MDM5NiwxOT
+c2Nzc1MzE1LC0xMTcwMDk3NTk5LDE0MTI5Mzc3OCw4MTMyNzUx
+OTcsLTEyOTUyNTQ4OTEsODE2OTMwMDcxLC03MDU3NTEwNTEsNj
+c4NDMwMTY0LDE0OTE0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2
+ODY2LC0xNjE5ODUzMDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LD
+MwMTU3Njk5MSwxMjc3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkx
+OTA5XX0=
 -->
