@@ -71,7 +71,7 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 
 echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs200.txt
 
-for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS/*SVBS.txt); do 
+for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS200/*SVBS200.txt); do 
 	echo $SVBSFile; 
 	sampleID=${SVBSFile#*SVBS/}; 
 	sampleID=${sampleID%.SVBS*};
@@ -84,18 +84,18 @@ for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS/*SVBS.txt);
 	b=`bedtools intersect -a $SVBSFile -b $motifFile -F 1.0 -u | wc -l`
 	
 	c=`echo "scale=2;$b/$a" | bc`
-	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_motif_VS_SVBSs.txt
+	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_motif_VS_SVBSs200.txt
 done
 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDAwODYzNDQsMTk3Njc3NTMxNSwtMT
-E3MDA5NzU5OSwxNDEyOTM3NzgsODEzMjc1MTk3LC0xMjk1MjU0
-ODkxLDgxNjkzMDA3MSwtNzA1NzUxMDUxLDY3ODQzMDE2NCwxND
-kxNDYwNDczLC02NDU4NzYwNzAsMTk0ODE4Njg2NiwtMTYxOTg1
-MzA3MywzOTU5OTcxODYsMTM1NTAwOTI5OSwzMDE1NzY5OTEsMT
-I3NzQwNjgwMiw0MTYyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0
-OTI2XX0=
+eyJoaXN0b3J5IjpbMTY1NDQ0NjUzNiwxOTc2Nzc1MzE1LC0xMT
+cwMDk3NTk5LDE0MTI5Mzc3OCw4MTMyNzUxOTcsLTEyOTUyNTQ4
+OTEsODE2OTMwMDcxLC03MDU3NTEwNTEsNjc4NDMwMTY0LDE0OT
+E0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUz
+MDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LDMwMTU3Njk5MSwxMj
+c3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkxOTA5LC05NTk4NzQ5
+MjZdfQ==
 -->
