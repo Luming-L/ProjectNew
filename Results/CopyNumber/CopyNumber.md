@@ -57,6 +57,11 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
+for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt); do 
+	echo $bpFile; 
+	sampleID=${bpFile#*CopyNumber/}; 
+	sampleID=${sampleID%.masked_cnv*};
+	echo $sampleID
 bedtools slop -i /exports/eddie/scratch/s1949868/CopyNumber/ACCx_TCGA-OR-A5J2-01A.masked_cnv_breakpoints.txt -g /home/s1949868/Tools/chr_length.hg38.txt -b 100
 ```
 ```bash
@@ -84,7 +89,7 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5ODg1NTE3OCwxNDEyOTM3NzgsODEzMj
+eyJoaXN0b3J5IjpbLTg3MTQ4NTY2NywxNDEyOTM3NzgsODEzMj
 c1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3MSwtNzA1NzUxMDUx
 LDY3ODQzMDE2NCwxNDkxNDYwNDczLC02NDU4NzYwNzAsMTk0OD
 E4Njg2NiwtMTYxOTg1MzA3MywzOTU5OTcxODYsMTM1NTAwOTI5
