@@ -81,17 +81,17 @@ for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS/*SVBS.txt);
 	echo $motifFile
 	
 	a=`cat $SVBSFile | wc -l`
-	echo "bedtools intersect -a $SVBSFile -b $motifFile -F 1.0 -u | wc -l"
+	b=`bedtools intersect -a $SVBSFile -b $motifFile -F 1.0 -u | wc -l`
 	
 	c=`echo "scale=2;$b/$a" | bc`
-	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_PRDM9BoundPeaks_VS_SVBs.txt
+	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_motif_VS_SVBSs.txt
 done
 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjIxMzgxOSwtMTE3MDA5NzU5OSwxND
+eyJoaXN0b3J5IjpbMTk3Njc3NTMxNSwtMTE3MDA5NzU5OSwxND
 EyOTM3NzgsODEzMjc1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3
 MSwtNzA1NzUxMDUxLDY3ODQzMDE2NCwxNDkxNDYwNDczLC02ND
 U4NzYwNzAsMTk0ODE4Njg2NiwtMTYxOTg1MzA3MywzOTU5OTcx
