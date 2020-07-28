@@ -97,19 +97,17 @@ for SVBFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/BRCA*); do
 	PRDM9BoundPeaks=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/${sampleID}_PRDM9_bound_peaks.bed
 	echo $PRDM9BoundPeaks
 	
-	bedtools intersect -a $PRDM9BoundPeaks -b $SVBFile -F 1.0 -u 
-	
-	c=`echo "scale=2;$b/$a" | bc`
-	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_motif_VS_SVBSs200.txt
+	bedtools intersect -a $PRDM9BoundPeaks -b $SVBFile -F 1.0 -u > ${sampleID}_PRDM9BoundPeaks_SVB.txt
+
 done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4ODUwNTYyNywtNzQ0ODQwMzk2LDE5Nz
-Y3NzUzMTUsLTExNzAwOTc1OTksMTQxMjkzNzc4LDgxMzI3NTE5
-NywtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nz
-g0MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4
-NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDkyOTksMz
-AxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNjI0OTE5
-MDldfQ==
+eyJoaXN0b3J5IjpbODk1NTQwMTgyLC03NDQ4NDAzOTYsMTk3Nj
+c3NTMxNSwtMTE3MDA5NzU5OSwxNDEyOTM3NzgsODEzMjc1MTk3
+LC0xMjk1MjU0ODkxLDgxNjkzMDA3MSwtNzA1NzUxMDUxLDY3OD
+QzMDE2NCwxNDkxNDYwNDczLC02NDU4NzYwNzAsMTk0ODE4Njg2
+NiwtMTYxOTg1MzA3MywzOTU5OTcxODYsMTM1NTAwOTI5OSwzMD
+E1NzY5OTEsMTI3NzQwNjgwMiw0MTYyNzMyMjQsMTM2MjQ5MTkw
+OV19
 -->
