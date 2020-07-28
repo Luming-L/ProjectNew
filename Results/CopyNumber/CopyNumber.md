@@ -28,6 +28,9 @@ masked_cnv$sample <- as.character(masked_cnv$sample)
 masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
 masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
 
+# select segments considered as gain or loss
+masked_cnv <- masked_cnv[masked_cnv$value >= 0.3 | masked_cnv$value <= -0.3,]
+
 # just keep samples containing RNA-seq, ATAC-seq and cnv data.
 masked_cnv <- masked_cnv[masked_cnv$sample %in% PRDM9.expression$sampleID,]
 
@@ -68,10 +71,10 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2Mj
-czMjI0LDEzNjI0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUs
-OTQ4NzgzNzAsLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMj
-g0NjYzLC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3
-LDQ4MzU2MzYyNiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNT
-A2MzI4MzgyXX0=
+eyJoaXN0b3J5IjpbMTM1NTAwOTI5OSwzMDE1NzY5OTEsMTI3Nz
+QwNjgwMiw0MTYyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0OTI2
+LDI5MTY3MTY3NSw5NDg3ODM3MCwtMTMyODAyNTQxMiwtMTc0Nz
+k2NjcxLC01MjMyODQ2NjMsLTE2OTkwMTIyODEsMjA3NDA3MTcs
+LTEzMjcxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMT
+IxMjQxNDk4LDE1MDYzMjgzODJdfQ==
 -->
