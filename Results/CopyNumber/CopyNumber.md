@@ -57,7 +57,7 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
-echo -e "sampleID\tnumCNV\tnumOverlap\toverlapFraction" > overlap_cnv_VS_motif.txt
+echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_breakpoints_VS_PRDM9BoundPeaks.txt
 
 for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt); do 
 	echo $bpFile; 
@@ -79,11 +79,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTc1MTA1MSw2Nzg0MzAxNjQsMTQ5MT
-Q2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4NjYsLTE2MTk4NTMw
-NzMsMzk1OTk3MTg2LDEzNTUwMDkyOTksMzAxNTc2OTkxLDEyNz
-c0MDY4MDIsNDE2MjczMjI0LDEzNjI0OTE5MDksLTk1OTg3NDky
-NiwyOTE2NzE2NzUsOTQ4NzgzNzAsLTEzMjgwMjU0MTIsLTE3ND
-c5NjY3MSwtNTIzMjg0NjYzLC0xNjk5MDEyMjgxLDIwNzQwNzE3
-XX0=
+eyJoaXN0b3J5IjpbOTUzMDQ4MjIyLC03MDU3NTEwNTEsNjc4ND
+MwMTY0LDE0OTE0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2ODY2
+LC0xNjE5ODUzMDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LDMwMT
+U3Njk5MSwxMjc3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkxOTA5
+LC05NTk4NzQ5MjYsMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MD
+I1NDEyLC0xNzQ3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4
+MV19
 -->
