@@ -63,13 +63,13 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 	sampleID=${sampleID%.masked_cnv*};
 	echo $sampleID
 	
-	bedtools slop -i ${bpFile} -g /home/s1949868/Tools/chr_length.hg38.txt -b 100 > ${sampleID}.SVBS.txt
+	bedtools slop -i ${bpFile} -g /home/s1949868/Tools/chr_length.hg38.txt -b 200 > ${sampleID}.SVBS200.txt
 	done
 ```
 ```bash
 
 
-echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs.txt
+echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs200.txt
 
 for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS/*SVBS.txt); do 
 	echo $SVBSFile; 
@@ -91,11 +91,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3Njc3NTMxNSwtMTE3MDA5NzU5OSwxND
-EyOTM3NzgsODEzMjc1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3
-MSwtNzA1NzUxMDUxLDY3ODQzMDE2NCwxNDkxNDYwNDczLC02ND
-U4NzYwNzAsMTk0ODE4Njg2NiwtMTYxOTg1MzA3MywzOTU5OTcx
-ODYsMTM1NTAwOTI5OSwzMDE1NzY5OTEsMTI3NzQwNjgwMiw0MT
-YyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0OTI2LDI5MTY3MTY3
-NV19
+eyJoaXN0b3J5IjpbLTIxMDAwODYzNDQsMTk3Njc3NTMxNSwtMT
+E3MDA5NzU5OSwxNDEyOTM3NzgsODEzMjc1MTk3LC0xMjk1MjU0
+ODkxLDgxNjkzMDA3MSwtNzA1NzUxMDUxLDY3ODQzMDE2NCwxND
+kxNDYwNDczLC02NDU4NzYwNzAsMTk0ODE4Njg2NiwtMTYxOTg1
+MzA3MywzOTU5OTcxODYsMTM1NTAwOTI5OSwzMDE1NzY5OTEsMT
+I3NzQwNjgwMiw0MTYyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0
+OTI2XX0=
 -->
