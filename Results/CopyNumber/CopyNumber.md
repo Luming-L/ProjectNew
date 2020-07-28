@@ -55,10 +55,12 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 }
 ```
 ```bash
+module load igmm/apps/BEDTools/2.27.1
+
 bedtools slop -i /exports/eddie/scratch/s1949868/CopyNumber/ACCx_TCGA-OR-A5J2-01A.masked_cnv_breakpoints.txt -g /home/s1949868/Tools/chr_length.hg38.txt -b 100
 ```
 ```bash
-module load igmm/apps/BEDTools/2.27.1
+
 
 echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_PRDM9BoundPeaks_VS_SVBs.txt
 
@@ -82,11 +84,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMjkzNzc4LDgxMzI3NTE5NywtMTI5NT
-I1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nzg0MzAxNjQs
-MTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4NjYsLTE2MT
-k4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDkyOTksMzAxNTc2OTkx
-LDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNjI0OTE5MDksLTk1OT
-g3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzAsLTEzMjgwMjU0MTJd
-fQ==
+eyJoaXN0b3J5IjpbLTk5ODg1NTE3OCwxNDEyOTM3NzgsODEzMj
+c1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3MSwtNzA1NzUxMDUx
+LDY3ODQzMDE2NCwxNDkxNDYwNDczLC02NDU4NzYwNzAsMTk0OD
+E4Njg2NiwtMTYxOTg1MzA3MywzOTU5OTcxODYsMTM1NTAwOTI5
+OSwzMDE1NzY5OTEsMTI3NzQwNjgwMiw0MTYyNzMyMjQsMTM2Mj
+Q5MTkwOSwtOTU5ODc0OTI2LDI5MTY3MTY3NSw5NDg3ODM3MF19
+
 -->
