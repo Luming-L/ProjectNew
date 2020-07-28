@@ -98,12 +98,12 @@ for SVBFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/BRCA*); do
 	echo $PRDM9BoundPeaks
 	
 	bedtools intersect -a $PRDM9BoundPeaks -b $SVBFile -F 1.0 -u |  > ${sampleID}_PRDM9BoundPeaks.containSVB.txt
-	awk '{FS=OFS="\t"; }' 
+	awk '{FS=OFS="\t"; print }' 
 done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMDk3NDc5MiwtMTcxODgwODY1NywtMT
+eyJoaXN0b3J5IjpbMTY0Njg1NzQ3NywtMTcxODgwODY1NywtMT
 c0MTg0NjM5NCwtNzQ0ODQwMzk2LDE5NzY3NzUzMTUsLTExNzAw
 OTc1OTksMTQxMjkzNzc4LDgxMzI3NTE5NywtMTI5NTI1NDg5MS
 w4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nzg0MzAxNjQsMTQ5MTQ2
