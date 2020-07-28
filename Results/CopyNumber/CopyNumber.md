@@ -72,14 +72,14 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt);
 	b=`bedtools intersect -a $bpFile -b $PRDM9BoundPeaks -f 1.0 -u | wc -l`
 	
 	c=`echo "scale=2;$b/$a" | bc`
-	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_cnv_VS_motif.txt
+	echo -e "$sampleID\t$a\t$b\t$c"
 done
 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMjI1NzY0OCw2Nzg0MzAxNjQsMTQ5MT
+eyJoaXN0b3J5IjpbLTcwNTc1MTA1MSw2Nzg0MzAxNjQsMTQ5MT
 Q2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4NjYsLTE2MTk4NTMw
 NzMsMzk1OTk3MTg2LDEzNTUwMDkyOTksMzAxNTc2OTkxLDEyNz
 c0MDY4MDIsNDE2MjczMjI0LDEzNjI0OTE5MDksLTk1OTg3NDky
