@@ -69,7 +69,7 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 ```bash
 
 
-echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_PRDM9BoundPeaks_VS_SVBs.txt
+echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs.txt
 
 for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS/*SVBS.txt); do 
 	echo $SVBSFile; 
@@ -91,11 +91,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzAwOTc1OTksMTQxMjkzNzc4LDgxMz
-I3NTE5NywtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1
-MSw2Nzg0MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5ND
-gxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDky
-OTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNj
-I0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzBd
-fQ==
+eyJoaXN0b3J5IjpbMTM5NjIxMzgxOSwtMTE3MDA5NzU5OSwxND
+EyOTM3NzgsODEzMjc1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3
+MSwtNzA1NzUxMDUxLDY3ODQzMDE2NCwxNDkxNDYwNDczLC02ND
+U4NzYwNzAsMTk0ODE4Njg2NiwtMTYxOTg1MzA3MywzOTU5OTcx
+ODYsMTM1NTAwOTI5OSwzMDE1NzY5OTEsMTI3NzQwNjgwMiw0MT
+YyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0OTI2LDI5MTY3MTY3
+NV19
 -->
