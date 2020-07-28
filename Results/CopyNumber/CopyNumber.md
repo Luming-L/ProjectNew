@@ -30,7 +30,13 @@ masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
 
 # select segments considered as gain or loss
 masked_cnv <- masked_cnv[masked_cnv$value >= 0.3 | masked_cnv$value <= -0.3,]
-# 
+# take the breakpoints
+masked_cnv_start <- masked_cnv[,c(1,2,3,5)]
+colnames(masked_cnv_start) <- c("sample", "Chrom", "End", "value")
+masked_cnv_end <- masked_cnv[,c(1,2,4,5)]
+masked_cnv_bp <- rbind(masked_cnv_start, masked_cnv_end)
+masked_cnv_bp$Start <- masked_cnv_bp$End - 1
+masked_cnv_breakpoints <- data.frame("sample" = masked_cnv_bp$sample, "Chrom" = masked_cnv_bp$Chrom, "Start" = masked_cnv_bp$Start, "End" = masked_cnv_bp$End, "value" = masked_cnv_bp$value, stringsAsFactors = FALSE)
 
 # just keep samples containing RNA-seq, ATAC-seq and cnv data.
 masked_cnv <- masked_cnv[masked_cnv$sample %in% PRDM9.expression$sampleID,]
@@ -72,10 +78,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1OTk3MTg2LDEzNTUwMDkyOTksMzAxNT
-c2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNjI0OTE5MDks
-LTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzAsLTEzMjgwMj
-U0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNjk5MDEyMjgx
-LDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYyNiwtMTY5Nj
-M4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4MzgyXX0=
+eyJoaXN0b3J5IjpbLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNT
+UwMDkyOTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0
+LDEzNjI0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4Nz
+gzNzAsLTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYz
+LC0xNjk5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4Mz
+U2MzYyNiwtMTY5NjM4OTEzMiwtMTEyMTI0MTQ5OCwxNTA2MzI4
+MzgyXX0=
 -->
