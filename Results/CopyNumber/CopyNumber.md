@@ -62,7 +62,9 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 	sampleID=${bpFile#*CopyNumber/}; 
 	sampleID=${sampleID%.masked_cnv*};
 	echo $sampleID
-	bedtools slop -i /exports/eddie/scratch/s1949868/CopyNumber/ACCx_TCGA-OR-A5J2-01A.masked_cnv_breakpoints.txt -g /home/s1949868/Tools/chr_length.hg38.txt -b 100
+	
+	echo "bedtools slop -i /exports/eddie/scratch/s1949868/CopyNumber/${bpFile} -g /home/s1949868/Tools/chr_length.hg38.txt -b 100 > ${sampleID}.SVBS.txt"
+	done
 ```
 ```bash
 
@@ -89,7 +91,7 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjIwMTUxNDcsMTQxMjkzNzc4LDgxMz
+eyJoaXN0b3J5IjpbLTE3OTY3MDQ0OTAsMTQxMjkzNzc4LDgxMz
 I3NTE5NywtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1
 MSw2Nzg0MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5ND
 gxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDky
