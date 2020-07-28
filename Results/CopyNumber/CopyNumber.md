@@ -68,8 +68,8 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt);
 	motif_file=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/${sampleID}_PRDM9_bound_peaks.bed
 	echo $PRDM9BoundPeaks
 	
-	a=`cat $cnv_file | wc -l`
-	b=`bedtools intersect -a $cnv_file -b $motif_file -F 1.0 -u | wc -l`
+	a=`cat $bpFile | wc -l`
+	b=`bedtools intersect -a $bpFile -b $PRDM9BoundPeaks -F 1.0 -u | wc -l`
 	
 	c=`echo "scale=2;$b/$a" | bc`
 	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_cnv_VS_motif.txt
@@ -79,11 +79,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc4NDMwMTY0LDE0OTE0NjA0NzMsLTY0NT
-g3NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUzMDczLDM5NTk5NzE4
-NiwxMzU1MDA5Mjk5LDMwMTU3Njk5MSwxMjc3NDA2ODAyLDQxNj
-I3MzIyNCwxMzYyNDkxOTA5LC05NTk4NzQ5MjYsMjkxNjcxNjc1
-LDk0ODc4MzcwLC0xMzI4MDI1NDEyLC0xNzQ3OTY2NzEsLTUyMz
-I4NDY2MywtMTY5OTAxMjI4MSwyMDc0MDcxNywtMTMyNzE4MjA5
+eyJoaXN0b3J5IjpbLTEwMDU3NjgyNjgsNjc4NDMwMTY0LDE0OT
+E0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUz
+MDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LDMwMTU3Njk5MSwxMj
+c3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkxOTA5LC05NTk4NzQ5
+MjYsMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MDI1NDEyLC0xNz
+Q3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMDc0MDcx
 N119
 -->
