@@ -41,12 +41,13 @@ masked_cnv_breakpoints <- data.frame("sample" = masked_cnv_bp$sample, "Chrom" = 
 # just keep samples containing RNA-seq, ATAC-seq and cnv data.
 masked_cnv_breakpoints <- masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% PRDM9.expression$sampleID,]
 
-for (i in unique(masked_cnv$sample)) {
-  output <- masked_cnv[masked_cnv$sample == i,c(2,3,4,5)]
+# save breakpoints of each sample separately
+for (i in unique(masked_cnv_breakpoints$sample)) {
+  output <- masked_cnv_breakpoints[masked_cnv_breakpoints$sample == i,c(2,3,4,5)]
   cType_sampleID <- rownames(PRDM9.expression[PRDM9.expression$sampleID == i,])
   
   write.table(output,
-	file=paste0(cType_sampleID,".masked_cnv.txt"),
+	file=paste0(cType_sampleID,".masked_cnv_breakpoints.txt"),
 	sep = "\t",
 	append=FALSE,row.names = FALSE,col.names = FALSE,
 	quote =FALSE
@@ -78,11 +79,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0ODE4Njg2NiwtMTYxOTg1MzA3MywzOT
-U5OTcxODYsMTM1NTAwOTI5OSwzMDE1NzY5OTEsMTI3NzQwNjgw
-Miw0MTYyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0OTI2LDI5MT
-Y3MTY3NSw5NDg3ODM3MCwtMTMyODAyNTQxMiwtMTc0Nzk2Njcx
-LC01MjMyODQ2NjMsLTE2OTkwMTIyODEsMjA3NDA3MTcsLTEzMj
-cxODIwOTcsNDgzNTYzNjI2LC0xNjk2Mzg5MTMyLC0xMTIxMjQx
-NDk4XX0=
+eyJoaXN0b3J5IjpbLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0xNj
+E5ODUzMDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LDMwMTU3Njk5
+MSwxMjc3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkxOTA5LC05NT
+k4NzQ5MjYsMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MDI1NDEy
+LC0xNzQ3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMD
+c0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OTYzODkx
+MzJdfQ==
 -->
