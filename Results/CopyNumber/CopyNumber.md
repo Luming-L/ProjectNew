@@ -14,7 +14,7 @@ Copy Number Estimation
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
 cd /exports/eddie/scratch/s1949868/CopyNumber
-R
+ R --no-restore
 ```
 ```r
 # read PRDM9 expression
@@ -79,11 +79,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0xNj
-E5ODUzMDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LDMwMTU3Njk5
-MSwxMjc3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkxOTA5LC05NT
-k4NzQ5MjYsMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MDI1NDEy
-LC0xNzQ3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMD
-c0MDcxNywtMTMyNzE4MjA5Nyw0ODM1NjM2MjYsLTE2OTYzODkx
-MzJdfQ==
+eyJoaXN0b3J5IjpbLTQwODkwNjg1NiwtNjQ1ODc2MDcwLDE5ND
+gxODY4NjYsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDky
+OTksMzAxNTc2OTkxLDEyNzc0MDY4MDIsNDE2MjczMjI0LDEzNj
+I0OTE5MDksLTk1OTg3NDkyNiwyOTE2NzE2NzUsOTQ4NzgzNzAs
+LTEzMjgwMjU0MTIsLTE3NDc5NjY3MSwtNTIzMjg0NjYzLC0xNj
+k5MDEyMjgxLDIwNzQwNzE3LC0xMzI3MTgyMDk3LDQ4MzU2MzYy
+Nl19
 -->
