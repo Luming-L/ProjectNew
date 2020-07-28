@@ -97,17 +97,17 @@ for SVBFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/BRCA*); do
 	PRDM9BoundPeaks=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/${sampleID}_PRDM9_bound_peaks.bed
 	echo $PRDM9BoundPeaks
 	
-	bedtools intersect -a $PRDM9BoundPeaks -b $SVBFile -F 1.0 -u > ${sampleID}_PRDM9BoundPeaks.containSVB.txt
-
+	bedtools intersect -a $PRDM9BoundPeaks -b $SVBFile -F 1.0 -u |  > ${sampleID}_PRDM9BoundPeaks.containSVB.txt
+	awk '{FS=OFS="\t"; }' 
 done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTg4MDg2NTcsLTE3NDE4NDYzOTQsLT
-c0NDg0MDM5NiwxOTc2Nzc1MzE1LC0xMTcwMDk3NTk5LDE0MTI5
-Mzc3OCw4MTMyNzUxOTcsLTEyOTUyNTQ4OTEsODE2OTMwMDcxLC
-03MDU3NTEwNTEsNjc4NDMwMTY0LDE0OTE0NjA0NzMsLTY0NTg3
-NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUzMDczLDM5NTk5NzE4Ni
-wxMzU1MDA5Mjk5LDMwMTU3Njk5MSwxMjc3NDA2ODAyLDQxNjI3
-MzIyNF19
+eyJoaXN0b3J5IjpbLTMyMDk3NDc5MiwtMTcxODgwODY1NywtMT
+c0MTg0NjM5NCwtNzQ0ODQwMzk2LDE5NzY3NzUzMTUsLTExNzAw
+OTc1OTksMTQxMjkzNzc4LDgxMzI3NTE5NywtMTI5NTI1NDg5MS
+w4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nzg0MzAxNjQsMTQ5MTQ2
+MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4NjYsLTE2MTk4NTMwNz
+MsMzk1OTk3MTg2LDEzNTUwMDkyOTksMzAxNTc2OTkxLDEyNzc0
+MDY4MDJdfQ==
 -->
