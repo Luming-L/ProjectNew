@@ -65,7 +65,7 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/*breakpoints.txt);
 	sampleID=${sampleID%.masked_cnv*};
 	echo $sampleID
 	
-	motif_file=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/${sampleID}_PRDM9_bound_peaks.bed
+	PRDM9BoundPeaks=/exports/eddie/scratch/s1949868/SelectPRDM9BoundPeaks_404/${sampleID}_PRDM9_bound_peaks.bed
 	echo $PRDM9BoundPeaks
 	
 	a=`cat $bpFile | wc -l`
@@ -79,11 +79,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDU3NjgyNjgsNjc4NDMwMTY0LDE0OT
-E0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUz
-MDczLDM5NTk5NzE4NiwxMzU1MDA5Mjk5LDMwMTU3Njk5MSwxMj
-c3NDA2ODAyLDQxNjI3MzIyNCwxMzYyNDkxOTA5LC05NTk4NzQ5
-MjYsMjkxNjcxNjc1LDk0ODc4MzcwLC0xMzI4MDI1NDEyLC0xNz
-Q3OTY2NzEsLTUyMzI4NDY2MywtMTY5OTAxMjI4MSwyMDc0MDcx
-N119
+eyJoaXN0b3J5IjpbODc3ODQzMzQ0LDY3ODQzMDE2NCwxNDkxND
+YwNDczLC02NDU4NzYwNzAsMTk0ODE4Njg2NiwtMTYxOTg1MzA3
+MywzOTU5OTcxODYsMTM1NTAwOTI5OSwzMDE1NzY5OTEsMTI3Nz
+QwNjgwMiw0MTYyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0OTI2
+LDI5MTY3MTY3NSw5NDg3ODM3MCwtMTMyODAyNTQxMiwtMTc0Nz
+k2NjcxLC01MjMyODQ2NjMsLTE2OTkwMTIyODEsMjA3NDA3MTdd
+fQ==
 -->
