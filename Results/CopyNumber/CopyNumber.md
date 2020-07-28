@@ -55,6 +55,9 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 }
 ```
 ```bash
+bedtools slop [OPTIONS] -i <BED/GFF/VCF> -g <GENOME> [-b or (-l and -r)]
+```
+```bash
 module load igmm/apps/BEDTools/2.27.1
 
 echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_PRDM9BoundPeaks_VS_SVBs.txt
@@ -79,11 +82,11 @@ done
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTUyNTQ4OTEsODE2OTMwMDcxLC03MD
-U3NTEwNTEsNjc4NDMwMTY0LDE0OTE0NjA0NzMsLTY0NTg3NjA3
-MCwxOTQ4MTg2ODY2LC0xNjE5ODUzMDczLDM5NTk5NzE4NiwxMz
-U1MDA5Mjk5LDMwMTU3Njk5MSwxMjc3NDA2ODAyLDQxNjI3MzIy
-NCwxMzYyNDkxOTA5LC05NTk4NzQ5MjYsMjkxNjcxNjc1LDk0OD
-c4MzcwLC0xMzI4MDI1NDEyLC0xNzQ3OTY2NzEsLTUyMzI4NDY2
-M119
+eyJoaXN0b3J5IjpbODEzMjc1MTk3LC0xMjk1MjU0ODkxLDgxNj
+kzMDA3MSwtNzA1NzUxMDUxLDY3ODQzMDE2NCwxNDkxNDYwNDcz
+LC02NDU4NzYwNzAsMTk0ODE4Njg2NiwtMTYxOTg1MzA3MywzOT
+U5OTcxODYsMTM1NTAwOTI5OSwzMDE1NzY5OTEsMTI3NzQwNjgw
+Miw0MTYyNzMyMjQsMTM2MjQ5MTkwOSwtOTU5ODc0OTI2LDI5MT
+Y3MTY3NSw5NDg3ODM3MCwtMTMyODAyNTQxMiwtMTc0Nzk2Njcx
+XX0=
 -->
