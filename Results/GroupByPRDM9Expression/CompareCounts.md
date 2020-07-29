@@ -31,7 +31,7 @@ for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/PRDM9_Threshold11
 done
 ```
 ```bash
-echo -e "threshold\tpadj<05&log2FC>0\tpadj<05&log2FC<0\tpadj<05&log2FC>1\tpadj<05&log2FC<-1." > pan_CompareCounts.txt
+echo -e "threshold\tpadj<05&log2FC>0\tpadj<05&log2FC<0\tpadj<05&log2FC>1\tpadj<05&log2FC<-1." > PCOG_CompareCounts.txt
 for file in $(ls /exports/eddie/scratch/s1949868/CompareCounts/pan_CompareCounts/*_t*); do
 	echo $file; 
 	threshold=`echo ${file#*_t}`; 
@@ -153,11 +153,11 @@ bedtools intersect -a  -b  -u
 columan is sample name
 row is gene name
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNjE5NzU2MSwtODcwNzQyNzA0LC00Mz
-k5MTMxNTAsMjEzODY2NTM2NCwxMjkzNTY3ODA2LC0xMjQwODE1
-ODU0LDE1NjM2ODQyMjMsLTEyNDA4MTU4NTQsLTU4MDE3MzY4NS
-wtMzU2OTgxMzAwLDYwMTA3Mzc3MiwtMjE0NDI4NzUwOCwtODM3
-NDU1NDM1LDE1MTI3NTUwNjIsLTE1MDczNjIyMDIsMjA3NDIxNj
-c5OSw3MDQyMjg5ODksODExMTEwNjc5LC0xODAzNjcxMTUsLTEx
-NzE4NDQ5MDldfQ==
+eyJoaXN0b3J5IjpbLTE3OTE3ODg4MTMsLTczNjE5NzU2MSwtOD
+cwNzQyNzA0LC00Mzk5MTMxNTAsMjEzODY2NTM2NCwxMjkzNTY3
+ODA2LC0xMjQwODE1ODU0LDE1NjM2ODQyMjMsLTEyNDA4MTU4NT
+QsLTU4MDE3MzY4NSwtMzU2OTgxMzAwLDYwMTA3Mzc3MiwtMjE0
+NDI4NzUwOCwtODM3NDU1NDM1LDE1MTI3NTUwNjIsLTE1MDczNj
+IyMDIsMjA3NDIxNjc5OSw3MDQyMjg5ODksODExMTEwNjc5LC0x
+ODAzNjcxMTVdfQ==
 -->
