@@ -105,12 +105,18 @@ done
  bedtools intersect -a ../../CompareCounts/pan_CompareCounts/pan_CompareCounts_WithAndWithoutPRDM9_t8_sigIncre100.txt -b pan.masked_cnv_breakpoints.txt -wa -wb
 ```
 chr2    201139352       201139853       TGCT_12429      1.61226016510803e-05    1.16477224210653        0.00221710084561987  chr2     201139551       201139552       0.3126  TCGA-C8-A12T-01A
+```bash
+ bedtools intersect -a /exports/eddie/scratch/s1949868/CompareCounts/BRCA_CompareCounts/BRCA_CompareCounts_WithAndWithoutPRDM9_sigIncre2t0_4t7.txt
+ -b pan.masked_cnv_breakpoints.txt -wa -wb
+/exports/eddie/scratch/s1949868/CompareCounts/BRCA_CompareCounts/BRCA_CompareCounts_WithAndWithoutPRDM9_sigIncre2t0_4t7.txt
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNzc3MTg2MiwyMTMxMDY0OTY4LC0xMT
-MwNjcyNDMyLDE2NDY4NTc0NzcsLTE3MTg4MDg2NTcsLTE3NDE4
-NDYzOTQsLTc0NDg0MDM5NiwxOTc2Nzc1MzE1LC0xMTcwMDk3NT
-k5LDE0MTI5Mzc3OCw4MTMyNzUxOTcsLTEyOTUyNTQ4OTEsODE2
-OTMwMDcxLC03MDU3NTEwNTEsNjc4NDMwMTY0LDE0OTE0NjA0Nz
-MsLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0xNjE5ODUzMDczLDM5
-NTk5NzE4Nl19
+eyJoaXN0b3J5IjpbLTIxMjAxNzM1MjgsMjExNzc3MTg2MiwyMT
+MxMDY0OTY4LC0xMTMwNjcyNDMyLDE2NDY4NTc0NzcsLTE3MTg4
+MDg2NTcsLTE3NDE4NDYzOTQsLTc0NDg0MDM5NiwxOTc2Nzc1Mz
+E1LC0xMTcwMDk3NTk5LDE0MTI5Mzc3OCw4MTMyNzUxOTcsLTEy
+OTUyNTQ4OTEsODE2OTMwMDcxLC03MDU3NTEwNTEsNjc4NDMwMT
+Y0LDE0OTE0NjA0NzMsLTY0NTg3NjA3MCwxOTQ4MTg2ODY2LC0x
+NjE5ODUzMDczXX0=
 -->
