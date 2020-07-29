@@ -100,14 +100,16 @@ for SVBFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/BRCA*); do
 	bedtools intersect -a $PRDM9BoundPeaks -b $SVBFile -F 1.0 -u | awk '{FS=OFS="\t"; print "'$sampleID'",$1,$2,$3,$4}' > ${sampleID}_PRDM9BoundPeaks.containSVB.txt
 	 
 done
-
+```
+```
+pan_CompareCounts_WithAndWithoutPRDM9_t8_sigIncre100.txt
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzA2NzI0MzIsMTY0Njg1NzQ3NywtMT
-cxODgwODY1NywtMTc0MTg0NjM5NCwtNzQ0ODQwMzk2LDE5NzY3
-NzUzMTUsLTExNzAwOTc1OTksMTQxMjkzNzc4LDgxMzI3NTE5Ny
-wtMTI5NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nzg0
-MzAxNjQsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4Nj
-YsLTE2MTk4NTMwNzMsMzk1OTk3MTg2LDEzNTUwMDkyOTksMzAx
-NTc2OTkxXX0=
+eyJoaXN0b3J5IjpbMjEzMTA2NDk2OCwtMTEzMDY3MjQzMiwxNj
+Q2ODU3NDc3LC0xNzE4ODA4NjU3LC0xNzQxODQ2Mzk0LC03NDQ4
+NDAzOTYsMTk3Njc3NTMxNSwtMTE3MDA5NzU5OSwxNDEyOTM3Nz
+gsODEzMjc1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3MSwtNzA1
+NzUxMDUxLDY3ODQzMDE2NCwxNDkxNDYwNDczLC02NDU4NzYwNz
+AsMTk0ODE4Njg2NiwtMTYxOTg1MzA3MywzOTU5OTcxODYsMTM1
+NTAwOTI5OV19
 -->
