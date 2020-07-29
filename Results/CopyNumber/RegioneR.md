@@ -112,6 +112,7 @@ The idea of the test is to randomly move PRDM9-bound peaks along the genome and 
 Create a new set of regions that is random with respect to our evaluation function but takes into account the specificities of our original region set. Randomization functions in regioneR can specify the genome and accept a mask, indicating where a random region cannot be placed.
 `circularRandomizeRegions`: maintains the order and distance of the regions, while changing their position in the chromosome. It is not possible to ensure that no region will overlap the mask. Instead of that the user can specify the maximum proportion of the regions overlapping the mask.
 ```r
+BiocManager::install("regioneR", lib = "/exports/eddie/scratch/s1949868/R/library")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg38", lib = "/exports/eddie/scratch/s1949868/R/library")
 library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/library")
 hg38 <- BSgenome.Hsapiens.UCSC.hg38
@@ -216,5 +217,5 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk2OTExMTE5XX0=
+eyJoaXN0b3J5IjpbLTEyMjI1NDIwNDksNjk2OTExMTE5XX0=
 -->
