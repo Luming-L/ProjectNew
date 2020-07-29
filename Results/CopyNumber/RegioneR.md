@@ -114,8 +114,6 @@ Create a new set of regions that is random with respect to our evaluation functi
 ```r
 BiocManager::install("regioneR", lib = "/exports/eddie/scratch/s1949868/R/library")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg38", lib = "/exports/eddie/scratch/s1949868/R/library")
-library(BSgenome.Hsapiens.UCSC.hg38,lib.loc="/exports/eddie/scratch/s1949868/R/library")
-hg38 <- BSgenome.Hsapiens.UCSC.hg38
 ```
 `randomize.function=circularRandomizeRegions`
 `genome=BSgenome.Hsapiens.UCSC.hg38`
@@ -217,5 +215,5 @@ in our case we can compute the number of PRDM9-bound ATAC-seq peaks overlapping 
 [https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html](https://bioconductor.org/packages/release/data/annotation/html/BSgenome.Hsapiens.UCSC.hg38.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjI1NDIwNDksNjk2OTExMTE5XX0=
+eyJoaXN0b3J5IjpbNDk2NjM3NjQzLDY5NjkxMTExOV19
 -->
