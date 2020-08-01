@@ -44,7 +44,11 @@ macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```bash
 macs2 bdgpeakcall -i .pvalue.bg -c 2 -l 150 -g 75 -o .bdgpeakcalls.bed
 ```
-## check the result of bdgpeakcall
+## 
+```bash
+
+```
+## check peakrecalling results
 sort files
 ```bash
 # prepare the input of bedtools
@@ -101,7 +105,7 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM4MTQ0MjExLDExMzc3MzMxNzIsMjE4Mj
+eyJoaXN0b3J5IjpbOTI5NDQ3NzgyLDExMzc3MzMxNzIsMjE4Mj
 Q0NjEyLDIxMjI0OTEwMTUsLTE5MjIzODc5MywtMTk4Mzg2OTg5
 OCwyODg4NjE0Myw2MzcyNjE0NjcsNzAwMzM2NTMzLDU1MDkxND
 c2MywxOTY3Nzg4OTQyLC00NzQ3ODc4NDgsMTY4NjY0NTY0NSwt
