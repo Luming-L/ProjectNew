@@ -59,7 +59,7 @@ Positions with scores higher than certain cutoff (set by `-c`) will be kept. If 
 
 `-g 75`: The read length is 75 bp.
 
-`-c 2 -l 150`
+`-c 2 -l 150`: The extsize in original command is 150.
 
 The **score** in the output bed file is `int(-10*log10pvalue) at peak summit`
 # Test
@@ -86,5 +86,6 @@ bedtools intersect -wa -wb -a ./CTCF_ChIP_200K_filterdup.pileup.peaks.bed -b ../
 [issues/379: The 5th column score = 10 * score in the summit from bedGraph.](https://github.com/macs3-project/MACS/issues/379)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNzQzNDQ5MywtMTIwMTIxMjI5Nl19
+eyJoaXN0b3J5IjpbLTE2Mjk3NTc3MSwxODM3NDM0NDkzLC0xMj
+AxMjEyMjk2XX0=
 -->
