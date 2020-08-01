@@ -17,7 +17,10 @@ done
 ```
 ```bash
 # convert BigWig to BedGraph
-qsub ~/BigWigtoBedGraph_batch.sh
+rule bwTobg:
+    output: "{dataset}.bg"
+    input:  "/exports/eddie/scratch/s1949868/BigWig/{dataset}.bw"
+    shell:  "/home/s1949868/Tools/bigWigToBedGraph {input} {output}"
 ```
 ## call peaks
 ```bash
@@ -88,11 +91,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE4MjQ0NjEyLDIxMjI0OTEwMTUsLTE5Mj
-IzODc5MywtMTk4Mzg2OTg5OCwyODg4NjE0Myw2MzcyNjE0Njcs
-NzAwMzM2NTMzLDU1MDkxNDc2MywxOTY3Nzg4OTQyLC00NzQ3OD
-c4NDgsMTY4NjY0NTY0NSwtMjA5NzkyNzk3NiwtMzA5ODI0NjQx
-LC05NTQ4ODY4MzYsMjA1Mjk1OTM0NywtNTI2MTQ4NjA0LDEzMj
-c2MzUyNDYsLTE3MjgyNzE0NzgsLTEyNDg2OTE4MzcsMzE3MTAy
-NDQ4XX0=
+eyJoaXN0b3J5IjpbLTEyODQyNzM5NjgsMjE4MjQ0NjEyLDIxMj
+I0OTEwMTUsLTE5MjIzODc5MywtMTk4Mzg2OTg5OCwyODg4NjE0
+Myw2MzcyNjE0NjcsNzAwMzM2NTMzLDU1MDkxNDc2MywxOTY3Nz
+g4OTQyLC00NzQ3ODc4NDgsMTY4NjY0NTY0NSwtMjA5NzkyNzk3
+NiwtMzA5ODI0NjQxLC05NTQ4ODY4MzYsMjA1Mjk1OTM0NywtNT
+I2MTQ4NjA0LDEzMjc2MzUyNDYsLTE3MjgyNzE0NzgsLTEyNDg2
+OTE4MzddfQ==
 -->
