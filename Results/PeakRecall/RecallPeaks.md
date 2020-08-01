@@ -7,7 +7,7 @@ ATAC-seq signal tracks that have been normalized by the number of reads in peaks
 # download BigWigs
 bigWigLinks.txt
 downloadLinks.sh
-qsub ~/BedGraph/downloadLinks.sh
+qsub /home/s1949868/MScProject/Results/AllInOneGo/PeakRecall/downloadLinks.sh
 # decompress files
 for file in $(ls ./*); do
 	tar xvzf $file
@@ -88,11 +88,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMjQ5MTAxNSwtMTkyMjM4NzkzLC0xOT
-gzODY5ODk4LDI4ODg2MTQzLDYzNzI2MTQ2Nyw3MDAzMzY1MzMs
-NTUwOTE0NzYzLDE5Njc3ODg5NDIsLTQ3NDc4Nzg0OCwxNjg2Nj
-Q1NjQ1LC0yMDk3OTI3OTc2LC0zMDk4MjQ2NDEsLTk1NDg4Njgz
-NiwyMDUyOTU5MzQ3LC01MjYxNDg2MDQsMTMyNzYzNTI0NiwtMT
-cyODI3MTQ3OCwtMTI0ODY5MTgzNywzMTcxMDI0NDgsLTcwNzQ5
-MzUyNF19
+eyJoaXN0b3J5IjpbMjE4MjQ0NjEyLDIxMjI0OTEwMTUsLTE5Mj
+IzODc5MywtMTk4Mzg2OTg5OCwyODg4NjE0Myw2MzcyNjE0Njcs
+NzAwMzM2NTMzLDU1MDkxNDc2MywxOTY3Nzg4OTQyLC00NzQ3OD
+c4NDgsMTY4NjY0NTY0NSwtMjA5NzkyNzk3NiwtMzA5ODI0NjQx
+LC05NTQ4ODY4MzYsMjA1Mjk1OTM0NywtNTI2MTQ4NjA0LDEzMj
+c2MzUyNDYsLTE3MjgyNzE0NzgsLTEyNDg2OTE4MzcsMzE3MTAy
+NDQ4XX0=
 -->
