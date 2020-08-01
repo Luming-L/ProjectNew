@@ -20,8 +20,20 @@ rule bwTobg:
 ```
 ## call peaks
 ```bash
-peakRecall.py
-qsub ~/peakRecall_batch.sh
+rule calculatePoisLambda:
+    output: "{dataset}.lambda.bg"
+    input:  "{dataset}.bg"
+    shell:  "python3 /home/s1949868/MScProject/Results/AllInOneGo/PeakRecall/calculatePoisLambda.py {input}"
+
+rule recallPeaks:
+    output: "{dataset}.bdgpeakcalls.bed"
+    input:  "{dataset}.bg"
+    shell:  r"""
+    # Compare ATAC-seq signal and local lambda to get the scores in pvalue
+    macs2 bdgcmp -t {input} -c {wildcards.dataset}.lambda.bg -m ppois -o {wildcards.dataset}.pvalue.bg
+    # Call peaks on score track using a cutoff p-value=0.01
+    macs2 bdgpeakcall -i {wildcards.dataset}.pvalue.bg -c 2 -l 150 -g 75 -o {output}
+    """
 ```
 ### 1. build local bias track from control
 ### 2. compare ATAC signal and local lambda to get the scores in pvalue or qvalue
@@ -87,11 +99,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNzczMzE3MiwyMTgyNDQ2MTIsMjEyMj
-Q5MTAxNSwtMTkyMjM4NzkzLC0xOTgzODY5ODk4LDI4ODg2MTQz
-LDYzNzI2MTQ2Nyw3MDAzMzY1MzMsNTUwOTE0NzYzLDE5Njc3OD
-g5NDIsLTQ3NDc4Nzg0OCwxNjg2NjQ1NjQ1LC0yMDk3OTI3OTc2
-LC0zMDk4MjQ2NDEsLTk1NDg4NjgzNiwyMDUyOTU5MzQ3LC01Mj
-YxNDg2MDQsMTMyNzYzNTI0NiwtMTcyODI3MTQ3OCwtMTI0ODY5
-MTgzN119
+eyJoaXN0b3J5IjpbMjkzODc1NjAyLDExMzc3MzMxNzIsMjE4Mj
+Q0NjEyLDIxMjI0OTEwMTUsLTE5MjIzODc5MywtMTk4Mzg2OTg5
+OCwyODg4NjE0Myw2MzcyNjE0NjcsNzAwMzM2NTMzLDU1MDkxND
+c2MywxOTY3Nzg4OTQyLC00NzQ3ODc4NDgsMTY4NjY0NTY0NSwt
+MjA5NzkyNzk3NiwtMzA5ODI0NjQxLC05NTQ4ODY4MzYsMjA1Mj
+k1OTM0NywtNTI2MTQ4NjA0LDEzMjc2MzUyNDYsLTE3MjgyNzE0
+NzhdfQ==
 -->
