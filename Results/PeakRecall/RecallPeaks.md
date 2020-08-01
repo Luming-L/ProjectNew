@@ -40,7 +40,7 @@ rule recallPeaks:
 ```bash
 macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```
-### 3. call peaks on score track using a cutoff
+### 3. call peaks on score track using a cutoff (2, 3, 4, 5, 6, 7)
 ```bash
 macs2 bdgpeakcall -i .pvalue.bg -c 2 -l 150 -g 75 -o .bdgpeakcalls.bed
 ```
@@ -105,11 +105,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MTE5MDU4NCwtNTc2NDg2MDAwLDExMz
-c3MzMxNzIsMjE4MjQ0NjEyLDIxMjI0OTEwMTUsLTE5MjIzODc5
-MywtMTk4Mzg2OTg5OCwyODg4NjE0Myw2MzcyNjE0NjcsNzAwMz
-M2NTMzLDU1MDkxNDc2MywxOTY3Nzg4OTQyLC00NzQ3ODc4NDgs
-MTY4NjY0NTY0NSwtMjA5NzkyNzk3NiwtMzA5ODI0NjQxLC05NT
-Q4ODY4MzYsMjA1Mjk1OTM0NywtNTI2MTQ4NjA0LDEzMjc2MzUy
-NDZdfQ==
+eyJoaXN0b3J5IjpbLTEyMTE4NjQxOCwxODgxMTkwNTg0LC01Nz
+Y0ODYwMDAsMTEzNzczMzE3MiwyMTgyNDQ2MTIsMjEyMjQ5MTAx
+NSwtMTkyMjM4NzkzLC0xOTgzODY5ODk4LDI4ODg2MTQzLDYzNz
+I2MTQ2Nyw3MDAzMzY1MzMsNTUwOTE0NzYzLDE5Njc3ODg5NDIs
+LTQ3NDc4Nzg0OCwxNjg2NjQ1NjQ1LC0yMDk3OTI3OTc2LC0zMD
+k4MjQ2NDEsLTk1NDg4NjgzNiwyMDUyOTU5MzQ3LC01MjYxNDg2
+MDRdfQ==
 -->
