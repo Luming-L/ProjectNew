@@ -44,7 +44,7 @@ macs2 bdgcmp -t .bg -c .lambda.bg -m ppois -o .pvalue.bg
 ```bash
 macs2 bdgpeakcall -i .pvalue.bg -c 2 -l 150 -g 75 -o .bdgpeakcalls.bed
 ```
-## 
+## Refine the output of bdgpeakcall
 ```bash
 
 ```
@@ -105,11 +105,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI5NDQ3NzgyLDExMzc3MzMxNzIsMjE4Mj
-Q0NjEyLDIxMjI0OTEwMTUsLTE5MjIzODc5MywtMTk4Mzg2OTg5
-OCwyODg4NjE0Myw2MzcyNjE0NjcsNzAwMzM2NTMzLDU1MDkxND
-c2MywxOTY3Nzg4OTQyLC00NzQ3ODc4NDgsMTY4NjY0NTY0NSwt
-MjA5NzkyNzk3NiwtMzA5ODI0NjQxLC05NTQ4ODY4MzYsMjA1Mj
-k1OTM0NywtNTI2MTQ4NjA0LDEzMjc2MzUyNDYsLTE3MjgyNzE0
-NzhdfQ==
+eyJoaXN0b3J5IjpbLTU3NjQ4NjAwMCwxMTM3NzMzMTcyLDIxOD
+I0NDYxMiwyMTIyNDkxMDE1LC0xOTIyMzg3OTMsLTE5ODM4Njk4
+OTgsMjg4ODYxNDMsNjM3MjYxNDY3LDcwMDMzNjUzMyw1NTA5MT
+Q3NjMsMTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2ODY2NDU2NDUs
+LTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNT
+I5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC0xNzI4Mjcx
+NDc4XX0=
 -->
