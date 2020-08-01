@@ -1,6 +1,6 @@
 # Input
-**BigWig files**
-ATAC-seq signal tracks that have been normalized by the number of reads in peaks. 
+**BigWig files**: ATAC-seq signal tracks that have been normalized by the number of reads in peaks. (796)
+Cancer type-specific peak calls (23)
 # Process
 ## convert BigWig to BedGraph
 ```bash
@@ -105,11 +105,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NjQ4NjAwMCwxMTM3NzMzMTcyLDIxOD
-I0NDYxMiwyMTIyNDkxMDE1LC0xOTIyMzg3OTMsLTE5ODM4Njk4
-OTgsMjg4ODYxNDMsNjM3MjYxNDY3LDcwMDMzNjUzMyw1NTA5MT
-Q3NjMsMTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2ODY2NDU2NDUs
-LTIwOTc5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNT
-I5NTkzNDcsLTUyNjE0ODYwNCwxMzI3NjM1MjQ2LC0xNzI4Mjcx
-NDc4XX0=
+eyJoaXN0b3J5IjpbMTg4MTE5MDU4NCwtNTc2NDg2MDAwLDExMz
+c3MzMxNzIsMjE4MjQ0NjEyLDIxMjI0OTEwMTUsLTE5MjIzODc5
+MywtMTk4Mzg2OTg5OCwyODg4NjE0Myw2MzcyNjE0NjcsNzAwMz
+M2NTMzLDU1MDkxNDc2MywxOTY3Nzg4OTQyLC00NzQ3ODc4NDgs
+MTY4NjY0NTY0NSwtMjA5NzkyNzk3NiwtMzA5ODI0NjQxLC05NT
+Q4ODY4MzYsMjA1Mjk1OTM0NywtNTI2MTQ4NjA0LDEzMjc2MzUy
+NDZdfQ==
 -->
