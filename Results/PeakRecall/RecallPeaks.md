@@ -13,8 +13,7 @@ qsub /home/s1949868/MScProject/Results/AllInOneGo/PeakRecall/downloadLinks.sh
 # decompress files
 for file in $(ls ./*tgz); do
 	tar -zxvf $file --strip-components 8
-	mv oak/stanford/groups/howchang/users/mcorces/temp/bigwigs/* ./bigwigs
-	rm -r oak
+	rm $file
 done
 ```
 ```bash
@@ -111,7 +110,7 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDc0MzUwOSwtMTIxMTg2NDE4LDE4OD
+eyJoaXN0b3J5IjpbLTE4Nzg2MDg5MiwtMTIxMTg2NDE4LDE4OD
 ExOTA1ODQsLTU3NjQ4NjAwMCwxMTM3NzMzMTcyLDIxODI0NDYx
 MiwyMTIyNDkxMDE1LC0xOTIyMzg3OTMsLTE5ODM4Njk4OTgsMj
 g4ODYxNDMsNjM3MjYxNDY3LDcwMDMzNjUzMyw1NTA5MTQ3NjMs
