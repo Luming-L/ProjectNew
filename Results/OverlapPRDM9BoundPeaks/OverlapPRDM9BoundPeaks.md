@@ -2,6 +2,8 @@ Overlap
 human DSB hotspots vs direct PRDM9 binding sites
 human DSB hotspots vs pan cancer PRDM9 bound peaks
 direct PRDM9 binding sites vs pan cancer PRDM9 bound peaks
+human DSB hotspots vs pan cancer peaks
+direct PRDM9 binding sites vs pan cancer peaks
 # Input 
 direct PRDM9 binding sites
 ```bash
@@ -47,6 +49,7 @@ write.table(pan_PRDM9BoundPeaks_df,
 	quote =FALSE
 	)
 ```
+pan cancer peaks
 # Process
 ```bash
 qlogin -l h_vmem=8G
@@ -75,11 +78,11 @@ Rscript overlapPeaksCentersWithIntervals.R TCGA-ATAC_PanCancer_PRDM9_bound_peaks
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzU3NDM0OTEsMzAxNjMwNjAzLDYwOT
-A2MDgxLDU2NDM3NTcwOCwxNDg0ODUxMjU5LC00MzAwMTc5OTQs
-LTE5NTg4NjY5NTYsMTMxOTM2ODQwMSwxNzQxMjcyNzQ3LDIxMT
-M5MjY1MTYsLTI4ODY0NDIyOCwzNzEyNjkxMDcsMTc0MjY0MjE2
-MSwtMTU0NzMzOTYxNSwtNTkzODk0NDE4LDc5MDI0MjYxMSwtNT
-I0MzIzNjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcyLDM5NTEyODE4
-MV19
+eyJoaXN0b3J5IjpbLTc4Mjk4Njg2LDMwMTYzMDYwMyw2MDkwNj
+A4MSw1NjQzNzU3MDgsMTQ4NDg1MTI1OSwtNDMwMDE3OTk0LC0x
+OTU4ODY2OTU2LDEzMTkzNjg0MDEsMTc0MTI3Mjc0NywyMTEzOT
+I2NTE2LC0yODg2NDQyMjgsMzcxMjY5MTA3LDE3NDI2NDIxNjEs
+LTE1NDczMzk2MTUsLTU5Mzg5NDQxOCw3OTAyNDI2MTEsLTUyND
+MyMzYwMCw4NzU5MjE4NSwtMTI5NDU2MzI3MiwzOTUxMjgxODFd
+fQ==
 -->
