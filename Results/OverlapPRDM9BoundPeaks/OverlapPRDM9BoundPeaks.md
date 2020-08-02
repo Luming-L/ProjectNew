@@ -65,13 +65,18 @@ Rscript overlapPeaksCentersWithIntervals.R humanDSBhotspots_AA_AB.hg38.bed TCGA-
 ```bash
 Rscript overlapPeaksCentersWithIntervals.R TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed HEK293T_PRDM9Binding_PeakCenters.hg38.bed
 ```
+## human DSB hotspots vs pan cancer peaks
+```bash
+Rscript overlapPeaksCentersWithIntervals.R TCGA-ATAC_PanCancer_PRDM9_bound_peaks.bed HEK293T_PRDM9Binding_PeakCenters.hg38.bed
+```
+
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA5MDYwODEsNTY0Mzc1NzA4LDE0ODQ4NT
-EyNTksLTQzMDAxNzk5NCwtMTk1ODg2Njk1NiwxMzE5MzY4NDAx
-LDE3NDEyNzI3NDcsMjExMzkyNjUxNiwtMjg4NjQ0MjI4LDM3MT
-I2OTEwNywxNzQyNjQyMTYxLC0xNTQ3MzM5NjE1LC01OTM4OTQ0
-MTgsNzkwMjQyNjExLC01MjQzMjM2MDAsODc1OTIxODUsLTEyOT
-Q1NjMyNzIsMzk1MTI4MTgxLC0xOTk1OTQ4NzYxLDE5OTM2MTI1
-Ml19
+eyJoaXN0b3J5IjpbMzAxNjMwNjAzLDYwOTA2MDgxLDU2NDM3NT
+cwOCwxNDg0ODUxMjU5LC00MzAwMTc5OTQsLTE5NTg4NjY5NTYs
+MTMxOTM2ODQwMSwxNzQxMjcyNzQ3LDIxMTM5MjY1MTYsLTI4OD
+Y0NDIyOCwzNzEyNjkxMDcsMTc0MjY0MjE2MSwtMTU0NzMzOTYx
+NSwtNTkzODk0NDE4LDc5MDI0MjYxMSwtNTI0MzIzNjAwLDg3NT
+kyMTg1LC0xMjk0NTYzMjcyLDM5NTEyODE4MSwtMTk5NTk0ODc2
+MV19
 -->
