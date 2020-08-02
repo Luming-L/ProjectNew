@@ -9,7 +9,13 @@ bigWigLinks.txt
 downloadLinks.sh
 qsub /home/s1949868/MScProject/Results/AllInOneGo/PeakRecall/downloadLinks.sh
 # decompress files
-
+~/BedGraph/downloadLinks.sh
+# decompress files
+for file in $(ls ./*tgz); do
+	tar -zxvf $file --strip-components 8
+	mv oak/stanford/groups/howchang/users/mcorces/temp/bigwigs/* ./bigwigs
+	rm -r oak
+done
 ```
 ```bash
 # convert BigWig to BedGraph
@@ -105,11 +111,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTE4NjQxOCwxODgxMTkwNTg0LC01Nz
-Y0ODYwMDAsMTEzNzczMzE3MiwyMTgyNDQ2MTIsMjEyMjQ5MTAx
-NSwtMTkyMjM4NzkzLC0xOTgzODY5ODk4LDI4ODg2MTQzLDYzNz
-I2MTQ2Nyw3MDAzMzY1MzMsNTUwOTE0NzYzLDE5Njc3ODg5NDIs
-LTQ3NDc4Nzg0OCwxNjg2NjQ1NjQ1LC0yMDk3OTI3OTc2LC0zMD
-k4MjQ2NDEsLTk1NDg4NjgzNiwyMDUyOTU5MzQ3LC01MjYxNDg2
-MDRdfQ==
+eyJoaXN0b3J5IjpbLTEyNDc0MzUwOSwtMTIxMTg2NDE4LDE4OD
+ExOTA1ODQsLTU3NjQ4NjAwMCwxMTM3NzMzMTcyLDIxODI0NDYx
+MiwyMTIyNDkxMDE1LC0xOTIyMzg3OTMsLTE5ODM4Njk4OTgsMj
+g4ODYxNDMsNjM3MjYxNDY3LDcwMDMzNjUzMyw1NTA5MTQ3NjMs
+MTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2ODY2NDU2NDUsLTIwOT
+c5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNTI5NTkz
+NDddfQ==
 -->
