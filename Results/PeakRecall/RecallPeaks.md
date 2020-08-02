@@ -25,20 +25,20 @@ rule bwTobg:
 ```
 ## call peaks
 ```bash
-rule calculatePoisLambda:
-    output: "{dataset}.lambda.bg"
+rule calculatePoisLambdaAndPvalue:
+    output: "{dataset}.pvalue.bg"
     input:  "{dataset}.bg"
-    shell:  "python3 /home/s1949868/MScProject/Results/AllInOneGo/PeakRecall/calculatePoisLambda.py {input}"
+    shell:  r"""
+    python3 /home/s1949868/MScProject/Results/AllInOneGo/PeakRecall/calculatePoisLambda.py {input}
+    # Compare ATAC-seq signal and local lambda to get the scores in pvalue
+    macs2 bdgcmp -t {input} -c {wildcards.dataset}.lambda.bg -m ppois -o {output}
+    """
 
 rule recallPeaks:
     output: "{dataset}.bdgpeakcalls.bed"
-    input:  "{dataset}.bg"
-    shell:  r"""
-    # Compare ATAC-seq signal and local lambda to get the scores in pvalue
-    macs2 bdgcmp -t {input} -c {wildcards.dataset}.lambda.bg -m ppois -o {wildcards.dataset}.pvalue.bg
+    input:  "{dataset}.pvalue.bg"
     # Call peaks on score track using a cutoff p-value=0.01
-    macs2 bdgpeakcall -i {wildcards.dataset}.pvalue.bg -c 2 -l 150 -g 75 -o {output}
-    """
+    shell:  "macs2 bdgpeakcall -i {input} -c 2 -l 150 -g 75 -o {output}"
 ```
 ### 1. build local bias track from control
 ### 2. compare ATAC signal and local lambda to get the scores in pvalue or qvalue
@@ -110,11 +110,11 @@ Region: chr1: 777499-1233399
 # Output
 ACCx_025FE5F8_885E_433D_9018_7AE322A92285_X034_S09_L133_B1_T1_PMRG.insertions.peaks.bed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzg2MDg5MiwtMTIxMTg2NDE4LDE4OD
-ExOTA1ODQsLTU3NjQ4NjAwMCwxMTM3NzMzMTcyLDIxODI0NDYx
-MiwyMTIyNDkxMDE1LC0xOTIyMzg3OTMsLTE5ODM4Njk4OTgsMj
-g4ODYxNDMsNjM3MjYxNDY3LDcwMDMzNjUzMyw1NTA5MTQ3NjMs
-MTk2Nzc4ODk0MiwtNDc0Nzg3ODQ4LDE2ODY2NDU2NDUsLTIwOT
-c5Mjc5NzYsLTMwOTgyNDY0MSwtOTU0ODg2ODM2LDIwNTI5NTkz
-NDddfQ==
+eyJoaXN0b3J5IjpbMTgyOTMyNTM3NiwtMTg3ODYwODkyLC0xMj
+ExODY0MTgsMTg4MTE5MDU4NCwtNTc2NDg2MDAwLDExMzc3MzMx
+NzIsMjE4MjQ0NjEyLDIxMjI0OTEwMTUsLTE5MjIzODc5MywtMT
+k4Mzg2OTg5OCwyODg4NjE0Myw2MzcyNjE0NjcsNzAwMzM2NTMz
+LDU1MDkxNDc2MywxOTY3Nzg4OTQyLC00NzQ3ODc4NDgsMTY4Nj
+Y0NTY0NSwtMjA5NzkyNzk3NiwtMzA5ODI0NjQxLC05NTQ4ODY4
+MzZdfQ==
 -->
