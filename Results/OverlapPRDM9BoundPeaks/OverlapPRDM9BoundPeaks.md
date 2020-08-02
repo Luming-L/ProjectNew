@@ -57,7 +57,7 @@ pan_Peaks_df$start <- pan_PRDM9BoundPeaks_df$start + 250
 pan_Peaks_df$end <- pan_PRDM9BoundPeaks_df$end - 250
 
 write.table(pan_Peaks_df,
-	file="TCGA-ATAC_PanCancer_PRDM9_bound_peaks_peakCenters.bed",
+	file="TCGA-ATAC_PanCancer_peakCenters_Peaks.bed",
 	sep = "\t",
 	append=FALSE,row.names = FALSE,col.names = FALSE,
 	quote =FALSE
@@ -91,7 +91,7 @@ Rscript overlapPeaksCentersWithIntervals.R TCGA-ATAC_PanCancer_PRDM9_bound_peaks
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4ODcyMDQ5LDMwMTYzMDYwMyw2MDkwNj
+eyJoaXN0b3J5IjpbMTU1NTE0MzcxLDMwMTYzMDYwMyw2MDkwNj
 A4MSw1NjQzNzU3MDgsMTQ4NDg1MTI1OSwtNDMwMDE3OTk0LC0x
 OTU4ODY2OTU2LDEzMTkzNjg0MDEsMTc0MTI3Mjc0NywyMTEzOT
 I2NTE2LC0yODg2NDQyMjgsMzcxMjY5MTA3LDE3NDI2NDIxNjEs
