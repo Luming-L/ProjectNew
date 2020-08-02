@@ -51,10 +51,9 @@ write.table(pan_PRDM9BoundPeaks_df,
 ```
 pan cancer peaks
 ```r
-pan_Peaks_df <- read.delim(file = "/exports/eddie/scratch/s1949868/PRDM9Binding/TCGA-ATAC_PanCancer_Peaks.bed", sep = "\t", header = FALSE)
-colnames(pan_Peaks_df) <- c("chrom","start","end","name")
-pan_Peaks_df$start <- pan_PRDM9BoundPeaks_df$start + 250
-pan_Peaks_df$end <- pan_PRDM9BoundPeaks_df$end - 250
+pan_Peaks_df <- read.delim(file = "/exports/eddie/scratch/s1949868/PRDM9Binding/TCGA-ATAC_PanCancer_Peaks.bed", sep = "\t", header = TRUE)
+pan_Peaks_df$start <- pan_Peaks_df$start + 250
+pan_Peaks_df$end <- pan_Peaks_df$end - 250
 
 write.table(pan_Peaks_df,
 	file="TCGA-ATAC_PanCancer_peakCenters_Peaks.bed",
@@ -91,11 +90,11 @@ Rscript overlapPeaksCentersWithIntervals.R TCGA-ATAC_PanCancer_PRDM9_bound_peaks
 ```
 # Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTE0MzcxLDMwMTYzMDYwMyw2MDkwNj
-A4MSw1NjQzNzU3MDgsMTQ4NDg1MTI1OSwtNDMwMDE3OTk0LC0x
-OTU4ODY2OTU2LDEzMTkzNjg0MDEsMTc0MTI3Mjc0NywyMTEzOT
-I2NTE2LC0yODg2NDQyMjgsMzcxMjY5MTA3LDE3NDI2NDIxNjEs
-LTE1NDczMzk2MTUsLTU5Mzg5NDQxOCw3OTAyNDI2MTEsLTUyND
-MyMzYwMCw4NzU5MjE4NSwtMTI5NDU2MzI3MiwzOTUxMjgxODFd
-fQ==
+eyJoaXN0b3J5IjpbMTk3NDIzMDA3MiwxNTU1MTQzNzEsMzAxNj
+MwNjAzLDYwOTA2MDgxLDU2NDM3NTcwOCwxNDg0ODUxMjU5LC00
+MzAwMTc5OTQsLTE5NTg4NjY5NTYsMTMxOTM2ODQwMSwxNzQxMj
+cyNzQ3LDIxMTM5MjY1MTYsLTI4ODY0NDIyOCwzNzEyNjkxMDcs
+MTc0MjY0MjE2MSwtMTU0NzMzOTYxNSwtNTkzODk0NDE4LDc5MD
+I0MjYxMSwtNTI0MzIzNjAwLDg3NTkyMTg1LC0xMjk0NTYzMjcy
+XX0=
 -->
