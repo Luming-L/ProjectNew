@@ -1,8 +1,5 @@
-Copy number variation (CNV)
-```bash
-wget https://gdc.xenahubs.net/download/GDC-PANCAN.masked_cnv.tsv.gz
-gzip -d GDC-PANCAN.masked_cnv.tsv.gz
-```
+
+
 
 ```bash
 qlogin -l h_vmem=8G
@@ -107,6 +104,11 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CompareCounts/BRCA_Compare
 
 # per sample level
 ## Input
+Copy number variation (CNV)
+```bash
+wget https://gdc.xenahubs.net/download/GDC-PANCAN.masked_cnv.tsv.gz
+gzip -d GDC-PANCAN.masked_cnv.tsv.gz
+```
 ## Process
 ## Output
 # per cancer level
@@ -114,6 +116,6 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CompareCounts/BRCA_Compare
 ## Process
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3NT
-EyNTgwNV19
+eyJoaXN0b3J5IjpbLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5ND
+I0NzcxOTEsMTg3NTEyNTgwNV19
 -->
