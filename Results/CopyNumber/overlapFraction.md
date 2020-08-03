@@ -7,7 +7,7 @@ module load igmm/apps/R/3.6.3
 cd /exports/eddie/scratch/s1949868/CopyNumber
 R --no-restore
 ```
-get breakpoints
+get structural variants breakpoints
 ```r
 # read PRDM9 expression
 PRDM9.expression <- read.delim("/home/s1949868/MScProject/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
@@ -116,6 +116,6 @@ gzip -d GDC-PANCAN.masked_cnv.tsv.gz
 ## Process
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5ND
-I0NzcxOTEsMTg3NTEyNTgwNV19
+eyJoaXN0b3J5IjpbLTIwOTIzNDU2MzksLTExMzc1NDg3MjgsMj
+EyMTk0NDUwNiw5NDI0NzcxOTEsMTg3NTEyNTgwNV19
 -->
