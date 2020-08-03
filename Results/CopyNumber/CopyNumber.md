@@ -110,12 +110,21 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CompareCounts/BRCA_Compare
  -b /exports/eddie/scratch/s1949868/CopyNumber/SVB/pan.masked_cnv_breakpoints.txt -wa -wb
 
 ```
+
+# per sample level
+## Input
+## Process
+## Output
+# per cancer level
+## Input
+## Process
+## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NTkyOTA2NSwyMTE3NzcxODYyLDIxMz
-EwNjQ5NjgsLTExMzA2NzI0MzIsMTY0Njg1NzQ3NywtMTcxODgw
-ODY1NywtMTc0MTg0NjM5NCwtNzQ0ODQwMzk2LDE5NzY3NzUzMT
-UsLTExNzAwOTc1OTksMTQxMjkzNzc4LDgxMzI3NTE5NywtMTI5
-NTI1NDg5MSw4MTY5MzAwNzEsLTcwNTc1MTA1MSw2Nzg0MzAxNj
-QsMTQ5MTQ2MDQ3MywtNjQ1ODc2MDcwLDE5NDgxODY4NjYsLTE2
-MTk4NTMwNzNdfQ==
+eyJoaXN0b3J5IjpbMTg3NTEyNTgwNSwxNjc1OTI5MDY1LDIxMT
+c3NzE4NjIsMjEzMTA2NDk2OCwtMTEzMDY3MjQzMiwxNjQ2ODU3
+NDc3LC0xNzE4ODA4NjU3LC0xNzQxODQ2Mzk0LC03NDQ4NDAzOT
+YsMTk3Njc3NTMxNSwtMTE3MDA5NzU5OSwxNDEyOTM3NzgsODEz
+Mjc1MTk3LC0xMjk1MjU0ODkxLDgxNjkzMDA3MSwtNzA1NzUxMD
+UxLDY3ODQzMDE2NCwxNDkxNDYwNDczLC02NDU4NzYwNzAsMTk0
+ODE4Njg2Nl19
 -->
