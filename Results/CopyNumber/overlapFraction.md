@@ -4,12 +4,6 @@ wget https://gdc.xenahubs.net/download/GDC-PANCAN.masked_cnv.tsv.gz
 gzip -d GDC-PANCAN.masked_cnv.tsv.gz
 ```
 
-
-Copy Number Estimation
--   Genes with focal CNV values smaller than -0.3 are categorized as a "loss" (-1)
--   Genes with focal CNV values larger than 0.3 are categorized as a "gain" (+1)
--   Genes with focal CNV values between and including -0.3 and 0.3 are categorized as "neutral" (0).
-
 ```bash
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
@@ -120,5 +114,6 @@ bedtools intersect -a /exports/eddie/scratch/s1949868/CompareCounts/BRCA_Compare
 ## Process
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyNDc3MTkxLDE4NzUxMjU4MDVdfQ==
+eyJoaXN0b3J5IjpbMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3NT
+EyNTgwNV19
 -->
