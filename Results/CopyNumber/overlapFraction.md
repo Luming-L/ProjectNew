@@ -98,7 +98,7 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 	)
 }
 ```
-get SVBSs (100/200bp)
+get SVBSs (100/200 bp)
 ```bash
 module load igmm/apps/BEDTools/2.27.1
 
@@ -122,7 +122,7 @@ get SVBs in PRDM9 expressed group and not expressed group for each cancer type (
 
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwtMz
-Q5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3
-MTkxLDE4NzUxMjU4MDVdfQ==
+eyJoaXN0b3J5IjpbMjAwOTQwMzU4NywtOTk0MTI3OTE5LC0xNj
+czMTI1NjEwLC0zNDk0NDA4MDUsLTExMzc1NDg3MjgsMjEyMTk0
+NDUwNiw5NDI0NzcxOTEsMTg3NTEyNTgwNV19
 -->
