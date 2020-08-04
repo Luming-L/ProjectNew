@@ -65,7 +65,7 @@ Copy number variation (CNV)
 wget https://gdc.xenahubs.net/download/GDC-PANCAN.masked_cnv.tsv.gz
 gzip -d GDC-PANCAN.masked_cnv.tsv.gz
 ```
-get structural variant breakpoints on per sample level
+get structural variant breakpoints (SVBs) on per sample level
 ```bash
 qlogin -l h_vmem=8G
 module load igmm/apps/R/3.6.3
@@ -115,13 +115,13 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 # per cancer level
 ## Input
 group samples of each cancer type by PRDM9 expression level (=0 and >0)
-get structural variant breakpoints on per cancer level
+get SVBs on per cancer level for PRDM9 expressed group and not expressed group
 ## Process
 
-ex
+
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1Mjc2NzIwMywtMTY3MzEyNTYxMCwtMz
+eyJoaXN0b3J5IjpbMTg5OTY0ODM5MiwtMTY3MzEyNTYxMCwtMz
 Q5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3
 MTkxLDE4NzUxMjU4MDVdfQ==
 -->
