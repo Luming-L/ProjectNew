@@ -93,9 +93,9 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 	bedtools slop -i ${bpFile} -g /home/s1949868/Tools/chr_length.hg38.txt -b 200 > ${sampleID}.SVBS200.txt
 	done
 ```
-In each sample,
-overla
 ## Process
+In each sample,
+overlap SVBs with PRDM9 binding peaks
 ```bash
 echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs200.txt
 
@@ -126,7 +126,7 @@ overlap SVBs in PRDM9 expressed group with cancer type-specific PRDM9 binding pe
 overlap SVBs in PRDM9 not expressed group with cancer type-specific PRDM9 binding peaks (motif finding 1e-4)
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzEyODc0MTgsMjAwOTQwMzU4NywtOT
+eyJoaXN0b3J5IjpbLTE5OTYzNzg2MTMsMjAwOTQwMzU4NywtOT
 k0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MDUsLTExMzc1
 NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3NTEyNTgwNV
 19
