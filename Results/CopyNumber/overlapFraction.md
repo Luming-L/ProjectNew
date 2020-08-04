@@ -115,14 +115,15 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 ## Output
 # per cancer level
 ## Input
-group samples of each cancer type by PRDM9 expression level (=0 and >0)
+group samples by PRDM9 expression level (=0 and >0) for each cancer type
 get SVBs in PRDM9 expressed group and not expressed group for each cancer type (23*2=46)
 ## Process
 
 
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTQwMzU4NywtOTk0MTI3OTE5LC0xNj
-czMTI1NjEwLC0zNDk0NDA4MDUsLTExMzc1NDg3MjgsMjEyMTk0
-NDUwNiw5NDI0NzcxOTEsMTg3NTEyNTgwNV19
+eyJoaXN0b3J5IjpbMTY3MjQyMjUyMywyMDA5NDAzNTg3LC05OT
+QxMjc5MTksLTE2NzMxMjU2MTAsLTM0OTQ0MDgwNSwtMTEzNzU0
+ODcyOCwyMTIxOTQ0NTA2LDk0MjQ3NzE5MSwxODc1MTI1ODA1XX
+0=
 -->
