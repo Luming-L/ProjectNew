@@ -118,11 +118,12 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 group samples by PRDM9 expression level (=0 and >0) for each cancer type
 get SVBs in PRDM9 expressed group and not expressed group separately for each cancer type (2*=46)
 ## Process
-overlap 
+In each cancer type,
+overlap SVBs in PRDM9 expressed group with cancer type-specific PRDM9 binding peaks (motif finding 1e-4)
 
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NjMwMjE1MywyMDA5NDAzNTg3LC05OT
+eyJoaXN0b3J5IjpbMjEwMzY1NTk0NiwyMDA5NDAzNTg3LC05OT
 QxMjc5MTksLTE2NzMxMjU2MTAsLTM0OTQ0MDgwNSwtMTEzNzU0
 ODcyOCwyMTIxOTQ0NTA2LDk0MjQ3NzE5MSwxODc1MTI1ODA1XX
 0=
