@@ -3,25 +3,7 @@
 
 
 
-```bash
-echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs200.txt
 
-for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS200/*SVBS200.txt); do 
-	echo $SVBSFile; 
-	sampleID=${SVBSFile#*SVBS200/}; 
-	sampleID=${sampleID%.SVBS*};
-	echo $sampleID
-	
-	motifFile=/exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
-	echo $motifFile
-	
-	a=`cat $SVBSFile | wc -l`
-	b=`bedtools intersect -a $SVBSFile -b $motifFile -F 1.0 -u | wc -l`
-	
-	c=`echo "scale=2;$b/$a" | bc`
-	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_motif_VS_SVBSs200.txt
-done
-```
 ```bash
 for SVBFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/BRCA*); do 
 	echo $SVBFile; 
@@ -111,7 +93,28 @@ for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.t
 	bedtools slop -i ${bpFile} -g /home/s1949868/Tools/chr_length.hg38.txt -b 200 > ${sampleID}.SVBS200.txt
 	done
 ```
+In each sample,
+overla
 ## Process
+```bash
+echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs200.txt
+
+for SVBSFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVBS200/*SVBS200.txt); do 
+	echo $SVBSFile; 
+	sampleID=${SVBSFile#*SVBS200/}; 
+	sampleID=${sampleID%.SVBS*};
+	echo $sampleID
+	
+	motifFile=/exports/eddie/scratch/s1949868/MotifFind_fimo_404/allFimoGFF_CaseID/${sampleID}_peakCalls_fimo.gff
+	echo $motifFile
+	
+	a=`cat $SVBSFile | wc -l`
+	b=`bedtools intersect -a $SVBSFile -b $motifFile -F 1.0 -u | wc -l`
+	
+	c=`echo "scale=2;$b/$a" | bc`
+	echo -e "$sampleID\t$a\t$b\t$c" >> overlap_motif_VS_SVBSs200.txt
+done
+```
 ## Output
 # per cancer level
 ## Input
@@ -123,7 +126,7 @@ overlap SVBs in PRDM9 expressed group with cancer type-specific PRDM9 binding pe
 overlap SVBs in PRDM9 not expressed group with cancer type-specific PRDM9 binding peaks (motif finding 1e-4)
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTg5OTg5ODEsMjAwOTQwMzU4NywtOT
+eyJoaXN0b3J5IjpbLTEyNzEyODc0MTgsMjAwOTQwMzU4NywtOT
 k0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MDUsLTExMzc1
 NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3NTEyNTgwNV
 19
