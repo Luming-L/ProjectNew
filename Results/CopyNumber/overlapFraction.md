@@ -127,10 +127,35 @@ get SVBs in PRDM9 expressed group and not expressed group separately for each ca
 In each cancer type,
 overlap SVBs in PRDM9 expressed group with cancer type-specific PRDM9 binding peaks (motif finding 1e-4)
 overlap SVBs in PRDM9 not expressed group with cancer type-specific PRDM9 binding peaks (motif finding 1e-4)
+```r
+# how to get 
+
+for (cType in unique(PRDM9.expression$cancerType)) {
+  # idx of samples with PRDM9 expression
+  idx1 <- PRDM9.expression[PRDM9.expression$cancerType == cType & PRDM9.expression$PRDM9Expression > 0,]$sampleID
+  # write SVBs in samples with PRDM9 expression
+  write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% idx1,c(2,3,4,5)],
+	file=paste0(cType,".withPRDM9.masked_cnv_breakpoints.txt"),
+	sep = "\t",
+	append=FALSE,row.names = FALSE,col.names = FALSE,
+	quote =FALSE
+	)
+  
+  # idx of samples without PRDM9 expression
+  idx2 <- PRDM9.expression[PRDM9.expression$cancerType == cType & !PRDM9.expression$PRDM9Expression > 0,]$sampleID
+  # write SVBs in samples without PRDM9 expression
+  write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% idx2,c(2,3,4,5)],
+	file=paste0(cType,".withoutPRDM9.masked_cnv_breakpoints.txt"),
+	sep = "\t",
+	append=FALSE,row.names = FALSE,col.names = FALSE,
+	quote =FALSE
+  )
+}
+```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE2ODkyNjM5LC0xOTk2Mzc4NjEzLDIwMD
-k0MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwtMzQ5NDQw
-ODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3MTkxLD
-E4NzUxMjU4MDVdfQ==
+eyJoaXN0b3J5IjpbLTE0NjQxOTU3NzIsLTE5OTYzNzg2MTMsMj
+AwOTQwMzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0
+NDA4MDUsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOT
+EsMTg3NTEyNTgwNV19
 -->
