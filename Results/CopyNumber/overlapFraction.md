@@ -47,6 +47,8 @@ R --no-restore
 PRDM9.expression <- read.delim("/home/s1949868/MScProject/Results/PRDM9ExpressionAndBinding/PRDM9Expression.txt", sep = "\t",header = TRUE)
 # store sampleID in a new column
 PRDM9.expression$sampleID <- substr(rownames(PRDM9.expression),6,21)
+# store cancerType in a new column
+PRDM9.expression$cancerType <- substr(rownames(PRDM9.expression),1,4)
 
 # read cnv
 masked_cnv <- read.delim("GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
@@ -66,13 +68,13 @@ masked_cnv_breakpoints <- data.frame("sample" = masked_cnv_bp$sample, "Chrom" = 
 
 # just keep samples containing RNA-seq, ATAC-seq and cnv data.
 masked_cnv_breakpoints <- masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% PRDM9.expression$sampleID,]
-
+```
+```r
 # save breakpoints of each sample separately
 for (i in unique(masked_cnv_breakpoints$sample)) {
   output <- masked_cnv_breakpoints[masked_cnv_breakpoints$sample == i,c(2,3,4,5)]
-  cType_sampleID <- rownames(PRDM9.expression[PRDM9.expression$sampleID == i,])
-```
- ```r 
+  cType_sampleID <- rownames(PRDM9.expression[PRDM9.expression$sampleID == i,]
+  
   write.table(output,
 	file=paste0(cType_sampleID,".masked_cnv_breakpoints.txt"),
 	sep = "\t",
@@ -127,8 +129,8 @@ overlap SVBs in PRDM9 expressed group with cancer type-specific PRDM9 binding pe
 overlap SVBs in PRDM9 not expressed group with cancer type-specific PRDM9 binding peaks (motif finding 1e-4)
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTgxNzQ1MDUsLTE5OTYzNzg2MTMsMj
-AwOTQwMzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0
-NDA4MDUsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOT
-EsMTg3NTEyNTgwNV19
+eyJoaXN0b3J5IjpbNDE2ODkyNjM5LC0xOTk2Mzc4NjEzLDIwMD
+k0MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwtMzQ5NDQw
+ODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3MTkxLD
+E4NzUxMjU4MDVdfQ==
 -->
