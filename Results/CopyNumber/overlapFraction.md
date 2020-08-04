@@ -114,11 +114,14 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 ## Output
 # per cancer level
 ## Input
+group samples of each cancer type by PRDM9 expression level (=0 and >0)
 get structural variant breakpoints on per cancer level
 ## Process
+
+ex
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzMxMjU2MTAsLTM0OTQ0MDgwNSwtMT
-EzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0MjQ3NzE5MSwxODc1MTI1
-ODA1XX0=
+eyJoaXN0b3J5IjpbMTA1Mjc2NzIwMywtMTY3MzEyNTYxMCwtMz
+Q5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3
+MTkxLDE4NzUxMjU4MDVdfQ==
 -->
