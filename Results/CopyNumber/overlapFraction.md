@@ -115,13 +115,13 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 # per cancer level
 ## Input
 group samples of each cancer type by PRDM9 expression level (=0 and >0)
-get SVBs on per cancer level for PRDM9 expressed group and not expressed group
+get SVBs in PRDM9 expressed group and not expressed group for each cancer type (23*2=46)
 ## Process
 
 
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTY0ODM5MiwtMTY3MzEyNTYxMCwtMz
+eyJoaXN0b3J5IjpbMTUxNTYwODMxMSwtMTY3MzEyNTYxMCwtMz
 Q5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3
 MTkxLDE4NzUxMjU4MDVdfQ==
 -->
