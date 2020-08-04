@@ -2,19 +2,7 @@
 
 
 
-get SVBSs (100/200bp)
-```bash
-module load igmm/apps/BEDTools/2.27.1
 
-for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.txt); do 
-	echo $bpFile; 
-	sampleID=${bpFile#*SVB/}; 
-	sampleID=${sampleID%.masked_cnv*};
-	echo $sampleID
-	
-	bedtools slop -i ${bpFile} -g /home/s1949868/Tools/chr_length.hg38.txt -b 200 > ${sampleID}.SVBS200.txt
-	done
-```
 ```bash
 echo -e "sampleID\tnumSVBs\tnumOverlap\toverlapFraction" > overlap_motif_VS_SVBSs200.txt
 
@@ -110,6 +98,19 @@ for (i in unique(masked_cnv_breakpoints$sample)) {
 	)
 }
 ```
+get SVBSs (100/200bp)
+```bash
+module load igmm/apps/BEDTools/2.27.1
+
+for bpFile in $(ls /exports/eddie/scratch/s1949868/CopyNumber/SVB/*breakpoints.txt); do 
+	echo $bpFile; 
+	sampleID=${bpFile#*SVB/}; 
+	sampleID=${sampleID%.masked_cnv*};
+	echo $sampleID
+	
+	bedtools slop -i ${bpFile} -g /home/s1949868/Tools/chr_length.hg38.txt -b 200 > ${sampleID}.SVBS200.txt
+	done
+```
 ## Process
 ## Output
 # per cancer level
@@ -121,7 +122,7 @@ get SVBs in PRDM9 expressed group and not expressed group for each cancer type (
 
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTYwODMxMSwtMTY3MzEyNTYxMCwtMz
+eyJoaXN0b3J5IjpbLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwtMz
 Q5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3
 MTkxLDE4NzUxMjU4MDVdfQ==
 -->
