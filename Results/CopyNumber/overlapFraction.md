@@ -71,7 +71,8 @@ masked_cnv_breakpoints <- masked_cnv_breakpoints[masked_cnv_breakpoints$sample %
 for (i in unique(masked_cnv_breakpoints$sample)) {
   output <- masked_cnv_breakpoints[masked_cnv_breakpoints$sample == i,c(2,3,4,5)]
   cType_sampleID <- rownames(PRDM9.expression[PRDM9.expression$sampleID == i,])
-  
+```
+ ```r 
   write.table(output,
 	file=paste0(cType_sampleID,".masked_cnv_breakpoints.txt"),
 	sep = "\t",
@@ -126,8 +127,8 @@ overlap SVBs in PRDM9 expressed group with cancer type-specific PRDM9 binding pe
 overlap SVBs in PRDM9 not expressed group with cancer type-specific PRDM9 binding peaks (motif finding 1e-4)
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTYzNzg2MTMsMjAwOTQwMzU4NywtOT
-k0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MDUsLTExMzc1
-NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3NTEyNTgwNV
-19
+eyJoaXN0b3J5IjpbLTE4OTgxNzQ1MDUsLTE5OTYzNzg2MTMsMj
+AwOTQwMzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0
+NDA4MDUsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOT
+EsMTg3NTEyNTgwNV19
 -->
