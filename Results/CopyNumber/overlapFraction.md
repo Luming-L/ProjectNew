@@ -57,7 +57,7 @@ masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
 masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
 
 # select segments considered as gain or loss
-masked_cnv <- masked_cnv[masked_cnv$value >= 0.3 | masked_cnv$value <= -0.3,]
+masked_cnv <- masked_cnv[masked_cnv$value > 0.3 | masked_cnv$value < -0.3,]
 # take the breakpoints
 masked_cnv_start <- masked_cnv[,c(1,2,3,5)]
 colnames(masked_cnv_start) <- c("sample", "Chrom", "End", "value")
@@ -154,8 +154,8 @@ for (cType in unique(PRDM9.expression$cancerType)) {
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4NDcyMjA5LC0xOTk2Mzc4NjEzLDIwMD
-k0MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwtMzQ5NDQw
-ODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3MTkxLD
-E4NzUxMjU4MDVdfQ==
+eyJoaXN0b3J5IjpbLTU3MjI4MjI4MywtMTk5NjM3ODYxMywyMD
+A5NDAzNTg3LC05OTQxMjc5MTksLTE2NzMxMjU2MTAsLTM0OTQ0
+MDgwNSwtMTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0MjQ3NzE5MS
+wxODc1MTI1ODA1XX0=
 -->
