@@ -170,14 +170,14 @@ COAD_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "COAD" & PRDM9.expres
 write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% COAD_t0,c(2,3,4,5)], file="COAD_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 
 # ESCA_t7
-COAD_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "COAD" & PRDM9.expression$PRDM9Expression > 0,]$sampleID
-write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% COAD_t0,c(2,3,4,5)], file="COAD_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+ESCA_t7 <- PRDM9.expression[PRDM9.expression$cancerType == "ESCA" & PRDM9.expression$PRDM9Expression > 7,]$sampleID
+write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% ESCA_t7,c(2,3,4,5)], file="ESCA_t7_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMzODg5NjMzLC0xMTYyNDY3NjcwLDE3Nj
-M4NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3ODYxMywyMDA5NDAz
-NTg3LC05OTQxMjc5MTksLTE2NzMxMjU2MTAsLTM0OTQ0MDgwNS
-wtMTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0MjQ3NzE5MSwxODc1
-MTI1ODA1XX0=
+eyJoaXN0b3J5IjpbLTkxMTA1ODI1MSwtMTE2MjQ2NzY3MCwxNz
+YzODczOTY0LC01NzIyODIyODMsLTE5OTYzNzg2MTMsMjAwOTQw
+MzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MD
+UsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3
+NTEyNTgwNV19
 -->
