@@ -155,6 +155,7 @@ for (cType in unique(PRDM9.expression$cancerType)) {
 ## Output
 # merge samples by PRDM9 expression level
 ## Input
+/exports/eddie/scratch/s1949868/CompareCounts/sigIncre
 /exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level
 ## Process
 ```r
@@ -234,12 +235,16 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% THCA_t0,c(
 UCEC_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "UCEC" & PRDM9.expression$PRDM9Expression > 0,]$sampleID
 write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% UCEC_t0,c(2,3,4,5)], file="UCEC_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 ```
+```bash
+/exports/eddie/scratch/s1949868/CompareCounts/sigIncre
+/exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level
+```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NjcwMjAyMywtMTMwMzE4MTA1MiwxNT
-Q5NTY2NDIyLC0xODkzNjY4MzM3LC0xMTYyNDY3NjcwLDE3NjM4
-NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3ODYxMywyMDA5NDAzNT
-g3LC05OTQxMjc5MTksLTE2NzMxMjU2MTAsLTM0OTQ0MDgwNSwt
-MTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0MjQ3NzE5MSwxODc1MT
-I1ODA1XX0=
+eyJoaXN0b3J5IjpbLTEyODA0NjU4NDIsMTA2NjcwMjAyMywtMT
+MwMzE4MTA1MiwxNTQ5NTY2NDIyLC0xODkzNjY4MzM3LC0xMTYy
+NDY3NjcwLDE3NjM4NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3OD
+YxMywyMDA5NDAzNTg3LC05OTQxMjc5MTksLTE2NzMxMjU2MTAs
+LTM0OTQ0MDgwNSwtMTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0Mj
+Q3NzE5MSwxODc1MTI1ODA1XX0=
 -->
