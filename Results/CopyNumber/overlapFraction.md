@@ -156,11 +156,18 @@ for (cType in unique(PRDM9.expression$cancerType)) {
 # merge samples by PRDM9 expression level
 ## Input
 ## Process
+```
+BRCA_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "BRCA" & PRDM9.expression$PRDM9Expression > 0,]$sampleID
+> write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% BRCA_t0,c(2,3,4,5)], file="BRCA_t0_SVB",sep = "\t",append=FALSE,row.names = FALSE,col.names = FALSE,
++ quote =FALSE
++ )
+
+```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjI0Njc2NzAsMTc2Mzg3Mzk2NCwtNT
-cyMjgyMjgzLC0xOTk2Mzc4NjEzLDIwMDk0MDM1ODcsLTk5NDEy
-NzkxOSwtMTY3MzEyNTYxMCwtMzQ5NDQwODA1LC0xMTM3NTQ4Nz
-I4LDIxMjE5NDQ1MDYsOTQyNDc3MTkxLDE4NzUxMjU4MDVdfQ==
-
+eyJoaXN0b3J5IjpbLTIxODA4NDUxOCwtMTE2MjQ2NzY3MCwxNz
+YzODczOTY0LC01NzIyODIyODMsLTE5OTYzNzg2MTMsMjAwOTQw
+MzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MD
+UsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3
+NTEyNTgwNV19
 -->
