@@ -226,14 +226,18 @@ TGCT_t10 <- PRDM9.expression[PRDM9.expression$cancerType == "TGCT" & PRDM9.expre
 write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% TGCT_t10,c(2,3,4,5)], file="TGCT_t10_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 
 # THCA_t0
-THCA_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "THCA" & PRDM9.expression$PRDM9Expression > 10,]$sampleID
-write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% TGCT_t10,c(2,3,4,5)], file="TGCT_t10_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+THCA_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "THCA" & PRDM9.expression$PRDM9Expression > 0,]$sampleID
+write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% THCA_t0,c(2,3,4,5)], file="THCA_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+
+# UCEC_t0
+UCEC_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "UCEC" & PRDM9.expression$PRDM9Expression > 0,]$sampleID
+write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% TH_t0,c(2,3,4,5)], file="THCA_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDY3NzE0NjcsLTE4OTM2NjgzMzcsLT
-ExNjI0Njc2NzAsMTc2Mzg3Mzk2NCwtNTcyMjgyMjgzLC0xOTk2
-Mzc4NjEzLDIwMDk0MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEyNT
-YxMCwtMzQ5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYs
-OTQyNDc3MTkxLDE4NzUxMjU4MDVdfQ==
+eyJoaXN0b3J5IjpbMzU0MzgyNTY4LC0xODkzNjY4MzM3LC0xMT
+YyNDY3NjcwLDE3NjM4NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3
+ODYxMywyMDA5NDAzNTg3LC05OTQxMjc5MTksLTE2NzMxMjU2MT
+AsLTM0OTQ0MDgwNSwtMTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0
+MjQ3NzE5MSwxODc1MTI1ODA1XX0=
 -->
