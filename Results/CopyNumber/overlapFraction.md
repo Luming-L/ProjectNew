@@ -180,12 +180,16 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% ESCA_t8,c(
 # LIHC_t9
 LIHC_t9 <- PRDM9.expression[PRDM9.expression$cancerType == "LIHC" & PRDM9.expression$PRDM9Expression > 9,]$sampleID
 write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% LIHC_t9,c(2,3,4,5)], file="LIHC_t9_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+
+# LIHC_t10
+LIHC_t10 <- PRDM9.expression[PRDM9.expression$cancerType == "LIHC" & PRDM9.expression$PRDM9Expression > 10,]$sampleID
+write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% LIHC_t10,c(2,3,4,5)], file="LIHC_t9_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzQ3NDQ5NiwtMTE2MjQ2NzY3MCwxNz
-YzODczOTY0LC01NzIyODIyODMsLTE5OTYzNzg2MTMsMjAwOTQw
-MzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MD
-UsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3
-NTEyNTgwNV19
+eyJoaXN0b3J5IjpbLTIwMjQwMDg3NDUsLTExNjI0Njc2NzAsMT
+c2Mzg3Mzk2NCwtNTcyMjgyMjgzLC0xOTk2Mzc4NjEzLDIwMDk0
+MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwtMzQ5NDQwOD
+A1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3MTkxLDE4
+NzUxMjU4MDVdfQ==
 -->
