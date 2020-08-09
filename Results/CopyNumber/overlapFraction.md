@@ -51,7 +51,7 @@ PRDM9.expression$sampleID <- substr(rownames(PRDM9.expression),6,21)
 PRDM9.expression$cancerType <- substr(rownames(PRDM9.expression),1,4)
 
 # read cnv
-masked_cnv <- read.delim("GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
+masked_cnv <- read.delim("/exports/eddie/scratch/s1949868/CopyNumber/GDC-PANCAN.masked_cnv.tsv",sep = "\t",header = TRUE)
 masked_cnv$sample <- as.character(masked_cnv$sample)
 masked_cnv$Chrom <- as.character(masked_cnv$Chrom)
 masked_cnv$Chrom <- paste0("chr",masked_cnv$Chrom)
@@ -158,8 +158,9 @@ for (cType in unique(PRDM9.expression$cancerType)) {
 ## Process
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2Mzg3Mzk2NCwtNTcyMjgyMjgzLC0xOT
-k2Mzc4NjEzLDIwMDk0MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEy
-NTYxMCwtMzQ5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MD
-YsOTQyNDc3MTkxLDE4NzUxMjU4MDVdfQ==
+eyJoaXN0b3J5IjpbLTExNjI0Njc2NzAsMTc2Mzg3Mzk2NCwtNT
+cyMjgyMjgzLC0xOTk2Mzc4NjEzLDIwMDk0MDM1ODcsLTk5NDEy
+NzkxOSwtMTY3MzEyNTYxMCwtMzQ5NDQwODA1LC0xMTM3NTQ4Nz
+I4LDIxMjE5NDQ1MDYsOTQyNDc3MTkxLDE4NzUxMjU4MDVdfQ==
+
 -->
