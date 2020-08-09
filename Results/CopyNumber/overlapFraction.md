@@ -242,14 +242,14 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% UCEC_t0,c(
 bedtools intersect \
 -a /exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level/BRCA_t0_SVB \
 -b /exports/eddie/scratch/s1949868/CompareCounts/sigIncre/BRCA*t0_sigIncre.txt \
--F 1.0 -u | wc -l 
+-f 1.0 -u | wc -l 
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDQyNDQwMDUsMTA2NjcwMjAyMywtMT
-MwMzE4MTA1MiwxNTQ5NTY2NDIyLC0xODkzNjY4MzM3LC0xMTYy
-NDY3NjcwLDE3NjM4NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3OD
-YxMywyMDA5NDAzNTg3LC05OTQxMjc5MTksLTE2NzMxMjU2MTAs
-LTM0OTQ0MDgwNSwtMTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0Mj
-Q3NzE5MSwxODc1MTI1ODA1XX0=
+eyJoaXN0b3J5IjpbLTg3Mjg0MTc5NywxMDY2NzAyMDIzLC0xMz
+AzMTgxMDUyLDE1NDk1NjY0MjIsLTE4OTM2NjgzMzcsLTExNjI0
+Njc2NzAsMTc2Mzg3Mzk2NCwtNTcyMjgyMjgzLC0xOTk2Mzc4Nj
+EzLDIwMDk0MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwt
+MzQ5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyND
+c3MTkxLDE4NzUxMjU4MDVdfQ==
 -->
