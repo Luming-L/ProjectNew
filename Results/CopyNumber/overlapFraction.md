@@ -231,13 +231,13 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% THCA_t0,c(
 
 # UCEC_t0
 UCEC_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "UCEC" & PRDM9.expression$PRDM9Expression > 0,]$sampleID
-write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% TH_t0,c(2,3,4,5)], file="THCA_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% UCEC_t0,c(2,3,4,5)], file="UCEC_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0MzgyNTY4LC0xODkzNjY4MzM3LC0xMT
-YyNDY3NjcwLDE3NjM4NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3
-ODYxMywyMDA5NDAzNTg3LC05OTQxMjc5MTksLTE2NzMxMjU2MT
-AsLTM0OTQ0MDgwNSwtMTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0
-MjQ3NzE5MSwxODc1MTI1ODA1XX0=
+eyJoaXN0b3J5IjpbMTU0OTU2NjQyMiwtMTg5MzY2ODMzNywtMT
+E2MjQ2NzY3MCwxNzYzODczOTY0LC01NzIyODIyODMsLTE5OTYz
+Nzg2MTMsMjAwOTQwMzU4NywtOTk0MTI3OTE5LC0xNjczMTI1Nj
+EwLC0zNDk0NDA4MDUsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5
+NDI0NzcxOTEsMTg3NTEyNTgwNV19
 -->
