@@ -155,9 +155,10 @@ for (cType in unique(PRDM9.expression$cancerType)) {
 ## Output
 # merge samples by PRDM9 expression level
 ## Input
-## 
+## Process
+## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MTIzNDU0OCwtNTcyMjgyMjgzLC0xOT
+eyJoaXN0b3J5IjpbMTc2Mzg3Mzk2NCwtNTcyMjgyMjgzLC0xOT
 k2Mzc4NjEzLDIwMDk0MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEy
 NTYxMCwtMzQ5NDQwODA1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MD
 YsOTQyNDc3MTkxLDE4NzUxMjU4MDVdfQ==
