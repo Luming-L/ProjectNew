@@ -192,10 +192,14 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% LUAD_t0,c(
 # LUAD_t8
 LUAD_t8 <- PRDM9.expression[PRDM9.expression$cancerType == "LUAD" & PRDM9.expression$PRDM9Expression > 8,]$sampleID
 write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% LUAD_t8,c(2,3,4,5)], file="LUAD_t8_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+
+# LUAD_t10
+LUAD_t10 <- PRDM9.expression[PRDM9.expression$cancerType == "LUAD" & PRDM9.expression$PRDM9Expression > 10,]$sampleID
+write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% LUAD_t10,c(2,3,4,5)], file="LUAD_t10_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNjI4MjI4MSwtMTE2MjQ2NzY3MCwxNz
+eyJoaXN0b3J5IjpbMTg4OTExNjkwNCwtMTE2MjQ2NzY3MCwxNz
 YzODczOTY0LC01NzIyODIyODMsLTE5OTYzNzg2MTMsMjAwOTQw
 MzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MD
 UsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3
