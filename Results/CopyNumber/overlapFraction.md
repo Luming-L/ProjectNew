@@ -155,7 +155,7 @@ for (cType in unique(PRDM9.expression$cancerType)) {
 ## Output
 # merge samples by PRDM9 expression level
 ## Input
-
+/exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level
 ## Process
 ```r
 # BRCA_t0
@@ -236,9 +236,10 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% UCEC_t0,c(
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDMxODEwNTIsMTU0OTU2NjQyMiwtMT
-g5MzY2ODMzNywtMTE2MjQ2NzY3MCwxNzYzODczOTY0LC01NzIy
-ODIyODMsLTE5OTYzNzg2MTMsMjAwOTQwMzU4NywtOTk0MTI3OT
-E5LC0xNjczMTI1NjEwLC0zNDk0NDA4MDUsLTExMzc1NDg3Mjgs
-MjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3NTEyNTgwNV19
+eyJoaXN0b3J5IjpbMTA2NjcwMjAyMywtMTMwMzE4MTA1MiwxNT
+Q5NTY2NDIyLC0xODkzNjY4MzM3LC0xMTYyNDY3NjcwLDE3NjM4
+NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3ODYxMywyMDA5NDAzNT
+g3LC05OTQxMjc5MTksLTE2NzMxMjU2MTAsLTM0OTQ0MDgwNSwt
+MTEzNzU0ODcyOCwyMTIxOTQ0NTA2LDk0MjQ3NzE5MSwxODc1MT
+I1ODA1XX0=
 -->
