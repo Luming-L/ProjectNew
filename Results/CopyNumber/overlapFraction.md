@@ -240,13 +240,13 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% UCEC_t0,c(
 /exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level
 
 bedtools intersect \
--a /exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level/STAD_t10_SVB \
--b /exports/eddie/scratch/s1949868/CompareCounts/sigIncre/STAD*t9_sigIncre.txt \
+-a /exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level/TGCT_t10_SVB \
+-b /exports/eddie/scratch/s1949868/CompareCounts/sigIncre/TGCT*t10_sigIncre.txt \
 -u | wc -l 
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0ODEzNjc3NywtMTUwMDA1OTczMywtMj
+eyJoaXN0b3J5IjpbLTYwNTcxMDYyMSwtMTUwMDA1OTczMywtMj
 kzNjY1ODE3LDEwNjY3MDIwMjMsLTEzMDMxODEwNTIsMTU0OTU2
 NjQyMiwtMTg5MzY2ODMzNywtMTE2MjQ2NzY3MCwxNzYzODczOT
 Y0LC01NzIyODIyODMsLTE5OTYzNzg2MTMsMjAwOTQwMzU4Nywt
