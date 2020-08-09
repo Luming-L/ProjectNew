@@ -238,10 +238,13 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% UCEC_t0,c(
 ```bash
 /exports/eddie/scratch/s1949868/CompareCounts/sigIncre
 /exports/eddie/scratch/s1949868/CopyNumber/SVB_cancerType_PRDM9Level
+
+bedtools intersect \
+-a $SVBSFile -b $motifFile -F 1.0 -u | wc -l 
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODA0NjU4NDIsMTA2NjcwMjAyMywtMT
+eyJoaXN0b3J5IjpbLTEwMzQ1OTY2MDAsMTA2NjcwMjAyMywtMT
 MwMzE4MTA1MiwxNTQ5NTY2NDIyLC0xODkzNjY4MzM3LC0xMTYy
 NDY3NjcwLDE3NjM4NzM5NjQsLTU3MjI4MjI4MywtMTk5NjM3OD
 YxMywyMDA5NDAzNTg3LC05OTQxMjc5MTksLTE2NzMxMjU2MTAs
