@@ -164,12 +164,16 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% BRCA_t0,c(
 # BRCA_t7
 BRCA_t7 <- PRDM9.expression[PRDM9.expression$cancerType == "BRCA" & PRDM9.expression$PRDM9Expression > 7,]$sampleID
 write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% BRCA_t7,c(2,3,4,5)], file="BRCA_t7_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+
+# COAD_t0
+COAD_t0 <- PRDM9.expression[PRDM9.expression$cancerType == "COAD" & PRDM9.expression$PRDM9Expression > 0,]$sampleID
+write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% COAD_t0,c(2,3,4,5)], file="COAD_t0_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzOTYxMjA0NSwtMTE2MjQ2NzY3MCwxNz
-YzODczOTY0LC01NzIyODIyODMsLTE5OTYzNzg2MTMsMjAwOTQw
-MzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MD
-UsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3
-NTEyNTgwNV19
+eyJoaXN0b3J5IjpbLTE0MDU0NjIzMzQsLTExNjI0Njc2NzAsMT
+c2Mzg3Mzk2NCwtNTcyMjgyMjgzLC0xOTk2Mzc4NjEzLDIwMDk0
+MDM1ODcsLTk5NDEyNzkxOSwtMTY3MzEyNTYxMCwtMzQ5NDQwOD
+A1LC0xMTM3NTQ4NzI4LDIxMjE5NDQ1MDYsOTQyNDc3MTkxLDE4
+NzUxMjU4MDVdfQ==
 -->
