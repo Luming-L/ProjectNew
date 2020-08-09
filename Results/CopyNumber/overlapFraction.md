@@ -172,10 +172,12 @@ write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% COAD_t0,c(
 # ESCA_t7
 ESCA_t7 <- PRDM9.expression[PRDM9.expression$cancerType == "ESCA" & PRDM9.expression$PRDM9Expression > 7,]$sampleID
 write.table(masked_cnv_breakpoints[masked_cnv_breakpoints$sample %in% ESCA_t7,c(2,3,4,5)], file="ESCA_t7_SVB",sep = "\t", append=FALSE,row.names = FALSE,col.names = FALSE, quote =FALSE)
+
+
 ```
 ## Output
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMTA1ODI1MSwtMTE2MjQ2NzY3MCwxNz
+eyJoaXN0b3J5IjpbMTA4MDgwNzU2OSwtMTE2MjQ2NzY3MCwxNz
 YzODczOTY0LC01NzIyODIyODMsLTE5OTYzNzg2MTMsMjAwOTQw
 MzU4NywtOTk0MTI3OTE5LC0xNjczMTI1NjEwLC0zNDk0NDA4MD
 UsLTExMzc1NDg3MjgsMjEyMTk0NDUwNiw5NDI0NzcxOTEsMTg3
